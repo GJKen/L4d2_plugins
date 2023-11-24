@@ -1,0 +1,29 @@
+// {default}
+// {olive} 橄榄绿
+// {green} 绿色
+// {blue} 蓝色
+// {red} 红色
+// {lightgreen 高绿色}
+
+"ChatResponses"
+{
+	"服主"
+	{
+		"text"		"{olive}服主是JKchan"
+	}
+	
+	"IP"
+	{
+		"text"		"{default}服务器IP:{lightgreen}connect 163.197.255.85"
+	}
+
+	"!rpg"
+	{
+		"text"		"{green}哈哈哈! 我是大傻逼"
+	}
+
+	"你好呀"
+	{
+		"text"		"{blue}好个头"
+	}
+}

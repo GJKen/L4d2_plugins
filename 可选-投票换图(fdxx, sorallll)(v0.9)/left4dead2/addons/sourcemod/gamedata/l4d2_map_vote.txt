@@ -1,0 +1,73 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"linux"
+				{
+					"signature"	"TheDirector"
+				}
+				"windows"
+				{
+					"signature"	"CDirectorMusicBanks::OnRoundStart"
+					"read"		"12"
+				}
+				"read"	"0"
+			}
+
+			"g_pMatchExtL4D"
+			{
+				"linux"
+				{
+					"signature"	"CTerrorGameRules::GetMissionInfo"
+					"read"		"44"
+				}
+				"windows"
+				{
+					"signature"	"CTerrorGameRules::GetMissionInfo"
+					"read"		"42"
+				}
+				"read"	"0"
+			}
+		}
+
+		"Signatures"
+		{
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			/* CDirectorMusicBanks::OnRoundStart(CDirectorMusicBanks *__hidden this) */
+			"CDirectorMusicBanks::OnRoundStart"
+			{
+				"library"	"server"
+				"linux"		"@_ZN19CDirectorMusicBanks12OnRoundStartEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F"
+				/* ? ? ? ? ? ? 56 57 8B ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 0F */
+			}
+
+			/* CTerrorGameRules::GetMissionInfo(CTerrorGameRules *__hidden this) */
+			"CTerrorGameRules::GetMissionInfo"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14GetMissionInfoEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x75\x2A\x5E"
+				/* ? ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? 56 FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? 5E */
+			}
+
+			/* CDirector::OnChangeMissionVote(CDirector *__hidden this, const char *) */
+			"CDirector::OnChangeMissionVote"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector19OnChangeMissionVoteEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x0F"
+				/* ? ? ? ? ? ? ? 8B 0D ? ? ? ? 8B ? 8B ? ? FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 0F */
+			}
+		}
+	}
+}

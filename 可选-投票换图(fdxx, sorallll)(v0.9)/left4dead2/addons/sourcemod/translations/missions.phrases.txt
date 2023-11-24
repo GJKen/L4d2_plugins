@@ -1,0 +1,219 @@
+"Phrases"
+{
+	"L4D2C1"
+	{
+		"en"		"Dead Center"
+	}
+	"L4D2C2"
+	{
+		"en"		"Dark Carnival"
+	}
+	"L4D2C3"
+	{
+		"en"		"Swamp Fever"
+	}
+	"L4D2C4"
+	{
+		"en"		"Hard Rain"
+	}
+	"L4D2C5"
+	{
+		"en"		"The Parish"
+	}
+	"L4D2C6"
+	{
+		"en"		"The Passing"
+	}
+	"L4D2C7"
+	{
+		"en"		"The Sacrifice"
+	}
+	"L4D2C8"
+	{
+		"en"		"No Mercy"
+	}
+	"L4D2C9"
+	{
+		"en"		"Crash Course"
+	}
+	"L4D2C10"
+	{
+		"en"		"Death Toll"
+	}
+	"L4D2C11"
+	{
+		"en"		"Dead Air"
+	}
+	"L4D2C12"
+	{
+		"en"		"Blood Harvest"
+	}
+	"L4D2C13"
+	{
+		"en"		"Cold Stream"
+	}
+	"L4D2C14"
+	{
+		"en"		"The Last Stand"
+	}
+	"Zengchengone"
+	{
+		"en"		"广州增城Lv7.3"
+	}
+	"2019"
+	{
+		"en"		"2019 (Anniversary Edition)"
+	}
+	"JTB2"
+	{
+		"en"		"Beldurra 2"
+	}
+	"bts"
+	{
+		"en"		"Back To School"
+	}
+	"CityOfTheDeadBeta"
+	{
+		"en"		"City of the Dead"
+	}
+	"City17l4d2"
+	{
+		"en"		"City 17 v3.2"
+	}
+	"crashbandicoot"
+	{
+		"en"		"Crash Bandicoot Course 2"
+	}
+	"Cure2"
+	{
+		"en"		"Cure 2"
+	}
+	"damitcomplete"
+	{
+		"en"		"Dam It Complete L4D2"
+	}
+	"darkwood"
+	{
+		"en"		"Dark Wood (Extended)"
+	}
+	"DayBreak"
+	{
+		"en"		"Day Break"
+	}
+	"deadvacation"
+	{
+		"en"		"Dead Vacation L4D2"
+	}
+	"deathaboard2"
+	{
+		"en"		"Death Aboard II"
+	}
+	"DevilMountain"
+	{
+		"en"		"Devil Mountain"
+	}
+	"Escansion"
+	{
+		"en"		"Escansion"
+	}
+	"escfromtoronto"
+	{
+		"en"		"Escape From Toronto L4D2"
+	}
+	"GettingOut"
+	{
+		"en"		"Gettingout"
+	}
+	"hauntedforest"
+	{
+		"en"		"Haunted Forest"
+	}
+	"Highway17L4D2"
+	{
+		"en"		"Half-Life 2: Highway 17(L4D2)"
+	}
+	"ihatemountains2"
+	{
+		"en"		"I Hate Mountains 2 (1.5)"
+	}
+	"JourneyToSplashMountain"
+	{
+		"en"		"Journey to Splash Mountain"
+	}
+	"Diescraper361"
+	{
+		"en"		"Diescraper Redux 3.61"
+	}
+	"One4Nine"
+	{
+		"en"		"One 4 Nine"
+	}
+	"TanksPlayground"
+	{
+		"en"		"Tanks Playground v3.0"
+	}
+	"YamaMSE"
+	{
+		"en"		"Yama"
+	}
+	"leftinprypiat"
+	{
+		"en"		"Left In Prypiat"
+	}
+	"LeftTurnSilentHill3"
+	{
+		"en"		"Left Turn Silent Hill 3"
+	}
+	"mic3"
+	{
+		"en"		"Military Industrial Complex III v666"
+	}
+	"necrovirusfacility"
+	{
+		"en"		"NecroVirus Facility"
+	}
+	"NightPresence"
+	{
+		"en"		"NightPresence"
+	}
+	"QuestionableEthicsAlphaTest"
+	{
+		"en"		"Questionable Ethics: Alpha test"
+	}
+	"re3"
+	{
+		"en"		"Resident Evil 3"
+	}
+	"SaltHellPark"
+	{
+		"en"		"SaltHell Park"
+	}
+	"shenmejb2"
+	{
+		"en"		"shenmejb2"
+	}
+	"ajsSilentFear"
+	{
+		"en"		"Silent Fear"
+	}
+	"shool"
+	{
+		"en"		"Silent Hill: Otherside of Life V4.7"
+	}
+	"TheHive"
+	{
+		"en"		"The Hive"
+	}
+	"ThereIsOnlyOneWay"
+	{
+		"en"		"There is only one way"
+	}
+	"undeadzone"
+	{
+		"en"		"The Undead Zone"
+	}
+	"WhiteForest"
+	{
+		"en"		"White Forest"
+	}
+}

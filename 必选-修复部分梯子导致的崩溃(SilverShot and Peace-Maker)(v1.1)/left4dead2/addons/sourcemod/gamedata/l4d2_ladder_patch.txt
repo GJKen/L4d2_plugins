@@ -1,0 +1,139 @@
+"Games"
+{
+	"left4dead2"
+	{
+		// Obsolete
+		"Functions"
+		{
+			"NavLadder::GetPosAtHeight"
+			{
+				"signature"		"NavLadder::GetPosAtHeight"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"address"
+				"arguments"
+				{
+					"a1"
+					{
+						"type"	"float"
+					}
+					"a2"
+					{
+						"type"	"float"
+					}
+				}
+			}
+		}
+
+		"Addresses"
+		{
+			"ChaseVictim::Update"
+			{
+				"linux"
+				{
+					"signature"	"ChaseVictim::Update"
+				}
+				"windows"
+				{
+					"signature"	"ChaseVictim::Update"
+				}
+			}
+
+			"InfectedFlee::Update"
+			{
+				"linux"
+				{
+					"signature"	"InfectedFlee::Update"
+				}
+				"windows"
+				{
+					"signature"	"InfectedFlee::Update"
+				}
+			}
+
+		}
+
+		"Offsets"
+		{
+			// Obsolete
+			"OS"
+			{
+				"linux"			"0"
+				"windows"		"1"
+			}
+
+			// Obsolete
+			"Crash_Offset"
+			{
+				"linux"			"24"
+				"windows"		"24"
+			}
+
+			// Obsolete
+			"Patch_Offset"
+			{
+				"linux"			"24"
+				"windows"		"67"
+			}
+
+			"Patch_ChaseVictim"
+			{
+				"linux"			"1502"
+				"windows"		"67"
+			}
+
+			"Patch_InfectedFlee"
+			{
+				"linux"			"301"
+				"windows"		"531"
+			}
+		}
+
+		"Signatures"
+		{
+			/* ChaseVictim::Update(ChaseVictim *this, Infected *, float) */
+			"ChaseVictim::Update"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11ChaseVictim6UpdateEP8Infectedf"
+				"windows"		"\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x56\x8D"
+				/* 8B ? 8B ? ? ? ? ? 8B ? FF ? 8B ? 8B ? 8B ? ? ? ? ? FF ? 56 8D */
+				/* Found via xref from the "AvoidNeighbors" function. Windows signature points next to the patch location midway through function */
+				/* Windows can also search for the string "Victim pointer is NULL" */
+			}
+
+			/* InfectedFlee::Update(InfectedFlee *this, Infected *, float) */
+			"InfectedFlee::Update"
+			{
+				"library"		"server"
+				"linux"			"@_ZN12InfectedFlee6UpdateEP8Infectedf"
+				"windows"		"\x55\x8B\x2A\x83\x2A\x2A\x53\x56\x8B\x2A\x2A\x8B\x2A\x57\x8B\x2A\x2A\x2A\x2A\x2A\x85"
+				/* 55 8B ? 83 ? ? 53 56 8B ? ? 8B ? 57 8B ? ? ? ? ? 85 */
+				/* Found via xref from the "AvoidNeighbors" function. Windows signature points next to the patch location midway through function */
+				/* Windows can also search for the string "Victim pointer is NULL" */
+			}
+
+			// Obsolete
+			/* AvoidNeighbors(Infected *, CBaseEntity *, PathFollower *) */
+			"AvoidNeighbors"
+			{
+				"library"		"server"
+				"linux"			"@_Z14AvoidNeighborsP8InfectedP11CBaseEntityP12PathFollower"
+				"windows"		"\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x56\x8D"
+				/* 8B ? 8B ? ? ? ? ? 8B ? FF ? 8B ? 8B ? 8B ? ? ? ? ? FF ? 56 8D */
+				/* Found via xref from the "NavLadder::GetPosAtHeight" function. Windows signature points next to the patch location midway through function */
+			}
+
+			// Obsolete
+			/* NavLadder::GetPosAtHeight(CNavLadder *this, float) */
+			"NavLadder::GetPosAtHeight"
+			{
+				"library"		"server"
+				"linux"			"@_ZNK10CNavLadder14GetPosAtHeightEf"
+				"windows"		"\x55\x8B\x2A\xF3\x0F\x2A\x2A\x2A\xF3\x0F\x2A\x2A\x2A\x0F\x2F\x2A\x76\x2A\x8B\x2A\x2A\x8B"
+				/* 55 8B ? F3 0F ? ? ? F3 0F ? ? ? 0F 2F ? 76 ? 8B ? ? 8B */
+				/* Found from crash offset in Accelerator */
+			}
+		}
+	}
+}

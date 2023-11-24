@@ -1,0 +1,29 @@
+"Games"
+{
+	"left4dead"
+	{
+		"Signatures"
+		{
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"	"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x8B\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+				"mac"		"@_ZN11CBasePlayer8SetModelEPKc"
+			}
+		}
+	}
+	"left4dead2"
+	{
+		"Signatures"
+		{
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"	"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x55\x8B\x2A\x8B\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x8B"
+				"mac"		"@_ZN11CBasePlayer8SetModelEPKc"
+			}
+		}
+	}
+}

@@ -1,0 +1,175 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"WindowsOrLinux" //Credit to Sammy-ROCK!
+			{
+				"windows" "1"   //Windows
+				"linux"   "2"   //Linux
+			}
+		}
+	}
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"WitchAttack::GetVictim"
+			{
+				"signature"	"WitchAttack::GetVictim"
+			}
+			"WitchAttack::OnStart"
+			{
+				"signature"	"WitchAttack::OnStart"
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"signature"	"WitchAttack::OnAnimationEvent"
+			}
+			"WitchAttack::Update"
+			{
+				"signature"	"WitchAttack::Update"
+			}
+		}
+		"Offsets"
+		{
+			"WitchAttack::GetVictim"
+			{
+				"linux"		"12"	//0x74 --> 0xEB
+				"windows"	"6"		//0x75 --> 0x90
+			}
+			"WitchAttack::OnStart"
+			{
+				"windows"	"76"	//0x75 --> 0x90
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"windows"	"17"	//0x75 --> 0x90
+			}
+			"WitchAttack::Update"
+			{
+				"windows"	"60"	//0x75 --> 0x90
+			}
+		}
+		"Signatures"
+		{
+			"WitchAttack::GetVictim"
+			{
+				/* WitchAttack::OnContact Location in win&nix*/
+				"library"		"server"
+				"linux"			"@_ZNK11WitchAttack9GetVictimEv"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\x03\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3"
+								/* ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? 03 ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 */
+			}
+			"WitchAttack::OnStart"
+			{
+				"library"		"server"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x15\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x87"
+								/* ? ? ? ? ? ? 8B 15 ? ? ? ? 53 56 57 8B ? ? 8B 87 */
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"library"		"server"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x38\x35\x75\x2A\x8B\x41\x38"
+								/* ? ? ? ? ? ? 83 38 35 75 ? 8B 41 ? 83 F8 08 ? ? 8B */
+			}
+			"WitchAttack::Update"
+			{
+				"library"		"server"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x87\x2A\x2A\x2A\x2A\x8B\x90\x2A\x2A\x2A\x2A\x81\xC7"
+								/* ? ? ? ? ? ? 53 56 57 8B ? ? 8B 87 ? ? ? ? 8B 90 ? ? ? ? 81 C7 */
+			}
+		}
+	}
+	"left4dead"
+	{
+		"Addresses"
+		{
+			"WitchAttack::GetVictim"
+			{
+				"signature"	"WitchAttack::GetVictim"
+			}
+			"WitchAttack::OnStart"
+			{
+				"signature"	"WitchAttack::OnStart"
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"signature"	"WitchAttack::OnAnimationEvent"
+			}
+			"WitchAttack::Update"
+			{
+				"signature"	"WitchAttack::Update"
+			}
+			"WitchAttack::OnContact"
+			{
+				"signature"	"WitchAttack::OnContact"
+			}
+		}
+		"Offsets"
+		{
+			"WitchAttack::GetVictim"
+			{
+				"linux"		"26"	//0x74 --> 0xEB
+				"windows"	"6"		//0x75 --> 0x90
+			}
+			"WitchAttack::OnStart"
+			{
+				"linux"		"77"	//0x0F --> 0xEB
+				"windows"	"69"	//0x75 --> 0x90
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"linux"		"78"	//0x75 --> 0x90
+				"windows"	"15"	//0x75 --> 0x90
+			}
+			"WitchAttack::Update"
+			{
+				"linux"		"74"	//0x04 --> 0x08
+				"windows"	"61"	//0x75 --> 0x90
+			}
+			"WitchAttack::OnContact"
+			{
+				"linux"		"235"	//0x0F --> 0x90
+			}
+		}
+		"Signatures"
+		{
+			/* WitchAttack::OnContact Location in win& linux seems to not use*/
+			"WitchAttack::GetVictim"
+			{
+				"library"		"server"
+				"linux"			"@_ZNK11WitchAttack9GetVictimEv"
+				"windows"		"\x8B\x41\x38\x83\xF8\x04\x2A\x2A\x8B\x41\x34\x83\xF8\xFF\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\xC8\x81\xE1\xFF\x0F\x00\x00\xC1\xE1\x04\x8D\x4C\x11\x04\xC1\xE8\x0C\x39\x41\x04\x75\x2A\x8B\x01\xC3"
+								/* 8B 41 38 83 F8 04 75 ? 8B 41 34 83 F8 FF 74 ? 8B 15 ? ? ? ? 8B C8 81 E1 FF 0F 00 00 C1 E1 04 8D 4C 11 04 C1 E8 0C 39 41 04 75 ? 8B 01 C3 */
+			}
+			"WitchAttack::OnStart"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11WitchAttack7OnStartEP8InfectedP6ActionIS0_E"
+				"windows"		"\x8B\x15\x2A\x2A\x2A\x2A\x83\xEC\x2C"
+								/* 8B 15 ? ? ? ? 83 EC 2C */
+			}
+			"WitchAttack::OnAnimationEvent"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11WitchAttack16OnAnimationEventEP8InfectedP11animevent_t"
+				"windows"		"\x8B\x44\x24\x0C\x83\x38\x2D\x75\x2A\x8B\x41\x38"
+								/* 8B 44 24 0C 83 38 2D 75 ? 8B 41 38 */
+			}
+			"WitchAttack::Update"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11WitchAttack6UpdateEP8Infectedf"
+				"windows"		"\x83\xEC\x20\x53\x55\x56\x8B\x74\x24\x34"
+								/* 83 EC 20 53 55 56 8B 74 24 34 */
+			}
+			"WitchAttack::OnContact"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11WitchAttack9OnContactEP8InfectedP11CBaseEntityP10CGameTrace"
+			}
+		}
+	}
+}

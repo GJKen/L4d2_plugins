@@ -1,0 +1,104 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			/**
+			 * This patch prevents marking survivors.
+			 * --
+			 * Example:
+			 * Reversed code of default behavior: pCharge->CCharge.m_hitSurvivors[pPlayer->CTerrorPlayer.m_survivorCharacter] = 1;
+			 * New behavior when patch is enabled: pCharge->CCharge.m_hitSurvivors[pPlayer->CTerrorPlayer.m_survivorCharacter] = 0;
+			 **/
+			"CCharge::HandleCustomCollision()::MarkSurvivor"
+			{
+				"signature"			"CCharge::HandleCustomCollision"
+				"linux"
+				{
+					"offset"		"333"
+					"verify"		"\x01"
+					"patch"			"\x00"
+					
+				}
+				"windows"
+				{
+					"offset"		"305"
+					"verify"		"\x01"
+					"patch"			"\x00"
+				}
+			}
+		}
+		"Functions"
+		{
+			"Lux::ThrowImpactedSurvivor"
+			{
+				"signature"		"ThrowImpactedSurvivor"
+				"callconv"		"cdecl"
+				"return"		"int"
+				"this"			"ignore"
+				"arguments"
+				{
+					"attacker"
+					{
+						"type"		"cbaseentity"
+					}
+					"victim"
+					{
+						"type"		"cbaseentity"
+					}
+					"charge_progress"
+					{
+						"type"		"float"
+					}
+					"should_damage"
+					{
+						"type"		"bool"
+					}
+				}
+			}
+		}
+		"Signatures"
+		{
+			/*
+			*	credit from here for sigs/remarks for finding or outdate sigs
+			*	https://github.com/SilvDev/Left4DHooks/blob/main/sourcemod/gamedata/left4dhooks.l4d2.txt
+			*	https://github.com/Psykotikism/L4D1-2_Signatures/blob/main/l4d2/gamedata/l4d2_signatures.txt
+			*/
+			
+			/*
+			 * CTerrorPlayer::Fling(Vector const&,PlayerAnimEvent_t,CBaseCombatCharacter *,float)
+			 *
+			 *	Vector: how target is supposed to fly, Animevent is "76" for chargerbounce, CBasePlayer is attacker, float is Incap Animation time
+			 *
+			 *	Find via CCharge::HandleCustomCollision (strings) -> ThrowImpactedSurvivor (strings, structure) -> Fling (feel it out)
+			 *
+			 */
+			"CCharge::HandleCustomCollision"
+			{
+				"library"		"server"
+				"linux"			"@_ZN7CCharge21HandleCustomCollisionEP11CBaseEntityRK6VectorS4_P10CGameTraceP9CMoveData"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x8B\x2A\x2A\x53\x8B\x2A\x89\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x56\x8B"
+								/* ? ? ? ? ? ? ? ? ? ? ? ? ? ? 33 ? 89 ? ? 8B ? ? 53 8B ? 89 ? ? 8B ? ? ? ? ? 56 8B */
+			}
+			/*
+			*	ThrowImpactedSurvivor(CTerrorPlayer *, CTerrorPlayer *, float, bool)
+			*	Search: "charger_impact"
+			*/
+			"ThrowImpactedSurvivor"
+			{
+				"library"		"server"
+				"linux"			"@_Z21ThrowImpactedSurvivorP13CTerrorPlayerS0_fb"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x2A\x2A\x74\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B"
+				/* ? ? ? ? ? ? 53 56 57 8B ? ? 8B ? ? ? ? ? C1 ? ? ? ? 74 ? ? ? ? ? ? ? ? 8B ? ? ? ? ? 8B */
+			}
+			"CBaseEntity::SetAbsVelocity"
+			{
+				"library"		"server"
+				"linux"			"@_ZN11CBaseEntity14SetAbsVelocityERK6Vector"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x75\x08\xF3\x0F\x10\x06\x57\x8B\xF9"
+								/* ? ? ? ? ? ? 56 8B 75 08 F3 0F 10 06 57 8B F9 */
+			}
+		}
+	}
+}

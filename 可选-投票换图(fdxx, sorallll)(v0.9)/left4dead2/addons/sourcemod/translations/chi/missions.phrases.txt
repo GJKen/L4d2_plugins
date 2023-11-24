@@ -1,0 +1,739 @@
+"Phrases"
+{
+	"L4D2C1"
+	{
+		"chi"		"死亡中心(Dead Center)"
+	}
+	"L4D2C2"
+	{
+		"chi"		"黑色狂欢节(Dark Carnival)"
+	}
+	"L4D2C3"
+	{
+		"chi"		"沼泽激战(Swamp Fever)"
+	}
+	"L4D2C4"
+	{
+		"chi"		"暴风骤雨(Hard Rain)"
+	}
+	"L4D2C5"
+	{
+		"chi"		"教区(The Parish)"
+	}
+	"L4D2C6"
+	{
+		"chi"		"短暂时刻(The Passing)"
+	}
+	"L4D2C7"
+	{
+		"chi"		"牺牲(The Sacrifice)"
+	}
+	"L4D2C8"
+	{
+		"chi"		"毫不留情(No Mercy)"
+	}
+	"L4D2C9"
+	{
+		"chi"		"坠机险途(Crash Course)"
+	}
+	"L4D2C10"
+	{
+		"chi"		"死亡丧钟(Death Toll)"
+	}
+	"L4D2C11"
+	{
+		"chi"		"静寂时分(Dead Air)"
+	}
+	"L4D2C12"
+	{
+		"chi"		"血腥收获(Blood Harvest)"
+	}
+	"L4D2C13"
+	{
+		"chi"		"刺骨寒溪(Cold Stream)"
+	}
+	"L4D2C14"
+	{
+		"chi"		"临死一搏(The Last Stand)"
+	}
+	"QuestionableEthics"
+	{
+		"chi"		"伦理问题(Questionable Ethics)"
+	}
+	"QuestionableEthicsAlphaTest"
+	{
+		"chi"		"伦理问题2(Questionable Ethics: Alpha test)"
+	}
+	"TanksPlayground"
+	{
+		"chi"		"坦克游乐场"
+	}
+	"WhiteForest"
+	{
+		"chi"		"白森林(White Forest)v3"
+	}
+	"YamaMSE"
+	{
+		"chi"		"摩耶山危机(Yama)v3"
+	}
+	"ddntr1"
+	{
+		"chi"		"死亡陷阱"
+	}
+	"Diescraper36"
+	{
+		"chi"		"喋血蜃楼"
+	}
+	"SaltHellPark"
+	{
+		"chi"		"盐井地狱公园"
+	}
+	"TheBloodyMoors"
+	{
+		"chi"		"血腥荒野(The Bloody Moors)"
+	}
+	"FarewellChenming"
+	{
+		"chi"		"再见了晨茗(Farewell Chenming)v4"
+	}
+	"darkwood"
+	{
+		"chi"		"阴暗森林(Dark Wood)"
+	}
+	"DevilMountain"
+	{
+		"chi"		"魔鬼山"
+	}
+	"Fallen"
+	{
+		"chi"		"坠落"
+	}
+	"Cure2"
+	{
+		"chi"		"治愈2"
+	}
+	"deadvacation2"
+	{
+		"chi"		"死亡度假2"
+	}
+	"Derailed"
+	{
+		"chi"		"脱轨"
+	}
+	"hauntedforest"
+	{
+		"chi"		"闹鬼森林(Haunted Forest)"
+	}
+	"TheCure"
+	{
+		"chi"		"治愈"
+	}
+	"2evileyes"
+	{
+		"chi"		"双邪眼"
+	}
+	"BloodTracks"
+	{
+		"chi"		"血迹(Blood Tracks)"
+	}
+	"drdegov21"
+	{
+		"chi"		"暴毙峡谷"
+	}
+	"DeadSeries"
+	{
+		"chi"		"连续死亡(Dead Series)"
+	}
+	"HighwayToHell"
+	{
+		"chi"		"地狱之路"
+	}
+	"ihatemountains2"
+	{
+		"chi"		"我恨山(I Hate Mountains)2 v1.5"
+	}
+	"JourneyToSplashMountain"
+	{
+		"chi"		"飞溅山之旅"
+	}
+	"undeadzone"
+	{
+		"chi"		"亡灵区"
+	}
+	"Zengchengone"
+	{
+		"chi"		"广州增城7.3"
+	}
+	"Zengcheng"
+	{
+		"chi"		"广州增城5.12(怀旧用)"
+	}
+	"2019"
+	{
+		"chi"		"2019周年纪念版(Anniversary Edition)"
+	}
+	"JTB2"
+	{
+		"chi"		"恐惧2"
+	}
+	"bts"
+	{
+		"chi"		"返回学校(Back To School)v1.06"
+	}
+	"CityOfTheDeadBeta"
+	{
+		"chi"		"死亡之城"
+	}
+	"City17l4d2"
+	{
+		"chi"		"17号城市(City 17)"
+	}
+	"crashbandicoot"
+	{
+		"chi"		"崩溃的博士2"
+	}
+	"damitcomplete"
+	{
+		"chi"		"大坝 完整版(Dam It Complete)"
+	}
+	"DayBreak"
+	{
+		"chi"		"破晓(Day Break)"
+	}
+	"deadvacation"
+	{
+		"chi"		"死亡度假"
+	}
+	"deathaboard2"
+	{
+		"chi"		"死船(Death Aboard)2"
+	}
+	"Escansion"
+	{
+		"chi"		"Escansion"
+	}
+	"escfromtoronto"
+	{
+		"chi"		"逃离多伦多"
+	}
+	"GettingOut"
+	{
+		"chi"		"Gettingout"
+	}
+	"Highway17L4D2"
+	{
+		"chi"		"半条命 2: 17号高速路"
+	}
+	"Diescraper361"
+	{
+		"chi"		"喋血蜃楼 3.61"
+	}
+	"One4Nine"
+	{
+		"chi"		"One 4 Nine"
+	}
+	"leftinprypiat"
+	{
+		"chi"		"逃离普里皮亚季(Left In Prypiat)v1.4"
+	}
+	"LeftTurnSilentHill3"
+	{
+		"chi"		"重回寂静岭3"
+	}
+	"mic3"
+	{
+		"chi"		"军事工厂(Military Industrial Complex)III v666"
+	}
+	"necrovirusfacility"
+	{
+		"chi"		"NecroVirus Facility"
+	}
+	"NightPresence"
+	{
+		"chi"		"夜幕降临"
+	}
+	"re3"
+	{
+		"chi"		"生化危机3"
+	}
+	"shenmejb2"
+	{
+		"chi"		"什么寄吧2"
+	}
+	"ajsSilentFear"
+	{
+		"chi"		"深度恐惧"
+	}
+	"shool"
+	{
+		"chi"		"寂静岭: 另一边的生活 V4.7"
+	}
+	"TheHive"
+	{
+		"chi"		"蜂巢(TheHive)"
+	}
+	"ThereIsOnlyOneWay"
+	{
+		"chi"		"只此一路"
+	}
+	"pdm"
+	{
+		"chi"		"平顶山研究所(Pitch Dark Mesa)v4"
+	}
+	"bpls1"
+	{
+		"chi"		"死路(Blight Path)"
+	}
+	"BuriedDeep"
+	{
+		"chi"		"深埋(Buried Deep)v1.8"
+	}
+	"buenosaires"
+	{
+		"chi"		"布宜诺斯艾利斯(Cambalache - Buenos Aires)1"
+	}
+	"buenosaires2"
+	{
+		"chi"		"布宜诺斯艾利斯(Cambalache - Buenos Aires)2"
+	}
+	"DarkCarnivalRemix"
+	{
+		"chi"		"黑色狂欢节 Remix(Dark Carnival Remix)"
+	}
+	"HardRainLegoTown"
+	{
+		"chi"		"暴风骤雨-乐高版(Hard Rain - LegoTown)"
+	}
+	"deadlyending"
+	{
+		"chi"		"致命结局(Deadly Ending by The Devil and Rebel)v3"
+	}
+	"eye"
+	{
+		"chi"		"异度神召(Divine Cybermancy)"
+	}
+	"dotl"
+	{
+		"chi"		"消逝的光(Dying of the Light)"
+	}
+	"fallindeath"
+	{
+		"chi"		"坠入死亡(Fall in Death)v1.12"
+	}
+	"fallenfortresspublic"
+	{
+		"chi"		"坠落堡垒(Fallen Fortress)"
+	}
+	"red"
+	{
+		"chi"		"救赎(Redemption)II"
+	}
+	"L4D2soi"
+	{
+		"chi"		"病源(Source of Infection)"
+	}
+	"soitimelordsver"
+	{
+		"chi"		"病源(Source of Infection Timelords Ver)Fix v5"
+	}
+	"SprawlingTerror"
+	{
+		"chi"		"恐惧蔓延(Sprawling Terror)"
+	}
+	"TimeKHMC"
+	{
+		"chi"		"死期将至(Time to Die)"
+	}
+	"tot"
+	{
+		"chi"		"恐怖之旅(Tour of Terror)"
+	}
+	"urbanflight"
+	{
+		"chi"		"城市航班(Urban Flight)"
+	}
+	"VC2xy6"
+	{
+		"chi"		"维也纳的呼唤(Vienna Calling)2"
+	}
+	"VC1ub5"
+	{
+		"chi"		"维也纳的呼唤(Vienna Calling)1"
+	}
+	"WelcometoHell"
+	{
+		"chi"		"欢迎来到地狱(Welcome to Hell)"
+	}
+	"BlueHeaven"
+	{
+		"chi"		"蓝色天堂(Blue Heaven)"
+	}
+	"infernocity"
+	{
+		"chi"		"地狱城市(Inferno City)"
+	}
+	"suicideblitz2"
+	{
+		"chi"		"闪电突袭(Suicide Blitz)2"
+	}
+	"bloodysunday"
+	{
+		"chi"		"血腥星期日(Bloody Sunday)2"
+	}
+	"yichangshi"
+	{
+		"chi"		"宜昌市(YC City)5.01"
+	}
+	"LastBaktun"
+	{
+		"chi"		"最后的骑士(Last Baktun)"
+	}
+	"kaoming"
+	{
+		"chi"		"尻名山(kaoming)"
+	}
+	"bjrtc2"
+	{
+		"chi"		"阴霾将至(The Hazing0"
+	}
+	"drmalroysabsolution"
+	{
+		"chi"		"马尔罗伊博士的赦免(Dr. Malroy's Absolution)v3"
+	}
+	"l4d1malroysabsolution"
+	{
+		"chi"		"马尔罗伊博士的赦免(Dr. Malroy's Absolution) L4D1"
+	}
+	"templeruins"
+	{
+		"chi"		"寺庙遗址(Temple Ruins)v1"
+	}
+	"DeadGetway"
+	{
+		"chi"		"死亡逃脱(Dead Getaway)v1"
+	}
+	"OttawaRockCity"
+	{
+		"chi"		"渥太华岩城(Ottawa Rock City)v2.1"
+	}
+	"TrueFangShi"
+	{
+		"chi"		"真方氏(True FangShi)"
+	}
+	"CoaldbloodExt"
+	{
+		"chi"		"血腥煤矿(Coal'd Blood2 Extended)"
+	}
+	"bigwat"
+	{
+		"chi"		"大佛寺(Big Wat)v1"
+	}
+	"naniwacity"
+	{
+		"chi"		"感染大阪(Naniwa City)2 Fix"
+	}
+	"echo"
+	{
+		"chi"		"死亡回声2重制版"
+	}
+	"Outbreak"
+	{
+		"chi"		"生化危机：爆发"
+	}
+	"derailed2"
+	{
+		"chi"		"脱轨(Derailed)2"
+	}
+	"cpoop"
+	{
+		"chi"		"诺兰传奇(The Real Epic Nolan Saga)"
+	}
+	"Ruins"
+	{
+		"chi"		"废墟(Ruins)"
+	}
+	"qiuming"
+	{
+		"chi"		"秋名市(Qiuming City)"
+	}
+	"bdur"
+	{
+		"chi"		"燃烧之下(Burning Down Under Redux)"
+	}
+	"CrashBandicootL4D2"
+	{
+		"chi"		"崩溃的博士(Crash Bandicoot - 2020 Remaster)1"
+	}
+	"l4d2CrashBandicoot2"
+	{
+		"chi"		"崩溃的博士(Crash Bandicoot Course)2"
+	}
+	"Atour"
+	{
+		"chi"		"异世界之旅(Mysterious World Tour)v2"
+	}
+	"toonrun"
+	{
+		"chi"		"卡通奔跑(Left 4 Toonrun)"
+	}
+	"metalslug54level"
+	{
+		"chi"		"metalslug5(4level)"
+	}
+	"Innards2"
+	{
+		"chi"		"内部结构(Innards)2"
+	}
+	"LockdownChapterTwo"
+	{
+		"chi"		"封锁(Lockdown: Chapter Two)2"
+	}
+	"hehe30"
+	{
+		"chi"		"hehe30"
+	}
+	"sunrisecarnival"
+	{
+		"chi"		"白色狂欢节(Sunrise Carnival)"
+	}
+	"fosremake"
+	{
+		"chi"		"生还之锋 重制版(Front Of Survivors_Remake)v6"
+	}
+	"adammission"
+	{
+		"chi"		"大坝的使命(A Dam Mission)"
+	}
+	"warcelona"
+	{
+		"chi"		"巴塞罗那(Warcelona)"
+	}
+	"LastBreath"
+	{
+		"chi"		"最后的呼吸(Last Breath)"
+	}
+	"DeadStreet2"
+	{
+		"chi"		"死亡街道(Dead Street)2"
+	}
+	"RedTide"
+	{
+		"chi"		"赤潮(Red Tide)"
+	}
+	"Outline"
+	{
+		"chi"		"跨越边境(Outline)"
+	}
+	"SuicideBlitzL4D1port"
+	{
+		"chi"		"闪电突袭(Suicide Blitz L4D1 Port)"
+	}
+	"CarnageFinal"
+	{
+		"chi"		"大屠杀决赛(Carnage Final)"
+	}
+	"LastNight"
+	{
+		"chi"		"昨晚(Last Night)v1.3"
+	}
+	"hllostcoast"
+	{
+		"chi"		"失落的海岸(The Lost Coast)"
+	}
+	"Chernobyl"
+	{
+		"chi"		"切诺尔贝利-gamemaps(Chernobyl: Chapter One)"
+	}
+	"Outrun"
+	{
+		"chi"		"超越(Outrun)"
+	}
+	"InfectedCity"
+	{
+		"chi"		"感染之城(Infected City)"
+	}
+	"7HoursLaterII"
+	{
+		"chi"		"7小时之后(7 Hours Later)II"
+	}
+	"OrangeOnslaught"
+	{
+		"chi"		"橙色冲击(Orange Onslaught)"
+	}
+	"Simplicity"
+	{
+		"chi"		"简约(Simplicity)"
+	}
+	"quedan"
+	{
+		"chi"		"Quedan 4X Morir L4D2"
+	}
+	"rkls"
+	{
+		"chi"		"公路杀手(Roadkill)"
+	}
+	"kickedout"
+	{
+		"chi"		"踢出!!!(Kicked!!! Out!!)"
+	}
+	"BlackMesaFallout"
+	{
+		"chi"		"黑色起源:辐射(BLACK MESA: FALLOUTS)"
+	}
+	"ProjectDreams"
+	{
+		"chi"		"梦想计划(Project: Dreams)"
+	}
+	"fallenport"
+	{
+		"chi"		"坠落(Fallen)"
+	}
+	"countryroadsnc"
+	{
+		"chi"		"乡村小路Country Roads NC Mashup:Fixed)"
+	}
+	"MontrealGoneToHell"
+	{
+		"chi"		"蒙特利尔的沦陷(MTL Gone To Hell)1.28"
+	}
+	"jiugongchang"
+	{
+		"chi"		"九死一生之小女孩的梦境v2.6"
+	}
+	"deathsummer"
+	{
+		"chi"		"死亡夏日(Death Summer)"
+	}
+	"BlueHeavenLongVersion"
+	{
+		"chi"		"蓝色天堂(加长版)"
+	}
+	"BeJustRoundTheCorner"
+	{
+		"chi"		"指日可待(Be Just Round the Corner)"
+	}
+	"diescreaming"
+	{
+		"chi"		"死亡尖叫(Die Screaming)II"
+	}
+	"Venissia"
+	{
+		"chi"		"威尼西亚(Venissia)"
+	}
+	"OpenRoadICSX"
+	{
+		"chi"		"开放公路(Open Road)"
+	}
+	"DeadCenterRebirthFIX"
+	{
+		"chi"		"死亡中心:重生(Dead Center: Rebirth)"
+	}
+	"dbd2dc"
+	{
+		"chi"		"活死人黎明:导演版(Dead Before Dawn DC)"
+	}
+	"detourahead"
+	{
+		"chi"		"$DetourAhead_Title"
+	}
+	"drmalroyfirstencounter"
+	{
+		"chi"		"Dr. Malroy: The First Encounter"
+	}
+	"drmalroy"
+	{
+		"chi"		"Dr. Malroy's Laboratory"
+	}
+	"Diescraper362"
+	{
+		"chi"		"Diescraper Redux 3.62"
+	}
+	"Diescraper362VS"
+	{
+		"chi"		"Diescraper Redux 3.62"
+	}
+	"BeginningtoCrossover"
+	{
+		"chi"		"Beginning to Cross Over"
+	}
+	"DT1TheGunslinger"
+	{
+		"chi"		"Dark Tower 1 The Gunslinger (1.99)"
+	}
+	"TheMission"
+	{
+		"chi"		"TheMission"
+	}
+	"IRRXmasEd"
+	{
+		"chi"		"Innes Road Rash Christmas Edition 1.1"
+	}
+	"UrbanDisaster"
+	{
+		"chi"		"Urban Disaster (1.0)"
+	}
+	"NoFate"
+	{
+		"chi"		"No Fate"
+	}
+	"riptide"
+	{
+		"chi"		"Riptide"
+	}
+	"complexcourseR"
+	{
+		"chi"		"Complex Course"
+	}
+	"deadspace"
+	{
+		"chi"		"死亡空间"
+	}
+	"Chapter2"
+	{
+		"chi"		"Nowhare Is Safe - Chapter 2"
+	}
+	"Blightmare"
+	{
+		"chi"		"Blightmare"
+	}
+	"burningnight"
+	{
+		"chi"		"Burning Night"
+	}
+	"energycrisis"
+	{
+		"chi"		"Energy Crisis"
+	}
+	"GGZact1"
+	{
+		"chi"		"Green Grove Zone"
+	}
+	"Beldurra"
+	{
+		"chi"		"Beldurra"
+	}
+	"DeadAirDaytime"
+	{
+		"chi"		"Dead Air Daytime"
+	}
+	"darkblood2"
+	{
+		"chi"		"Dark Blood 2"
+	}
+	"hopeless"
+	{
+		"chi"		"Hopeless"
+	}
+	"atthegloaming2feitu"
+	{
+		"chi"		"atthegloaming2feitu"
+	}
+	"FeetUnder"
+	{
+		"chi"		"10,000 Feet Under"
+	}
+	"gloomtown"
+	{
+		"chi"		"Gloom Town"
+	}
+}

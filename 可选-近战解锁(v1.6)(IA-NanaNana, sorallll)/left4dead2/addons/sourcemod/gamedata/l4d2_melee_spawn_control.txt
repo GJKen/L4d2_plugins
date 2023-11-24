@@ -1,0 +1,95 @@
+"Games"
+{
+    "left4dead2"
+    {
+		"Functions"
+		{
+			"DD::CMeleeWeaponInfoStore::LoadScripts"
+			{
+				"signature"	"CMeleeWeaponInfoStore::LoadScripts"
+				"callconv"	"thiscall"
+				"return"	"int"
+				"this"		"address"
+				"arguments"
+				{
+					"a1"
+					{
+						"type"	"int"
+					}
+				}
+			}
+
+			"DD::CDirectorItemManager::IsMeleeWeaponAllowedToExist"
+			{
+				"signature"	"CDirectorItemManager::IsMeleeWeaponAllowedToExist"
+				"callconv"	"thiscall"
+				"return"	"int"
+				"this"		"address"
+				"arguments"
+				{
+					"wscript_name"
+					{
+						"type"	"charptr"
+					}
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			/* CMeleeWeaponInfoStore::LoadScripts(CMeleeWeaponInfoStore *__hidden this, bool) */
+			"CMeleeWeaponInfoStore::LoadScripts"
+			{
+				"library"	"server"
+				"linux"		"@_ZN21CMeleeWeaponInfoStore11LoadScriptsEb"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x89\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x33"
+				/* ? ? ? ? ? ? 53 56 57 89 ? ? E8 ? ? ? ? 33 */
+			}
+	
+			/* CDirectorItemManager::IsMeleeWeaponAllowedToExist(CDirectorItemManager *__hidden this, const char *) */
+			"CDirectorItemManager::IsMeleeWeaponAllowedToExist"
+			{
+				"library"	"server"
+				"linux"		"@_ZN20CDirectorItemManager27IsMeleeWeaponAllowedToExistEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\xFF\x2A\x84\x2A\x75\x2A\x8B\x2A\x2A\x6A"
+				/* ? ? ? ? ? ? ? ? ? 8B ? 8B 90 ? ? ? ? FF ? 84 ? 75 ? 8B ? ? 6A */
+			}
+
+			/* KeyValues::GetString(KeyValues *__hidden this, const char *, const char *) */
+			"KeyValues::GetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9GetStringEPKcS1_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x8B\x2A\x2A\x56\x57\x6A\x2A\x53\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x2A\x48\x83\x2A\x2A\x0F\x87\x2A\x2A\x2A\x2A\xFF\x24\x2A\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x83\x2A\x2A\xDD\x2A\x2A\x68"
+				/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 8B ? ? 56 57 6A ? 53 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 0F ? ? ? 48 83 ? ? 0F 87 ? ? ? ? FF 24 ? ? ? ? ? D9 ? ? 83 ? ? DD ? ? 68 */
+			}
+
+			/* KeyValues::SetString(KeyValues *__hidden this, const char *s, const char *) */
+			"KeyValues::SetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9SetStringEPKcS1_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x53\x57\x51\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x52\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x83\x2A\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\xBB\x2A\x2A\x2A\x2A\x53"
+				/* ? ? ? ? ? ? 56 6A ? 50 E8 ? ? ? ? 8B ? 85 ? 74 ? 8B ? ? 53 57 51 E8 ? ? ? ? 8B ? ? 52 E8 ? ? ? ? 8B ? ? 83 ? ? C7 46 ? ? ? ? ? 85 ? 75 ? BB ? ? ? ? 53 */
+			}
+
+			/* CTerrorGameRules::GetMissionInfo(CTerrorGameRules *__hidden this) */
+			"CTerrorGameRules::GetMissionInfo"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14GetMissionInfoEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x75\x2A\x5E"
+				/* ? ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? 56 FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? 5E */
+			}
+
+			/* CTerrorGameRules::GetMissionFirstMap(KeyValues **) */
+			"CTerrorGameRules::GetMissionFirstMap"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules18GetMissionFirstMapEPP9KeyValues"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\xC7\x07\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x75\x2A\x5F\x5E\x5D\xC3\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x57\x56\xFF\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\x8B"
+				/* ? ? ? ? ? ? ? ? 85 ? 74 ? C7 07 ? ? ? ? 8B 0D ? ? ? ? 8B ? 8B ? ? FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? 5F 5E 5D C3 8B 0D ? ? ? ? 8B ? 8B ? ? 57 56 FF ? 6A ? 68 ? ? ? ? 8B ? 8B */
+			}
+		}
+	}
+}

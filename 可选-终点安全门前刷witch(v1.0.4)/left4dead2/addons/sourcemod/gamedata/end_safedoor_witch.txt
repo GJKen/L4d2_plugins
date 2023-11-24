@@ -1,0 +1,21 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Offsets"
+		{
+			/* CPropDoorRotatingCheckpoint::IsCheckpointDoor(CPropDoorRotatingCheckpoint *__hidden this) */
+			"CPropDoorRotatingCheckpoint::IsCheckpointDoor"
+			{
+				"linux"		"286"
+				"windows"	"238"
+			}
+			/* CPropDoorRotatingCheckpoint::IsCheckpointExitDoor(CPropDoorRotatingCheckpoint *__hidden this) */
+			"CPropDoorRotatingCheckpoint::IsCheckpointExitDoor"
+			{
+				"linux"		"287"
+				"windows"	"239"
+			}
+		}
+	}
+}

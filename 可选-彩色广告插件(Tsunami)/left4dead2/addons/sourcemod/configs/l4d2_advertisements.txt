@@ -1,0 +1,38 @@
+"Advertisements"
+{
+	"1"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[AD]{TEAM}欢迎加入玩家联机Q群:{GREEN}735468034"
+	}
+	"2"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[AD]{TEAM}超多三方图任你选择,快来加Q群吧!{GREEN}735468034"
+	}
+	"3"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[AD]{TEAM}欢迎加入玩家联机Q群!{GREEN}735468034"
+	}
+	"4"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[AD]{TEAM}超多三方图任你选择,快来加Q群吧!{GREEN}735468034"
+	}
+	"5"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[杂鱼]{TEAM}本服难度压力大,打不过建议退出!{GREEN}Q群:735468034"
+	}
+	"6"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[杂鱼]{TEAM}本服难度压力大,打不过建议退出!{GREEN}Q群:735468034"
+	}
+	"6"
+	{
+		"type"	"S"
+		"text"	"{GREEN}[tips]{TEAM}本服为特感速递,人越多越难打,人少逛街~{GREEN}Q群:735468034"
+	}
+}

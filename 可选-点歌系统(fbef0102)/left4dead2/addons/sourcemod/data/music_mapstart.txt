@@ -1,0 +1,13 @@
+TS_SERVER/LuckyStar_OP.mp3 TAG- LuckyStar_OP
+TS_SERVER/Magia.mp3 TAG- Magia(魔法少女小圆ED)
+TS_SERVER/Connect.mp3 TAG- コネクト(魔法少女小圆OP)
+TS_SERVER/CallofSilence.mp3 TAG- 澤野弘之 - Call of Silence
+TS_SERVER/Pios.mp3 TAG- 小林未郁 - βios
+TS_SERVER/aLIEz_binaural_ver.mp3 TAG- 小緣 - aLIEz(双声道版)
+TS_SERVER/Blumenkranz.mp3 TAG- Blumenkranz
+TS_SERVER/Hacking_to_the_Gate.mp3 TAG- Hacking to the Gate
+TS_SERVER/Hello_world.mp3 TAG- Hello world!
+TS_SERVER/Keep_on_keeping_on.mp3 TAG- 澤野弘之 - Keep on keeping on
+TS_SERVER/STYX_HELIX.mp3 TAG- STYX HELIX
+TS_SERVER/Vogel_im_Kafig.mp3 TAG- 澤野弘之,Cyua - Vogel im Kafig
+TS_SERVER/YouSeeBIGGIRL_T_T.mp3 TAG- 泽野弘之 - YouSeeBIGGIRL T T

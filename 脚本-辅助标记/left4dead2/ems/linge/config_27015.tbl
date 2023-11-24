@@ -1,0 +1,34 @@
+{
+	Admin = {
+		takeOverAdminSystem = false
+		enabled = true
+		adminsFile = "linge/admins_simple.ini"
+	}
+	Hint = {
+		ping = {
+			emptySpace = true
+			duration = 12
+			weaponMessage = true
+		}
+		deadHint = true
+		offscreenShow = true
+		help = {
+			dominateDelay = 0
+			duration = 15
+			charger = "被牛牛顶了"
+			dying = "黑白要嗝屁了"
+			incap = "躺平了"
+			ledge = "想不开了"
+			smoker = "被捆绑Play"
+			jockey = "被当马骑"
+			hunter = "被骑乘位"
+		}
+		limit = 4
+		deadChat = "你们不准抢我的我的圣遗物"
+	}
+	Base = {
+		isShowTeamChange = false
+		recordPlayerInfo = false
+	}
+}
+ 

@@ -1,0 +1,105 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Functions"
+		{
+			"CItemDefibrillator::OnActionComplete"
+			{
+				"offset"		"CItemDefibrillator::OnActionComplete"
+				"hooktype"		"entity"
+				"return"		"int"
+				"this"			"ignore"
+				"arguments"
+				{
+					"Reviver"
+					{
+						"type"	"cbaseentity"
+					}
+					"DeathModel"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+			"CItemDefibrillator::OnStartAction"
+			{
+				"offset"		"CItemDefibrillator::OnStartAction"
+				"hooktype"		"entity"
+				"return"		"int"
+				"this"			"ignore"
+				"arguments"
+				{
+					"BackpackItemActionType"
+					{
+						type	"int"
+					}
+					"Reviver"
+					{
+						"type"	"cbaseentity"
+					}
+					"DeathModel"
+					{
+						"type"	"cbaseentity"
+					}
+					"somefloat"
+					{
+						"type"	"float"
+					}
+				}
+			}
+			"CTerrorPlayer::GetPlayerByCharacter"
+			{
+				"signature"		"CTerrorPlayer::GetPlayerByCharacter"
+				"callconv"		"cdecl"
+				"return"		"cbaseentity"
+				"this"			"ignore"
+				"arguments"
+				{
+					"CharacterIndex"
+					{
+						"type"	"int"
+					}
+				}
+			}
+			"CSurvivorDeathModel::Create"
+			{
+				"signature"		"CSurvivorDeathModel::Create"
+				"callconv"		"thiscall"
+				"return"		"cbaseentity"
+				"this"			"entity"
+			}
+		}
+		"Offsets"
+		{
+			"CItemDefibrillator::OnActionComplete"
+			{
+				"linux"		"456"
+				"windows"	"454"
+			}
+			"CItemDefibrillator::OnStartAction"
+			{
+				"linux"		"451"
+				"windows"	"449"
+			}
+		}
+		"Signatures"
+		{
+			"CTerrorPlayer::GetPlayerByCharacter"
+			{
+				"library"		"server"
+				"linux"			"@_ZN13CTerrorPlayer20GetPlayerByCharacterE21SurvivorCharacterType"
+				"windows"		"\x55\x8B\xEC\x8B\x45\x08\x83\xEC\x08\x83\xF8\x08"
+								/* 55 8B EC 8B 45 08 83 EC 08 83 F8 08 */
+			}
+			"CSurvivorDeathModel::Create"
+			{
+				"library"		"server"
+				"linux"			"@_ZN19CSurvivorDeathModel6CreateEP13CTerrorPlayer"
+				"windows"		"\x55\x8B\xEC\x57\x8B\x7D\x08\x85\xFF\x75\x2A\x33\xC0\x5F\x5D\xC3\x8B\x87\x38\x01\x00\x00"
+								/* 55 8B EC 57 8B 7D 08 85 FF 75 ? 33 C0 5F 5D C3 8B 87 38 01 00 00 */
+			}
+		}
+	}
+}
+//some gamedata from here https://github.com/Satanic-Spirit/defib-fix/blob/master/defibfix.txt credit to whoever 

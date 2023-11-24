@@ -1,0 +1,276 @@
+// Many thanks to Psykotikism for sharing the Windows signature (https://github.com/Psykotikism/L4D1-2_Signatures)
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"OS"
+			{
+				"linux"		"1"
+				"windows"	"0"
+			}
+		}
+	}
+
+	"left4dead2"
+    {
+		"Functions"
+		{
+			"DD::CTerrorPlayer::GoAwayFromKeyboard"
+			{
+				"signature"	"CTerrorPlayer::GoAwayFromKeyboard"
+				"callconv"	"thiscall"
+				"return"	"void"
+				"this"		"entity"
+			}
+
+			"DD::SurvivorBot::SetHumanSpectator"
+			{
+				"signature"	"SurvivorBot::SetHumanSpectator"
+				"callconv"	"thiscall"
+				"return"	"void"
+				"this"		"entity"
+				"arguments"
+				{
+					"AFKPlayer"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+
+			"DD::CBasePlayer::SetModel"
+			{
+				"signature"	"CBasePlayer::SetModel"
+				"callconv"	"thiscall"
+				"return"	"void"
+				"this"		"entity"
+				"arguments"
+				{
+					"modelname"
+					{
+						"type"	"charptr"
+					}
+				}
+			}
+
+			"DD::CTerrorPlayer::GiveDefaultItems"
+			{
+				"signature"	"CTerrorPlayer::GiveDefaultItems"
+				"callconv"	"thiscall"
+				"return"	"void"
+				"this"		"entity"
+			}
+		}
+		
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"linux"
+				{
+					"signature"	"TheDirector"
+				}
+				"windows"
+				{
+					"signature"	"CDirectorMusicBanks::OnRoundStart"
+					"read"		"12"
+				}
+				"read"	"0"
+			}
+
+			"SavedSurvivorBotsCount"
+			{
+				"linux"
+				{
+					"signature"	"RestoreTransitionedSurvivorBots"
+					"read"		"57"
+				}
+				"windows"
+				{
+					"signature"	"RestoreTransitionedSurvivorBots"
+					"read"		"53"
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			"RoundRespawn_Offset"
+			{
+				"linux"		"25" // 0x19
+				"windows"	"15" // 0xF
+			}
+
+			"RoundRespawn_Byte" // JNZ => JMP rel8
+			{
+				"linux"		"117" // 0x75
+				"windows"	"117" // 0x75
+			}
+
+			/* CTerrorPlayer::RestoreWeapons(CTerrorPlayer *__hidden this) */
+			"m_hWeaponHandle"
+			{
+				"linux"		"16272"
+				"windows"	"16292"
+			}
+
+			/* CTerrorPlayer::RestoreWeapons(CTerrorPlayer *__hidden this) */
+			"m_iRestoreAmmo"
+			{
+				"linux"		"16276"
+				"windows"	"16296"
+			}
+
+			/* CTerrorPlayer::RestoreWeapons(CTerrorPlayer *__hidden this) */
+			"m_restoreWeaponID"
+			{
+				"linux"		"16280"
+				"windows"	"16300"
+			}
+
+			/**
+			* 搜索字符串 "PainLevel:Critical"
+			**/
+			"m_hHiddenWeapon"
+			{
+				"linux"		"16288"
+				"windows"	"16308"
+			}
+
+			/**
+			* 搜索字符串 "takeover_survivor_bar"
+			**/
+			"m_isOutOfCheckpoint"
+			{
+				"linux"		"14820"
+				"windows"	"14840"
+			}
+
+			/**
+			* 搜索字符串 "#L4D_Scenario_Restart"
+			**/
+			"RestartScenarioTimer"
+			{
+				"linux"		"424"
+				"windows"	"424"
+			}
+		}
+
+		"Signatures"
+		{
+			/**
+			* C++ Function:		CBaseEntity* __cdecl NextBotCreatePlayerBotSurvivorBot(const char *src)
+			* Search string:	CreatePlayerBot: Could not Instance() from the bot edict
+			*
+			* Where call this function: 
+			* RestoreTransitionedSurvivorBots(void);	CDirector::AddSurvivorBot(SurvivorCharacterType)
+			**/
+			"NextBotCreatePlayerBot<SurvivorBot>"
+			{	
+				"library"	"server"
+				"linux"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x92"
+				/* E8 ? ? ? ? 83 ? ? 85 ? 74 ? 8B ? 8B 92 */
+				/* (addr+5) + *(addr+1) = call function addr -> this  signature into <CDirector::AddSurvivorBot> */
+				/* Sig. should point to "call" opcode E8, not to the func. start */
+			}
+
+			/* CTerrorPlayer::RoundRespawn(void) */
+			"CTerrorPlayer::RoundRespawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xC6\x86"
+				/* ? ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? 75 ? 8B ? E8 ? ? ? ? C6 86 */
+			}
+
+			/* CCSPlayer::State_Transition(CSPlayerState) */
+			"CCSPlayer::State_Transition"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CCSPlayer16State_TransitionE13CSPlayerState"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x86\x2A\x2A\x2A\x2A\x57\x8B\x2A\x2A\x85\x2A\x74\x2A\x83"
+				/* ? ? ? ? ? ? 8B 86 ? ? ? ? 57 8B ? ? 85 ? 74 ? 83 */
+			}
+
+			/* CTerrorPlayer::GoAwayFromKeyboard(CTerrorPlayer *__hidden this) */
+			"CTerrorPlayer::GoAwayFromKeyboard"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B"
+				/* ? ? ? ? ? ? 53 56 57 8B ? 8B ? 8B 90 ? ? ? ? 8B */
+			}
+
+			/* SurvivorBot::SetHumanSpectator(SurvivorBot *__hidden this, CTerrorPlayer *) */
+			"SurvivorBot::SetHumanSpectator"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11SurvivorBot17SetHumanSpectatorEP13CTerrorPlayer"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\xBE\x2A\x2A\x2A\x2A\x2A\x7E\x2A\x32\x2A\x5E\x5D\xC2\x2A\x2A\x8B\x0D"
+                /* ? ? ? ? ? ? 83 BE ? ? ? ? ? 7E ? 32 ? 5E 5D C2 ? ? 8B 0D */
+			}
+
+			/* CTerrorPlayer::TakeOverBot(CTerrorPlayer *__hidden this, bool) */
+			"CTerrorPlayer::TakeOverBot"
+			{
+				"library"  "server"
+				"linux"    "@_ZN13CTerrorPlayer11TakeOverBotEb"
+				"windows"  "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x56\x8D"
+				/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 56 8D */
+			}
+
+			/* CBasePlayer::SetModel(CBasePlayer *__hidden this, const char *) */
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+				/* ? ? ? ? ? ? 56 57 50 8B ? E8 ? ? ? ? 8B 3D */
+			}
+
+			/* CTerrorPlayer::GiveDefaultItems(CTerrorPlayer *__hidden this) */
+			"CTerrorPlayer::GiveDefaultItems"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16GiveDefaultItemsEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x88"
+				/* ? ? ? ? ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 84 ? 0F 84 ? ? ? ? A1 ? ? ? ? 8B 88 */
+			}
+
+			/* CDirector::IsInTransition(CDirector *__hidden this) */
+			"CDirector::IsInTransition"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9CDirector14IsInTransitionEv"
+				"windows"	"\x80\x3D\x2A\x2A\x2A\x2A\x00\x75\x2A\x80\xB9\x8C\x02\x00\x00\x00"
+				/* 80 3D ? ? ? ? 00 75 ? 80 B9 8C 02 00 00 00 */
+			}
+
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			/* CDirectorMusicBanks::OnRoundStart(CDirectorMusicBanks *__hidden this) */
+			"CDirectorMusicBanks::OnRoundStart"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F"
+				/* ? ? ? ? ? ? 56 57 8B ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 0F */
+			}
+
+			/* RestoreTransitionedSurvivorBots(void) */
+			"RestoreTransitionedSurvivorBots"
+			{
+				"library"	"server"
+				"linux"		"@_Z31RestoreTransitionedSurvivorBotsv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x53\x56\x57\x50\x68"
+				/* ? ? ? ? ? ? ? ? 83 ? ? 85 ? 0F 84 ? ? ? ? 53 56 57 50 68 */
+			}
+		}
+    }
+}

@@ -1,0 +1,220 @@
+"Games"
+{
+	"left4dead"
+	{
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"windows"
+				{
+					"signature" "SelectModelByPopulation"
+					"read" "2"
+				}
+				"linux"
+				{
+					"signature" "TheDirector"
+				}
+				"read" "0"
+			}
+
+			"TerrorNavMesh"
+			{
+				"windows"
+				{
+					"signature" "CommandNavSave"
+					"read" "11"
+				}
+				"linux"
+				{
+					"signature" "TheNavMesh"
+				}
+				"read" "0"
+			}
+		}
+
+		"Offsets"
+		{
+			"TerrorNavMesh::m_fMapMaxFlowDistance"
+			{
+				"windows"	"1444"
+				"linux"		"1444"
+			}
+
+			"m_flow"
+			{
+				"windows"	"340"
+				"linux"		"348"
+			}
+
+			/*
+			* CTerrorPlayer::GetLastKnownArea() const
+			*/
+			"CTerrorPlayer::GetLastKnownArea"
+			{
+				"windows"	"309"
+				"linux"		"310"
+			}
+		}
+
+		"Signatures"
+		{
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			"TheNavMesh"
+			{
+				"library"	"server"
+				"linux"		"@TheNavMesh"
+			}
+
+			/* Used solely to get the offset for TheDirector */
+			"SelectModelByPopulation"
+			{
+				"library"	"server"
+				"windows"	"\x8B\x0D\x2A\x2A\x2A\x2A\x81\xEC\x2A\x2A\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\xF8\x85\xFF\x75"
+				/* 8B 0D ? ? ? ? 81 EC ? ? ? ? 56 57 E8 ? ? ? ? 8B F8 85 FF 75 */
+			}
+
+			/* Used solely to get the offset for TheNavMesh 
+			   Look for string "Navigation map '%s' saved.\n" in a short function */
+			"CommandNavSave"
+			{
+				"library"	"server"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x01\x8B\x50\x2A\xFF\xD2\x84\xC0\x8B\x0D\x2A\x2A\x2A\x2A\x74\x15"
+				/* E8 ? ? ? ? 84 C0 74 ? 8B 0D ? ? ? ? 8B 01 8B 50 ? FF D2 84 C0 8B 0D ? ? ? ? 74 15 */
+			}
+
+			/*
+			 * CTerrorPlayer::GetFlowDistance(TerrorNavArea::FlowType)
+			 */
+			"PlayerGetFlowDistance"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13CTerrorPlayer15GetFlowDistanceEN13TerrorNavArea8FlowTypeE"
+				"windows"	"\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x2A\xD9"
+				/* 8B ? 8B ? ? ? ? ? ? ? 85 ? 74 ? 8B ? ? ? D9 */
+				/* Search: "Director state change SUSTAIN_PEAK" few calls above, near "-9999.0" */
+				/* Found by SilverShot */
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"windows"
+				{
+					"signature"		"DirectorMusicBanks_OnRoundStart"				
+					"read" "12"
+				}
+				"linux"
+				{
+					"signature"		"TheDirector"
+				}
+				"read" "0"
+			}
+
+			"TerrorNavMesh"
+			{
+				"windows"
+				{
+					"signature" "CommandNavSave"
+					"read" "11"
+				}
+				"linux"
+				{
+					"signature" "TheNavMesh"
+				}
+				"read" "0"
+			}
+		}
+
+		"Offsets"
+		{
+			"CDirectorScriptedEventManager"
+			{
+				"windows"	"1400"
+				"linux"		"1400"
+			}
+
+			"m_CurrentFinaleStage"
+			{
+				"windows"	"4"
+				"linux"		"4"
+			}
+
+			"TerrorNavMesh::m_fMapMaxFlowDistance"
+			{
+				"windows"	"1528"
+				"linux"		"1524"
+			}
+
+			"m_flow"
+			{
+				"windows"	"332"
+				"linux"		"340"
+			}
+
+			/*
+			* CTerrorPlayer::GetLastKnownArea() const
+			*/
+			"CTerrorPlayer::GetLastKnownArea"
+			{
+				"windows"	"330"
+				"linux"		"331"
+			}
+		}
+
+		"Signatures"
+		{
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			"TheNavMesh"
+			{
+				"library"	"server"
+				"linux"		"@TheNavMesh"
+			}
+
+			/* CDirectorMusicBanks::OnRoundStart, used solely to get the offset for TheDirector */
+			"DirectorMusicBanks_OnRoundStart"
+			{
+				"library"	"server"
+				"windows"       "\x55\x8B\xEC\x83\xEC\x2A\x56\x57\x8B\xF9\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x0F"
+				/* 55 8B EC 83 EC ? 56 57 8B F9 8B 0D ? ? ? ? E8 ? ? ? ? 84 C0 0F */
+			}
+
+			/* Used solely to get the offset for TheNavMesh 
+			   Look for string "Navigation map '%s' saved.\n" in a short function */
+			"CommandNavSave"
+			{
+				"library"	"server"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x01\x8B\x50\x2A\xFF\xD2\x8B\x0D\x2A\x2A\x2A\x2A\x84\xC0"
+				/* E8 ? ? ? ? 84 C0 74 ? 8B 0D ? ? ? ? 8B 01 8B 50 ? FF D2 8B 0D ? ? ? ? 84 C0 */
+			}
+
+			/*
+			 * CTerrorPlayer::GetFlowDistance(TerrorNavArea::FlowType)
+			 */
+			"PlayerGetFlowDistance"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13CTerrorPlayer15GetFlowDistanceEN13TerrorNavArea8FlowTypeE"
+				"windows"	"\x55\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x8B"
+				/* 55 8B ? 8B ? 8B ? ? ? ? ? ? ? 85 ? 74 ? 8B */
+				/* Search: "Director state change SUSTAIN_PEAK" few calls below */
+				/* Found by SilverShot */
+			}
+		}
+	}
+}

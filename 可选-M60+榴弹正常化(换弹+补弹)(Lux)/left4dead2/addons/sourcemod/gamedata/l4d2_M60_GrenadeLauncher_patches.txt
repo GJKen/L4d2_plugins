@@ -1,0 +1,52 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CRifle_M60::PrimaryAttack"
+			{
+				"signature"	"CRifle_M60::PrimaryAttack"
+			}
+			"CWeaponAmmoSpawn::Use"
+			{
+				"signature"	"CWeaponAmmoSpawn::Use"
+			}
+		}
+		"Offsets"//nopping drop weapon call
+		{
+			"CRifle_M60::PrimaryAttack"
+			{
+				"linux"		"222"	//0x85
+				"windows"	"271"	//0x75
+			}
+			"CWeaponAmmoSpawn::Use_NadeLauncher_Patch"
+			{
+				"linux"		"81"	//0x15
+				"windows"	"75"	//0x15
+			}
+			"CWeaponAmmoSpawn::Use_M60_Patch"
+			{
+				"linux"		"101"	//0x25
+				"windows"	"92"	//0x25
+			}
+		}
+		"Signatures"
+		{
+			"CRifle_M60::PrimaryAttack"
+			{
+				"library"		"server"
+				"linux"			"@_ZN10CRifle_M6013PrimaryAttackEv"
+				"windows"		"\x55\x8B\xEC\x51\x53\x56\x57\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x80\xBE\x2A\x15\x00\x00\x00"
+								/* 55 8B EC 51 53 56 57 8B F1 E8 ? ? ? ? 80 BE 2A 15 00 00 00 */
+			}
+			"CWeaponAmmoSpawn::Use"
+			{
+				"library"		"server"
+				"linux"			"@_ZN16CWeaponAmmoSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
+				"windows"		"\x55\x8B\xEC\x51\x53\x8B\x5D\x08\x85\xDB"
+								/* 55 8B EC 51 53 8B 5D 08 85 DB */
+			}
+		}
+	}
+}

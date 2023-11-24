@@ -1,0 +1,112 @@
+[Info]
+Language=简体中文
+Translator=YY
+Version=2.6.0
+
+[frmMFNm]
+frmMFNm.Caption=Mod 文件夹名...
+frmMFNm.Label1.Caption=欢迎使用 JoneSoft Generic Mod Enabler (JSGME)!
+frmMFNm.Label2.Caption=JSGME 默认在一个名为"MODS"的文件夹中寻找 Mod。然而，当你的游戏已有一个名为 "MODS" 的文件夹时，这将会引起冲突。
+frmMFNm.Label3.Caption=如果你想将 Mod 储存在其他名字不为 "MODS" 的文件夹中，请在下面输入你所希望的文件夹名并点击“确定”。否则请直接点击“确定”以使用默认的文件夹名 "MODS"。
+frmMFNm.cmdOK.Caption=确定
+
+[frmMainForm]
+frmMainForm.Label1.Caption=可用的 MOD: ↓↓点击你要安装的MOD↓↓ → 点击启用 ←
+frmMainForm.Label2.Caption=已安装 MOD: ↓↓点击你要停用的MOD↓↓ → 点击停用 ←
+frmMainForm.lblHelp.Caption=帮助
+frmMainForm.lblHelp.Hint=显示帮助
+frmMainForm.lblAbout.Caption=关于
+frmMainForm.lblAbout.Hint=关于 Generic Mod Enabler
+frmMainForm.lblUpdates.Caption=更新
+frmMainForm.lblUpdates.Hint=检查互联网上的可用更新
+frmMainForm.lblTasks.Caption=任务...
+frmMainForm.lblTasks.Hint=查看可用任务
+frmMainForm.cmdEnable.Caption=&启用
+frmMainForm.cmdEnable.Hint=安装选择的 Mod
+frmMainForm.cmdDisable.Caption=&停用
+frmMainForm.cmdDisable.Hint=卸载选择的 Mod
+frmMainForm.cmdClose.Caption=关闭
+frmMainForm.cmdDisableAll.Caption=停用全部
+frmMainForm.cmdDisableAll.Hint=卸载所有 Mod
+frmMainForm.pumLoadProfile.Caption=载入MOD档案...
+frmMainForm.pumSaveProfile.Caption=保存MOD档案...
+frmMainForm.pumImportMod.Caption=导入 Mod...
+frmMainForm.pumImportMod.Hint=从另其他位置导入一个 Mod 文件夹
+frmMainForm.pumFind.Caption=查找MOD...
+frmMainForm.pumFind.Hint=在你的可用和已激活MOD列表中查找特定MOD
+frmMainForm.pumRefresh.Caption=刷新列表
+frmMainForm.pumRefresh.Hint=刷新可用和已激活MOD列表
+frmMainForm.pumSnapshot.Caption=建立游戏文件快照
+frmMainForm.pumSnapshot.Hint=记录此安装的文件细节
+frmMainForm.pumCompare.Caption=将游戏文件与快照比较
+frmMainForm.pumCompare.Hint=将此文件细节与快照比较
+frmMainForm.pumExport.Caption=导出已安装 Mod 列表
+frmMainForm.pumExport.Hint=将已安装的 Mod 列表导出到文本文件
+frmMainForm.pumsToClpbrd.Caption=剪贴板
+frmMainForm.pumsToFile.Caption=文本文件
+frmMainForm.pumExplore.Caption=查看(&E)
+frmMainForm.pumDelete.Caption=删除(&D)
+frmMainForm.pumRename.Caption=重命名(&R)
+
+[frmFilesAltered]
+frmFilesAltered.Label2.Caption=安装此 Mod *可能*对你的游戏产生反作用。
+frmFilesAltered.Label3.Caption=你确定要安装此 Mod 吗？
+frmFilesAltered.cmdYes.Caption=是(&Y)
+frmFilesAltered.cmdNo.Caption=否(&N)
+
+[frmFind]
+frmFind.Caption=查找MOD
+frmFind.Label1.Caption=输入MOD的部分或全部名称:
+frmFind.Label2.Caption=结果 (双击转到列表):
+frmFind.lvFound.Columns[0].Caption=MOD
+frmFind.lvFound.Columns[1].Caption=状态
+frmFind.cmdFind.Caption=查找
+frmFind.cmdClose.Caption=关闭
+frmFind.pnlNoFind.Caption=未找到MOD！
+
+[frmCompare]
+frmCompare.Caption=比较
+frmCompare.lvCompare.Columns[0].Caption=名称
+frmCompare.lvCompare.Columns[1].Caption=细节
+frmCompare.cmdSave.Caption=保存
+frmCompare.cmdClose.Caption=关闭
+ 
+[frmAbout]
+frmAbout.Caption=关于 Generic Mod Enabler
+frmAbout.imgPayPal.Hint=如果你想贡献并帮助确保本产品的后续开发工作，请通过 PayPal 捐助本产品。
+frmAbout.lblLicense.Caption=许可协议和使用条款请参见 "JoneSoft.txt"。
+frmAbout.lblHomePage.Caption=转到 JoneSoft 主页...
+frmAbout.cmdOK.Caption=完成
+
+[Messages]
+strCheckForUpdates=检查更新
+strHasLatestVersion=你正在使用最新版本。
+strDownloadNow=你想现在下载吗？
+strCouldNotRetrieve=无法从 JoneSoft 服务器获取版本信息！请确认你已连接到 Internet 然后再试一次。
+strWarningEnabling=警告安装 "%s"!
+strEnablingMod=正在安装 %s...
+strDisablingMod=正在卸载 %s...
+strCannotBeDisabledTitle=无法卸载 Mod！
+strCannotBeDisabled=无法卸载 "%0:s"：文件被 %1:s 覆盖，必须先卸载后者。
+strNoInstLogTitle=Problem disabling mod
+strNoInstLog=无法找到 "%s" 的安装记录。无法从游戏删除文件！你想从已安装列表删除此 Mod 吗？
+strAlreadyAltered="%0:s" 已被 "%1:s" Mod 更改。
+strAlreadyAdded=文件夹 "%0:s" 已被 "%1:s" Mod 添加。
+strDisableAllMods=你确定要卸载*所有*已安装的 Mod 吗？
+strReplaceSnapshotTitle=建立快照
+strReplaceSnapshot=快照已存在。你确定要替换它吗？
+strGeneratingSnapshot=正在建立游戏文件的快照...
+strSnapshotGenerated=一份所有游戏文件的快照已建立。请在以后使用“将游戏文件与快照比较”任务来测定任何更改。
+strCompareDetails=比较文件在 %0:s 到 %1:s 快照。
+strIsSame=相同的
+strHasChanged=不同的
+strIsNew=新的
+strNoLongerExists=移除
+strModList=一份你的已安装Mod列表已被保存到 MOD 文件夹。点击“确定”查看。
+strNewFldrNm=我的新 Mod 文件夹(%d)
+strModSummary=找到 %0:d 个 Mod (%1:d 个已安装)  → → → 注意:你必须关闭游戏再卸载插件平台,否则你需要手动清理插件平台. ← ← ←
+strBrowseMsg=请指定要导入的 Mod 位置
+strErrorLoadingProfileTitle=载入档案出错
+strErrorLoadingProfile=找不到以下MOD:%s 无法载入档案。
+strAvail=可用
+strActiv=已激活

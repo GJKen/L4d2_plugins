@@ -1,0 +1,48 @@
+// Credits: https://forums.alliedmods.net/showthread.php?t=317662
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"zoom"
+			{
+				"signature"	"CTerrorGun::ShouldUnzoom"
+				
+				"linux"
+				{
+					"offset"	"2Ah"
+					"verify"	"\x0F\x84\xA7\x00\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"1Dh"
+					"verify"	"\x75"
+					"patch"		"\xEB"
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			"CTerrorGun::CycleZoom"
+			{
+				"windows"	"395"
+				"linux"		"396"
+			}
+		}
+
+		"Signatures"
+		{
+			"CTerrorGun::ShouldUnzoom"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK10CTerrorGun12ShouldUnzoomEv"
+				"windows"	"\x56\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x75\x2A\x5F\x32\x2A\x5E\xC3\x8B\x2A\xE8"
+						/* 56 57 8B ? E8 ? ? ? ? 8B ? 85 ? 75 ? 5F 32 ? 5E C3 8B ? E8 */
+			}
+		}
+	}
+}

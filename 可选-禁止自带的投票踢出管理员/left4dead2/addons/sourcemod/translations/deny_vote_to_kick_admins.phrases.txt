@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"tip"
+	{
+		"chi"		"{green}[6] {olive}杂鱼♡～还想踢管理员, 想得美!"
+		"en"		"{green}[tip] {olive}Can not vote to kick admins!"
+	}
+}

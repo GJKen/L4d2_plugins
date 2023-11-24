@@ -1,0 +1,54 @@
+"Games"
+{
+    "left4dead2"
+    {
+		"Addresses"
+		{
+			"CTerrorPlayer::RoundRespawn"
+			{
+				"linux"
+				{
+					"signature"	"CTerrorPlayer::RoundRespawn"
+				}
+				"windows"
+				{
+					"signature"	"CTerrorPlayer::RoundRespawn"			
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			"RoundRespawn_Offset"
+			{
+				"linux"		"25" // 0x19
+				"windows"	"15" // 0xF
+			}
+			"RoundRespawn_Byte" // JNZ => JNS
+			{
+				"linux"		"117" // 0x75
+				"windows"	"117" // 0x75
+			}
+		}
+
+		"Signatures"
+		{
+			/* CTerrorPlayer::RoundRespawn */
+			"CTerrorPlayer::RoundRespawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xC6\x86"
+				/* ? ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? 75 ? 8B ? E8 ? ? ? ? C6 86 */
+			}
+			/* CTerrorPlayer::GoAwayFromKeyboard(void) */
+			"CTerrorPlayer::GoAwayFromKeyboard"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B"
+				/* ? ? ? ? ? ? 53 56 57 8B ? 8B ? 8B 90 ? ? ? ? 8B */
+			}
+		}
+    }
+}

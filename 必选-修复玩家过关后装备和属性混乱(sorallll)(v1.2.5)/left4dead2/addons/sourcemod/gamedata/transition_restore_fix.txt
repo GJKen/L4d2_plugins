@@ -1,0 +1,275 @@
+// Many thanks to Psykotikism for sharing the Windows signature (https://github.com/Psykotikism/L4D1-2_Signatures)
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"OS"
+			{
+				"linux"		"1"
+				"windows"	"0"
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"Functions"
+		{
+			"DD::CDirector::Restart"
+			{
+				"signature"		"CDirector::Restart"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"address"
+			}
+
+			"DD::CTerrorPlayer::TransitionRestore"
+			{
+				"signature"		"CTerrorPlayer::TransitionRestore"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"entity"
+			}
+
+			"DD::PlayerSaveData::Restore"
+			{
+				"signature"		"PlayerSaveData::Restore"
+				"callconv"		"thiscall"
+				"return"		"void"
+				"this"			"address"
+				"arguments"
+				{
+					"Player"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+
+			"DD::CDirector::IsHumanSpectatorValid"
+			{
+				"signature"		"CDirector::IsHumanSpectatorValid"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"address"
+				"arguments"
+				{
+					"SurvivorBot"
+					{
+						"type"	"cbaseentity"
+					}
+				}
+			}
+
+			"DD::CDirectorSessionManager::FillRemainingSurvivorTeamSlotsWithBots"
+			{
+				"signature"		"CDirectorSessionManager::FillRemainingSurvivorTeamSlotsWithBots"
+				"callconv"		"thiscall"
+				"return"		"int"
+				"this"			"address"
+			}
+		}
+
+		"MemPatches"
+		{
+			"CTerrorPlayer::TransitionRestore::RestoreByUserId"
+			{
+				"signature"		"CTerrorPlayer::TransitionRestore"
+
+				"linux"
+				{
+					"offset"	"64h"
+					"verify"	"\x0F\x85\x36\x01\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"55h"
+					"verify"	"\x0F\x84\x22\x01\x00\x00"
+					"patch"		"\x90\xE9\x22\x01\x00\x00"
+				}
+			}
+
+			"RestoreTransitionedSurvivorBots::MaxRestoreSurvivorBots"
+			{
+				"signature"		"RestoreTransitionedSurvivorBots"
+
+				"linux"
+				{
+					"offset"	"6Ah"
+					"verify"	"\x83\xF8\x03"
+					"patch"		"\x83\xF8\x03"
+					"preserve"	"\xFF\xFF\xFF"
+				}
+				
+				"windows"
+				{
+					"offset"	"50h"
+					"verify"	"\x83\xF8\x04"
+					"patch"		"\x83\xF8\x04"
+					"preserve"	"\xFF\xFF\xFF"
+				}
+			}
+		}
+
+		"Addresses"
+		{
+			"SavedPlayersCount"
+			{
+				"linux"
+				{
+					"signature"	"CTerrorPlayer::TransitionRestore"
+					"read"		"107"
+				}
+				"windows"
+				{
+					"signature"	"CTerrorPlayer::TransitionRestore"
+					"read"		"446"
+				}
+			}
+
+			"SavedSurvivorBotsCount"
+			{
+				"linux"
+				{
+					"signature"	"RestoreTransitionedSurvivorBots"
+					"read"		"57"
+				}
+				"windows"
+				{
+					"signature"	"RestoreTransitionedSurvivorBots"
+					"read"		"53"
+				}
+			}
+
+			"SavedLevelRestartSurvivorBotsCount"
+			{
+				"linux"
+				{
+					"signature"	"CTerrorPlayer::TransitionRestore"
+					"read"		"593"
+				}
+				"windows"
+				{
+					"signature"	"CTerrorPlayer::TransitionRestore"
+					"read"		"225"
+				}
+			}
+
+			"CDirector"
+			{
+				"linux"
+				{
+					"signature"	"TheDirector"
+				}
+				"windows"
+				{
+					"signature"	"CDirectorMusicBanks::OnRoundStart"
+					"read"		"12"
+				}
+				"read"	"0"
+			}
+		}
+
+		"Signatures"
+		{
+			/* CDirector::Restart(CDirector *__hidden this) */
+			"CDirector::Restart"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector7RestartEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x53\x56\x57\x8B"
+				/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? A1 ? ? ? ? 8B ? ? 53 56 57 8B */
+			}
+
+			/* CTerrorPlayer::TransitionRestore(CTerrorPlayer *__hidden this) */
+			"CTerrorPlayer::TransitionRestore"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer17TransitionRestoreEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x80\xBE\x2A\x2A\x2A\x2A\x2A\x75\x2A\x33\x2A\x5E\x8B\x2A\x5D\xC3"
+				/* ? ? ? ? ? ? ? 80 BE ? ? ? ? ? 75 ? 33 ? 5E 8B ? 5D C3 */
+			}
+
+			/* PlayerSaveData::Restore(PlayerSaveData *__hidden this, CTerrorPlayer *) */
+			"PlayerSaveData::Restore"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14PlayerSaveData7RestoreEP13CTerrorPlayer"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\x8B\x2A\x2A\x56\x8B\x2A\x8B\x0D"
+				/* ? ? ? ? ? ? 53 8B ? ? 8B ? ? 56 8B ? 8B 0D */
+			}
+
+			/* CDirector::IsHumanSpectatorValid(CDirector *__hidden this, SurvivorBot *) */
+			"CDirector::IsHumanSpectatorValid"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector21IsHumanSpectatorValidEP11SurvivorBot"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x86\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x8E"
+				/* ? ? ? ? ? ? ? 8B 86 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 ? 8B 8E */
+			}
+
+			/* RestoreTransitionedSurvivorBots(void) */
+			"RestoreTransitionedSurvivorBots"
+			{
+				"library"	"server"
+				"linux"		"@_Z31RestoreTransitionedSurvivorBotsv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x53\x56\x57\x50\x68"
+				/* ? ? ? ? ? ? ? ? 83 ? ? 85 ? 0F 84 ? ? ? ? 53 56 57 50 68 */
+			}
+
+			/* CDirectorSessionManager::FillRemainingSurvivorTeamSlotsWithBots(CDirectorSessionManager *__hidden this) */
+			"CDirectorSessionManager::FillRemainingSurvivorTeamSlotsWithBots"
+			{
+				"library"	"server"
+				"linux"		"@_ZN23CDirectorSessionManager38FillRemainingSurvivorTeamSlotsWithBotsEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x83"
+				/* ? ? ? ? ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 83 */
+			}
+
+			/* KeyValues::GetString(KeyValues *__hidden this, const char *, const char *) */
+			"KeyValues::GetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9GetStringEPKcS1_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x8B\x2A\x2A\x56\x57\x6A\x2A\x53\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x2A\x48\x83\x2A\x2A\x0F\x87\x2A\x2A\x2A\x2A\xFF\x24\x2A\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x83\x2A\x2A\xDD\x2A\x2A\x68"
+				/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 8B ? ? 56 57 6A ? 53 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 0F ? ? ? 48 83 ? ? 0F 87 ? ? ? ? FF 24 ? ? ? ? ? D9 ? ? 83 ? ? DD ? ? 68 */
+			}
+
+			/* KeyValues::SetString(KeyValues *__hidden this, const char *s, const char *) */
+			"KeyValues::SetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9SetStringEPKcS1_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x53\x57\x51\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x52\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x83\x2A\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\xBB\x2A\x2A\x2A\x2A\x53"
+				/* ? ? ? ? ? ? 56 6A ? 50 E8 ? ? ? ? 8B ? 85 ? 74 ? 8B ? ? 53 57 51 E8 ? ? ? ? 8B ? ? 52 E8 ? ? ? ? 8B ? ? 83 ? ? C7 46 ? ? ? ? ? 85 ? 75 ? BB ? ? ? ? 53 */
+			}
+
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			/* CDirectorMusicBanks::OnRoundStart(CDirectorMusicBanks *__hidden this) */
+			"CDirectorMusicBanks::OnRoundStart"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F"
+				/* ? ? ? ? ? ? 56 57 8B ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 0F */
+			}
+
+			/* CDirector::IsInTransition(CDirector *__hidden this) */
+			"CDirector::IsInTransition"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9CDirector14IsInTransitionEv"
+				"windows"	"\x80\x3D\x2A\x2A\x2A\x2A\x00\x75\x2A\x80\xB9\x8C\x02\x00\x00\x00"
+				/* 80 3D ? ? ? ? 00 75 ? 80 B9 8C 02 00 00 00 */
+			}
+		}
+	}
+}

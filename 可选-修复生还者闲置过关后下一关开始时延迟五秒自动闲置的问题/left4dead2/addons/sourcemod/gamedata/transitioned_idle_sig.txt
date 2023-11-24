@@ -1,0 +1,58 @@
+"Games"
+{
+	"left4dead2" 
+	{
+		"MemPatches"
+		{
+			"PlayerSaveData::Restore::Patch1"
+			{
+				"signature"		"PlayerSaveData::Restore"
+
+				"linux"
+				{
+					"offset"	"15Ah"
+					"verify"	"\x0F\x85"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"ECh"
+					"verify"	"\x0F\x84"
+					"patch"		"\x90\xE9"
+				}
+			}
+
+			"PlayerSaveData::Restore::Patch2"
+			{
+				"signature"		"PlayerSaveData::Restore"
+
+				"linux"
+				{
+					"offset"	"B58h"
+					"verify"	"\x74"
+					"patch"		"\xEB"
+				}
+				
+				"windows"
+				{
+					"offset"	"10EEh"
+					"verify"	"\x74"
+					"patch"		"\xEB"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			/* PlayerSaveData::Restore(PlayerSaveData *__hidden this, CTerrorPlayer *) */
+			"PlayerSaveData::Restore"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14PlayerSaveData7RestoreEP13CTerrorPlayer"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\x8B\x2A\x2A\x56\x8B\x2A\x8B\x0D"
+				/* ? ? ? ? ? ? 53 8B ? ? 8B ? ? 56 8B ? 8B 0D */
+			}
+		}
+	}
+}

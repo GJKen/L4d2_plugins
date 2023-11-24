@@ -1,0 +1,98 @@
+"Games"
+{
+    "left4dead2"
+    {
+		"Functions"
+		{
+			"DD::CTerrorGameRules::GetSurvivorSet"
+			{
+				"signature"	"CTerrorGameRules::GetSurvivorSet"
+				"callconv"	"thiscall"
+				"return"	"int"
+				"this"		"address"
+			}
+		}
+
+		"Addresses"
+		{
+			"ZoeyUnlock"
+			{
+				"windows"
+				{
+					"signature"	"ZoeyUnlock_Sig"
+				}
+			}
+
+			"CDirector"
+			{
+				"linux"
+				{
+					"signature"	"TheDirector"
+				}
+				"windows"
+				{
+					"signature"	"CDirectorMusicBanks::OnRoundStart"
+					"read"		"12"
+				}
+				"read"	"0"
+			}
+		}
+
+		"Offsets"
+		{
+			"ZoeyUnlock_Offset"
+			{
+				"windows"	"58"
+			}
+
+			"CTerrorPlayer::IsTransitioned::m_isTransitioned"
+			{
+				"linux"		"13172"
+				"windows"	"13192"
+			}
+		}
+
+		"Signatures"
+		{
+			/* SurvivorResponseCachedInfo::Update(void) */
+			"ZoeyUnlock_Sig"
+			{
+				"library"	"server"
+				"windows"	"\x53\x8B\x2A\x83\x2A\x08\x83\x2A\x2A\x83\x2A\x04\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x83\x2A\x68\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x33"
+				/* 53 8B ? 83 ? 08 83 ? ? 83 ? 04 55 8B ? ? 89 ? ? ? 8B ? 83 ? 68 A1 ? ? ? ? 33 ? 89 ? ? 56 33 */
+			}
+
+			"TheDirector"
+			{
+				"library"	"server"
+				"linux"		"@TheDirector"
+			}
+
+			/* CDirectorMusicBanks::OnRoundStart(CDirectorMusicBanks *__hidden this) */
+			"CDirectorMusicBanks::OnRoundStart"
+			{
+				"library"	"server"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F"
+				/* ? ? ? ? ? ? 56 57 8B ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 0F */
+			}
+
+			/* CDirector::IsInTransition(CDirector *__hidden this) */
+			"CDirector::IsInTransition"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9CDirector14IsInTransitionEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x80\xB9\xCC"
+				/* ? ? ? ? ? ? ? 75 ? 80 B9 CC */
+			}
+
+			/* CTerrorGameRules::GetSurvivorSet(CTerrorGameRules *__hidden this) */
+			"CTerrorGameRules::GetSurvivorSet"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14GetSurvivorSetEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x53\x56\xBB\x2A\x2A\x2A\x2A\xFF"
+				/* ? ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? 53 56 BB ? ? ? ? FF */
+			}
+		}
+    }
+}

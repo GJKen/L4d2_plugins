@@ -1,0 +1,99 @@
+"Games"
+{
+    "left4dead2"
+    {
+		"Offsets"
+		{
+			"os"
+			{
+				"linux"		"0"
+				"windows"	"1"
+			}
+		}
+
+		"Addresses"
+		{
+			"AggresiveSpecials"
+			{
+				"linux"
+				{
+					"signature"	"CDirectorChallengeMode::AggresiveSpecials"
+				}
+				"windows"
+				{
+					"signature"	"CDirector::SpecialsShouldAdvanceOnSurvivors"
+					"offset"	"29" // Call CDirectorChallengeMode::AggresiveSpecials
+				}
+			}
+
+			"SpecialsShouldAssault"
+			{
+				"linux"
+				{
+					"signature"	"CDirectorChallengeMode::SpecialsShouldAssault"
+				}
+				"windows"
+				{
+					"signature"	"JockeyBehavior::InitialContainedAction"
+					"offset"	"6" // Call CDirectorChallengeMode::SpecialsShouldAssault
+				}
+			}
+		}
+
+		"Keys"
+		{
+			"AggresiveSpecials_Verify"
+			{
+				"linux"		"\x55"
+				"windows"	"\x80"
+			}
+
+			"AggresiveSpecials_Patch"
+			{
+				"linux"		"\x55\xB8\x01\x00\x00\x00\x89\xE5\x5D\xC3"
+				"windows"	"\x55\xB8\x01\x00\x00\x00\x89\xE5\x5D\xC3"
+			}
+
+			"SpecialsShouldAssault_Verify"
+			{
+				"linux"		"\x55"
+				"windows"	"\x8B"
+			}
+
+			"SpecialsShouldAssault_Patch"
+			{
+				"linux"		"\x55\xB8\x01\x00\x00\x00\x89\xE5\x5D\xC3"
+				"windows"	"\x55\xB8\x01\x00\x00\x00\x89\xE5\x5D\xC3"
+			}
+		}
+
+		"Signatures"
+		{
+			"CDirectorChallengeMode::AggresiveSpecials"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK22CDirectorChallengeMode17AggresiveSpecialsEv"
+			}
+
+			"CDirector::SpecialsShouldAdvanceOnSurvivors"
+			{
+				"library"	"server"
+				"windows"	"\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x84\xC0\x75\x1E\x8B\x86\x2A\x2A\x2A\x2A\x80\x38\x00\x75\x13\x8B\x8E\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0"
+				// 56 8B F1 E8 ? ? ? ? 84 C0 75 1E 8B 86 ? ? ? ? 80 38 00 75 13 8B 8E ? ? ? ? E8 ? ? ? ? 84 C0
+			}
+
+			"CDirectorChallengeMode::SpecialsShouldAssault"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK22CDirectorChallengeMode21SpecialsShouldAssaultEv"
+			}
+
+			"JockeyBehavior::InitialContainedAction"
+			{
+				"library"	"server"
+				"windows"	"\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x68\x3C\x90\x00\x00"
+				// 8B 0D ? ? ? ? E8 ? ? ? ? 68 3C 90 00 00
+			}
+		}
+    }
+}
