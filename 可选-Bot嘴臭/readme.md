@@ -1,6 +1,6 @@
 # Description | 內容
 bot会嘲讽杂鱼❤玩家, 有刷屏风险!
-1
+
 * Video | 影片展示
 <br>None
 
@@ -12,30 +12,17 @@ bot会嘲讽杂鱼❤玩家, 有刷屏风险!
 	简体中文
 	```
 
-* <details><summary>Changelog | 版本日志</summary>
-
-	```
-	none
-	```
-</details>
+* <summary>Changelog | 版本日志</summary>
+<br>none
 
 * Require | 需求
-	1. [left4dhooks](https://forums.alliedmods.net/showthread.php?t=321696)
-	2. [[INC] Multi Colors](https://github.com/fbef0102/L4D1_2-Plugins/releases/tag/Multi-Colors)
+<br>None
 
 * Related Plugin | 相关插件
-	```
-	none
-	```
+<br>None
 
-* <details><summary>ConVar | 指令</summary>
-		```
-		none
-		```
-</details>
+* <summary>ConVar | 指令</summary>
+<br>None
 
-* <details><summary>Command | 命令</summary>
-		```
-		none
-		```
-</details>
+* <summary>Command | 命令</summary>
+<br>None
