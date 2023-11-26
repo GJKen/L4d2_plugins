@@ -12,10 +12,11 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 * Image | 图示
 <br>None
 
-* Translation Support | 支持语言
+* <details>Translation Support | 支持语言
 	```
 	简体中文
 	```
+</details>
 
 * <details><summary>Changelog | 版本日志</summary>
 
@@ -53,8 +54,10 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 * Require | 需求
 <br>None
 
-* Related Plugin | 相关插件
+* <details>Related Plugin | 相关插件
+
 1. [shop_lite](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop_lite.sp)
+</details>
 
 * <details><summary>ConVar | 指令</summary>
 
@@ -116,6 +119,7 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 </details>
 
 * <details><summary>Command | 命令</summary>
+
 	```php
 		sm_shop | 开关商店
 		sm_b \ sm_buy \sm_rpg | 商店菜单
