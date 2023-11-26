@@ -33,16 +33,14 @@
 * <details><summary>ConVar | 指令</summary>
 
 	* cfg/sourcemod/survivor_mvp.cfg
-	```SourcePawn
+	```
 	// 轮播时间间隔
 	// Default: "240.0"
-	//sm_mvp_time "240.0"
+	// sm_mvp_time "240.0"
 	```
 </details>
 
 * <details><summary>Command | 命令</summary>
 
-	```SourcePawn
-	sm_mvp | 即时显示幸存者MVP统计信息
-	```
+	`sm_mvp`> 即时显示幸存者MVP统计信息
 </details>

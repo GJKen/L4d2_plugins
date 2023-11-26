@@ -3,7 +3,7 @@
 
 <br>
 
-启动项直接设置 `-trackrate [数值]`
+启动项直接设置 `-tickrate [数值]`
 
 - - - -
 * Video | 影片展示
