@@ -1,5 +1,6 @@
 # Description | 內容
-**📌保留管理员位置**
+**📌原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/blob/master/l4d_reservedslots), 未任何修改 <br><br>
+🔹保留管理员位置**
 
 当服务器满人时, 管理员可以使用预留通道进入, 其他人加入会被踢出
 
@@ -23,12 +24,21 @@ Admin Reserved Slots (剩余通道只能管理員加入.. Sorry, Reserverd Slots
 
 * <details><summary>Changelog | 版本日志</summary>
 
-	*v1.5
-		*-Remake Code
-		*-Add ConVars
+	* v1.8 (2023-8-18)
+		* Remake code
 
-	*v1.0
-		*-Original Post: https://bbs.3dmgame.com/thread-2804070-1-1.html
+	* v1.6 (2023-8-17)
+		* Fixed server kicks all players when map change
+
+	* v1.5 (2023-7-1)
+        * Require lef4dhooks v1.33 or above
+		* Remake code, convert code to latest syntax
+		* Fix warnings when compiling on SourceMod 1.11.
+		* Optimize code and improve performance
+		* Translation Support
+
+	* v1.0 (2023-5-3)
+	    * [Original Plugin by fenghf](https://bbs.3dmgame.com/thread-2804070-1-1.html)
 </details>
 
 * <details><summary>Require | 需求</summary>
