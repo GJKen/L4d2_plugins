@@ -13,6 +13,31 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 	简体中文
 	```
 
+* <details><summary>Changelog | 版本日誌</summary>
+
+	* v2.3 (2023-6-7)
+		* Change back ```L4D_ForcePanicEvent()```
+		* Fixed non-car hittables would burn and explode
+		
+	* v2.2 (2023-5-28)
+		* Use ```z_spawn mob auto``` instead of ```L4D_ForcePanicEvent()```
+		
+	* v2.1 (2023-2-14)
+		* Support L4D1
+
+	* v2.0
+		* [AlliedModder post](https://forums.alliedmods.net/showpost.php?p=2751903&postcount=217)
+		* Remake code
+		* Replace left4downtown with left4dhooks
+		* Remove car entity after it explodes
+		* Fixed damage dealt to car
+		* Safely create entity and safely remove entity
+		* Safely explode cars between few secomds to prevent client from crash
+
+    * v1.0.4
+        * [Original Plugin by honorcode23](https://forums.alliedmods.net/showthread.php?p=1304463)
+</details>
+
 * <details><summary>Changelog | 版本日志</summary>
 
 采用sqlite数据库保存数据, 功能和shop一样
