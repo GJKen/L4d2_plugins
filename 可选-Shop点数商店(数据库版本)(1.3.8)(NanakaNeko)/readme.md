@@ -5,7 +5,7 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 采用sqlite数据库保存数据, 功能和shop一样<br>
 安装过插件的, 建议删除data/sqlite文件夹下的数据库文件, 再更新插件重建数据库表**
 
-- - - -
+---
 * Video | 影片展示
 <br>None
 
@@ -113,26 +113,17 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 
 * <details><summary>Command | 命令</summary>
 
-	
-	`sm_shop`> 开关商店
-	
-	`sm_b \ sm_buy \ sm_rpg`> 商店菜单
-	
-	`sm_rank`> 个人数据
-	
-	`sm_tp`> 传送菜单
-
-	`sm_ammo`> 补充子弹
-	
-	`sm_pen`> 快速随机一把单喷
-	
-	`sm_chr`> 快速选铁喷
-	
-	`sm_pum`> 快速选木喷
-	
-	`sm_smg`> 快速选smg
-	
-	`sm_uzi`> 快速选uzi
-
-	`sm_pilll`> 快速买药
+	|指令|效果|
+	|-|-|
+	|`sm_shop`|商店总开关|
+	|`sm_b \ sm_buy \ sm_rpg`|商店菜单|
+	|`sm_rank`|个人数据|
+	|`sm_tp`|传送菜单|
+	|`sm_ammo`|补充子弹|
+	|`sm_pen`|快速随机一把单喷|
+	|`sm_chr`|快速选铁喷|
+	|`sm_pum`|快速选木喷|
+	|`sm_smg`|快速选smg|
+	|`sm_uzi`|快速选uzi|
+	|`sm_pilll`|快速买药|
 </details>

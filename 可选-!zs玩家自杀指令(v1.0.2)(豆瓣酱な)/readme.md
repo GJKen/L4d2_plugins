@@ -1,11 +1,11 @@
 # Description | 內容
-**📌玩家输入 !zs 指令自杀<br>**
+**📌玩家输入 `!zs` 指令自杀<br>**
 
 <br>
 
 对源码修改了自杀提示文案
 
-- - - -
+---
 * Video | 影片展示
 <br>None
 
@@ -33,5 +33,7 @@
 * ConVar | 指令
 <br>None
 
-* Command | 命令
-<br>None
+ <details><summary>Command | 命令</summary>
+
+	`sm_zs`> 原地睡觉
+</details>
