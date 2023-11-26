@@ -1,18 +1,16 @@
 # Description | 內容
-**📌解锁服务器tickrate+设置插件**
+**📌解锁服务器tickrate+设置插件整合**
 
 <br>
 
-启动项直接设置 '-trackrate [数值]'
+启动项直接设置 `-trackrate [数值]`
 
 - - - -
 * Video | 影片展示
 <br>None
 
-* <details><summary>Image | 图示</summary>
-
-	![survivor_mvp.smx](imgs/01.png) ![survivor_mvp.smx](imgs/02.png)
-</details>
+* Image | 图示
+<br>None
 
 * <details><summary>Translation Support | 支持语言</summary>
 
@@ -33,9 +31,5 @@
 * ConVar | 指令
 <br>None
 
-* <details><summary>Command | 命令</summary>
-
-	```SourcePawn
-	sm_mvp
-	```
-</details>
+* Command | 命令
+<br>None
