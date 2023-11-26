@@ -56,7 +56,8 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 1. [shop_lite](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop_lite.sp)
 
 * <details><summary>ConVar | 指令</summary>
-	* cfg/sourcemod/shop.cfg
+
+	* cfg/sourcemod/l4dinfectedbots.cfg
 		```php
 			// 救援通关获得的点数
 			// Default: "2"
