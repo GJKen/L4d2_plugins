@@ -13,6 +13,7 @@
 
 	![survivor_mvp.smx](imgs/01.jpg) ![survivor_mvp.smx](imgs/02.jpg)
 </details>
+
 * <details><summary>Translation Support | 支持语言</summary>
 
 	```
