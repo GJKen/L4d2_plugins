@@ -47,8 +47,8 @@ char MeleeName[][] = {"暂无", "砍刀", "消防斧", "小刀", "武士刀", "�
 
 public Plugin myinfo =  
 { 
-	name = "[L4D2]Shop", 
-	author = "奈", 
+	name = "[L4D2]Shop_sqlver", 
+	author = "奈, 修改GJKen", 
 	description = "商店(数据库版本)", 
 	version = "1.3.8", 
 	url = "https://github.com/NanakaNeko/l4d2_plugins_coop" 
@@ -202,9 +202,9 @@ public void OnPluginStart()
 	RegConsoleCmd("sm_rpg", ShopMenu, "商店菜单"); 
 	RegConsoleCmd("sm_buy", ShopMenu, "商店菜单");
 	RegConsoleCmd("sm_b", ShopMenu, "商店菜单");
-	RegConsoleCmd("sm_rank", PlayerInfoMenu, "个人数据");
+	RegConsoleCmd("sm_rank", PlayerMenu, "个人数据");
 
-	RegAdminCmd("sm_shop", SwitchShop, ADMFLAG_ROOT, "开关商店");
+	RegAdminCmd("sm_shop", SwitchShop, ADMFLAG_ROOT, "商店开关");
 	RegConsoleCmd("sm_tp", Transmit, "传送菜单");
 	RegConsoleCmd("sm_ammo", GetAmmo, "补充子弹");
 	RegConsoleCmd("sm_chr", GiveChr, "快速选铁喷");
@@ -216,14 +216,14 @@ public void OnPluginStart()
 
 	cv_Disable = CreateConVar("l4d2_shop_disable", "0", "商店开关 开:0 关:1", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	cv_Medical = CreateConVar("l4d2_medical_enable", "1", "医疗物品购买开关 开:1 关:0", FCVAR_NOTIFY, true, 0.0, true, 1.0);
-	cv_MaxWeapon = CreateConVar("l4d2_weapon_number", "2", "每关单人可用白嫖武器上限", FCVAR_NOTIFY, true, 0.0);
-	cv_GetPoint = CreateConVar("l4d2_get_point", "2", "救援通关获得的点数", FCVAR_NOTIFY, true, 0.0);
-	cv_KillPoint = CreateConVar("l4d2_get_point_kill", "1", "击杀坦克或者女巫获得的点数", FCVAR_NOTIFY, true, 0.0);
-	cv_MaxPoint = CreateConVar("l4d2_max_point", "5", "获取点数上限", FCVAR_NOTIFY, true, 0.0);
+	cv_MaxWeapon = CreateConVar("l4d2_weapon_number", "1", "每关单人可用白嫖武器上限", FCVAR_NOTIFY, true, 0.0);
+	cv_GetPoint = CreateConVar("l4d2_get_point", "5", "救援通关获得的逼数", FCVAR_NOTIFY, true, 0.0);
+	cv_KillPoint = CreateConVar("l4d2_get_point_kill", "2", "击杀坦克或者女巫获得的逼数", FCVAR_NOTIFY, true, 0.0);
+	cv_MaxPoint = CreateConVar("l4d2_max_point", "5", "获取逼数上限", FCVAR_NOTIFY, true, 0.0);
 	cv_DeathReset = CreateConVar("l4d2_reset_buy", "0", "玩家死亡后是否重置白嫖武器次数 开:1 关:0", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	cv_AmmoTime = CreateConVar("l4d2_give_ammo_time", "180.0", "补充子弹的最小间隔时间,小于0.0关闭功能");
 	cv_TransmitEnable = CreateConVar("l4d2_transmit_enable", "1", "传送开关 开:1 关:0", FCVAR_NOTIFY, true, 0.0, true, 1.0);
-	cv_MaxTransmit = CreateConVar("l4d2_max_transmit", "2", "玩家每回合传送使用次数.", FCVAR_NOTIFY, true, 0.0);
+	cv_MaxTransmit = CreateConVar("l4d2_max_transmit", "3", "玩家每回合传送使用次数", FCVAR_NOTIFY, true, 0.0);
 	HookEvent("round_start", Event_Reset, EventHookMode_Pre);
 	HookEvent("mission_lost", Event_Reset, EventHookMode_Post);
 	HookEvent("finale_win", Event_RewardPoint, EventHookMode_Pre);
@@ -242,7 +242,7 @@ public void OnPluginStart()
 		InitSQLite();
 	SQL_LoadAll();
 	//是否生成cfg文件
-	//AutoExecConfig(true, "ShopSystem");
+	AutoExecConfig(true, "Shop");
 }  
 
 void CvarChanged(ConVar convar, const char[] oldValue, const char[] newValue)
@@ -541,7 +541,7 @@ public void Event_PlayerHurt(Event event, const char[] name, bool dontBroadcast)
 	}
 }
 
-//玩家通关救援奖励点数
+//玩家通关救援奖励逼数
 void Event_RewardPoint(Event event, const char []name, bool dontBroadcast)
 {
 	if(b_Disable)
@@ -556,16 +556,16 @@ void Event_RewardPoint(Event event, const char []name, bool dontBroadcast)
 					player[client].ClientTotalPoint += cv_GetPoint.IntValue;
 					CheckMaxPoint(client);
 					SQL_SavePoint(client);
-					PrintToChat(client, "\x04[提示]\x05恭喜通关! 获得\x03 %d \x05点数.", cv_GetPoint.IntValue);
+					PrintToChat(client, "\x05通关!获得\x03 %d \x05逼数", cv_GetPoint.IntValue);
 				}
 				else{
-					PrintToChat(client, "\x04[提示]\x05恭喜通关! 点数到达上限\x03 %d \x05点,本关不会增加点数.", i_MaxPoint);
+					PrintToChat(client, "\x05通关!逼数到达上限\x03 %d \x05点,本关不会增加逼数", i_MaxPoint);
 					player[client].ClientTotalPoint += cv_GetPoint.IntValue;
 					SQL_SavePoint(client);
 				}
 			}
 			else{
-				PrintToChat(client, "\x04[提示]\x05恭喜通关! 死亡玩家无点数发放.");
+				PrintToChat(client, "\x05通关!嗝屁玩家无逼数发放");
 			}
 		}
 	}
@@ -589,10 +589,10 @@ void Event_WitchKilled(Event event, const char[] name, bool dontBroadcast)
 			player[client].ClientTotalPoint += cv_KillPoint.IntValue;
 			CheckMaxPoint(client);
 			SQL_SavePoint(client);
-			PrintToChat(client, "\x04[提示]\x05击杀女巫! 获得\x03 %d \x05点数.", cv_KillPoint.IntValue);
+			PrintToChat(client, "\x05击杀女巫! 获得\x03 %d \x05逼数", cv_KillPoint.IntValue);
 		}
 		else{
-			PrintToChat(client, "\x04[提示]\x05点数到达上限\x03 %d \x05点.", i_MaxPoint);
+			PrintToChat(client, "\x05逼数到达上限\x03 %d \x05点", i_MaxPoint);
 			player[client].ClientTotalPoint += cv_KillPoint.IntValue;
 			SQL_SavePoint(client);
 		}
@@ -611,17 +611,17 @@ void Event_TankKilled(Event event, const char[] name, bool dontBroadcast)
 	if(b_Disable)
 		return;
 	
-	PrintToChatAll("\x04[提示]\x03%N\x05是坦克最终击杀者!", client);
+	PrintToChatAll("\x03%N\x05是坦克最终击杀者!", client);
 	if (!NoValidPlayer(client) && GetClientTeam(client) == 2){
 		if(player[client].ClientPoint < i_MaxPoint){
 			player[client].ClientPoint += cv_KillPoint.IntValue;
 			player[client].ClientTotalPoint += cv_KillPoint.IntValue;
 			CheckMaxPoint(client);
 			SQL_SavePoint(client);
-			PrintToChat(client, "\x04[提示]\x05击杀坦克! 获得\x03 %d \x05点数.", cv_KillPoint.IntValue);
+			PrintToChat(client, "\x05击杀坦克! 获得\x03 %d \x05逼数", cv_KillPoint.IntValue);
 		}
 		else{
-			PrintToChat(client, "\x04[提示]\x05点数到达上限\x03 %d \x05点.", i_MaxPoint);
+			PrintToChat(client, "\x05逼数到达上限\x03 %d \x05点", i_MaxPoint);
 			player[client].ClientTotalPoint += cv_KillPoint.IntValue;
 			SQL_SavePoint(client);
 		}
@@ -655,11 +655,11 @@ public Action SwitchShop(int client, int args)
 	{
 		if(b_Disable)
 		{
-			PrintToChat(client, "\x04[商店]\x05商店已关闭,打开请输入\x04!shop on");
+			PrintToChat(client, "\x05商店已关闭,打开请输入\x04!shop on");
 		}
 		else
 		{
-			PrintToChat(client, "\x04[商店]\x05商店已开启,关闭请输入\x04!shop off");
+			PrintToChat(client, "\x05商店已开启,关闭请输入\x04!shop off");
 		}
 	}
 	else if(args == 1)
@@ -668,16 +668,16 @@ public Action SwitchShop(int client, int args)
 		if (strcmp(info, "on", false) == 0)
 		{
 			SetConVarBool(cv_Disable, false, true);
-			PrintToChatAll("\x04[商店]\x05管理员打开商店.");
+			PrintToChatAll("\x05管理员打开商店");
 		}
 		else if (strcmp(info, "off", false) == 0)
 		{
 			SetConVarBool(cv_Disable, true, true);
-			PrintToChatAll("\x04[商店]\x05管理员关闭商店.");
+			PrintToChatAll("\x05管理员关闭商店");
 		}
 		else
 		{
-			PrintToChat(client, "\x04[商店]\x05请输入正确的命令!");
+			PrintToChat(client, "[shop]\x05请输入正确的命令!");
 		}
 	}
 	return Plugin_Handled;
@@ -695,7 +695,7 @@ void ShowMenu(int client)
 {
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return;
 	}
 	if( !NoValidPlayer(client) && GetClientTeam(client) == 2 )
@@ -759,29 +759,35 @@ public int ShowMenuDetail(Menu menu, MenuAction action, int client, int param)
 	return 0;
 }
 
+//展示个人数据
+public Action PlayerMenu(int client, int args)
+{
+	PlayerInfoMenu(client);
+	return Plugin_Handled;
+}
 public void PlayerInfoMenu(int client)
 {
 	char buffer[256];
 	Panel panel = new Panel();
-	Format(buffer, sizeof(buffer), "%N的个人数据\n——————————", client);
+	Format(buffer, sizeof(buffer), "%N的个人数据\n!rank——————————", client);
 	panel.SetTitle(buffer);
-	Format(buffer, sizeof(buffer), "☆ 游玩时间: %.2fh", player[client].ClientTime);
+	Format(buffer, sizeof(buffer), "❤游玩时间: %.2fh", player[client].ClientTime);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 总爆头率: %.0f%%", GetHeadShot(client));
+	Format(buffer, sizeof(buffer), "❤总爆头率: %.0f%%", GetHeadShot(client));
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 累计点数: %d", player[client].ClientTotalPoint);
+	Format(buffer, sizeof(buffer), "❤累计逼数: %d", player[client].ClientTotalPoint);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 累计黑枪: %d", player[client].ClientFFCount);
+	Format(buffer, sizeof(buffer), "❤累计黑枪: %d", player[client].ClientFFCount);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 累计被黑: %d", player[client].ClientGotFFCount);
+	Format(buffer, sizeof(buffer), "❤累计被黑: %d", player[client].ClientGotFFCount);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 击杀僵尸: %d", player[client].ClientKillCI);
+	Format(buffer, sizeof(buffer), "❤击杀僵尸: %d", player[client].ClientKillCI);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 击杀特感: %d", player[client].ClientKillSI);
+	Format(buffer, sizeof(buffer), "❤击杀特感: %d", player[client].ClientKillSI);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 击杀坦克: %d", player[client].ClientKillTank);
+	Format(buffer, sizeof(buffer), "❤击杀坦克: %d", player[client].ClientKillTank);
 	DrawPanelText(panel, buffer);
-	Format(buffer, sizeof(buffer), "☆ 击杀女巫: %d", player[client].ClientKillWitch);
+	Format(buffer, sizeof(buffer), "❤击杀女巫: %d", player[client].ClientKillWitch);
 	DrawPanelText(panel, buffer);
 	DrawPanelItem(panel, "关闭");
 	SendPanelToClient(panel, client, InfoPanelHandler, 60);
@@ -954,14 +960,14 @@ public int MeleeMenu_back(Menu menu, MenuAction action, int client, int num)
 void PrintWeaponName(int client, int i, bool isWeapon = true)
 {
 	player[client].ClientWeapon++;
-	PrintToChat(client, "\x04[提示]\x05白嫖\x03%s\x05成功,还剩\x04%d\x05次.", isWeapon?WeaponName[i]:MeleeName[i], SURPLUS(client));
+	PrintToChat(client, "\x05白嫖\x03%s\x05成功,还剩\x04%d\x05次", isWeapon?WeaponName[i]:MeleeName[i], SURPLUS(client));
 }
 
 //医疗物品菜单
 public void MedicalMenu(int client) 
 {
 	Menu menu = new Menu(MedicalMenu_back);
-	menu.SetTitle("点数(剩余:%d)\n————————", player[client].ClientPoint);
+	menu.SetTitle("逼数(剩余:%d)\n————————", player[client].ClientPoint);
 	menu.AddItem("p", "止痛药(1点)");
 	menu.AddItem("a", "肾上腺素(1点)");
 	menu.AddItem("k", "医疗包(2点)");
@@ -975,7 +981,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 	if(judge(client))
 		return 0;
 	if(player[client].ClientPoint == 0){
-		PrintToChat(client, "\x04[商店]\x03点数不足!");
+		PrintToChat(client, "\x03逼数不足!");
 		return 0;
 	}
 
@@ -993,7 +999,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				}
 				else
 				{
-					PrintToChat(client, "\x04[提示]\x03医疗物品每关只能买一次哦!");
+					PrintToChat(client, "\x03医疗物品每关只能买一次哦!");
 				}
 			}
 			case 1: //肾上腺素
@@ -1006,7 +1012,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				}
 				else
 				{
-					PrintToChat(client, "\x04[提示]\x03医疗物品每关只能买一次哦!");
+					PrintToChat(client, "\x03医疗物品每关只能买一次哦!");
 				}
 			}
 			case 2: //医疗包
@@ -1015,7 +1021,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				{
 					if(player[client].ClientPoint == 1)
 					{
-						PrintToChat(client, "\x04[商店]\x03点数不足!");
+						PrintToChat(client, "\x03逼数不足!");
 						return 0;
 					}
 					GiveCommand(client, "first_aid_kit");
@@ -1025,7 +1031,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				}
 				else
 				{
-					PrintToChat(client, "\x04[提示]\x03医疗物品每关只能买一次哦!");
+					PrintToChat(client, "\x03医疗物品每关只能买一次哦!");
 				}
 			}
 			case 3: //电击器
@@ -1034,7 +1040,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				{
 					if(player[client].ClientPoint == 1)
 					{
-						PrintToChat(client, "\x04[商店]\x03点数不足!");
+						PrintToChat(client, "\x03逼数不足!");
 						return 0;
 					}
 					GiveCommand(client, "defibrillator");
@@ -1044,7 +1050,7 @@ public int MedicalMenu_back(Menu menu, MenuAction action, int client, int param)
 				}
 				else
 				{
-					PrintToChat(client, "\x04[提示]\x03医疗物品每关只能买一次哦!");
+					PrintToChat(client, "\x03医疗物品每关只能买一次哦!");
 				}
 			}
 		}
@@ -1062,14 +1068,14 @@ void PrintMedicalName(int client, int i)
 	char MedicalName[][] = {"止痛药", "肾上腺素", "医疗包", "电击器"};
 	player[client].ClientPoint--;
 	SQL_SavePoint(client);
-	PrintToChat(client, "\x04[提示]\x05购买\x03%s\x05成功,还剩\x04%d\x05点数.", MedicalName[i], player[client].ClientPoint);
+	PrintToChat(client, "\x05购买\x03%s\x05成功,还剩\x04%d\x05逼数", MedicalName[i], player[client].ClientPoint);
 }
 
 //杂项物品菜单
 public void SundryMenu(int client) 
 {
 	Menu menu = new Menu(SundryMenu_back);
-	menu.SetTitle("点数(剩余:%d)\n————————", player[client].ClientPoint);
+	menu.SetTitle("逼数(剩余:%d)\n————————", player[client].ClientPoint);
 	menu.AddItem("ammo", "子弹(免费)");
 	menu.AddItem("molotov", "燃烧瓶(1点)");
 	menu.AddItem("pipebomb", "土制炸弹(1点)");
@@ -1086,7 +1092,7 @@ public int SundryMenu_back(Menu menu, MenuAction action, int client, int param)
 	if(judge(client))
 		return 0;
 	if(player[client].ClientPoint == 0){
-		PrintToChat(client, "\x04[商店]\x03点数不足!");
+		PrintToChat(client, "\x03逼数不足!");
 		return 0;
 	}
 
@@ -1143,7 +1149,7 @@ void PrintSundryName(int client, int i)
 	char SundryName[][] = {"燃烧瓶", "土制炸弹", "胆汁", "激光瞄准", "烟花", "地精"};
 	player[client].ClientPoint--;
 	SQL_SavePoint(client);
-	PrintToChat(client, "\x04[提示]\x05购买\x03%s\x05成功,还剩\x04%d\x05点数.", SundryName[i], player[client].ClientPoint);
+	PrintToChat(client, "\x05购买\x03%s\x05成功,还剩\x04%d\x05逼数", SundryName[i], player[client].ClientPoint);
 }
 
 //出门近战选择菜单
@@ -1181,7 +1187,7 @@ public int MeleeSelect_back(Menu menu, MenuAction action, int client, int param)
 			{
 				player[client].ClientMelee=0;
 				SQL_SaveMelee(client);
-				PrintToChat(client,"\x04[提示]\x03出门近战武器设置已清除");
+				PrintToChat(client,"\x03出门近战武器设置已清除");
 			}
 			case 1://砍刀
 			{
@@ -1267,7 +1273,7 @@ public int MeleeSelect_back(Menu menu, MenuAction action, int client, int param)
 //出门近战选择后聊天框展示
 void PrintMeleeSelect(int client)
 {
-	PrintToChat(client,"\x04[提示]\x05出门近战武器设为\x03%s", MeleeName[player[client].ClientMelee]);
+	PrintToChat(client,"\x05出门近战武器设为\x03%s", MeleeName[player[client].ClientMelee]);
 }
 
 //出门发放近战
@@ -1357,12 +1363,12 @@ public void GiveAmmo(int client)
 {
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return;
 	}
 	if(f_AmmoTime < 0.0)
 	{
-		PrintToChat(client, "\x04[商店]\x05补充弹药已关闭.");
+		PrintToChat(client, "\x05补充弹药已关闭");
 		return;
 	}
 	if (GetClientTeam(client) == 2 && !NoValidPlayer(client))
@@ -1370,11 +1376,11 @@ public void GiveAmmo(int client)
 		float fTime = GetEngineTime() - player[client].ClientAmmoTime - f_AmmoTime;
 		if (fTime < 0.0)
 		{
-			PrintToChat(client, "\x04[提示]\x05请等待\x04%.1f\x05秒后补充子弹.", FloatAbs(fTime));
+			PrintToChat(client, "\x05请等待\x04%.1f\x05秒后补充子弹", FloatAbs(fTime));
 			return;
 		}
 		GiveCommand(client, "ammo");
-		PrintToChatAll("\x04[提示]\x03%N\x05补充了后备弹药.", client);
+		PrintToChatAll("\x03%N\x05补充了后备弹药", client);
 		player[client].ClientAmmoTime = GetEngineTime();
 	}
 }
@@ -1422,7 +1428,7 @@ bool judge(int client, bool free=false)
 		
 	if(GetClientTeam(client) != 2) 
 	{ 
-		PrintToChat(client, "\x04[商店]\x05武器菜单仅对生还生效."); 
+		PrintToChat(client, "\x05武器菜单仅对生还生效"); 
 		return true; 
 	} 
 
@@ -1430,7 +1436,7 @@ bool judge(int client, bool free=false)
 	{
 		if(player[client].ClientWeapon >= i_MaxWeapon)  
 		{ 
-			PrintToChat(client, "\x04[商店]\x05已达到每关白嫖上限."); 
+			PrintToChat(client, "\x05已达到每关白嫖上限"); 
 			return true; 
 		}
 	}
@@ -1442,7 +1448,7 @@ public Action GiveChr(int client,int args)
 { 
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client, true))
@@ -1457,7 +1463,7 @@ public Action GivePum(int client,int args)
 { 
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client, true))
@@ -1472,7 +1478,7 @@ public Action GiveSmg(int client,int args)
 { 
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client, true))
@@ -1487,7 +1493,7 @@ public Action GiveUzi(int client,int args)
 { 
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client, true))
@@ -1502,7 +1508,7 @@ public Action GivePen(int client,int args)
 { 
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client, true))
@@ -1522,18 +1528,18 @@ public Action BuyPill(int client,int args)
 {
 	if(b_Disable)
 	{
-		PrintToChat(client, "\x04[商店]\x05商店未开启.");
+		PrintToChat(client, "\x05商店未开启");
 		return Plugin_Handled;
 	}
 	if(cv_Medical.BoolValue)
 	{
-		PrintToChat(client, "\x04[商店]\x05医疗物品购买未开启.");
+		PrintToChat(client, "\x05医疗物品购买未开启");
 		return Plugin_Handled;
 	}
 	if(judge(client))
 		return Plugin_Handled;
 	if(player[client].ClientPoint == 0){
-		PrintToChat(client, "\x04[商店]\x03点数不足!");
+		PrintToChat(client, "\x03逼数不足!");
 		return Plugin_Handled;
 	}
 	if(player[client].CanBuyMedical)
@@ -1543,7 +1549,7 @@ public Action BuyPill(int client,int args)
 		player[client].CanBuyMedical = false;
 	}
 	else
-		PrintToChat(client, "\x04[提示]\x03医疗物品每关只能买一次哦!");
+		PrintToChat(client, "\x03医疗物品每关只能买一次哦!");
 	return Plugin_Handled;
 }
 
@@ -1552,7 +1558,7 @@ public Action Transmit(int client, int args)
 	if(cv_TransmitEnable.BoolValue)
 		TransmitMenu(client);
 	else
-		PrintToChat(client, "\x04[商店]\x05传送已关闭.");
+		PrintToChat(client, "\x05传送已关闭");
 	return Plugin_Handled;
 }
 
@@ -1561,36 +1567,36 @@ public void TransmitMenu(int client)
 {
 	if(player[client].ClientTransmit >= i_MaxTransmit)
 	{
-		PrintToChat(client, "\x04[提示]\x05你的传送次数已用完.");
+		PrintToChat(client, "\x05你的传送次数已用完");
 		return;
 	}
 	if(go_away_from(client))
 	{
-		PrintToChat(client, "\x04[提示]\x05被特感控制时禁止使用传送功能.");
+		PrintToChat(client, "\x05被特感控制时禁止使用传送功能");
 		return;
 	}
 
 	if(is_survivor_hanging(client))
 	{
-		PrintToChat(client, "\x04[提示]\x05挂边时禁止使用传送功能.");
+		PrintToChat(client, "\x05挂边时禁止使用传送功能");
 		return;
 	}
 
 	if(is_survivor_down(client))
 	{
-		PrintToChat(client, "\x04[提示]\x05倒地时禁止使用传送功能.");
+		PrintToChat(client, "\x05倒地时禁止使用传送功能");
 		return;
 	}
 
 	if(GetClientTeam(client) == 1)
 	{
-		PrintToChat(client, "\x04[提示]\x05闲置或旁观时禁止使用传送功能.");
+		PrintToChat(client, "\x05闲置或旁观时禁止使用传送功能");
 		return;
 	}
 
 	if(!IsPlayerAlive(client))
 	{
-		PrintToChat(client, "\x04[提示]\x05死亡状态时禁止使用传送功能.");
+		PrintToChat(client, "\x05死亡状态时禁止使用传送功能");
 		return;
 	}
 
@@ -1621,22 +1627,22 @@ public int TransmitMenu_back(Menu menu, MenuAction action, int client, int param
 	{
 		if(!IsClientInGame(target))
 		{
-			PrintToChat(client, "\x04[提示]\x05传送目标已失效,传送失败.");
+			PrintToChat(client, "\x05传送目标已失效,传送失败");
 			return 0;
 		}
 		if(GetClientTeam(target) == 3)
 		{
-			PrintToChat(client, "\x04[提示]\x05传送目标已变更感染者,传送失败.");
+			PrintToChat(client, "\x05传送目标已变更感染者,传送失败");
 			return 0;
 		}
 		if(is_survivor_hanging(target))
 		{
-			PrintToChat(client, "\x04[提示]\x05传送目标处于挂边状态,传送失败.");
+			PrintToChat(client, "\x05传送目标处于挂边状态,传送失败");
 			return 0;
 		}
 		if(!IsPlayerAlive(target))
 		{
-			PrintToChat(client, "\x04[提示]\x05传送目标已死亡,传送失败.");
+			PrintToChat(client, "\x05传送目标已死亡,传送失败");
 			return 0;
 		}
 		if (GetClientTeam(client) == 2)
@@ -1647,11 +1653,11 @@ public int TransmitMenu_back(Menu menu, MenuAction action, int client, int param
 			ForceCrouch(client);
 			GetClientAbsOrigin(target, Origin);
 			TeleportEntity(client, Origin, NULL_VECTOR, NULL_VECTOR);
-			PrintToChat(client, "\x04[提示]\x05你已经传送到幸存者\x03%N\x05身边,传送次数还剩\x03%d\x05次.", target, TPS(client));
-			PrintToChat(target, "\x04[提示]\x05幸存者\x03%N已经传送到你身边.", client);
+			PrintToChat(client, "\x05你已经传送到幸存者\x03%N\x05身边,传送次数还剩\x03%d\x05次", target, TPS(client));
+			PrintToChat(target, "\x05幸存者\x03%N已经传送到你身边", client);
 		}
 		else
-			PrintToChat(client, "\x04[提示]\x05传送功能只限于幸存者使用.");
+			PrintToChat(client, "\x05传送功能只限于幸存者使用");
 	}
 	else if (action == MenuAction_End)
 		delete menu;
