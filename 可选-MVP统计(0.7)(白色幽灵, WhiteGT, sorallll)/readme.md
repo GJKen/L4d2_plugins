@@ -11,7 +11,7 @@
 
 * <details><summary>Image | 图示</summary>
 
-	![survivor_mvp.smx](imgs/01.jpg) ![survivor_mvp.smx](imgs/02.jpg)
+	![survivor_mvp.smx](imgs/01.png) ![survivor_mvp.smx](imgs/02.png)
 </details>
 
 * <details><summary>Translation Support | 支持语言</summary>
