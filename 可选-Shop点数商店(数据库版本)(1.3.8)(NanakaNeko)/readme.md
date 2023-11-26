@@ -9,8 +9,10 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 * Video | 影片展示
 <br>None
 
-* Image | 图示
-<br/>![l4dinfectedbots_1](imgs/01.png) # ![l4dinfectedbots_1](imgs/02.png)
+* <details><summary>Image | 图示</summary>
+	
+	![l4dinfectedbots_1](imgs/01.png) ![l4dinfectedbots_1](imgs/02.png)
+</details>
 
 * <details><summary>Translation Support | 支持语言</summary>
 
