@@ -57,60 +57,60 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 
 * <details><summary>ConVar | 指令</summary>
 	* cfg/sourcemod/shop.cfg
-	```php
-		// 救援通关获得的点数
-		// Default: "2"
-		// Minimum: "0.000000"
-		//l4d2_get_point "5"
-		
-		// 击杀坦克或者女巫获得的点数
-		// Default: "1"
-		// Minimum: "0.000000"
-		//l4d2_get_point_kill "2"
-		
-		// 补充子弹的最小间隔时间,小于0.0关闭功能
-		// Default: "180.0"
-		//l4d2_give_ammo_time "180.0"
-		
-		// 获取点数上限
-		// Default: "5"
-		// Minimum: "0.000000"
-		//l4d2_max_point "20"
-		
-		// 玩家每回合传送使用次数.
-		// Default: "2"
-		// Minimum: "0.000000"
-		//l4d2_max_transmit "2"
-		
-		// 医疗物品购买开关 开:1 关:0
-		// Default: "1"
-		// Minimum: "0.000000"
-		// Maximum: "1.000000"
-		//l4d2_medical_enable "1"
-		
-		// 玩家死亡后是否重置白嫖武器次数 开:1 关:0
-		// Default: "0"
-		// Minimum: "0.000000"
-		// Maximum: "1.000000"
-		//l4d2_reset_buy "0"
-		
-		// 商店开关 开:0 关:1
-		// Default: "0"
-		// Minimum: "0.000000"
-		// Maximum: "1.000000"
-		//l4d2_shop_disable "0"
-		
-		// 传送开关 开:1 关:0
-		// Default: "1"
-		// Minimum: "0.000000"
-		// Maximum: "1.000000"
-		//l4d2_transmit_enable "1"
-		
-		// 每关单人可用白嫖武器上限
-		// Default: "2"
-		// Minimum: "0.000000"
-		//l4d2_weapon_number "2"
-	```
+		```php
+			// 救援通关获得的点数
+			// Default: "2"
+			// Minimum: "0.000000"
+			//l4d2_get_point "5"
+			
+			// 击杀坦克或者女巫获得的点数
+			// Default: "1"
+			// Minimum: "0.000000"
+			//l4d2_get_point_kill "2"
+			
+			// 补充子弹的最小间隔时间,小于0.0关闭功能
+			// Default: "180.0"
+			//l4d2_give_ammo_time "180.0"
+			
+			// 获取点数上限
+			// Default: "5"
+			// Minimum: "0.000000"
+			//l4d2_max_point "20"
+			
+			// 玩家每回合传送使用次数.
+			// Default: "2"
+			// Minimum: "0.000000"
+			//l4d2_max_transmit "2"
+			
+			// 医疗物品购买开关 开:1 关:0
+			// Default: "1"
+			// Minimum: "0.000000"
+			// Maximum: "1.000000"
+			//l4d2_medical_enable "1"
+			
+			// 玩家死亡后是否重置白嫖武器次数 开:1 关:0
+			// Default: "0"
+			// Minimum: "0.000000"
+			// Maximum: "1.000000"
+			//l4d2_reset_buy "0"
+			
+			// 商店开关 开:0 关:1
+			// Default: "0"
+			// Minimum: "0.000000"
+			// Maximum: "1.000000"
+			//l4d2_shop_disable "0"
+			
+			// 传送开关 开:1 关:0
+			// Default: "1"
+			// Minimum: "0.000000"
+			// Maximum: "1.000000"
+			//l4d2_transmit_enable "1"
+			
+			// 每关单人可用白嫖武器上限
+			// Default: "2"
+			// Minimum: "0.000000"
+			//l4d2_weapon_number "2"
+		```
 </details>
 
 * <details><summary>Command | 命令</summary>
