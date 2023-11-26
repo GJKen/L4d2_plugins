@@ -399,7 +399,7 @@ void PrintStatistics() {
 		teamFF = g_esData[client].teamFF;
 		teamRF = g_esData[client].teamRF;
 
-		strcopy(buffer, sizeof buffer, "\x04★ \x01特感: ");
+		strcopy(buffer, sizeof buffer, "\x01特: ");
 		numSpace = killSILen - IntToString(killSI, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
@@ -423,7 +423,7 @@ void PrintStatistics() {
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, " \x01友伤: ");
+		strcopy(buffer[len], sizeof buffer - len, " \x01精液: ");
 		numSpace = teamFFLen - IntToString(teamFF, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
@@ -431,7 +431,7 @@ void PrintStatistics() {
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, " \x01被黑: ");
+		strcopy(buffer[len], sizeof buffer - len, " \x01被射: ");
 		numSpace = teamRFLen - IntToString(teamRF, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
@@ -449,26 +449,26 @@ void PrintStatistics() {
 	dmgSI = g_esData[client].dmgSI;
 	killSI = g_esData[client].killSI;
 	if (killSI > 0)
-		PrintToChatAll("\x04★ \x01特感杀手: \x05%N \x01伤害: \x05%d\x01(\x04%d%%\x01) 击杀: \x05%d\x01(\x04%d%%\x01)", client, dmgSI, RoundToNearest(float(dmgSI) / float(g_iTotaldmgSI) * 100.0), killSI, RoundToNearest(float(killSI) / float(g_iTotalkillSI) * 100.0));
+		PrintToChatAll("\x01杀特睾手: \x05%N \x01伤害: \x05%d\x01(\x04%d%%\x01) 击杀: \x05%d\x01(\x04%d%%\x01)", client, dmgSI, RoundToNearest(float(dmgSI) / float(g_iTotaldmgSI) * 100.0), killSI, RoundToNearest(float(killSI) / float(g_iTotalkillSI) * 100.0));
 
 	SortCustom1D(clients, count, SortCIKill);
 	client = clients[0];
 	killCI = g_esData[client].killCI;
 	headCI = g_esData[client].headCI;
 	if (killCI > 0)
-		PrintToChatAll("\x04★ \x01清尸狂人: \x05%N \x01击杀: \x05%d\x01(\x04%d%%\x01) 爆头: \x05%d\x01(\x04%d%%\x01)", client, killCI, RoundToNearest(float(killCI) / float(g_iTotalkillCI) * 100.0), headCI, RoundToNearest(float(headCI) / float(killCI) * 100.0));
+		PrintToChatAll("\x01清尸狂人: \x05%N \x01击杀: \x05%d\x01(\x04%d%%\x01) 爆头: \x05%d\x01(\x04%d%%\x01)", client, killCI, RoundToNearest(float(killCI) / float(g_iTotalkillCI) * 100.0), headCI, RoundToNearest(float(headCI) / float(killCI) * 100.0));
 
 	SortCustom1D(clients, count, SortTeamFF);
 	client = clients[0];
 	teamFF = g_esData[client].teamFF;
 	if (teamFF > 0)
-		PrintToChatAll("\x04★ \x01黑枪之王: \x05%N \x01友伤: \x05%d\x01(\x04%d%%\x01)", client, teamFF, RoundToNearest(float(teamFF) / float(g_iTotalFF) * 100.0));
+		PrintToChatAll("\x01射精之王: \x05%N \x01精液: \x05%d\x01(\x04%d%%\x01)", client, teamFF, RoundToNearest(float(teamFF) / float(g_iTotalFF) * 100.0));
 
 	SortCustom1D(clients, count, SortTeamRF);
 	client = clients[0];
 	teamRF = g_esData[client].teamRF;
 	if (teamRF > 0)
-		PrintToChatAll("\x04★ \x01挨枪之王: \x05%N \x01被黑: \x05%d\x01(\x04%d%%\x01)", client, teamRF, RoundToNearest(float(teamRF) / float(g_iTotalRF) * 100.0));
+		PrintToChatAll("\x01M属性大爆发: \x05%N \x01被射: \x05%d\x01(\x04%d%%\x01)", client, teamRF, RoundToNearest(float(teamRF) / float(g_iTotalRF) * 100.0));
 }
 
 void PrintTankStatistics(int tank) {
@@ -539,7 +539,7 @@ void PrintTankStatistics(int tank) {
 
 	char name[MAX_NAME_LENGTH];
 	FormatEx(name, sizeof name, "[%s] %N", IsFakeClient(tank) ? "AI" : "PZ", tank);
-	CPrintToChatAll("{default}[{red}%s{default}] {olive}%N {default}伤害承受: {red}%d", IsFakeClient(tank) ? "AI" : "PZ", tank, g_esData[tank].totalTankDmg);
+	CPrintToChatAll("{default}[{red}%s{default}] {olive}%N {default}HP: {red}%d", IsFakeClient(tank) ? "AI" : "PZ", tank, g_esData[tank].totalTankDmg);
 
 	int len;
 	int numSpace;
@@ -549,7 +549,7 @@ void PrintTankStatistics(int tank) {
 		damage = aClients.Get(i, 0);
 		percent = RoundToNearest(float(damage) / float(g_esData[tank].totalTankDmg) * 100.0);
 
-		strcopy(buffer, sizeof buffer, "{green}★ {default}[");
+		strcopy(buffer, sizeof buffer, "{red}♥{default}[");
 		numSpace = dmgLen - IntToString(damage, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
