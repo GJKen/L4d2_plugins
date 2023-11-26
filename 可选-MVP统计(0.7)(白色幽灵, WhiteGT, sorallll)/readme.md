@@ -1,9 +1,9 @@
 # Description | 內容
-**📌玩家输入 !zs 指令自杀<br>**
+**📌幸存者Mvp统计, 详情看图示**
 
 <br>
 
-对源码修改了自杀提示文案
+修改了源码的一些文字
 
 - - - -
 * Video | 影片展示
@@ -11,9 +11,8 @@
 
 * <details><summary>Image | 图示</summary>
 
-	![l4d2_player_suicide.smx](imgs/01.png)
+	![survivor_mvp.smx](imgs/01.jpg) ![survivor_mvp.smx](imgs/02.jpg)
 </details>
-
 * <details><summary>Translation Support | 支持语言</summary>
 
 	```
@@ -33,5 +32,9 @@
 * ConVar | 指令
 <br>None
 
-* Command | 命令
-<br>None
+* <details><summary>Command | 命令</summary>
+
+	```SourcePawn
+	sm_mvp
+	```
+</details>
