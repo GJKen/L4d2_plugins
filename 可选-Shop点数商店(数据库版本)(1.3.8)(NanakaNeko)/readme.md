@@ -15,6 +15,8 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 
 * <details><summary>Changelog | 版本日誌</summary>
 
+采用sqlite数据库保存数据, 功能和shop一样
+
 	* v2.3 (2023-6-7)
 		* Change back ```L4D_ForcePanicEvent()```
 		* Fixed non-car hittables would burn and explode
