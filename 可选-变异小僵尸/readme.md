@@ -1,6 +1,6 @@
 # Description | 內容
-**📌原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/blob/master/l4d_reservedslots), 未任何修改<br><br>
-🔹保留管理员位置**
+**📌原作 [alliedmods](https://forums.alliedmods.net/showthread.php?t=175242), 做了汉化文案 <br><br>
+🔹变异小僵尸**
 
 当服务器满人时, 管理员可以使用预留通道进入, 其他人加入会被踢出
 
@@ -10,9 +10,10 @@ Admin Reserved Slots (剩余通道只能管理員加入.. Sorry, Reserverd Slots
 * Video | 影片展示
 <br>None
 
-* Image | 图示
-<br>None
+* <details><summary>Image | 图示</summary>
 
+	
+</details>
 * <details><summary>Translation Support | 支持语言</summary>
 
 	```
