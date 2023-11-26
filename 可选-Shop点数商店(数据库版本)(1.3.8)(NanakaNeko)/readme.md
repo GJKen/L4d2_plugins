@@ -1,6 +1,10 @@
 # Description | 內容
 感谢原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github"), 基于源码增加了sm_rank直接显示个人数据的功能<br>
 Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设定每关几次
+<br>
+采用sqlite数据库保存数据, 功能和shop一样
+安装过插件的, 建议删除data/sqlite文件夹下的数据库文件, 再更新插件重建数据库表
+
 
 * Video | 影片展示
 <br>None
@@ -13,36 +17,7 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 	简体中文
 	```
 
-* <details><summary>Changelog | 版本日誌</summary>
-
-采用sqlite数据库保存数据, 功能和shop一样
-
-	* v2.3 (2023-6-7)
-		* Change back ```L4D_ForcePanicEvent()```
-		* Fixed non-car hittables would burn and explode
-		
-	* v2.2 (2023-5-28)
-		* Use ```z_spawn mob auto``` instead of ```L4D_ForcePanicEvent()```
-		
-	* v2.1 (2023-2-14)
-		* Support L4D1
-
-	* v2.0
-		* [AlliedModder post](https://forums.alliedmods.net/showpost.php?p=2751903&postcount=217)
-		* Remake code
-		* Replace left4downtown with left4dhooks
-		* Remove car entity after it explodes
-		* Fixed damage dealt to car
-		* Safely create entity and safely remove entity
-		* Safely explode cars between few secomds to prevent client from crash
-
-    * v1.0.4
-        * [Original Plugin by honorcode23](https://forums.alliedmods.net/showthread.php?p=1304463)
-</details>
-
 * <details><summary>Changelog | 版本日志</summary>
-
-采用sqlite数据库保存数据, 功能和shop一样
 
 	*  1.1.1
 	 * 重构代码, 数据库增加点数, 救援关通关加1点, 增加医疗物品和投掷物品的购买
@@ -73,7 +48,6 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 		
 	* 1.3.8
 	 * 新增服务器游玩时长统计
-安装过插件的, 建议删除data/sqlite文件夹下的数据库文件, 再更新插件重建数据库表
 </details>
 
 * Require | 需求
