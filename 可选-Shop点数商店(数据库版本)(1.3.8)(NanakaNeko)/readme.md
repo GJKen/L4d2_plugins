@@ -1,6 +1,6 @@
 # Description | 內容
-感谢原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github")
-Shop点数商店, 每关提供几次机会白嫖部分武器，cvar可自行设定每关几次
+感谢原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github"), 基于源码增加了sm_rank直接显示个人数据的功能<br>
+Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设定每关几次
 
 * Video | 影片展示
 <br>None
@@ -14,13 +14,14 @@ Shop点数商店, 每关提供几次机会白嫖部分武器，cvar可自行设�
 	```
 
 * <details><summary>Changelog | 版本日志</summary>
-<br>采用sqlite数据库保存数据，功能和shop一样
+
+采用sqlite数据库保存数据, 功能和shop一样
 
 	*  1.1.1
-		* 重构代码，数据库增加点数，救援关通关加1点，增加医疗物品和投掷物品的购买
+		* 重构代码, 数据库增加点数, 救援关通关加1点, 增加医疗物品和投掷物品的购买
 	
 	* 1.1.3
-		* 增加死亡重置次数开关，增加医疗物品购买上限，提供设置获取点数cvar
+		* 增加死亡重置次数开关, 增加医疗物品购买上限, 提供设置获取点数cvar
 		
 	* 1.2.0
 		* 增加击杀坦克和女巫获取点数
@@ -29,29 +30,30 @@ Shop点数商店, 每关提供几次机会白嫖部分武器，cvar可自行设�
 		* 增加传送菜单
 		
 	* 1.2.7
-		* 投掷修改为杂项，增加激光瞄准
+		* 投掷修改为杂项, 增加激光瞄准
 		
 	*1 .3.1
 		* 杂项增加子弹补充
 		
 	* 1.3.2
-		* 增加快捷买药，随机单喷
+		* 增加快捷买药, 随机单喷
 		
 	* 1.3.4
-		* 增加inc文件提供其他插件支持，个人信息面板，显示累计得分，击杀僵尸、特感、坦克、女巫数量
+		* 增加inc文件提供其他插件支持, 个人信息面板, 显示累计得分, 击杀僵尸、特感、坦克、女巫数量
 		
 	* 1.3.6
 		* 增加爆头率、累计黑枪
 		
 	* 1.3.8
 		* 新增服务器游玩时长统计
-<br>安装过插件的，建议删除data/sqlite文件夹下的数据库文件，再更新插件重建数据库表
+安装过插件的, 建议删除data/sqlite文件夹下的数据库文件, 再更新插件重建数据库表
 </details>
+
 * Require | 需求
 <br>None
 
 * Related Plugin | 相关插件
-<br>None
+1. [shop_lite](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop_lite.sp)
 
 * <details><summary>ConVar | 指令</summary>
 	* cfg/sourcemod/shop.cfg
