@@ -10,7 +10,7 @@ Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设�
 <br>None
 
 * <details><summary>Image | 图示</summary>
-	
+
 	![shop.smx](imgs/01.png) ![shop.smx](imgs/02.png)
 </details>
 
