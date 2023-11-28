@@ -1,6 +1,10 @@
 # Description | 內容
-**📌感谢原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github"), 基于源码增加了sm_rank直接显示个人数据的功能<br>
-Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设定每关几次<br>
+**📌原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github")**
+> 基于源码增加了sm_rank直接显示个人数据
+>
+> 修改一些文案
+<br>
+Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设定每关几次
 <br>
 采用sqlite数据库保存数据, 功能和shop一样<br>
 安装过插件的, 建议删除data/sqlite文件夹下的数据库文件, 再更新插件重建数据库表**

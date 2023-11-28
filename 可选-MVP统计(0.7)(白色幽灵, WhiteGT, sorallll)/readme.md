@@ -1,9 +1,9 @@
 # Description | 內容
-**📌幸存者Mvp统计, 详情看图示**
+**📌幸存者MVP统计, 详情看图示**
 
 <br>
 
-修改了源码的一些文字
+> 修改了源码的一些文案
 
 ---
 * Video | 影片展示
@@ -11,7 +11,13 @@
 
 * <details><summary>Image | 图示</summary>
 
-	![survivor_mvp.smx](imgs/01.png) ![survivor_mvp.smx](imgs/02.png)
+	幸存者MVP统计:
+
+	![survivor_mvp.smx](imgs/01.png)<br>
+
+	幸存者Tank MVP统计:
+
+	![survivor_mvp.smx](imgs/02.png)
 </details>
 
 * <details><summary>Translation Support | 支持语言</summary>

@@ -9,6 +9,7 @@
 
 	![l4d2_botchat4.smx](imgs/01.jpg) ![l4d2_botchat4.smx](imgs/02.jpg)
 </details>
+
 * <details><summary>Translation Support | 支持语言</summary>
 
 	```
