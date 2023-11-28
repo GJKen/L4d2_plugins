@@ -12,8 +12,11 @@ Admin Reserved Slots (剩余通道只能管理員加入.. Sorry, Reserverd Slots
 
 * <details><summary>Image | 图示</summary>
 
+	![l4d_mutant_zombies.smx](http://imgur.com/5rkkxIu.jpg)
 	
+	1. 2. 3.
 </details>
+
 * <details><summary>Translation Support | 支持语言</summary>
 
 	```
