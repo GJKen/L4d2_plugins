@@ -2,7 +2,7 @@
 **📌原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github")**
 > 基于源码增加了sm_rank直接显示个人数据
 >
-> 修改一些文案
+> 修改了源码的一些文案
 <br>
 Shop点数商店, 每关提供几次机会白嫖部分武器, cvar可自行设定每关几次
 <br>

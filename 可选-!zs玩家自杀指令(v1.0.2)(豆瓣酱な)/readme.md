@@ -3,7 +3,7 @@
 
 <br>
 
-> 对源码修改了自杀提示文案
+> 修改了源码的自杀提示文案
 
 ---
 * Video | 影片展示
@@ -33,7 +33,7 @@
 * ConVar | 指令
 <br>None
 
- <details><summary>Command | 命令</summary>
+* <details><summary>Command | 命令</summary>
 
 	`sm_zs`> 原地睡觉
 </details>
