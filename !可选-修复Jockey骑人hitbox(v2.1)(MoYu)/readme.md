@@ -1,5 +1,5 @@
 # Description | 內容
-**📌原作 [Github](https://github.com/Target5150/MoYu_Server_Stupid_Plugins/tree/master/The%20Last%20Stand/l4d2_fix_jockey_hitbox "Github")**, 未任何修改
+**📌原作 [Github](https://github.com/Target5150/MoYu_Server_Stupid_Plugins/tree/master/The%20Last%20Stand/l4d2_fix_jockey_hitbox)**, 未任何修改
 
 🔹修复骑师骑在幸存者身上时的碰撞问题, 仅限L4D2
 
