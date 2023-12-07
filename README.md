@@ -26,7 +26,7 @@
 		<a href="https://github.com/Lin515">
 			<img src="https://avatars.githubusercontent.com/u/35224561" width="60px;" alt="Lin515"/>
 			<p>Lin515</p>
-		<a href="https://github.com/Lin515/L4D2_LinGe_VScripts">L4D2_LinGe_VScripts</a>
+		<a href="https://github.com/Lin515/L4D_LinGe_Plugins">L4D2_LinGe_VScripts</a>
 		</a>
 	</td>
 	<td align="center">

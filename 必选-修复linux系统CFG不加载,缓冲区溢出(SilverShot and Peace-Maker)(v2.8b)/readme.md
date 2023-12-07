@@ -114,7 +114,7 @@
 
 	```php
 	// Command and ConVar - Buffer Overflow Fixer plugin version.
-	command_buffer_version 
+	command_buffer_version
 	```
 * Command | 命令
 <br>None
