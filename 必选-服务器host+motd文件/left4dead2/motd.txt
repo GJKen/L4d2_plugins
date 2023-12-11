@@ -46,7 +46,7 @@
 		</style>
 	 </head>
 	 <body>
-		<div class="title"><b>JKchan's Server</b></div>
+		<div class="title"><b>JKchan's Server M2</b></div>
 		<div class="all">
 			<div class="conten">
 				<p>

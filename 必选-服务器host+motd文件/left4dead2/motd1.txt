@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>JKchan's Server M1</title>
+		<title>JKchan's Server</title>
 		<meta charset="UTF-8">
 		<style>
 		body{
@@ -46,7 +46,7 @@
 		</style>
 	 </head>
 	 <body>
-		<div class="title"><b>JKchan's Server</b></div>
+		<div class="title"><b>JKchan's Server M1</b></div>
 		<div class="all">
 			<div class="conten">
 				<p>

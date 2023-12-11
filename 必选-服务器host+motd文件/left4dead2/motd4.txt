@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>JKchan's Server M4</title>
+		<title>JKchan's Server</title>
 		<meta charset="UTF-8">
 		<style>
 		body{
 			font-size: 20px;
 			font-family: Arial,Microsoft YaHei,sans-serif;
-			background-image: url('http://z1.ax1x.com/2023/11/23/piwpf8e.jpg');
+			background-image: url('http://i.imgs.ovh/2023/11/23/M3Vx0.jpeg');
 			background-repeat: no-repeat;
 			background-size: 100% auto;
 			background-color: #a18e7c;
@@ -49,7 +49,7 @@
 		</style>
 	 </head>
 	 <body>
-		<div class="title"><b>JKchan's Server</b></div>
+		<div class="title"><b>JKchan's Server M4</b></div>
 		<div class="all">
 			<div class="conten">
 				<p>
