@@ -1,0 +1,115 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"CDirector::OnThreatEncountered::Block"
+			{
+				"signature"		"CDirector::OnThreatEncountered"
+
+				"linux"
+				{
+					"offset"	"16h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"13h"
+					"verify"	"\x75"
+					"patch"		"\xEB"
+				}
+			}
+
+			"CDirectorVersusMode::UpdateNonVirtual::IsVersusMode"
+			{
+				"signature"		"CDirectorVersusMode::UpdateNonVirtual"
+
+				"linux"
+				{
+					"offset"	"11h"
+					"verify"	"\x75"
+					"patch"		"\xEB"
+				}
+				
+				"windows"
+				{
+					"offset"	"Ah"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+			}
+
+			"CDirectorVersusMode::UpdateNonVirtual::UpdateMarkersTimer"
+			{
+				"signature"		"CDirectorVersusMode::UpdateNonVirtual"
+
+				"linux"
+				{
+					"offset"	"3Fh"
+					"verify"	"\x72"
+					"patch"		"\xEB"
+				}
+				
+				"windows"
+				{
+					"offset"	"26h"
+					"verify"	"\x72"
+					"patch"		"\xEB"
+				}
+			}
+
+			// l4dvs_witch_spawn_fix (https://github.com/Target5150/MoYu_Server_Stupid_Plugins/tree/master/The%20Last%20Stand/l4dvs_witch_spawn_fix)
+			"CDirectorVersusMode::UpdateVersusBossSpawning::m_iTankCount"
+			{
+				"signature"		"CDirectorVersusMode::UpdateVersusBossSpawning"
+
+				"linux"
+				{
+					"offset"	"10Dh"
+					"verify"	"\x0F\x8F"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"EBh"
+					"verify"	"\x0F\x8F"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			/* CDirector::OnThreatEncountered(CDirector *__hidden this, TerrorNavArea *) */
+			"CDirector::OnThreatEncountered"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector19OnThreatEncounteredEP13TerrorNavArea"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x34\x57\x8B\xF9"
+				/* 55 8B EC 83 EC 34 57 8B F9 */
+			}
+
+			/* CDirectorVersusMode::UpdateNonVirtual(CDirectorVersusMode *__hidden this) */
+			"CDirectorVersusMode::UpdateNonVirtual"
+			{
+				"library"	"server"
+				"linux"		"@_ZN19CDirectorVersusMode16UpdateNonVirtualEv"
+				"windows"	"\x57\x8B\xF9\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\x56"
+				/* 57 8B F9 E8 ? ? ? ? 84 C0 74 ? 56 */
+			}
+
+			/* CDirectorVersusMode::UpdateVersusBossSpawning(CDirectorVersusMode *__hidden this) */
+			"CDirectorVersusMode::UpdateVersusBossSpawning"
+			{
+				"library"	"server"
+				"linux"		"@_ZN19CDirectorVersusMode24UpdateVersusBossSpawningEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x89\x2A\x2A\xE8"
+				/* ? ? ? ? ? ? 57 8B ? 8B 0D ? ? ? ? 89 ? ? E8 */
+			}
+		}
+	}
+}

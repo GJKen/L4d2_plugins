@@ -299,22 +299,22 @@ void CreateStringMap()
 	g_smModelToName = new StringMap();
 
 	// Case-sensitive
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_medkit.mdl", "医疗包");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_defibrillator.mdl", "电击器");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_painpills.mdl", "大-伟哥");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_adrenaline.mdl", "伟哥");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_bile_flask.mdl", "胆汁");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_molotov.mdl", "燃烧瓶");
-	g_smModelToName.SetString("models/w_models/weapons/w_eq_pipebomb.mdl", "土制炸弹");
-	g_smModelToName.SetString("models/w_models/weapons/w_laser_sights.mdl", "激光瞄准器");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_medkit.mdl", "妙手回春");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_defibrillator.mdl", "起死回生");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_painpills.mdl", "雌二醇");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_adrenaline.mdl", "雌激素");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_bile_flask.mdl", "Shit!");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_molotov.mdl", "莫洛托夫鸡尾酒");
+	g_smModelToName.SetString("models/w_models/weapons/w_eq_pipebomb.mdl", "钻天雷");
+	g_smModelToName.SetString("models/w_models/weapons/w_laser_sights.mdl", "官方外挂");
 	g_smModelToName.SetString("models/w_models/weapons/w_eq_incendiary_ammopack.mdl", "燃烧弹药包");
 	g_smModelToName.SetString("models/w_models/weapons/w_eq_explosive_ammopack.mdl", "高爆弹药包");
 	g_smModelToName.SetString("models/props/terror/ammo_stack.mdl", "弹药堆");
 	g_smModelToName.SetString("models/props_unique/spawn_apartment/coffeeammo.mdl", "弹药堆");
 	g_smModelToName.SetString("models/props/de_prodigy/ammo_can_02.mdl", "弹药堆");
 	g_smModelToName.SetString("models/weapons/melee/w_chainsaw.mdl", "电锯");
-	g_smModelToName.SetString("models/w_models/weapons/w_pistol_b.mdl", "手枪");
-	g_smModelToName.SetString("models/w_models/weapons/w_pistol_a.mdl", "手枪");
+	g_smModelToName.SetString("models/w_models/weapons/w_pistol_b.mdl", "手♂枪");
+	g_smModelToName.SetString("models/w_models/weapons/w_pistol_a.mdl", "手♂枪");
 	g_smModelToName.SetString("models/w_models/weapons/w_desert_eagle.mdl", "马格南");
 	g_smModelToName.SetString("models/w_models/weapons/w_shotgun.mdl", "木喷");
 	g_smModelToName.SetString("models/w_models/weapons/w_pumpshotgun_a.mdl", "铁喷");
@@ -330,7 +330,7 @@ void CreateStringMap()
 	g_smModelToName.SetString("models/w_models/weapons/w_sniper_mini14.mdl", "木制狙击枪");
 	g_smModelToName.SetString("models/w_models/weapons/w_sniper_military.mdl", "军用狙击枪");
 	g_smModelToName.SetString("models/w_models/weapons/w_sniper_scout.mdl", "鸟狙");
-	g_smModelToName.SetString("models/w_models/weapons/w_sniper_awp.mdl", "AWP!");
+	g_smModelToName.SetString("models/w_models/weapons/w_sniper_awp.mdl", "AWP");
 	g_smModelToName.SetString("models/w_models/weapons/w_grenade_launcher.mdl", "榴弹发射器");
 	g_smModelToName.SetString("models/w_models/weapons/w_m60.mdl", "M60");
 	g_smModelToName.SetString("models/props_junk/gascan001a.mdl", "汽油桶");
@@ -359,9 +359,9 @@ void CreateStringMap()
 	g_smModelToName.SetString("models/infected/boomette.mdl", "Boomer!");
 	g_smModelToName.SetString("models/infected/boomer.mdl", "Boomer!");
 	g_smModelToName.SetString("models/infected/boomer_l4d1.mdl", "Boomer!");
-	g_smModelToName.SetString("models/infected/hulk.mdl", "Tank!快送!");
-	g_smModelToName.SetString("models/infected/hulk_l4d1.mdl", "Tank!快送!");
-	g_smModelToName.SetString("models/infected/hulk_dlc3.mdl", "Tank!快送!");
+	g_smModelToName.SetString("models/infected/hulk.mdl", "Tank♂快送!");
+	g_smModelToName.SetString("models/infected/hulk_l4d1.mdl", "Tank♂快送!");
+	g_smModelToName.SetString("models/infected/hulk_dlc3.mdl", "Tank♂快送!");
 	g_smModelToName.SetString("models/infected/smoker.mdl", "Smoker!");
 	g_smModelToName.SetString("models/infected/smoker_l4d1.mdl", "Smoker!");
 	g_smModelToName.SetString("models/infected/hunter.mdl", "Hunter!来空爆");
