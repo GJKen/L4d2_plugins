@@ -1,0 +1,84 @@
+"Games"
+{
+	"left4dead"
+	{
+		"MemPatches"
+		{
+			"CTankClaw::SweepFist::Check1"
+			{
+				"signature"			"CTankClaw::SweepFist"
+				"linux"
+				{
+					"offset"		"423h"
+					"verify"		"\x0F\x84" // make sure the 'jz' instruction starts with '0F 84'
+					"patch"			"\x90\x90\x90\x90\x90\x90" // patch the 'jz' instruction with NOPs (6 bytes)
+				}
+				"windows"
+				{
+					"offset"		"432h"
+					"verify"		"\x75" // make sure the 'jnz' instruction starts with '75'
+					"patch"			"\xEB" // replace the 'jnz' instruction with 'jmp'
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			/**
+			 * CTankClaw::SweepFist(Vector const&, Vector const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search string "tank_fist_radius" and go to its relative ConVar "HulkFistRadius".
+			 * 2. The only xref to the "HulkFistRadius.m_pParent" (usually present as "dword_xxxxxx" below) is the function we want.
+			 */
+			"CTankClaw::SweepFist"
+			{
+				"library"			"server"
+				"linux"				"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.246"
+				"windows"			"\x2A\x2A\x2A\x2A\x2A\x2A\x55\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x0D"
+									/* ? ? ? ? ? ? 55 56 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B 0D */
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"CTankClaw::SweepFist__HasPlayerControlledZombies_skip"
+			{
+				"signature"			"CTankClaw::SweepFist"
+				"linux"
+				{
+					"offset"		"A01h"
+					"verify"		"\x0F\x84" // make sure the 'jz' instruction starts with '0F 84'
+					"patch"			"\x90\x90\x90\x90\x90\x90" // patch the 'jz' instruction with NOPs (6 bytes)
+				}
+				"windows"
+				{
+					"offset"		"56Dh"
+					"verify"		"\x75" // make sure the 'jnz' instruction starts with '75'
+					"patch"			"\xEB" // replace the 'jnz' instruction with 'jmp'
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			/**
+			 * CTankClaw::SweepFist(Vector const&, Vector const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search string "tank_fist_radius" and go to its relative ConVar "HulkFistRadius".
+			 * 2. The only xref to the "HulkFistRadius.m_pParent" (usually present as "dword_xxxxxx" below) is the function we want.
+			 */
+			"CTankClaw::SweepFist"
+			{
+				"library"			"server"
+				"linux"				"@_ZN9CTankClaw9SweepFistERK6VectorS2_"
+				"windows"			"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x81\xEC\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x8B\x2A\x2A\x56\x57\x8B\x2A\x2A\x89\x8D"
+									/* ? ? ? ? ? ? 83 ? ? 83 ? ? 55 8B ? ? 89 ? ? ? 8B ? 81 EC ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 8B ? ? 56 57 8B ? ? 89 8D */
+			}
+		}
+	}
+}

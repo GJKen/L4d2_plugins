@@ -1,0 +1,38 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"TankBehavior::InitialContainedAction::CancelIdle"
+			{
+				"signature" "TankBehavior::InitialContainedAction"
+
+				"linux"
+				{
+					"offset"	"17h"
+					"verify"	"\x74\x27"
+					"patch"		"\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"10h"
+					"verify"	"\x75\x2A"
+					"patch"		"\xEB\x2A"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"TankBehavior::InitialContainedAction"
+			{
+				"library"	"server"
+				"linux"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"windows"	"\x55\x8B\xEC\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x75\x2A\x8B\x4D\x08"
+				/* 55 8B EC 8B 0D ? ? ? ? E8 ? ? ? ? 84 C0 75 ? 8B 4D 08 */
+			}
+		}
+	}
+}

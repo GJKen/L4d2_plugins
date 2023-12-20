@@ -1,0 +1,37 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"CTerrorPlayer::UpdateHangingFromTongue"
+			{
+				"signature" "CTerrorPlayer::UpdateHangingFromTongue"
+
+				"linux"
+				{
+					"offset"	"D7h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"175h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"CTerrorPlayer::UpdateHangingFromTongue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer23UpdateHangingFromTongueEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x64\x56\x8B\xF1\x80\xBE\xF0\x33\x00\x00\x00"
+			}
+		}
+	}
+}

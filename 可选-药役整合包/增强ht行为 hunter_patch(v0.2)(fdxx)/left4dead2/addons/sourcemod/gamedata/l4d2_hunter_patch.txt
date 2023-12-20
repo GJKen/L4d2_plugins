@@ -1,0 +1,200 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			// CTerrorPlayer::OnLungeStart::HasPlayerControlledZombies
+
+			"convert_leap_always"
+			{
+				"signature" "CTerrorPlayer::OnLungeStart"
+
+				"linux"
+				{
+					"offset"	"1Bh"
+					"verify"	"\x0F\x84\xBF\x01\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"14h"
+					"verify"	"\x74\x47"
+					"patch"		"\x90\x90"
+				}
+			}
+			"convert_leap_never"
+			{
+				"signature" "CTerrorPlayer::OnLungeStart"
+
+				"linux"
+				{
+					"offset"	"1Bh"
+					"verify"	"\x0F\x84\xBF\x01\x00\x00"
+					"patch"		"\x90\xE9\xBF\x01\x00\x00"
+				}
+
+				"windows"
+				{
+					"offset"	"14h"
+					"verify"	"\x74\x47"
+					"patch"		"\xEB\x47"
+				}
+			}
+
+			// CLunge::IsAbilityReadyToFire::HasPlayerControlledZombies
+
+			"crouch_pounce_always"
+			{
+				"signature" "CLunge::IsAbilityReadyToFire"
+
+				"linux"
+				{
+					"offset"	"CAh"
+					"verify"	"\x74\x0B"
+					"patch"		"\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"7Eh"
+					"verify"	"\x74\x52"
+					"patch"		"\x90\x90"
+				}
+			}
+			"crouch_pounce_never"
+			{
+				"signature" "CLunge::IsAbilityReadyToFire"
+
+				"linux"
+				{
+					"offset"	"CAh"
+					"verify"	"\x74\x0B"
+					"patch"		"\xEB\x0B"
+				}
+
+				"windows"
+				{
+					"offset"	"7Eh"
+					"verify"	"\x74\x52"
+					"patch"		"\xEB\x52"
+				}
+			}
+
+			// CTerrorPlayer::OnPouncedOnSurvivor::HasPlayerControlledZombies
+
+			"bonus_damage_always"
+			{
+				"signature" "CTerrorPlayer::OnPouncedOnSurvivor"
+
+				"linux"
+				{
+					"offset"	"4F6h"
+					"verify"	"\x0F\x84\x47\x01\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"46Eh"
+					"verify"	"\x0F\x84\x10\x04\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+			}
+			"bonus_damage_never"
+			{
+				"signature" "CTerrorPlayer::OnPouncedOnSurvivor"
+
+				"linux"
+				{
+					"offset"	"4F6h"
+					"verify"	"\x0F\x84\x47\x01\x00\x00"
+					"patch"		"\x90\xE9\x47\x01\x00\x00"
+				}
+
+				"windows"
+				{
+					"offset"	"46Eh"
+					"verify"	"\x0F\x84\x10\x04\x00\x00"
+					"patch"		"\x90\xE9\x10\x04\x00\x00"
+				}
+			}
+
+			// CTerrorPlayer::OnTakeDamageInternal::BotCheck
+			// MyNextBotPointer()
+			
+			"pounce_interrupt_always"
+			{
+				"signature" "CTerrorPlayer::OnTakeDamageInternal"
+
+				"linux"
+				{
+					"offset"	"782h"
+					"verify"	"\x75\x92"
+					"patch"		"\x90\x90"
+				}
+
+				"windows"
+				{
+					"offset"	"760h"
+					"verify"	"\x0F\x85\xCD\x0A\x00\x00"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+			}
+			"pounce_interrupt_never"
+			{
+				"signature" "CTerrorPlayer::OnTakeDamageInternal"
+
+				"linux"
+				{
+					"offset"	"782h"
+					"verify"	"\x75\x92"
+					"patch"		"\xEB\x92"
+				}
+
+				"windows"
+				{
+					"offset"	"760h"
+					"verify"	"\x0F\x85\xCD\x0A\x00\x00"
+					"patch"		"\x90\xE9\xCD\x0A\x00\x00"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"CTerrorPlayer::OnLungeStart"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12OnLungeStartEv"
+				"windows"	"\x55\x8B\xEC\x51\x53\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A"
+				/* 55 8B EC 51 53 56 8B F1 E8 ? ? ? ? E8 ? ? ? ? */
+			}
+
+			"CLunge::IsAbilityReadyToFire"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK6CLunge20IsAbilityReadyToFireEv"
+				"windows"	"\x56\x8B\xF1\x8B\x86\x38\x04\x00\x00\x57\x83\xF8\xFF\x0F\x84\x2A\x2A\x2A\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\xC8\x81\xE1\xFF\x0F\x00\x00\x03\xC9\x8D\x4C\xCA\x04\x85\xC9\x0F\x84\x2A\x2A\x2A\x2A\xC1\xE8\x0C\x39\x41\x04\x0F\x85\x2A\x2A\x2A\x2A\x8B\x39"
+				/* 56 8B F1 8B 86 38 04 00 00 57 83 F8 FF 0F 84 ? ? ? ? 8B 15 ? ? ? ? 8B C8 81 E1 FF 0F 00 00 03 C9 8D 4C CA 04 85 C9 0F 84 ? ? ? ? C1 E8 0C 39 41 04 0F 85 ? ? ? ? 8B 39 */
+			}
+
+			"CTerrorPlayer::OnPouncedOnSurvivor"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer19OnPouncedOnSurvivorEPS_"
+				"windows"	"\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x81\xEC\x88\x01\x00\x00"
+				/* 53 8B DC 83 EC 08 83 E4 F0 83 C4 04 55 8B 6B 04 89 6C 24 04 8B EC 81 EC 88 01 00 00 */
+			}
+
+			"CTerrorPlayer::OnTakeDamageInternal"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer20OnTakeDamageInternalER15CTakeDamageInfo.part.781"
+				"windows"	"\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x81\xEC\xB8\x00\x00\x00\x56"
+				/* 53 8B DC 83 EC 08 83 E4 F0 83 C4 04 55 8B 6B 04 89 6C 24 04 8B EC 81 EC B8 00 00 00 56 */
+			}
+		}
+	}
+}

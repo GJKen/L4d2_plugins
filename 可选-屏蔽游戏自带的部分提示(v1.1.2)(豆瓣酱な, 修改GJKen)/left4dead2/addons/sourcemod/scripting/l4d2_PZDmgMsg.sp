@@ -75,7 +75,7 @@ public void OnPluginStart()
 	g_hIncapacitated = CreateConVar("l4d2_player_incapacitated", "1", "屏蔽游戏自带的玩家倒下提示 0=显示, 1=屏蔽", CVAR_FLAGS);
 	g_hDisconnect = CreateConVar("l4d2_player_disconnect", "1", "屏蔽游戏自带的玩家离开提示 0=显示, 1=屏蔽", CVAR_FLAGS);
 	g_hDefibrillator = CreateConVar("l4d2_defibrillator_used", "1", "屏蔽游戏自带的使用电击器提示 0=显示, 1=屏蔽", CVAR_FLAGS);
-	g_cvSMNotity = CreateConVar("l4d2_sourcemod_sm_notify_admin", "1", "屏蔽sourcemod平台自带的SM提示 1=只向管理员显示, 0=对所有人屏蔽");
+	g_cvSMNotity = CreateConVar("l4d2_sourcemod_sm_notify_admin", "0", "屏蔽sourcemod平台自带的SM提示 1=只向管理员显示, 0=对所有人屏蔽");
 
 	AutoExecConfig(true, "l4d2_PZDmgMsg");
 

@@ -1,0 +1,124 @@
+"Games"
+{
+	"left4dead"
+	{
+		"Functions"
+		{
+			/* BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *) */
+			"BossZombiePlayerBot::ChooseVictim"
+			{
+				"signature"		"BossZombiePlayerBot::ChooseVictim"
+				"callconv"		"thiscall"
+				"return"		"cbaseentity"
+				"this"			"entity"
+				"arguments"
+				{
+					"player"
+					{
+						"type"	"int"
+					}
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"BossZombiePlayerBot::ChooseVictim"
+			{
+				"library"		"server"
+				"linux"			"@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayer"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x53\x55\x33\x2A\x39\x2A\x2A\x8B"
+				/* ? ? ? ? ? 83 ? ? 53 55 33 ? 39 ? ? 8B */
+				/* Search: "switching to mobile victim" */
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"Functions"
+		{
+			/* cdecl BossZombiePlayerBot::ChooseVictim(BossZombiePlayerBot *this, CTerrorPlayer *, char, CBaseCombatCharacter *) */
+			"BossZombiePlayerBot::ChooseVictim"
+			{
+				"signature"		"BossZombiePlayerBot::ChooseVictim"
+				"callconv"		"thiscall"
+				"return"		"cbaseentity"
+				"this"			"entity"
+				"arguments"
+				{
+					"player"
+					{
+						"type"	"int"
+					}
+					"a_char"
+					{
+						"type"	"int"
+					}
+					"character"
+					{
+						"type"	"int"
+					}
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			"TankAttack__Update_Offset"
+			{
+				"windows"	"1513"
+				"linux"		"966"
+			}
+			"TankAttack__Update_Count"
+			{
+				"windows"	"39"
+				"linux"		"8"
+			}
+			"TankAttack__Update_Match"
+			{
+				"windows"	"141"	// 0x8D
+				"linux"		"137"	// 0x89
+			}
+		}
+
+		"Addresses"
+		{
+			"TankAttack::Update"
+			{
+				"windows"
+				{
+					"signature"	"TankAttack::Update"
+				}
+				"linux"
+				{
+					"signature"	"TankAttack::Update"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"BossZombiePlayerBot::ChooseVictim"
+			{
+				"library"		"server"
+				"linux"			"@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayeriP20CBaseCombatCharacter"
+				"windows"		"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x53\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x56"
+				/* ? ? ? ? ? ? ? ? ? ? ? 83 ? ? ? 53 8B ? 8B ? ? ? ? ? 8B ? ? ? ? ? 56 */
+				/* Search: "switching to mobile victim" */
+			}
+
+			"TankAttack::Update"
+			{
+				"library"		"server"
+				"linux"			"@_ZN10TankAttack6UpdateEP4Tankf"
+				"windows"		"\x55\x8B\x2A\x81\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B"
+				/* 55 8B ? 81 ? ? ? ? ? 53 56 57 8B ? ? 8B ? ? ? ? ? 8B */
+				/* Search: "Looking at my victim" */
+				/* Patching: */
+				/* Go to "BossZombiePlayerBot::ChooseVictim" and xref, most likely last function is "TankAttack::Update" */
+				/* Then go back 2 jumps to reach "ForEachSurvivor<MinigunnerScan>" <- this is where we patch the jump */
+			}
+		}
+	}
+}

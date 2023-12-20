@@ -1,0 +1,16 @@
+特感使用技能时可移动
+
+以下参数，写在server里面
+
+//tank冷却
+//sm_cvar z_tank_throw_interval 2
+//boomer冷却
+//sm_cvar z_vomit_interval 0
+//somker舌头被隔断后冷却
+//sm_cvar tongue_hit_delay 0
+//somker舌头未命中后冷却
+//sm_cvar tongue_miss_delay 0
+//spitter冷却
+//sm_cvar z_spit_interval 0
+//charger冷却
+//sm_cvar z_charge_interval 0

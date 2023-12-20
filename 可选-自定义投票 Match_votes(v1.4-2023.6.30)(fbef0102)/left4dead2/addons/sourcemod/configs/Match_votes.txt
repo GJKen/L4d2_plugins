@@ -1,0 +1,398 @@
+"MatchModes"
+{
+
+// You can delete any section. Or add your own, for example:
+// 你可以隨意修改或新增, 舉例:
+//
+//	"Test" //名稱隨意
+//	{
+//		"test"				//config's directory: cfg/test.cfg
+//		"test"				//執行cfg文件的路徑為: cfg/test.cfg
+//		{
+//			"name" "Test Mode"	//that appears in the menu
+//			"name" "Test Mode"	//出現在選單介面上的名稱
+//		}
+//		//.... (list of other configs)
+//		//.... (其他配置列表)
+//	}
+
+	"全体转生?"
+	{
+		"match_votes/restartmap_on"
+		{
+			"name" "人生重开!!!!"
+		}
+		"match_votes/restartmap_off"
+		{
+			"name" "我不想重开T_T"
+		}
+	}
+
+	"特感数量 | 特感模式"
+	{
+		"match_votes/l4dinfectedbots_sblx_gdst_on"
+		{
+			"name" "固定刷特"
+		}
+		"match_votes/l4dinfectedbots_sblx_tgsd_on"
+		{
+			"name" "特感速递"
+		}
+		"match_votes/l4dinfectedbots_sblx_1t"
+		{
+			"name" "特感数量1t"
+		}
+		"match_votes/l4dinfectedbots_sblx_2t"
+		{
+			"name" "特感数量2t"
+		}
+		"match_votes/l4dinfectedbots_sblx_3t"
+		{
+			"name" "特感数量3t"
+		}
+		"match_votes/l4dinfectedbots_sblx_4t"
+		{
+			"name" "特感数量4t"
+		}
+		"match_votes/l4dinfectedbots_sblx_6t"
+		{
+			"name" "特感数量6t"
+		}
+		"match_votes/l4dinfectedbots_sblx_8t"
+		{
+			"name" "特感数量8t"
+		}
+		"match_votes/l4dinfectedbots_sblx_10t"
+		{
+			"name" "特感数量10t"
+		}
+		"match_votes/l4dinfectedbots_sblx_12t"
+		{
+			"name" "特感数量12t"
+		}
+		"match_votes/l4dinfectedbots_sblx_14t"
+		{
+			"name" "特感数量14t"
+		}
+		"match_votes/l4dinfectedbots_sblx_16t"
+		{
+			"name" "特感数量16t"
+		}
+		"match_votes/l4dinfectedbots_sblx_18t"
+		{
+			"name" "特感数量18t"
+		}
+		"match_votes/l4dinfectedbots_sblx_20t"
+		{
+			"name" "特感数量20t"
+		}
+		"match_votes/l4dinfectedbots_sblx_22t"
+		{
+			"name" "特感数量22t"
+		}
+	}
+
+	"刷特时间(s)"
+	{
+		"match_votes/l4dinfectedbots_sblx_timer_1_1"
+		{
+			"name" "刷特时间最大1s | 最小1s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_4_4"
+		{
+			"name" "刷特时间最大4s | 最小4s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_5_5"
+		{
+			"name" "刷特时间最大5s | 最小5s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_6_6"
+		{
+			"name" "刷特时间最大6s | 最小6s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_8_8"
+		{
+			"name" "刷特时间最大8s | 最小8s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_10_10"
+		{
+			"name" "刷特时间最大10s | 最小10s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_12_12"
+		{
+			"name" "刷特时间最大12s | 最小12s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_18_18"
+		{
+			"name" "刷特时间最大18s | 最小18s"
+		}
+		"match_votes/l4dinfectedbots_sblx_timer_20_20"
+		{
+			"name" "刷特时间最大20s | 最小20s"
+		}
+	}
+
+	"特感属性(Hard_SI)"
+	{
+		"match_votes/infected_attribute_tank_bhop_off"
+		{
+			"name" "off - Tank连跳"
+		}
+		"match_votes/infected_attribute_tank_bhop_on"
+		{
+			"name" "on - Tank连跳"
+		}
+		"match_votes/infected_hunter_no_deadstops_on"
+		{
+			"name" "on - Hunter飞扑不能推"
+		}
+		"match_votes/infected_hunter_no_deadstops_off"
+		{
+			"name" "off - Hunter飞扑不能推"
+		}
+		"match_votes/infected_attribute_hunter_jump_0"
+		{
+			"name" "0 - Hunter折角跳跃值"
+		}
+		"match_votes/infected_attribute_hunter_jump_7"
+		{
+			"name" "7 - Hunter折角跳跃值"
+		}
+		"match_votes/infected_attribute_spitter_bhop_off"
+		{
+			"name" "off - Spitter 连跳"
+		}
+		"match_votes/infected_attribute_spitter_bhop_on"
+		{
+			"name" "on - Spitter 连跳"
+		}
+	}
+
+	"角色属性(rpg)"
+	{
+		"match_votes/xd999_on"
+		{
+			"name" "on - 下蹲速度999"
+		}
+		"match_votes/xd999_off"
+		{
+			"name" "off - 下蹲速度999"
+		}
+		"match_votes/survivor_allow_crawling_on"
+		{
+			"name" "on - 倒地爬行"
+		}
+		"match_votes/survivor_allow_crawling_off"
+		{
+			"name" "off - 倒地爬行"
+		}
+		"match_votes/survivor_revive_duration_3s"
+		{
+			"name" "3s - 拉人时间"
+		}
+		"match_votes/survivor_revive_duration_5s"
+		{
+			"name" "5s - 拉人时间(默认)"
+		}
+		"match_votes/first_aid_kit_use_duration_3s"
+		{
+			"name" "3s - 打包时间"
+		}
+		"match_votes/first_aid_kit_use_duration_5s"
+		{
+			"name" "5s - 打包时间(默认)"
+		}
+	}
+
+	"bot数量"
+	{
+		"match_votes/bots_num_1"
+		{
+			"name" "bot 1"
+		}
+		"match_votes/bots_num_2"
+		{
+			"name" "bot 2"
+		}
+		"match_votes/bots_num_3"
+		{
+			"name" "bot 3"
+		}
+		"match_votes/bots_num_4"
+		{
+			"name" "bot 4"
+		}
+		"match_votes/bots_num_5"
+		{
+			"name" "bot 5"
+		}
+		"match_votes/bots_num_6"
+		{
+			"name" "bot 6"
+		}
+		"match_votes/bots_num_7"
+		{
+			"name" "bot 7"
+		}
+		"match_votes/bots_num_8"
+		{
+			"name" "bot 8"
+		}
+		"match_votes/bots_num_9"
+		{
+			"name" "bot 9"
+		}
+		"match_votes/bots_num_10"
+		{
+			"name" "bot 10"
+		}
+		"match_votes/bots_num_11"
+		{
+			"name" "bot 11"
+		}
+		"match_votes/bots_num_12"
+		{
+			"name" "bot 12"
+		}
+		"match_votes/bots_num_13"
+		{
+			"name" "bot 13"
+		}
+		"match_votes/bots_num_14"
+		{
+			"name" "bot 14"
+		}
+		"match_votes/bots_num_15"
+		{
+			"name" "bot 15"
+		}
+		"match_votes/bots_num_16"
+		{
+			"name" "bot 16"
+		}
+		"match_votes/bots_num_17"
+		{
+			"name" "bot 17"
+		}
+		"match_votes/bots_num_18"
+		{
+			"name" "bot 18"
+		}
+	}
+
+	"武器"
+	{
+		"match_votes/ammo_default"
+		{
+			"name" "正常备弹"
+		}
+		"match_votes/ammo_3"
+		{
+			"name" "3倍备弹"
+		}
+		"match_votes/ammo_primary"
+		{
+			"name" "无限火力"
+		}
+	}
+
+	"小僵尸控制"
+	{
+		"match_votes/zomble_0_0_0"
+		{
+			"name" "无小僵尸"
+		}
+		"match_votes/zomble_default"
+		{
+			"name" "官方默认僵尸数量"
+		}
+		"match_votes/zomble_3_1_5"
+		{
+			"name" "3-1-5 每次尸潮刷新僵尸的数量5"
+		}
+		"match_votes/zomble_3_1_10"
+		{
+			"name" "3-1-10 每次尸潮刷新僵尸的数量10"
+		}
+		"match_votes/zomble_3_1_20"
+		{
+			"name" "3-1-20 每次尸潮刷新僵尸的数量20"
+		}
+	}
+
+	"友伤参数"
+	{
+		"match_votes/friendly_fire_anti_on"
+		{
+			"name" "on - 反伤"
+		}
+		"match_votes/friendly_fire_anti_off"
+		{
+			"name" "off - 反伤"
+		}
+		"match_votes/friendly_fire_0"
+		{
+			"name" "0 - 友伤(萌新)"
+		}
+		"match_votes/friendly_fire_0_1"
+		{
+			"name" "0.1 - 友伤(普通)"
+		}
+		"match_votes/friendly_fire_0_2"
+		{
+			"name" "0.2 - 友伤"
+		}
+		"match_votes/friendly_fire_0_3"
+		{
+			"name" "0.3 - 友伤(困难)"
+		}
+		"match_votes/friendly_fire_0_4"
+		{
+			"name" "0.4 - 友伤"
+		}
+		"match_votes/friendly_fire_0_5(专家)"
+		{
+			"name" "0.5 - 友伤"
+		}
+	}
+
+	"特感模式(速递 | 固定)"
+	{
+		"match_votes/l4dinfectedbots_sblx_tgsd_6t_1r1t_10s30s"
+		{
+			"name" "特感速递(4人6特 | 1人+1特 | 10-30s)"
+		}
+		"match_votes/l4dinfectedbots_sblx_tgsd_6t_1r2t_10s30s"
+		{
+			"name" "特感速递(4人6特 | 1人+2特 | 10-30s)"
+		}
+		"match_votes/l4dinfectedbots_sblx_tgsd_4t_1r1t_10s30s"
+		{
+			"name" "特感速递(4人4特 | 1人+2特 | 10-30s)"
+		}
+	}
+
+	"更改motd (需重启地图)"
+	{
+		"match_votes/motd1"
+		{
+			"name" "小春-默认motd(Pid:96067070)"
+		}
+		"match_votes/motd2"
+		{
+			"name" "モ誰(Twi:1302667849249378304)"
+		}
+		"match_votes/motd3"
+		{
+			"name" "浅黄梦月 (Twi:1477031921003921409)"
+		}
+	}
+
+	"更多参数开发玩弄中❤..."
+	{
+		"match_votes/test"
+		{
+			"name" "要被玩坏了❤"
+		}
+	}
+}

@@ -81,6 +81,29 @@
 		<a href="https://github.com/fantasylidong/CompetitiveWithAnne">L4D2-Not0721Here-CoopSvPlugins</a>
 	</td>
 	</tr>
+	<tr>
+	<td align="center">
+		<a href="https://github.com/NanakaNeko">
+			<img src="https://avatars.githubusercontent.com/u/81429435" width="60px;" alt="NanakaNeko"/>
+			<p>NanakaNeko</p>
+		</a>
+		<a href="https://github.com/NanakaNeko/l4d2_plugins_coop">l4d2_plugins_coop</a>
+	</td>
+	<td align="center">
+		<a href="https://github.com/accelerator74">
+			<img src="https://avatars.githubusercontent.com/u/18032476" width="60px;" alt="accelerator74"/>
+			<p>accelerator74</p>
+		</a>
+		<a href="https://github.com/accelerator74/sp-plugins">l4d2_plugins_coop</a>
+	</td>
+	<td align="center">
+		<a href="https://github.com/GlowingTree880">
+			<img src="https://avatars.githubusercontent.com/u/85665832" width="60px;" alt="GlowingTree880"/>
+			<p>夜雨真白</p>
+		</a>
+		<a href="https://github.com/GlowingTree880/L4D2_LittlePlugins">L4D2_LittlePlugins</a>
+	</td>
+	</tr>
 </table>
 </details>
 
