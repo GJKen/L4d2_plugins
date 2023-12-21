@@ -1,0 +1,405 @@
+"Cfgs"
+{
+	"全体转生?"
+	{
+		"exec match_votes/restartmap_on"
+		{
+			"message" "人生重开!!!!"
+		}
+		"exec match_votes/restartmap_off"
+		{
+			"message" "我不想重开T_T"
+		}
+	}
+	"特感数量"
+	{
+		"sm_cvar l4d2_si_spawn_control_max_specials 1"
+		{
+			"message" "1特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 2"
+		{
+			"message" "2特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 3"
+		{
+			"message" "3特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 4"
+		{
+			"message" "4特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 5"
+		{
+			"message" "5特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 6"
+		{
+			"message" "6特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 7"
+		{
+			"message" "7特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 8"
+		{
+			"message" "8特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 9"
+		{
+			"message" "9特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 10"
+		{
+			"message" "10特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 12"
+		{
+			"message" "12特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 14"
+		{
+			"message" "14特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 16"
+		{
+			"message" "16特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 18"
+		{
+			"message" "18特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 20"
+		{
+			"message" "20特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 22"
+		{
+			"message" "22特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 24"
+		{
+			"message" "24特"
+		}
+		"sm_cvar l4d2_si_spawn_control_max_specials 28"
+		{
+			"message" "28特"
+		}
+	}
+	"刷特时间(s)"
+	{
+		"sm_cvar l4d2_si_spawn_control_spawn_time 0"
+		{
+			"message" "刷特时间0s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 3"
+		{
+			"message" "刷特时间3s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 5"
+		{
+			"message" "刷特时间5s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 7"
+		{
+			"message" "刷特时间7s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 9"
+		{
+			"message" "刷特时间9s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 12"
+		{
+			"message" "刷特时间12s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 14"
+		{
+			"message" "刷特时间14s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 16"
+		{
+			"message" "刷特时间16s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 18"
+		{
+			"message" "刷特时间18s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 20"
+		{
+			"message" "刷特时间20s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 22"
+		{
+			"message" "刷特时间22s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 25"
+		{
+			"message" "刷特时间25s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 30"
+		{
+			"message" "刷特时间30s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 35"
+		{
+			"message" "刷特时间35s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 40"
+		{
+			"message" "刷特时间40s"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 45"
+		{
+			"message" "刷特时间45s"
+		}
+	}
+	"特感设置"
+	{
+		"sm_cvar l4d2_si_spawn_control_together_spawn 1"
+		{
+			"message" "固定刷特时间"
+		}
+		"sm_cvar l4d2_si_spawn_control_together_spawn 0"
+		{
+			"message" "自动调整刷特时间"
+		}
+		"exec match_votes/hunter_no_charge_on"
+		{
+			"message" "on - 无蓄力HT"
+		}
+		"exec match_votes/hunter_no_charge_off"
+		{
+			"message" "off - 无蓄力HT"
+		}
+		"sm_cvar ai_Tank_Bhop 1"
+		{
+			"message" "on - tank连跳"
+		}
+		"sm_cvar ai_Tank_Bhop 0"
+		{
+			"message" "off - tank连跳"
+		}
+	}
+	"bot数量"
+	{
+		"exec match_votes/bots_num_1"
+		{
+			"message" "bot数量1"
+		}
+		"exec match_votes/bots_num_2"
+		{
+			"message" "bot数量2"
+		}
+		"exec match_votes/bots_num_3"
+		{
+			"message" "bot数量3"
+		}
+		"exec match_votes/bots_num_4"
+		{
+			"message" "bot数量4"
+		}
+		"exec match_votes/bots_num_5"
+		{
+			"message" "bot数量5"
+		}
+		"exec match_votes/bots_num_6"
+		{
+			"message" "bot数量6"
+		}
+		"exec match_votes/bots_num_7"
+		{
+			"message" "bot数量7"
+		}
+		"exec match_votes/bots_num_8"
+		{
+			"message" "bot数量8"
+		}
+		"exec match_votes/bots_num_9"
+		{
+			"message" "bot数量9"
+		}
+		"exec match_votes/bots_num_10"
+		{
+			"message" "bot数量10"
+		}
+		"exec match_votes/bots_num_11"
+		{
+			"message" "bot数量11"
+		}
+		"exec match_votes/bots_num_12"
+		{
+			"message" "bot数量12"
+		}
+		"exec match_votes/bots_num_13"
+		{
+			"message" "bot数量13"
+		}
+		"exec match_votes/bots_num_14"
+		{
+			"message" "bot数量14"
+		}
+		"exec match_votes/bots_num_15"
+		{
+			"message" "bot数量15"
+		}
+		"exec match_votes/bots_num_16"
+		{
+			"message" "bot数量16"
+		}
+		"exec match_votes/bots_num_17"
+		{
+			"message" "bot数量17"
+		}
+		"exec match_votes/bots_num_18"
+		{
+			"message" "bot数量18"
+		}
+	}
+	"角色属性(rpg)"
+	{
+		"exec match_votes/xd999_on"
+		{
+			"message" "on - 下蹲速度999"
+		}
+		"exec match_votes/xd999_off"
+		{
+			"message" "off - 下蹲速度999"
+		}
+		"exec match_votes/survivor_allow_crawling_on"
+		{
+			"message" "on - 倒地爬行"
+		}
+		"exec match_votes/survivor_allow_crawling_off"
+		{
+			"message" "off - 倒地爬行"
+		}
+		"exec match_votes/survivor_revive_duration_3s"
+		{
+			"message" "3s - 拉人时间"
+		}
+		"exec match_votes/survivor_revive_duration_5s"
+		{
+			"message" "5s - 拉人时间(默认)"
+		}
+		"exec match_votes/first_aid_kit_use_duration_3s"
+		{
+			"message" "3s - 打包时间"
+		}
+		"exec match_votes/first_aid_kit_use_duration_5s"
+		{
+			"message" "5s - 打包时间(默认)"
+		}
+	}
+	"小僵尸控制"
+	{
+		"exec match_votes/zomble_0_0_0"
+		{
+			"message" "无小僵尸"
+		}
+		"exec match_votes/zomble_default"
+		{
+			"message" "官方默认僵尸数量"
+		}
+		"exec match_votes/zomble_3_1_5"
+		{
+			"message" "3-1-5 每次尸潮刷新僵尸的数量5"
+		}
+		"exec match_votes/zomble_3_1_10"
+		{
+			"message" "3-1-10 每次尸潮刷新僵尸的数量10"
+		}
+		"exec match_votes/zomble_3_1_20"
+		{
+			"message" "3-1-20 每次尸潮刷新僵尸的数量20"
+		}
+	}
+	"枪械设置"
+	{
+		"exec vote/weapon/AnneHappy.cfg"
+		{
+			"message" "Anne枪械"
+		}
+		"exec vote/weapon/AnneHappyPlus.cfg"
+		{
+			"message" "AnnePlus枪械"
+		}
+		"exec vote/weapon/zonemod.cfg"
+		{
+			"message" "Zonemod枪械"
+		}
+		"exec vote/shove/Zonemod.cfg"
+		{
+			"message" "Zonemod推数"
+		}
+		"exec vote/shove/AnneHappy.cfg"
+		{
+			"message" "药役推数"
+		}
+		"sm_weapon_attributes_reset"
+		{
+			"message" "恢复默认枪械伤害"
+		}
+		"exec match_votes/ammo_3"
+		{
+			"message" "3倍弹药"
+		}
+		"exec vote/weapon/shuangbei.cfg"
+		{
+			"message" "2倍弹药"
+		}
+		"exec vote/weapon/moren.cfg"
+		{
+			"message" "默认弹药"
+		}
+	}
+	"友伤设置"
+	{
+		"exec vote/ff-off.cfg"
+		{
+			"message" "友伤 - off"
+		}
+		"exec vote/ff-on.cfg"
+		{
+			"message" "友伤 - on"
+		}
+		"exec match_votes/friendly_fire_anti_off"
+		{
+			"message" "反伤 - off"
+		}
+		"exec match_votes/friendly_fire_anti_on"
+		{
+			"message" "反伤 - on"
+		}
+	}
+	"更改motd (需重启地图)"
+	{
+		"exec match_votes/motd1"
+		{
+			"message" "小春-R18(Pid:96067070)"
+		}
+		"exec match_votes/motd2"
+		{
+			"message" "モ誰(Twi:1302667849249378304)"
+		}
+		"exec match_votes/motd3"
+		{
+			"message" "浅黄梦月 (Twi:1477031921003921409)"
+		}
+		"exec match_votes/motd4"
+		{
+			"message" "水族馆(Anmi: 83088427)"
+		}
+		"exec match_votes/motd5"
+		{
+			"message" "原神萝莉-R18(dorontabi: 100613459)"
+		}
+		"exec match_votes/motd6"
+		{
+			"message" "Mignon-水出芙蓉(Twi:1486585741832454151)"
+		}
+		"exec match_votes/motd7"
+		{
+			"message" "少女与天鹅(Anmi:no source)"
+		}
+	}
+}

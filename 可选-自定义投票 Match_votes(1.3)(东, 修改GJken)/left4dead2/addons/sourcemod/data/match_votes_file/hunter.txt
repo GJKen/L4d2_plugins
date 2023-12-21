@@ -1,0 +1,264 @@
+"Cfgs"
+{
+	"特感数量"
+	{
+		"exec vote/t3/1t.cfg"
+		{
+			"message" "1特模式"
+		}
+		"exec vote/t3/2t.cfg"
+		{
+			"message" "2特模式"
+		}
+		"exec vote/t3/3t.cfg"
+		{
+			"message" "3特模式"
+		}
+		"exec vote/t3/4t.cfg"
+		{
+			"message" "4特模式"
+		}
+		"exec vote/t3/5t.cfg"
+		{
+			"message" "5特模式"
+		}
+		"exec vote/t3/6t.cfg"
+		{
+			"message" "6特模式"
+		}
+		"exec vote/t3/7t.cfg"
+		{
+			"message" "7特模式"
+		}
+		"exec vote/t3/8t.cfg"
+		{
+			"message" "8特模式"
+		}
+		"exec vote/t3/9t.cfg"
+		{
+			"message" "9特模式"
+		}
+		"exec vote/t3/10t.cfg"
+		{
+			"message" "10特模式"
+		}
+		"exec vote/t3/11t.cfg"
+		{
+			"message" "11特模式"
+		}
+		"exec vote/t3/12t.cfg"
+		{
+			"message" "12特模式"
+		}
+	}
+	"特感复活时间"
+	{
+		"sm_cvar l4d2_si_spawn_control_spawn_time 1"
+		{
+			"message" "特感复活=1秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 3"
+		{
+			"message" "特感复活=3秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 5"
+		{
+			"message" "特感复活=5秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 7"
+		{
+			"message" "特感复活=7秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 9"
+		{
+			"message" "特感复活=9秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 12"
+		{
+			"message" "特感复活=12秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 14"
+		{
+			"message" "特感复活=14秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 16"
+		{
+			"message" "特感复活=16秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 18"
+		{
+			"message" "特感复活=18秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 20"
+		{
+			"message" "特感复活=20秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 22"
+		{
+			"message" "特感复活=22秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 25"
+		{
+			"message" "特感复活=25秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 30"
+		{
+			"message" "特感复活=30秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 35"
+		{
+			"message" "特感复活=35秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 40"
+		{
+			"message" "特感复活=40秒"
+		}
+		"sm_cvar l4d2_si_spawn_control_spawn_time 45"
+		{
+			"message" "特感复活=45秒"
+		}
+	}
+	"特感其他设置"
+	{
+		"sm_cvar l4d2_si_spawn_control_together_spawn 1"
+		{
+			"message" "开启特感集中生成"
+		}
+		"sm_cvar l4d2_si_spawn_control_together_spawn 0"
+		{
+			"message" "关闭特感集中生成"
+		}
+		"exec vote/crouch_on.cfg"
+		{
+			"message" "开启无蓄力HT"
+		}
+		"exec vote/crouch_off.cfg"
+		{
+			"message" "关闭无蓄力HT"
+		}
+	}
+	"杂项"
+	{
+		"sm_restartmap"
+		{
+			"message" "重启当前地图"
+		}
+		"sm_cvar l4d_dissolve_allow 1"
+		{
+			"message" "开启小怪死亡清除尸体"
+		}
+		"sm_cvar l4d_dissolve_allow 0"
+		{
+			"message" "关闭小怪死亡清除尸体"
+		}
+		"sm sm_cvar sound_enable 0"
+		{
+			"message" "关闭击杀音效"
+		}
+		"sm sm_cvar sound_enable 1"
+		{
+			"message" "开启击杀音效"
+		}
+		"sm_cvar sb_fix_enabled 0"
+		{
+			"message" "关闭bot加强"
+		}
+		"sm_cvar sb_fix_enabled 1"
+		{
+			"message" "开启bot加强"
+		}
+		"sm_cvar l4d_skip_intro_allow 1"
+		{
+			"message" "开启跳过开头动画"
+		}
+		"sm_cvar l4d_skip_intro_allow 0"
+		{
+			"message" "关闭跳过开头动画"
+		}
+	}
+	"杀特回血回弹药"
+	{
+		"exec vote/onregain.cfg"
+		{
+			"message" "开启杀特回血"
+		}
+		"exec vote/offregain.cfg"
+		{
+			"message" "关闭杀特回血"
+		}
+		"sm_cvar ss_healthregain 2"
+		{
+			"message" "杀特回血量=2"
+		}
+		"sm_cvar ss_healthregain 3"
+		{
+			"message" "杀特回血量=3"
+		}
+		"sm_cvar ss_healthregain 5"
+		{
+			"message" "杀特回血量=5"
+		}
+	}
+	"小怪数量"
+	{
+		"sm_cvar z_common_limit 30"
+		{
+			"message" "小怪数量锁定30个"
+		}
+		"sm_cvar z_common_limit 20"
+		{
+			"message" "小怪数量锁定20个"
+		}
+		"sm_cvar z_common_limit 10"
+		{
+			"message" "小怪数量锁定10个"
+		}
+		"sm_cvar z_common_limit 5"
+		{
+			"message" "小怪数量锁5个"
+		}
+		"sm_cvar z_common_limit 3"
+		{
+			"message" "小怪数量锁3个"
+		}
+	}	
+	"枪械设置"
+	{
+		"exec vote/weapon/AnneHappy.cfg"
+		{
+			"message" "Anne枪械"
+		}
+		"exec vote/weapon/AnneHappyPlus.cfg"
+		{
+			"message" "AnnePlus枪械"
+		}
+		"exec vote/weapon/zonemod.cfg"
+		{
+			"message" "Zonemod枪械"
+		}
+		"sm_weapon_attributes_reset"
+		{
+			"message" "恢复默认枪械"
+		}
+		"exec vote/weapon/duote.cfg"
+		{
+			"message" "多特弹药"
+		}
+		"exec vote/weapon/shuangbei.cfg"
+		{
+			"message" "双倍弹药"
+		}
+		"exec vote/weapon/moren.cfg"
+		{
+			"message" "默认弹药"
+		}
+		"exec vote/gunrecoil_on.cfg"
+		{
+			"message" "关闭枪械抖动"
+		}
+		"exec vote/gunrecoil_off.cfg"
+		{
+			"message" "恢复枪械抖动"
+		}
+	}	
+}

@@ -1,0 +1,83 @@
+"Cfgs"
+{
+	"全体转生?"
+	{
+		"exec match_votes/restartmap_on"
+		{
+			"message" "人生重开!!!!"
+		}
+		"exec match_votes/restartmap_off"
+		{
+			"message" "我不想重开T_T"
+		}
+	}
+	"枪械设置"
+	{
+		"exec match_votes/ammo_3"
+		{
+			"message" "3倍弹药"
+		}
+		"exec vote/weapon/shuangbei.cfg"
+		{
+			"message" "2倍弹药"
+		}
+		"exec vote/weapon/moren.cfg"
+		{
+			"message" "默认弹药"
+		}
+		"exec match_votes/ammo_primary"
+		{
+			"message" "无限火力"
+		}
+	}
+	"友伤设置"
+	{
+		"exec vote/ff-off.cfg"
+		{
+			"message" "友伤 - off"
+		}
+		"exec vote/ff-on.cfg"
+		{
+			"message" "友伤 - on"
+		}
+		"exec match_votes/friendly_fire_anti_off"
+		{
+			"message" "反伤 - off"
+		}
+		"exec match_votes/friendly_fire_anti_on"
+		{
+			"message" "反伤 - on"
+		}
+	}
+	"更改motd (需重启地图)"
+	{
+		"exec match_votes/motd1"
+		{
+			"message" "小春-R18(Pid:96067070)"
+		}
+		"exec match_votes/motd2"
+		{
+			"message" "モ誰(Twi:1302667849249378304)"
+		}
+		"exec match_votes/motd3"
+		{
+			"message" "浅黄梦月 (Twi:1477031921003921409)"
+		}
+		"exec match_votes/motd4"
+		{
+			"message" "水族馆(Anmi: 83088427)"
+		}
+		"exec match_votes/motd5"
+		{
+			"message" "原神萝莉-R18(dorontabi: 100613459)"
+		}
+		"exec match_votes/motd6"
+		{
+			"message" "Mignon-水出芙蓉(Twi:1486585741832454151)"
+		}
+		"exec match_votes/motd7"
+		{
+			"message" "少女与天鹅(Anmi:no source)"
+		}
+	}
+}

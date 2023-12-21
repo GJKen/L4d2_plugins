@@ -1,0 +1,150 @@
+"Cfgs"
+{
+	"杂项"
+	{
+		"sm_restartmap"
+		{
+			"message" "重启当前地图"
+		}
+		"exec vote/sis-on.cfg"
+		{
+			"message" "开启特感生成音效"
+		}
+		"sm_cvar l4d_dissolve_allow 1"
+		{
+			"message" "开启小怪死亡清除尸体"
+		}
+		"sm_cvar l4d_dissolve_allow 0"
+		{
+			"message" "关闭小怪死亡清除尸体"
+		}
+		"sm sm_cvar sound_enable 0"
+		{
+			"message" "关闭击杀音效"
+		}
+		"sm sm_cvar sound_enable 1"
+		{
+			"message" "开启击杀音效"
+		}
+		"exec vote/bot.cfg"
+		{
+			"message" "开启bot加强"
+		}
+		"sm_cvar sb_fix_enabled 0"
+		{
+			"message" "关闭bot加强"
+		}
+		"exec vote/botplus.cfg"
+		{
+			"message" "给人机开挂(先开加强)"
+		}
+		"sm_cvar l4d_skip_intro_allow 1"
+		{
+			"message" "开启跳过开头动画"
+		}
+		"sm_cvar l4d_skip_intro_allow 0"
+		{
+			"message" "关闭跳过开头动画"
+		}
+	}
+	"杀特回血回弹药"
+	{
+		"exec vote/onregain.cfg"
+		{
+			"message" "开启杀特回血"
+		}
+		"exec vote/offregain.cfg"
+		{
+			"message" "关闭杀特回血"
+		}
+		"sm_cvar ss_healthregain 1"
+		{
+			"message" "杀特回血量=1"
+		}
+		"sm_cvar ss_healthregain 3"
+		{
+			"message" "杀特回血量=3"
+		}
+		"sm_cvar ss_healthregain 5"
+		{
+			"message" "杀特回血量=5"
+		}
+	}
+	"小怪数量"
+	{
+		"sm_cvar z_common_limit 30"
+		{
+			"message" "小怪数量锁定30个"
+		}
+		"sm_cvar z_common_limit 20"
+		{
+			"message" "小怪数量锁定20个"
+		}
+		"sm_cvar z_common_limit 10"
+		{
+			"message" "小怪数量锁定10个"
+		}
+		"sm_cvar z_common_limit 5"
+		{
+			"message" "小怪数量锁5个"
+		}
+	}	
+	"枪械设置"
+	{
+		"exec vote/weapon/AnneHappy.cfg"
+		{
+			"message" "Anne枪械"
+		}
+		"exec vote/weapon/AnneHappyPlus.cfg"
+		{
+			"message" "AnnePlus枪械"
+		}
+		"exec vote/weapon/zonemod.cfg"
+		{
+			"message" "Zonemod枪械"
+		}
+		"sm_weapon_attributes_reset"
+		{
+			"message" "恢复默认枪械"
+		}
+		"exec vote/weapon/duote.cfg"
+		{
+			"message" "多特弹药"
+		}
+		"exec vote/weapon/shuangbei.cfg"
+		{
+			"message" "双倍弹药"
+		}
+		"exec vote/weapon/moren.cfg"
+		{
+			"message" "默认弹药"
+		}
+		"exec vote/gunrecoil_on.cfg"
+		{
+			"message" "关闭枪械抖动"
+		}
+		"exec vote/gunrecoil_off.cfg"
+		{
+			"message" "恢复枪械抖动"
+		}
+	}
+	"友伤设置"
+	{
+		"exec vote/ff-off.cfg"
+		{
+			"message" "关闭队友伤害"
+		}
+		"exec vote/ff-on.cfg"
+		{
+			"message" "开启队友伤害"
+		}
+		"exec vote/fsoff.cfg"
+		{
+			"message" "关闭反伤"
+		}
+		"exec vote/fson.cfg"
+		{
+			"message" "开启反伤"
+		}
+	}
+}
