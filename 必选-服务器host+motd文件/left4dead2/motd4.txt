@@ -58,7 +58,8 @@
 					<code>!mapnext</code>: 下一张地图投票(需在救援关才能投票)<br />
 					<code>!v</code> | <code>!votes</code>: 多功能投票<br />
 					<code>!afk</code> | <code>!away\!s</code> | <code>!join\!jg</code>: 闲置 \ 旁观 \ 加入幸存者<br />
-					<code>!teams</code> | <code>!rank</code>: 查看团队信息 \ 查看个人信息<br />
+					<code>!teams</code>: 查看团队信息<br />
+					<!-- <code>!teams</code> | <code>!rank</code>: 查看团队信息 \ 查看个人信息<br />-->
 					<!-- <code>!tp</code> | <code>!cs</code>: 指定传送到队友身边 \ 随机传送<br />-->
 					<code>!b</code> | <code>!buy</code> | <code>!rpg</code>: 点数商店<br />
 					<!-- <code>!zs</code>: 自杀<br />-->
