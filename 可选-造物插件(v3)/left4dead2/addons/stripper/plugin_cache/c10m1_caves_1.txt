@@ -1,0 +1,19 @@
+//----------FILE MODIFICATION (YY/MM/DD): [2022/01/15] ---------------||
+//----------BY: 徐慧雪----------------------||
+
+"Objects_Cache"
+{
+	"object_1"
+	{
+		"solid" "6"
+		"origin" "-12312 -11750 -179"
+		"angles" "0 90 0"
+		"model"	 "models/props_docks/dock_broken01a_256.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"total_cache"
+	{
+		"total" "1"
+	}
+}

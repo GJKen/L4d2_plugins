@@ -1,0 +1,705 @@
+//----------FILE MODIFICATION (YY/MM/DD): [2022/01/15] ---------------||
+//----------BY: 徐慧雪----------------------||
+
+"Objects_Cache"
+{
+	"object_1"
+	{
+		"solid" "6"
+		"origin" "10476 8260 -547"
+		"angles" "0 177 0"
+		"model"	 "models/deadbodies/dead_female_civilian_draped_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_2"
+	{
+		"solid" "6"
+		"origin" "10271 8457 -362"
+		"angles" "0 1 0"
+		"model"	 "models/props_fairgrounds/mic_stand.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_3"
+	{
+		"solid" "6"
+		"origin" "10238 8455 -362"
+		"angles" "0 -177 0"
+		"model"	 "models/props_fairgrounds/amp_stack_small.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_4"
+	{
+		"solid" "6"
+		"origin" "10282 8232 -342"
+		"angles" "0 136 0"
+		"model"	 "models/props/cs_militia/caseofbeer01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_5"
+	{
+		"solid" "6"
+		"origin" "10246 8136 -342"
+		"angles" "720 0 0"
+		"model"	 "models/props_fortifications/sandbags_corner3.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_6"
+	{
+		"solid" "6"
+		"origin" "10699 8216 -528"
+		"angles" "0 66 0"
+		"model"	 "models/props_interiors/dvd_player.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_7"
+	{
+		"solid" "6"
+		"origin" "10824 8283 -577"
+		"angles" "0 269 0"
+		"model"	 "models/props_interiors/refrigerator03.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_8"
+	{
+		"solid" "6"
+		"origin" "10662 8199 -558"
+		"angles" "0 93 0"
+		"model"	 "models/props_interiors/waterbottle.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_9"
+	{
+		"solid" "6"
+		"origin" "10721 8211 -528"
+		"angles" "0 173 0"
+		"model"	 "models/props_interiors/phone_motel.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_10"
+	{
+		"solid" "6"
+		"origin" "10864 8247 -573"
+		"angles" "0 -3 0"
+		"model"	 "models/props_interiors/bbq_grill.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_11"
+	{
+		"solid" "6"
+		"origin" "10969 8368 -601"
+		"angles" "0 86 0"
+		"model"	 "models/props_mill/tank_medium01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_12"
+	{
+		"solid" "6"
+		"origin" "10648 8232 -562"
+		"angles" "0 91 0"
+		"model"	 "models/props_urban/plastic_bucket001.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_13"
+	{
+		"solid" "6"
+		"origin" "10686 8261 -527"
+		"angles" "0 269 0"
+		"model"	 "models/props_interiors/paper_towel_dispenser.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_14"
+	{
+		"solid" "6"
+		"origin" "10686 8235 -528"
+		"angles" "0 87 0"
+		"model"	 "models/props_interiors/styrofoam_cups.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_15"
+	{
+		"solid" "6"
+		"origin" "10746 8310 -553"
+		"angles" "0 267 0"
+		"model"	 "models/props_interiors/medicalcabinet02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_16"
+	{
+		"solid" "6"
+		"origin" "10438 8326 -415"
+		"angles" "0 91 0"
+		"model"	 "models/props_cemetery/grave_07.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_17"
+	{
+		"solid" "6"
+		"origin" "10731 8256 -528"
+		"angles" "360 -15 0"
+		"model"	 "models/props_c17/consolebox01a.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_18"
+	{
+		"origin" "1157 5463 -900"
+		"angles" "-1 270 -1"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_19"
+	{
+		"origin" "1164 5257 -897"
+		"angles" "0 90 -91"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_20"
+	{
+		"origin" "1021 5463 -900"
+		"angles" "-1 269 1"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_21"
+	{
+		"origin" "1021 5015 -900"
+		"angles" "-1 269 1"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_22"
+	{
+		"origin" "1157 5015 -900"
+		"angles" "-1 270 -1"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_23"
+	{
+		"origin" "1004 4809 -897"
+		"angles" "0 90 -91"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_24"
+	{
+		"origin" "1020 4585 -900"
+		"angles" "-1 89 1"
+		"model"	 "models/props_urban/picture_frame001.mdl"
+		"classname"	"prop_physics"
+	}
+	
+	"object_25"
+	{
+		"solid" "6"
+		"origin" "10225 8175 -522"
+		"angles" "0 178 0"
+		"model"	 "models/props_cemetery/crypts_wall.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_26"
+	{
+		"solid" "6"
+		"origin" "10226 8385 -542"
+		"angles" "0 -179 0"
+		"model"	 "models/props_cemetery/crypts_wall.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_27"
+	{
+		"solid" "6"
+		"origin" "10209 8599 -407"
+		"angles" "0 132 0"
+		"model"	 "models/props_wasteland/rockcliff_cluster03b.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_28"
+	{
+		"solid" "6"
+		"origin" "10394 8136 -450"
+		"angles" "360 627 690"
+		"model"	 "models/props_equipment/tablegreenhouse01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_29"
+	{
+		"solid" "6"
+		"origin" "10539 8131 -537"
+		"angles" "0 177 0"
+		"model"	 "models/props_unique/haybails_single.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_30"
+	{
+		"solid" "6"
+		"origin" "10212 7753 -524"
+		"angles" "0 178 0"
+		"model"	 "models/props_urban/fence_gate001_256.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_31"
+	{
+		"solid" "6"
+		"origin" "10214 8003 -526"
+		"angles" "0 178 0"
+		"model"	 "models/props_urban/fence_gate001_256.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_32"
+	{
+		"solid" "6"
+		"origin" "10214 7877 -525"
+		"angles" "0 179 0"
+		"model"	 "models/props_urban/fence_gate001_256.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_33"
+	{
+		"solid" "6"
+		"origin" "10327 7969 -526"
+		"angles" "0 -178 0"
+		"model"	 "models/props_fortifications/fortification_indoor_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_34"
+	{
+		"solid" "6"
+		"origin" "10350 7970 -527"
+		"angles" "0 -176 0"
+		"model"	 "models/w_models/weapons/w_minigun.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_35"
+	{
+		"solid" "6"
+		"origin" "10330 7781 -523"
+		"angles" "720 361 0"
+		"model"	 "models/props_fortifications/sandbags_corner3.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_36"
+	{
+		"solid" "6"
+		"origin" "10365 7786 -528"
+		"angles" "0 178 0"
+		"model"	 "models/w_models/weapons/w_minigun.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_37"
+	{
+		"solid" "6"
+		"origin" "10393 8005 -529"
+		"angles" "0 -177 0"
+		"model"	 "models/deadbodies/dead_male_torso_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_38"
+	{
+		"solid" "6"
+		"origin" "10393 7875 -525"
+		"angles" "0 -177 0"
+		"model"	 "models/deadbodies/dead_female_civilian_02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_39"
+	{
+		"solid" "6"
+		"origin" "10453 8001 -527"
+		"angles" "0 -154 0"
+		"model"	 "models/deadbodies/dead_female_civilian_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_40"
+	{
+		"solid" "6"
+		"origin" "10554 7982 -533"
+		"angles" "0 89 0"
+		"model"	 "models/deadbodies/dead_female_civilian_draped_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_41"
+	{
+		"solid" "6"
+		"origin" "10056 7528 -309"
+		"angles" "0 -167 0"
+		"model"	 "models/props_wasteland/rock_cliff01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_42"
+	{
+		"solid" "6"
+		"origin" "10438 8326 -559"
+		"angles" "0 179 0"
+		"model"	 "models/props_swamp/ferry.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_43"
+	{
+		"solid" "6"
+		"origin" "10613 8346 -569"
+		"angles" "0 177 0"
+		"model"	 "models/props_furniture/it_mkt_table2.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_44"
+	{
+		"solid" "6"
+		"origin" "10363 8259 -545"
+		"angles" "0 -176 0"
+		"model"	 "models/props_cemetery/grave_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_45"
+	{
+		"solid" "6"
+		"origin" "10337 8321 -554"
+		"angles" "0 -180 0"
+		"model"	 "models/props_cemetery/grave_07.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_46"
+	{
+		"solid" "6"
+		"origin" "10339 8377 -553"
+		"angles" "0 -180 0"
+		"model"	 "models/props_cemetery/grave_03.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_47"
+	{
+		"solid" "6"
+		"origin" "10422 8261 -548"
+		"angles" "0 -179 0"
+		"model"	 "models/props_cemetery/grave_01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_48"
+	{
+		"solid" "6"
+		"origin" "10404 8321 -557"
+		"angles" "0 -179 0"
+		"model"	 "models/props_cemetery/grave_04.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_49"
+	{
+		"solid" "6"
+		"origin" "10396 8380 -555"
+		"angles" "0 -178 0"
+		"model"	 "models/props_cemetery/grave_07.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_50"
+	{
+		"solid" "6"
+		"origin" "10474 8334 -557"
+		"angles" "0 -176 0"
+		"model"	 "models/deadbodies/dead_female_civilian_draped_02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_51"
+	{
+		"solid" "6"
+		"origin" "10620 8323 -533"
+		"angles" "0 -176 0"
+		"model"	 "models/props_fairgrounds/alligator.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_52"
+	{
+		"solid" "6"
+		"origin" "10597 8317 -536"
+		"angles" "360 358 0"
+		"model"	 "models/props_fairgrounds/amp_plexi.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_53"
+	{
+		"solid" "6"
+		"origin" "10268 8252 -341"
+		"angles" "0 -179 0"
+		"model"	 "models/props_fairgrounds/fairgrounds_flagpole01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_54"
+	{
+		"solid" "6"
+		"origin" "10157 8052 -391"
+		"angles" "0 17 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_55"
+	{
+		"solid" "6"
+		"origin" "10069 8024 -454"
+		"angles" "0 -165 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_56"
+	{
+		"solid" "6"
+		"origin" "9956 8001 -516"
+		"angles" "0 -174 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_57"
+	{
+		"solid" "6"
+		"origin" "10160 8198 -385"
+		"angles" "0 178 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_58"
+	{
+		"solid" "6"
+		"origin" "10078 8198 -387"
+		"angles" "0 178 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_59"
+	{
+		"solid" "6"
+		"origin" "10255 8231 -342"
+		"angles" "0 -180 0"
+		"model"	 "models/props/cs_militia/caseofbeer01.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_60"
+	{
+		"solid" "6"
+		"origin" "10268 8355 -350"
+		"angles" "0 138 0"
+		"model"	 "models/props/cs_militia/footlocker01_closed.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_61"
+	{
+		"solid" "6"
+		"origin" "10780 8359 -590"
+		"angles" "720 266 0"
+		"model"	 "models/props_fairgrounds/foodcart.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_62"
+	{
+		"solid" "6"
+		"origin" "10625 8359 -533"
+		"angles" "720 326 0"
+		"model"	 "models/props_fairgrounds/elephant.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_63"
+	{
+		"solid" "6"
+		"origin" "10707 8165 -555"
+		"angles" "0 90 0"
+		"model"	 "models/props_interiors/sofa_chair02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_64"
+	{
+		"solid" "6"
+		"origin" "9987 8199 -391"
+		"angles" "0 176 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_65"
+	{
+		"solid" "6"
+		"origin" "9786 8195 -402"
+		"angles" "0 -1 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_66"
+	{
+		"solid" "6"
+		"origin" "9684 8199 -404"
+		"angles" "0 1 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_67"
+	{
+		"solid" "6"
+		"origin" "10782 8236 -562"
+		"angles" "0 -178 0"
+		"model"	 "models/props_interiors/sofa02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_68"
+	{
+		"solid" "6"
+		"origin" "10656 8301 -573"
+		"angles" "0 99 0"
+		"model"	 "models/props/cs_office/fire_extinguisher.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_69"
+	{
+		"solid" "6"
+		"origin" "10721 8347 -464"
+		"angles" "0 125 0"
+		"model"	 "models/props_foliage/flower_barrel.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_70"
+	{
+		"solid" "6"
+		"origin" "10713 8241 -528"
+		"angles" "0 140 0"
+		"model"	 "models/props_urban/hotel_lamp001.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_71"
+	{
+		"solid" "6"
+		"origin" "10747 8183 -559"
+		"angles" "0 118 0"
+		"model"	 "models/props_urban/ashtray_stand001.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_72"
+	{
+		"solid" "6"
+		"origin" "9890 8195 -399"
+		"angles" "0 -175 0"
+		"model"	 "models/props_interiors/dining_table_round.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_73"
+	{
+		"solid" "6"
+		"origin" "10252 7743 -426"
+		"angles" "0 -1 0"
+		"model"	 "models/props_misc/military_sign01_2.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_74"
+	{
+		"solid" "6"
+		"origin" "10267 8352 -336"
+		"angles" "0 -151 0"
+		"model"	 "models/w_models/weapons/w_minigun.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_75"
+	{
+		"solid" "6"
+		"origin" "10712 8242 -568"
+		"angles" "0 88 0"
+		"model"	 "models/props_urban/round_table001.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_76"
+	{
+		"solid" "6"
+		"origin" "10598 8359 -533"
+		"angles" "0 133 0"
+		"model"	 "models/props_interiors/teddy_bear.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_77"
+	{
+		"solid" "6"
+		"origin" "10252 8040 -547"
+		"angles" "0 1 0"
+		"model"	 "models/props_misc/military_sign02.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"object_78"
+	{
+		"solid" "6"
+		"origin" "10225 8353 -361"
+		"angles" "0 -9 0"
+		"model"	 "models/props_fortifications/sandbags_corner2.mdl"
+		"classname"	"prop_dynamic"
+	}
+	
+	"total_cache"
+	{
+		"total" "78"
+	}
+}

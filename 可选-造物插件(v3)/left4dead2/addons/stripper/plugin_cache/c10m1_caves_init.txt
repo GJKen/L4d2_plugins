@@ -1,0 +1,38 @@
+//Init file for map c10m1_caves
+//DO NOT FORGET TO REPLACE " FOR QUOTES!
+//
+//The format of the file is:
+//
+//	"coop" --------> This is the gamemode where the following object list will be loaded
+//	{
+//		"total"	"2" ---------> This is the total object list availables. Randomly, one will be selected
+//		"path1"	"c5m2_park_1" -------------> If the plugin chooses the option 1, the file c5m2_park_1.txt will be loaded
+//		"path2"	"c5m2_park_3" -------------> Same if the option is 2
+//	}
+//
+// If you have any doubts, please check the example_init.txt file or ask on the plugin topic.
+//
+
+"PathInit"
+{
+	"coop"
+	{
+		"total"	"1"
+		"path1"	"c10m1_caves_1"		
+	}
+	
+	"versus"
+	{
+		
+	}
+	
+	"survival"
+	{
+		
+	}
+	
+	"scavenge"
+	{
+		
+	}
+}

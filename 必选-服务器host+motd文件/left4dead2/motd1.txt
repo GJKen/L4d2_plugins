@@ -7,7 +7,7 @@
 		body{
 			font-size: 20px;
 			font-family: Arial,Microsoft YaHei,sans-serif;
-			background-image: url('http://i.imgs.ovh/2023/11/23/M3rVt.jpeg');
+			background-image: url('http://i.imgs.ovh/2023/12/23/kLvkm.jpeg');
 			background-repeat: no-repeat;
 			background-size: 100% auto;
 			background-color: #a18e7c;
