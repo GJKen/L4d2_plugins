@@ -5,6 +5,8 @@
 
 > 修改了源码的一些文案
 
+> 添加团灭次数统计
+
 ---
 * Video | 影片展示
 <br>None
@@ -14,10 +16,12 @@
 	幸存者MVP统计:
 
 	![survivor_mvp.smx](imgs/01.png)<br>
+	
+	![survivor_mvp.smx](imgs/03.png)<br>
 
 	幸存者Tank MVP统计:
 
-	![survivor_mvp.smx](imgs/02.png)
+	![survivor_mvp.smx](imgs/03.png)
 </details>
 
 * <details><summary>Translation Support | 支持语言</summary>
