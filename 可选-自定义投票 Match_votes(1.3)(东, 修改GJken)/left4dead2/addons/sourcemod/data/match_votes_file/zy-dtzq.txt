@@ -287,25 +287,25 @@
 	}
 	"枪械设置"
 	{
-		"exec vote/weapon/AnneHappy.cfg"
+		"exec vote/weapon/AnneHappy"
 		{
 			"message" "Anne枪械"
 		}
-		"exec vote/weapon/AnneHappyPlus.cfg"
+		"exec vote/weapon/AnneHappyPlus"
 		{
 			"message" "AnnePlus枪械"
 		}
-		"exec vote/weapon/zonemod.cfg"
+		"exec vote/weapon/zonemod"
 		{
 			"message" "Zonemod枪械"
 		}
-		"exec vote/shove/Zonemod.cfg"
+		"exec vote/shove/Zonemod"
 		{
 			"message" "Zonemod推数"
 		}
-		"exec vote/shove/AnneHappy.cfg"
+		"exec vote/shove/AnneHappy"
 		{
-			"message" "药役推数"
+			"message" "Anne药役推数"
 		}
 		"sm_weapon_attributes_reset"
 		{
@@ -315,11 +315,11 @@
 		{
 			"message" "3倍弹药"
 		}
-		"exec vote/weapon/shuangbei.cfg"
+		"exec vote/weapon/shuangbei"
 		{
 			"message" "2倍弹药"
 		}
-		"exec vote/weapon/moren.cfg"
+		"exec vote/weapon/moren"
 		{
 			"message" "默认弹药"
 		}
@@ -330,11 +330,11 @@
 	}
 	"友伤设置"
 	{
-		"exec vote/ff-off.cfg"
+		"exec vote/ff-off"
 		{
 			"message" "友伤 - off"
 		}
-		"exec vote/ff-on.cfg"
+		"exec vote/ff-on"
 		{
 			"message" "友伤 - on"
 		}

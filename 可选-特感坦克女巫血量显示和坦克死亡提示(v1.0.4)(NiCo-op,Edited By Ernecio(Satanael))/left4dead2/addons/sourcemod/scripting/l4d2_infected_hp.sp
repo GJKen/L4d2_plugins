@@ -11,7 +11,7 @@
 
 public Plugin myinfo =
 {
-	name 		= "[L4D1 AND L4D2] Infected HP",
+	name 		= "[L4D1 AND L4D2] Infected HP(血量显示)",
 	author 		= "NiCo-op, Edited By Ernecio (Satanael)",
 	description = "L4D Infected HP",
 	version 	= PLUGIN_VERSION,
@@ -252,11 +252,11 @@ public void OnInfectedDeath(Event hEvent, const char[] sName, bool bDontBroadcas
 						{
 							if(GetConVarInt(hPluginTank) == 1 || GetConVarInt(hPluginTank) == 2)
 							{
-								PrintToChat(i, "\x04[提示]\x05感染者\x03坦克%s\x05突然失去了梦想,自杀身亡.", clName1);//聊天窗提示.
+								PrintToChat(i, "Tank%s\x05被卡到气死了捏❤", clName1);//聊天窗提示.
 							}
 							if(GetConVarInt(hPluginTank) == 2 || GetConVarInt(hPluginTank) == 3)
 							{
-								PrintHintText(i, "[提示]感染者 坦克%s 突然失去了梦想,自杀身亡.", clName1);//屏幕中下提示.
+								PrintHintText(i, "Tank%s被卡到气死了捏❤", clName1);//屏幕中下提示.
 							}
 						}
 					}
@@ -268,7 +268,7 @@ public void OnInfectedDeath(Event hEvent, const char[] sName, bool bDontBroadcas
 				{
 					if(IsClientConnected(i) && IsClientInGame(i) && !IsFakeClient(i) && GetClientTeam(i) != 3)
 					{
-						PrintHintText(i, "++ 坦克%s已死亡 ++", clName1);
+						PrintHintText(i, "❤杂鱼Tank%s嗝屁了捏❤", clName1);
 					}
 				}
 			}

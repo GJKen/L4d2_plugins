@@ -30,6 +30,29 @@
 			"message" "无限火力"
 		}
 	}
+	"小僵尸控制"
+	{
+		"exec match_votes/zomble_0_0_0"
+		{
+			"message" "无小僵尸"
+		}
+		"exec match_votes/zomble_default"
+		{
+			"message" "官方默认僵尸数量"
+		}
+		"exec match_votes/zomble_3_1_5"
+		{
+			"message" "3-1-5 每次尸潮刷新僵尸的数量5"
+		}
+		"exec match_votes/zomble_3_1_10"
+		{
+			"message" "3-1-10 每次尸潮刷新僵尸的数量10"
+		}
+		"exec match_votes/zomble_3_1_20"
+		{
+			"message" "3-1-20 每次尸潮刷新僵尸的数量20"
+		}
+	}
 	"友伤设置"
 	{
 		"exec vote/ff-off.cfg"

@@ -58,8 +58,8 @@
 					<code>!teams</code>: 查看团队信息<br />
 					<!-- <code>!teams</code> | <code>!rank</code>: 查看团队信息 \ 查看个人信息<br />-->
 					<!-- <code>!tp</code> | <code>!cs</code>: 指定传送到队友身边 \ 随机传送<br />-->
-					<code>!b</code> | <code>!buy</code> | <code>!rpg</code>: 点数商店<br />
-					<!-- <code>!zs</code>: 自杀<br />-->
+					<code>!b</code> | <code>!buy</code> | <code>!rpg</code>: 商店<br />
+					<code>!zs</code>: 转生异世界<br />
 					<!-- <code>!g</code>: 丢物品<br />-->
 					<code>z(订购键)</code>: 定购键的<code class="light">看</code>可标记物品 \ 路线<br />
 					<span class="title2">本服特性:</span><br />

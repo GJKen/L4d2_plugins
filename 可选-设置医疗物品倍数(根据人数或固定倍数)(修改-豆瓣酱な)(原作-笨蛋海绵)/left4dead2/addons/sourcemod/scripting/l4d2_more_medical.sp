@@ -25,19 +25,19 @@ ConVar l4d2_medical;
 
 public Plugin myinfo =
 {
-	name = "多倍医疗补给.",
-	author = "笨蛋海绵",
-	description = "多倍医疗补给.",
+	name = "l4d2_more_medical(多倍医疗补给)",
+	author = "笨蛋海绵,修改:GJKen",
+	description = "多倍医疗补给",
 	version = "5.0.0",
-	url = "QQ群：133102253"
+	url = "QQ群:133102253"
 };
 
 public void OnPluginStart()   
 {
-	RegConsoleCmd("sm_mmn", Command_mmn, "设置补给倍数.");
+	RegConsoleCmd("sm_mmn", Command_mmn, "设置补给倍数");
 	
-	l4d2_supply		= CreateConVar("l4d2_more_enabled_Supply",	"1", "玩家连接或退出时根据人数设置医疗物品倍数? (输入指令 !mmn 设置医疗物品倍数) 0=禁用, 1=启用, 2=只显示玩家连接和退出提示.", FCVAR_NOTIFY);
-	l4d2_medical	= CreateConVar("l4d2_more_enabled_medical",	"2", "设置医疗物品的固定倍数(l4d2_more_enabled_Supply = 2 时这里设置倍数才会生效,使用指令更改倍数后这里的值失效).", FCVAR_NOTIFY);
+	l4d2_supply		= CreateConVar("l4d2_more_enabled_Supply",	"1", "玩家连接或退出时根据人数设置医疗物品倍数? (输入指令 !mmn 设置医疗物品倍数) 0=禁用, 1=启用, 2=只显示玩家连接和退出提示", FCVAR_NOTIFY);
+	l4d2_medical	= CreateConVar("l4d2_more_enabled_medical",	"2", "设置医疗物品的固定倍数(l4d2_more_enabled_Supply = 2 时这里设置倍数才会生效,使用指令更改倍数后这里的值失效)", FCVAR_NOTIFY);
 	l4d2_supply.AddChangeHook(l4d2ConVarChanged);
 	l4d2_medical.AddChangeHook(l4d2ConVarChanged);
 	HookEvent("round_start", Event_RoundStart);//回合开始.
@@ -54,15 +54,15 @@ public Action Command_mmn(int client, int args)
 		switch (supply)
 		{
 			case 0:
-				PrintToChat(client, "\x04[提示]\x05多倍医疗物品补给和玩家连接离开提示已禁用,请在CFG中设为1或2启用.");
+				PrintToChat(client, "\x04[!]\x05多倍医疗物品补给和玩家连接离开提示已禁用,请在CFG中设为1或2启用");
 			case 1:
-				PrintToChat(client, "\x04[提示]\x05当前为根据人数设置医疗物品倍数,设置为只显示玩家连接或离开时才能使用指令更改倍数.");
+				PrintToChat(client, "\x04[!]\x05当前为根据人数设置医疗物品倍数,设置为只显示玩家连接或离开时才能使用指令更改倍数");
 			case 2:
 				DisplaySLMOREMenu(client);
 		}
 	}
 	else
-		PrintToChat(client, "\x04[提示]\x05你无权使用此指令.");
+		PrintToChat(client, "\x04[!]\x05你无权使用此指令");
 	return Plugin_Handled;
 }
 
@@ -101,7 +101,7 @@ public int MORESLMenuHandler(Handle menu, MenuAction action, int client, int ite
 		int userids = StringToInt(clientinfos);
 		usermnums = userids;
 		l4d2_UpdateEntCount(usermnums);
-		PrintToChatAll("\x04[提示]\x05更改医疗补给倍数为\x04:\x03%i\x05倍.", usermnums);
+		PrintToChatAll("\x04[!]\x05更改医疗补给倍数为\x04:\x03%i\x05倍", usermnums);
 		l4d2_more_medical_usermnums = true;
 	}
 	return 0;
@@ -136,11 +136,11 @@ public void Event_playerleftstartarea(Event event, const char[] name, bool dontB
 		{
 			if (!l4d2_more_medical_usermnums)
 			{
-				PrintToChatAll("\x04[提示]\x05当前医疗物品倍数为\x04:\x03%d\x05倍.", medical);
+				PrintToChatAll("\x05当前药品为\x04:\x03%d\x05倍数", medical);
 			}
 			else
 			{
-				PrintToChatAll("\x04[提示]\x05当前医疗物品倍数为\x04:\x03%d\x05倍.", usermnums);
+				PrintToChatAll("\x05当前药品为\x04:\x03%d\x05倍数", usermnums);
 			}
 		}
 	}
@@ -276,37 +276,37 @@ public void OnClientConnected(int client)
 			{
 				case 1,2,3,4:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x031\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x031\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(1);
 					l4d2_lianjie(); 
 				}
 				case 5,6,7,8:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x032\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x032\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(2);
 					l4d2_lianjie(); 
 				}
 				case 9,10,11,12:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x033\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x033\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(3);
 					l4d2_lianjie(); 
 				}
 				case 13,14,15,16:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x034\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x034\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(4);
 					l4d2_lianjie(); 
 				}
 				case 17,18,19,20:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x035\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x035\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(5);
 					l4d2_lianjie(); 
 				}
 				case 21,22,23,24:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x036\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05正在连接\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x036\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(6);
 					l4d2_lianjie(); 
 				}
@@ -314,7 +314,7 @@ public void OnClientConnected(int client)
 		}
 		case 2:
 		{
-			PrintToChatAll("\x04[提示]\x03%N\x05正在连接\x04...\x05(づˉ*ˉ)づ\x04(\x03%d\x05/\x03%d\x04)\x05.", client, l4d2_player_num, Survivor_Limit);
+			PrintToChatAll("\x03%N\x05大佬来了\x04(\x03%d\x05/\x03%d\x04)\x05", client, l4d2_player_num, Survivor_Limit);
 			l4d2_lianjie(); 
 		}
 	}
@@ -349,37 +349,37 @@ public void OnClientDisconnect(int client)
 			{
 				case 1,2,3,4:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x031\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x031\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(1);
 					l4d2_tuichu(); 
 				}
 				case 5,6,7,8:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x032\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x032\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(2);
 					l4d2_tuichu(); 
 				}
 				case 9,10,11,12:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x033\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x033\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(3);
 					l4d2_tuichu(); 
 				}
 				case 13,14,15,16:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x034\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x034\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(4);
 					l4d2_tuichu(); 
 				}
 				case 17,18,19,20:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x035\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x035\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(5);
 					l4d2_tuichu(); 
 				}
 				case 21,22,23,24:
 				{
-					PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x036\x05倍医疗补给.", client, l4d2_player_num, Survivor_Limit);
+					PrintToChatAll("\x04[!]\x03%N\x05离开游戏\x04(\x03%i\x05/\x03%d\x04)\x03,\x05更改为\x036\x05倍医疗补给", client, l4d2_player_num, Survivor_Limit);
 					l4d2_UpdateEntCount(6);
 					l4d2_tuichu(); 
 				}
@@ -387,8 +387,8 @@ public void OnClientDisconnect(int client)
 		}
 		case 2:
 		{
-			PrintToChatAll("\x04[提示]\x03%N\x05离开游戏\x04...\x05oヾ(￣▽￣)Bye~Bye~\x04(\x03%i\x05/\x03%d\x04)\x05.", client, l4d2_player_num, Survivor_Limit);
-			l4d2_tuichu(); 
+			PrintToServer("\x03%N\x05打不过溜了~\x04(\x03%i\x05/\x03%d\x04)\x05", client, l4d2_player_num, Survivor_Limit);
+			l4d2_tuichu();
 		}
 	}
 }

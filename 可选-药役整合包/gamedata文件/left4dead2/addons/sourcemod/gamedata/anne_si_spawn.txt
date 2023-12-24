@@ -1,0 +1,116 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"CDirector::GetMaxPlayerZombies"
+			{
+				"signature"	"CDirector::GetMaxPlayerZombies"
+
+				// return 31;
+
+				"linux"
+				{
+					"offset"	"0"
+					"verify"	"\x55"
+					"patch"		"\x55\xB8\x1F\x00\x00\x00\x89\xE5\x5D\xC3"
+				}
+
+				"windows"
+				{
+					"offset"	"0"
+					"verify"	"\x55"
+					"patch"		"\x55\xB8\x1F\x00\x00\x00\x89\xE5\x5D\xC3"
+				}
+			}
+		}
+
+		"Addresses"
+		{
+			"TheNavAreas"
+			{
+				"linux"
+				{
+					"signature"	"nav_update_lighting"
+					"read"		"33"
+				}
+				
+				"windows"
+				{
+					"signature"	"nav_update_lighting"
+					"read"		"82"
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			// From TerrorNavArea::ScriptGetSpawnAttributes
+			"TerrorNavArea::SpawnAttributes"
+			{
+				"windows"	"296"
+				"linux"		"300"
+			}
+
+			// From CTerrorPlayer::GetFlowDistance
+			"TerrorNavArea::FlowDistance"
+			{
+				"windows"	"332"
+				"linux"		"340"
+			}
+
+			// CUtlVector<T, A>::m_Size
+			"TheNavAreas::Count"
+			{
+				"windows"	"12"
+				"linux"		"12"
+			}
+		}
+
+		"Signatures"
+		{
+			"nav_update_lighting"
+			{
+				"library"	"server"
+				"linux"		"@_ZL19nav_update_lightingRK8CCommand"
+				"windows"	"\x55\x8B\xEC\x8B\x2A\x2A\x57\x33\x2A\x83\x2A\x02"
+				/* 55 8B EC 8B ? ? 57 33 ? 83 ? 02 */
+			}
+
+			"TerrorNavArea::FindRandomSpot"
+			{
+				"library"   "server"
+				"linux"     "@_ZNK13TerrorNavArea14FindRandomSpotEv"
+				"windows"   "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x8B\x2A\xF3\x2A\x2A\x2A\x2A\xF3\x2A\x2A\x2A\x2A\x0F"
+				/* ? ? ? ? ? ? ? ? ? ? ? 83 ? ? 56 8B ? F3 ? ? ? ? F3 ? ? ? ? 0F */
+			}
+
+			/**
+			* IsVisibleToPlayer(Vector const&, CBasePlayer *, int, int, float, CBaseEntity const*, TerrorNavArea **, bool *)
+			*
+			* Thanks Psyk0tik help
+			* How to find on Windows:
+			* 1. Search for the "Tank/Witch threat spawn: No non-visible valid areas between threat area and goal area! Choosing random area.\n" string.
+			* 2. The string can only be found in "CDirector::OnThreatEncountered".
+			* 3. The function "CDirector::OnThreatEncountered" calls "CDirectorTacticalServices::IsSpawnLocationVisibleToTeam" with the values "2" and "3" passed to it.
+			* 4. The last function call in "CDirectorTacticalServices::IsSpawnLocationVisibleToTeam" should be this function.
+			**/
+			"IsVisibleToPlayer"
+			{
+				"library"   "server"
+				"linux"     "@_Z17IsVisibleToPlayerRK6VectorP11CBasePlayeriifPK11CBaseEntityPP13TerrorNavAreaPb"
+				"windows"   "\x55\x8B\x2A\x81\xEC\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x53\x8B\x2A\x2A\x56\x8B\x2A\x2A\xC6"
+				/* 55 8B ? 81 EC ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 8B ? ? 8B ? ? 53 8B ? ? 56 8B ? ? C6 */
+			}
+
+			"CDirector::GetMaxPlayerZombies"
+			{
+				"library"   "server"
+				"linux"     "@_ZNK9CDirector19GetMaxPlayerZombiesEv"
+				"windows"   "\x55\x8B\xEC\x51\x56\x8B\xF1\x8B\x8E\x88\x05\x00\x00\x8D\x45\xFC\x50\xE8"
+				/* 55 8B EC 51 56 8B F1 8B 8E 88 05 00 00 8D 45 FC 50 E8 */
+			}
+		}
+	}
+}
