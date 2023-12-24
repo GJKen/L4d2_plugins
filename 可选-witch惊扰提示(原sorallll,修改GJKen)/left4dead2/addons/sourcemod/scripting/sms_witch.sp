@@ -12,7 +12,7 @@ public Plugin myinfo =
 {
 	name = "witch Startled(惊扰witch提示)",
 	author = "原:sorallll, 修改:GJKen", 
-	description = "屏蔽游戏自带的部分提示",
+	description = "提取自sorallll的sms插件",
 	version = "1.0",
 	url = "https://github.com/GJKen/L4d2_plugins"
 };
@@ -20,7 +20,7 @@ public Plugin myinfo =
 public void OnPluginStart() {
 	HookEvent("witch_harasser_set",	Event_WitchHarasserSet);
 
-	g_cvWitchstartled =	CreateConVar("sms_witchstartled_notify", "1", "Witch惊扰提示");
+	g_cvWitchstartled =	CreateConVar("sms_witchstartled_notify", "1", "Witch惊扰提示 1=开,0=关");
 	
 	g_cvWitchstartled.AddChangeHook(CvarChanged);
 }

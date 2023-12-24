@@ -1,7 +1,7 @@
 # Description | 內容
 **📌幸存者MVP统计, 详情看图示**
 
-<br>
+**原作[GIthub](https://github.com/umlka/l4d2/blob/main/survivor_mvp/survivor_mvp.sp)**
 
 > 修改了源码的一些文案
 
@@ -43,7 +43,7 @@
 * <details><summary>ConVar | 指令</summary>
 
 	* cfg/sourcemod/survivor_mvp.cfg
-	```
+	```php
 	// 轮播时间间隔
 	// Default: "240.0"
 	// sm_mvp_time "240.0"
