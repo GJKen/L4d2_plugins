@@ -17,7 +17,7 @@
 
 	![survivor_mvp.smx](imgs/01.png)<br>
 	
-	![survivor_mvp.smx](imgs/03.png)<br>
+	![survivor_mvp.smx](imgs/02.png)<br>
 
 	幸存者Tank MVP统计:
 
