@@ -1,37 +1,43 @@
-# Description | 內容
-**📌原作 [Github](https://github.com/Target5150/MoYu_Server_Stupid_Plugins/tree/master/The%20Last%20Stand/l4d2_fix_jockey_hitbox)**, 未任何修改
+# 📌修复 Jockey 骑在幸存者身上时的碰撞问题
 
-🔹修复骑师骑在幸存者身上时的碰撞问题, 仅限L4D2
+**原作 [Github](https://github.com/Target5150/MoYu_Server_Stupid_Plugins/tree/master/The%20Last%20Stand/l4d2_fix_jockey_hitbox)**, 未任何修改
 
 ---
-* <details><summary>Video | 影片展示</summary>
+Command | 指令
+<br>None
 
-	```感谢 **@Derpduck** 演示了这些错误的视频 [Youtube](https://www.youtube.com/watch?v=3DakbNJJzi8)```
+<details><summary>Video | 影片展示</summary>
+
+感谢 **@Derpduck*- 演示了这些错误的视频 [Youtube](https://www.youtube.com/watch?v=3DakbNJJzi8)
 </details>
 
-* <details><summary>Image | 图示</summary>
+<details><summary>Image | 图示</summary>
 
-	![l4d2_jockey_hitbox_fix.smx](imgs/01.png) ![l4d2_jockey_hitbox_fix.smx](imgs/02.png)
+![l4d2_jockey_hitbox_fix.smx](imgs/01.png) ![l4d2_jockey_hitbox_fix.smx](imgs/02.png)
 </details>
 
-* Translation Support | 支持语言
-<br>None
+ <details><summary>Apply to | 适用于</summary>
 
-* <details><summary>Changelog | 版本日志</summary>
-
-	*  (v2.0 2023/7/3 UTC+8) Jockey Hitbox: Fix unaligned hitboxes when riding
-
-	* (v1.0 2022/10/16 UTC+8) Initial release.
+```
+L4D2 only
+```
 </details>
 
-* Require | 需求
+ConVar | 控制台变量
 <br>None
 
-* Related Plugin | 相关插件
+Translation Support | 支持语言
 <br>None
 
-* ConVar | 指令
+Require | 需求
 <br>None
 
-* Command | 命令
+Related Plugin | 相关插件
 <br>None
+
+<details><summary>Changelog | 版本日志</summary>
+
+-  (v2.0 2023/7/3 UTC+8) Jockey Hitbox: Fix unaligned hitboxes when riding
+
+-  (v1.0 2022/10/16 UTC+8) Initial release.
+</details>

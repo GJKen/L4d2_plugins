@@ -1,77 +1,82 @@
-# Description | 內容
-**📌原作[Github](https://github.com/fantasylidong/anne/blob/main/left4dead2/addons/sourcemod/scripting/vote.sp)**
+# 📌投票执行更改cvar
 
-输入指令投票更改cvar, 不同的cvar需要自定义`data/match_votes_file/*.txt`里面的内容, 默认读取sourcemod/data/match_votes_file/default.txt
+**原作 [Github](https://github.com/fantasylidong/anne/blob/main/left4dead2/addons/sourcemod/scripting/vote.sp)**
 
-投票执行配置文件的位置, 位于sourcemod/data/match_votes_file/文件夹里面的任意路径
+输入指令投票更改cvar,<br>投票执行配置文件的位置, 位于 `sourcemod/data/match_votes_file/` 文件夹里面的任意路径
+
+默认读取 `sourcemod/data/match_votes_file/default.txt`
 
 不同模式可以用cvar指定读取配置文件 `sm_cvar votecfgfile "data/match_votes_file/*.txt"`
-<br>
 
-> 修改源码的一些文案, 修改RegConsoleCmd指令
+> 修改源码的一些文案和RegConsoleCmd指令
 
->修改配置文件路径
+> 修改配置文件路径
 
 > 添加重启地图代码
 ---
-* Video | 影片展示
-<br/>None
+<details><summary>Command | 命令</summary>
 
-* Image | 圖示
-<br/>None
-
-* <details><summary>Apply to | 適用於</summary>
-
-	```
-	l4d1
-	l4d2
-	```
+|指令|功能|权限|
+|-|-|-|
+|`!v` \ `!vt` \ `!votes`|投票菜单|Console|
+|`!vk`|投票踢出玩家|Console|
+|`!cv`|管理员终止此次投票|Admin|
+|`!restartmap`|重启当前地图|Admin|
 </details>
 
-* Changelog | 版本日誌</summary>
+Video | 影片展示
 <br/>None
 
-* <details><summary>Require | 必要安裝</summary>
+Image | 图示
+<br/>None
 
-	1. [[INC] Multi Colors](https://github.com/fbef0102/L4D1_2-Plugins/releases/tag/Multi-Colors)
-	2. [builtinvotes](https://github.com/L4D-Community/builtinvotes/actions)
+<details><summary>ConVar | 指令</summary>
+
+```SourcePawn
+//投票文件的位置(位于sourcemod/文件夹)
+votecfgfile "data/match_votes_file/default.txt"
+```
 </details>
 
-* <details><summary>Configs 设定示例</summary>
+<details><summary>Configs | 设定示例</summary>
 
-	- data/match_votes_file/*.txt
-		```SourcePawn
-			"Cfgs"
+此为自用配置
+
+data/match_votes_file/*.txt
+```SourcePawn
+	"Cfgs"
+	{
+		"全体转生?" //名称随意
+		{
+			"exec match_votes/restartmap_on" //执行cfg文件的路径为: cfg/match_votes, 也可以是cvar
 			{
-				"全体转生?" //名称随意
-				{
-					"exec match_votes/restartmap_on" //执行cfg文件的路径为: cfg/match_votes, 也可以是cvar
-					{
-						"message" "人生重开!!!!" //出现在菜单界面面上的名称
-					}
-					"exec match_votes/restartmap_off"
-					{
-						"name" "我不想重开T_T"
-					}
-				}
-				//以此类推
+				"message" "人生重开!!!!" //出现在菜单界面面上的名称
 			}
-		```
+			"exec match_votes/restartmap_off"
+			{
+				"name" "我不想重开T_T"
+			}
+		}
+		//以此类推
+	}
+```
   </details>
 
-* <details><summary>ConVar | 指令</summary>
+<details><summary>Require | 需求</summary>
 
-	```SourcePawn
-	votecfgfile "data/match_votes_file/default.txt" //投票文件的位置(位于sourcemod/文件夹)
-	```
+1. [builtinvotes 0.5.8](https://github.com/mvandorp/builtinvotes/releases)
 </details>
 
-* <details><summary>Command | 命令</summary>
+Related Plugin | 相关插件
+<br>None
 
-	|指令|功能|
-	|-|-|
-	|`!v` `!vt` `votes`|投票菜单|
-	|`!vk`|投票踢出玩家|
-	|`!cv`|管理员终止此次投票|
-	|`!restartmap`|重启当前地图|
+<details><summary>Apply to | 适用于</summary>
+
+```
+l4d1
+l4d2
+```
 </details>
+
+Changelog | 版本日志</summary>
+<br/>None

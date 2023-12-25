@@ -1,322 +1,275 @@
+# 📌强化每个特感的行为与提高智商, 积极攻击幸存者
 
-# Description | 內容
-Improves the AI behaviour of special infected
+> Improves the behaviour of special infected
 
-* Video | 影片展示
+**原作 [GIthub](https://github.com/fbef0102/L4D2-Plugins/tree/c0d3044c996ee5c68ae544b3641c2412cea8d304/AI_HardSI)**
+
+---
+Command | 命令
+<br>None
+
+Video | 影片展示
 <br/>None
 
-* Image｜ 圖示
-<br/>None
+Image｜ 图示
+<br/>None<details><summary>ConVar | 指令</summary>
 
-* Apply to | 適用於
-    ```
-    L4D2
-    ```
+cfg\sourcemod\AI_HardSI_fbef0102.cfg
+```SourcePawn
+// ConVars for plugin "AI_HardSI_fbef0102.smx"
 
-* <details><summary>Changelog | 版本日誌</summary>
+// 触发"nb_assault"命令特感进行攻击的频率(秒)
+ai_assault_reminder_interval "2"
 
-    * v1.5 (2023-5-4)
-        * Use server console to execute command "nb_assault"
+// 改善Bommer行为, 0=关闭 1=开启
+ai_hardsi_boomer_enable "1"
 
-    * v1.4
-        * Remake code
-        * Replace left4downtown with left4dhooks
-        *Compatibility support for SourceMod 1.11. Fixed various warnings.
-    </details>
+// 改善Charger行为, 0=关闭 1=开启
+ai_hardsi_charger_enable "1"
 
-* Require | 必要安裝
-    1. [left4dhooks](https://forums.alliedmods.net/showthread.php?t=321696)
+// 改善Hunter行为, 0=关闭 1=开启
+ai_hardsi_hunter_enable "1"
 
-* <details><summary>ConVar | 指令</summary>
+// 改善Jockey行为, 0=关闭 1=开启
+ai_hardsi_jockey_enable "1"
 
-	* cfg\sourcemod\AI_HardSI.cfg
-		```php
-        // If the charger has a target, it will not straight pounce if the target's aim on the horizontal axis is within this radius
-        ai_aim_offset_sensitivity_charger "20"
+// 改善Smoker行为, 0=关闭 1=开启
+ai_hardsi_smoker_enable "1"
 
-        // If the hunter has a target, it will not straight pounce if the target's aim on the horizontal axis is within this radius
-        ai_aim_offset_sensitivity_hunter "30"
+// 改善Spitter行为, 0=关闭 1=开启
+ai_hardsi_spitter_enable "1"
 
-        // Frequency(sec) at which the 'nb_assault' command is fired to make SI attack
-        ai_assault_reminder_interval "2"
+// 改善Tank行为, 0=关闭 1=开启
+ai_hardsi_tank_enable "1"
 
-        // How close a charger will approach before charging
-        ai_charge_proximity "300"
+// 目标幸存者的准心如果在瞄自身Charger的身体低于20度视野范围内则强制冲刺
+// 如果Charger有目标, 如果目标在水平轴上的瞄准点在此半径范围内, 则Charger不会直扑
+ai_aim_offset_sensitivity_Charger "20"
 
-        // At what distance to start pouncing fast
-        ai_fast_pounce_proximity "1000"
+// 强迫Charger在300公尺范围内开始冲刺
+ai_charge_proximity "300"
 
-        // Charger will charge if its health drops to this level
-        ai_health_threshold_charger "300"
+// 如果Charger的健康状况降至此水平, 则会冲撞
+ai_health_threshold_Charger "300"
 
-        // How close a jockey will approach before it starts hopping
-        ai_hop_activation_proximity "500"
+// 如果Hunter有目标, 如果目标在横轴上的瞄准点在这个半径范围内, 它就不会直扑
+ai_aim_offset_sensitivity_hunter "30"
 
-        // Mean angle produced by Gaussian RNG
-        ai_pounce_angle_mean "10"
+// 强迫Hunter在1000公尺范围内蹲下准备扑人
+ai_fast_pounce_proximity "1000"
 
-        // One standard deviation from mean as produced by Gaussian RNG
-        ai_pounce_angle_std "20"
+// 强制左右飞扑靠近目标, 不要垂直飞向目标
+ai_pounce_angle_mean "10" // 高斯 RNG 产生的平均角度
+ai_pounce_angle_std "20" // 高斯 RNG 产生的平均值的一个标准差
 
-        // Vertical angle to which AI hunter pounces will be restricted
-        ai_pounce_vertical_angle "7"
+// Hunter猛扑的垂直角度将会受到限制, 
+// Hunter跳跃折角值, 越小Hunter跳跃角度越大
+ai_pounce_vertical_angle "7"
 
-        // Distance to nearest survivor at which hunter will consider pouncing straight
-        ai_straight_pounce_proximity "200"
+// 前面有墙壁的范围内则飞扑的角度会变高, 尝试越过障碍物 (-1: 无限范围)
+// 受感染的机器人将在自己前方多远的地方检查墙壁  使用 "-1"禁用功能
+ai_wall_detection_distance "-1"
 
-        // Flag to enable bhop facsimile on AI tanks
-        ai_tank_bhop "1"
+// Hunter距离最近的幸存者的距离值, 会考虑直接猛扑
+ai_straight_pounce_proximity "200"
 
-        // Flag to enable rocks on AI tanks
-        ai_tank_rock "1"
+// 强迫Jockey在500公尺范围內开始连跳
+ai_hop_activation_proximity "500"
 
-        // How far in front of himself infected bot will check for a wall. Use '-1' to disable feature
-        ai_wall_detection_distance "-1"
-		```
+// 启用Spitter连跳
+ai_spitter_bhop "1"
+
+// Tank连跳 0=关 1=开
+ai_tank_bhop "0"
+
+// 启用坦克岩石的标志
+ai_tank_rock "1"
+
+//------ 更改的官方指令 start ------//
+// Smoker的舌头准备拉走幸存者的期间, 被攻击超过250HP或自身血量才会死亡 (预设: 50)
+tongue_break_from_damage_amount 250
+
+// 当幸存者靠近范围内的0.1秒后立刻吐舌头 (预设: 1.5)
+smoker_tongue_delay 0.1
+
+// 被人类看见1000秒之后才会逃跑 (预设: 1.0)
+boomer_exposed_time_tolerance 1000.0
+
+// 当幸存者靠近范围内的0.1秒后立刻呕吐 (预设: 1.0)
+boomer_vomit_delay 0.1
+
+// 1000公尺范围内才会蹲下准备扑人 (预设: 1000)
+hunter_pounce_ready_range 1000
+
+// 10000公尺范围内才会扑人 (预设: 75)
+hunter_committed_attack_range 10000
+
+// 0公尺范围内没有蹲下的Hunter被攻击时会逃跑跳走 (只会出现在战役/写实模式, 预设: 1000)
+hunter_leap_away_give_up_range 0
+
+// Hunter跳跃的最大倾角 (避免飞过头或飞太高, 预设: 45)
+hunter_pounce_max_loft_angle 0
+
+// Hunter飞扑在空中的过程中受到150HP伤害或自身血量以上才会死亡 (避免飞扑过程中容易被杀死, 预设: 50)
+z_pounce_damage_interrupt 150
+
+// 1000公尺范围内才会飞扑 (预设: 200)
+z_jockey_leap_range 1000
+//------ 更改的官方指令 end ------//
+
+```
 </details>
 
-* <details><summary>Command | 命令</summary>
+<details><summary>Apply to | 适用于</summary>
 
-	None
+```
+L4D2
+```
 </details>
 
-* Improve Infected
-    * <details><summary><b>AI Tank</b></summary>
+<details><summary>Require | 需求</summary>
 
-        * Stop throwing the rock after approaching the survivors
-        * Behop
-    </details>
+1. [left4dhooks](https://forums.alliedmods.net/showthread.SourcePawn?t=321696)
+</details>
 
-    * <details><summary><b>Witch</b></summary>
+<details><summary>每个特感增效</summary>
 
-        * None
-    </details>
+<br>
 
-    * <details><summary><b>AI Smoker</b></summary>
+<details><summary>Tank</summary>
 
-        * Modify Official ConVar
-            ```php
-            // How much damage to the smoker makes him let go of his victim. (Default: 50)
-            tongue_break_from_damage_amount 250
+靠近幸存者一定范围内不会主动丢石头
 
-            // Start to shoot his tongue after 0.1 seconds (Default: 1.5)
-            smoker_tongue_delay 0.1
-            ```
-    </details>
+连跳
+</details>
 
-    * <details><summary><b>AI Boomer</b></summary>
+<details><summary>Witch</summary>
 
-        * Modify Official ConVar
-            ```php
-            // How long an out-of-range Boomer will tolerate being visible before fleeing (Default: 1.0)
-            boomer_exposed_time_tolerance 1000.0
+无
+</details>
 
-            // How long the Boomer waits before he vomits on his target on Normal difficulty (Default: 1.0)
-            boomer_vomit_delay 0.1
-            ```
-    </details>
+<details><summary>Smoker</summary>
 
-    * <details><summary><b>AI Hunter</b></summary>
+更改的官方指令
 
-        * Won't leap away (Coop/Realism)
-        * Modify Official ConVar
-            ```php
-            // Range at which hunter prepares pounce	 (Default: 1000)
-            hunter_pounce_ready_range 1000
+```SourcePawn
+// Smoker的舌头准备拉走幸存者的期间, 被攻击超过250HP或自身血量才会死亡 (预设: 50)
+tongue_break_from_damage_amount 250
 
-            // Range at which hunter is committed to attack	 (Default: 75)
-            hunter_committed_attack_range 10000
+// 当幸存者靠近范围内的0.1秒后立刻吐舌头 (预设: 1.5)
+smoker_tongue_delay 0.1
+```
+</details>
 
-            // Range at which shooting a non-committed hunter will cause it to leap away (Coop/Realis, Default: 1000)
-            hunter_leap_away_give_up_range 0
+<details><summary>Boomer</summary>
 
-            // Maximum vertical angle hunters can pounce (Default: 45)
-            hunter_pounce_max_loft_angle 0
+更改的官方指令
 
-            // AI Hunter skeet damage (Default: 50)
-            z_pounce_damage_interrupt 150
-            ```
-        * Plugin ConVar
-            ```php
-            // At what distance to start pouncing fast
-            ai_fast_pounce_proximity 1000
+```SourcePawn
+// 被人类看见1000秒之后才会逃跑 (预设: 1.0)
+boomer_exposed_time_tolerance 1000.0
 
-            // Vertical angle to which AI hunter pounces will be restricted
-            ai_pounce_vertical_angle 7
+// 当幸存者靠近范围内的0.1秒后立刻呕吐 (预设: 1.0)
+boomer_vomit_delay 0.1
+```
+</details>
 
-            // Mean angle produced by Gaussian RNG
-            ai_pounce_angle_mean 10
+<details><summary>Hunter</summary>
 
-            // One standard deviation from mean as produced by Gaussian RNG
-            ai_pounce_angle_std 20
+被攻击的时候不会自动逃跑跳走 (只会出现在战役/写实模式)
 
-            // Distance to nearest survivor at which hunter will consider pouncing straight
-            ai_straight_pounce_proximity 200
+更改的官方指令
 
-            // If the hunter has a target, it will not straight pounce if the target's aim on the horizontal axis is within this radius
-            ai_aim_offset_sensitivity_hunter 30
+```SourcePawn
+// 1000公尺范围内才会蹲下准备扑人 (预设: 1000)
+hunter_pounce_ready_range 1000
 
-            // How far in front of himself infected bot will check for a wall. Use '-1' to disable feature
-            ai_wall_detection_distance -1
-            ```
-    </details>
+// 10000公尺范围内才会扑人 (预设: 75)
+hunter_committed_attack_range 10000
 
-    * <details><summary><b>AI Spitter</b></summary>
+// 0公尺范围内没有蹲下的Hunter被攻击时会逃跑跳走 (只会出现在战役/写实模式, 预设: 1000)
+hunter_leap_away_give_up_range 0
 
-        * None
-    </details>
+// Hunter跳跃的最大倾角 (避免飞过头或飞太高, 预设: 45)
+hunter_pounce_max_loft_angle 0
 
-    * <details><summary><b>AI Jockey</b></summary>
+// Hunter飞扑在空中的过程中受到150HP伤害或自身血量以上才会死亡 (避免飞扑过程中容易被杀死, 预设: 50)
+z_pounce_damage_interrupt 150
+```
+插件自带的指令
 
-        * Modify Official ConVar
-            ```php
-            // AI Jockeys will move to attack survivors within this range (Default: 200)
-            z_jockey_leap_range 1000
-            ```
-        * Plugin ConVar
-            ```php
-            // How close a jockey will approach before it starts hopping
-            ai_hop_activation_proximity 500
-            ```
-    </details>
+```SourcePawn
+// 强迫Hunter在1000公尺范围内蹲下准备扑人
+ai_fast_pounce_proximity 1000
 
-    * <details><summary><b>AI Charger</b></summary>
+// 强迫Hunter跳跃的最大倾角 (避免飞过头或飞太高)
+ai_pounce_vertical_angle 7
 
-        * Plugin ConVar
-            ```php
-            // How close a charger will approach before charging
-            ai_charge_proximity 300
+// 强制左右飞扑靠近目标, 不要垂直飞向目标
+ai_pounce_angle_mean 10
+ai_pounce_angle_std 20
 
-            // If the charger has a target, it will not straight pounce if the target's aim on the horizontal axis is within this radius
-            ai_aim_offset_sensitivity_charger 20
-            ```
-    </details>
+// 离目标200公尺范围内考虑直接垂直飞向目标
+ai_straight_pounce_proximity 200
 
-* What is ```nb_assault```?
-    * Tell all special infected bots to assault, attack survivors actively instead of not moving like idiots
-    * This is official command
-    * Can't use this command in multiplayer, unless the server has sv_cheats set to 1
-    * By Default, the plugin forces server to execue this command every 2 seconds
+// 目标幸存者的准心如果在瞄自身Hunter的身体低于30度视野范围内则强制飞扑
+ai_aim_offset_sensitivity_hunter 30
 
-- - - -
-# 中文說明
-強化每個AI 特感的行為與提高智商，積極攻擊倖存者
+// 前面有墙壁的范围内则飞扑的角度会变高, 尝试越过障碍物 (-1: 无限范围)
+ai_wall_detection_distance -1
+```
+</details>
 
-* 原理
-    * 改變各種特感的行為
+<details><summary>Spitter</summary>
 
-* 功能
-    * <details><summary><b>AI Tank</b></summary>
+连跳
+</details>
 
-        * 靠近倖存者一定範圍內不會主動丟石頭
-        * 連跳
-    </details>
+<details><summary>Jockey</summary>
 
-    * <details><summary><b>Witch</b></summary>
+更改的官方指令
 
-        * 無
-    </details>
+```SourcePawn
+// 1000公尺范围内才会飞扑 (预设: 200)
+z_jockey_leap_range 1000
+```
+插件自带的指令
 
-    * <details><summary><b>AI Smoker</b></summary>
+```SourcePawn
+// 强迫Jockey在500公尺范围内开始连跳
+ai_hop_activation_proximity 500
+```
+</details>
 
-        * 更動的官方指令
-            ```php
-            // AI Smoker的舌頭準備拉走倖存者的期間，被攻擊超過250HP或自身血量才會死亡 (預設: 50)
-            tongue_break_from_damage_amount 250
+<details><summary>Charger</summary>
 
-            // 當倖存者靠近範圍內的0.1秒後立刻吐舌頭 (預設: 1.5)
-            smoker_tongue_delay 0.1
-            ```
-    </details>
+插件自带的指令
 
-    * <details><summary><b>AI Boomer</b></summary>
+```SourcePawn
+// 强迫Charger在300公尺范围内开始冲刺
+ai_charge_proximity 300
 
-        * 更動的官方指令
-            ```php
-            // 被人類看見1000秒之後才會逃跑 (預設: 1.0)
-            boomer_exposed_time_tolerance 1000.0
+// 目标幸存者的准心如果在瞄自身Charger的身体低于20度视野范围内则强制冲刺
+ai_aim_offset_sensitivity_Charger 20
+```
+</details>
+</details>
 
-            // 當倖存者靠近範圍內的0.1秒後立刻嘔吐 (預設: 1.0)
-            boomer_vomit_delay 0.1
-            ```
-    </details>
+什么是 ```nb_assault```?
+- 这是官方的指令, 强迫所有特感Bots主动往前攻击幸存者而非像智障一样待在原地等幸存者过来
+- Server 没有开启 `sv_cheats` 作弊模式就不能输入这条指令
+- 插件预设会每2秒执行这条指令
 
-    * <details><summary><b>AI Hunter</b></summary>
+<details><summary>Changelog | 版本日志</summary>
 
-        * 被攻擊的時候不會自動逃跑跳走 (只會出現在戰役/寫實模式)
-        * 更動的官方指令
-            ```php
-            // 1000公尺範圍內才會蹲下準備撲人 (預設: 1000)
-            hunter_pounce_ready_range 1000
+- v1.6 (2023-6-4)
+	- Enable or Disable Each special infected behaviour
 
-            // 10000公尺範圍內才會撲人 (預設: 75)
-            hunter_committed_attack_range 10000
+- v1.5 (2023-5-4)
+	- Use server console to execute command "nb_assault"
 
-            // 0公尺範圍內沒有蹲下的AI Hunter被攻擊時會逃跑跳走 (只會出現在戰役/寫實模式，預設: 1000)
-            hunter_leap_away_give_up_range 0
-
-            // AI Hunter跳躍的最大傾角 (避免飛過頭或飛太高，預設: 45)
-            hunter_pounce_max_loft_angle 0
-
-            // AI Hunter飛撲在空中的過程中受到150HP傷害或自身血量以上才會死亡 (避免飛撲過程中容易被殺死，預設: 50)
-            z_pounce_damage_interrupt 150
-            ```
-        * 插件自帶的指令
-            ```php
-            // 強迫AI Hunter在1000公尺範圍內蹲下準備撲人
-            ai_fast_pounce_proximity 1000
-
-            // 強迫AI Hunter跳躍的最大傾角 (避免飛過頭或飛太高)
-            ai_pounce_vertical_angle 7
-
-            // 強制左右飛撲靠近目標，不要垂直飛向目標
-            ai_pounce_angle_mean 10
-            ai_pounce_angle_std 20
-
-            // 離目標200公尺範圍內考慮直接垂直飛向目標
-            ai_straight_pounce_proximity 200
-
-            // 目標倖存者的準心如果在瞄自身AI Hunter的身體低於30度視野範圍內則強制飛撲
-            ai_aim_offset_sensitivity_hunter 30
-
-            // 前面有牆壁的範圍內則飛撲的角度會變高，嘗試越過障礙物 (-1: 無限範圍)
-            ai_wall_detection_distance -1
-            ```
-    </details>
-
-    * <details><summary><b>AI Spitter</b></summary>
-
-        * 無
-    </details>
-
-    * <details><summary><b>AI Jockey</b></summary>
-
-        * 更動的官方指令
-            ```php
-            // 1000公尺範圍內才會飛撲 (預設: 200)
-            z_jockey_leap_range 1000
-            ```
-        * 插件自帶的指令
-            ```php
-            // 強迫AI Jockey在500公尺範圍內開始連跳
-            ai_hop_activation_proximity 500
-            ```
-    </details>
-
-    * <details><summary><b>AI Charger</b></summary>
-
-        * 插件自帶的指令
-            ```php
-            // 強迫AI Charger在300公尺範圍內開始衝刺
-            ai_charge_proximity 300
-
-            // 目標倖存者的準心如果在瞄自身AI Charger的身體低於20度視野範圍內則強制衝刺
-            ai_aim_offset_sensitivity_charger 20
-            ```
-    </details>
-
-* 甚麼是 ```nb_assault```?
-    * 強迫所有特感Bots主動往前攻擊倖存者而非像智障一樣待在原地等倖存者過來
-    * 這是官方的指令
-    * Server沒有開啟sv_cheats 作弊模式就不能輸入這條指令
-    * 這插件預設會每2秒執行這條指令
+- v1.4
+	- Remake code
+	- Replace left4downtown with left4dhooks
+	- Compatibility support for SourceMod 1.11. Fixed various warnings.
+</details>

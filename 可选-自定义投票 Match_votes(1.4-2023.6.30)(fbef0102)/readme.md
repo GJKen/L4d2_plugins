@@ -40,7 +40,7 @@
 * <details><summary>Configs 设定示例</summary>
 
 	* configs/Match_votes.cfg
-		```php
+		```SourcePawn
 			"Match_votes"
 			{
 				"全体转生?" //名称随意
@@ -61,7 +61,7 @@
 * <details><summary>ConVar | 指令</summary>
 
 	* cfg\sourcemod\match_vote.cfg
-		```php
+		```SourcePawn
 		// 0=Plugin off, 1=Plugin on.
 		// Default: "1"
 		// Minimum: "0.000000"

@@ -103,6 +103,31 @@
 		</a>
 		<a href="https://github.com/GlowingTree880/L4D2_LittlePlugins">L4D2_LittlePlugins</a>
 	</td>
+	<td align="center">
+			<img src="https://cdn-fusion.imgimg.cc/i/2023/xzLEe175aEhb2A7u.jpg" width="60px;" alt="Kita"/>
+			<p>Kita</p>
+			<p>妹有link捏</p>
+	</td>
+	<td align="center">
+		<a href="https://github.com/Hatsune-Imagine">
+			<img src="https://cdn-fusion.imgimg.cc/i/2023/efygQTyatPX1Q9uy.jpg" width="60px;" alt="Hatsune Imagine"/>
+			<p>Hatsune Imagine</p>
+		</a>
+		<a href="https://github.com/Hatsune-Imagine/l4d2-plugins">l4d2-plugins</a>
+	</td>
+	</tr>
+	<tr>
+		<td align="center">
+				<img src="https://cdn-fusion.imgimg.cc/i/2023/MpOZcjEy3hqU8Vzl.jpg" width="60px;" alt="豆瓣酱な"/>
+				<p>豆瓣酱な</p>
+				<p>妹有link捏</p>
+		</td>
+		<td align="center">
+			<a href="https://github.com/apples1949">
+				<img src="https://avatars.githubusercontent.com/u/49244656" width="60px;" alt="apples1949"/>
+				<p>apples1949</p>
+			<a href="https://github.com/apples1949/l4dplugins">l4dplugins</a>
+		</td>
 	</tr>
 </table>
 </details>

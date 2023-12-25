@@ -69,7 +69,7 @@ public void OnPluginStart()
 	// 获取其他 Cvar
 	g_hHostName = FindConVar("hostname");
 	g_hRefreshTime.AddChangeHook(refreshTimeCvarChanged);
-	// AdminCommand
+
 	RegAdminCmd("sm_hostname", refreshHostNameHandler, ADMFLAG_BAN, "立即刷新服名");
 	// CreateTimer
 	g_hRefreshTimer = CreateTimer(g_hRefreshTime.FloatValue, timerRefreshHostNameHandler, _, TIMER_REPEAT);
@@ -123,21 +123,20 @@ void setServerName()
 	//判断不同刷特插件的刷特cvar
 	int moreInfectedType = GetConVarInt(FindConVar("l4d2_more_infected_type"));
 	int g_hInfectedTime, g_hInfectedLimit;
-	// int g_h;
 	switch (moreInfectedType)
 	{
 		case 1:
-		{
+		{	//l4d2_si_spawn_control fdxx
 			g_hInfectedLimit = GetConVarInt(FindConVar("l4d2_si_spawn_control_max_specials"));
 			g_hInfectedTime = GetConVarInt(FindConVar("l4d2_si_spawn_control_spawn_time"));
 		}
 		case 2:
-		{
+		{	//infected_control 夜雨真白
 			g_hInfectedLimit = GetConVarInt(FindConVar("inf_limit"));
 			g_hInfectedTime = GetConVarInt(FindConVar("inf_spawn_duration"));
 		}
 		case 3:
-		{
+		{	//l4dinfectedbots 哈利波特
 			g_hInfectedLimit = GetConVarInt(FindConVar("l4d_infectedbots_max_specials"));
 			g_hInfectedTime = GetConVarInt(FindConVar("l4d_infectedbots_spawn_time_max"));
 		}

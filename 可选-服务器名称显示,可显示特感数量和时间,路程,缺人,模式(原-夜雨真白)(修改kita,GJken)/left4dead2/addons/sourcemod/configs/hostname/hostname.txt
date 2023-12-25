@@ -2,10 +2,10 @@ ServerName
 {
 	"27015"
 	{
-		"baseName"	"排卵少女妊娠期#1"
+		"baseName"	"JKChan's Server#1"
 	}
-    "27025"
-    {
-        "baseName" "排卵少女妊娠期#2"
-    }
+	"27025"
+	{
+		"baseName"	"JKChan's Server#2"
+	}
 }

@@ -1,14 +1,7 @@
 #pragma semicolon 1
 #pragma newdecls required
 #include <sourcemod>
-//#include <sdkhooks>
 #include <left4dhooks>
-
-#define PLUGIN_NAME				"Skip Tank Taunt"
-#define PLUGIN_AUTHOR			"sorallll"
-#define PLUGIN_DESCRIPTION		""
-#define PLUGIN_VERSION			"1.0.7"
-#define PLUGIN_URL				"https://forums.alliedmods.net/showthread.php?t=336707"
 
 ConVar
 	g_cvAnimationPlaybackRate;
@@ -22,11 +15,11 @@ bool
 	g_bTankClimb[MAXPLAYERS + 1];
 
 public Plugin myinfo = {
-	name = PLUGIN_NAME,
-	author = PLUGIN_AUTHOR,
-	description = PLUGIN_DESCRIPTION,
-	version = PLUGIN_VERSION,
-	url = PLUGIN_URL
+	name = "[l4d1 / 2]Skip Tank Taunt(跳过坦克嘲讽动画并加快攀爬障碍物动画)",
+	author = "sorallll",
+	description = "",
+	version = "1.0.7",
+	url = "https://forums.alliedmods.net/showthread.php?t=336707"
 };
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max) {
@@ -48,8 +41,8 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 }
 
 public void OnPluginStart() {
-	CreateConVar("skip_tank_taunt_version", PLUGIN_VERSION, "Skip Tank Taunt plugin version.", FCVAR_NOTIFY|FCVAR_DONTRECORD);
-	g_cvAnimationPlaybackRate = CreateConVar("tank_animation_playbackrate", "5.0", "Obstacle animation playback rate", _, true, 0.0);
+	CreateConVar("skip_tank_taunt_version", "1.0.7", "Skip Tank Taunt plugin version.", FCVAR_NOTIFY|FCVAR_DONTRECORD);
+	g_cvAnimationPlaybackRate = CreateConVar("tank_animation_playbackrate", "5.0", "爬过障碍物动画速度", _, true, 0.0);
 	g_cvAnimationPlaybackRate.AddChangeHook(CvarChanged);
 	AutoExecConfig(true);
 
@@ -57,6 +50,7 @@ public void OnPluginStart() {
 	HookEvent("tank_spawn",		Event_TankSpawn);
 	HookEvent("player_death",	Event_PlayerDeath);
 	HookEvent("player_team",	Event_PlayerTeam);
+	AutoExecConfig(true,		"skip_tank_taunt");
 
 	if (g_bLateLoad) {
 		for (int i = 1; i <= MaxClients; i++) {

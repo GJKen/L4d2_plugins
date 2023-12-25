@@ -119,16 +119,16 @@ public void OnPluginStart() {
 	g_aRandomNextMap = new ArrayList(ByteCountToCells(64));
 	g_umDisconnectToLobby = GetUserMessageId("DisconnectToLobby");
 	HookUserMessage(GetUserMessageId("StatsCrawlMsg"), umStatsCrawlMsg, false, umStatsCrawlMsgPost);
-	CreateConVar("map_changer_version", PLUGIN_VERSION, "Map Changer plugin version.", FCVAR_NOTIFY|FCVAR_DONTRECORD);
+	CreateConVar("map_changer_version", PLUGIN_VERSION, "Map Changer plugin version", FCVAR_NOTIFY|FCVAR_DONTRECORD);
 
-	g_cvFinaleChangeType = 		CreateConVar("mapchanger_finale_change_type",		"12",	"0 - 终局不换地图(返回大厅); 1 - 救援载具离开时; 2 - 终局获胜时; 4 - 统计屏幕出现时; 8 - 统计屏幕结束时", CVAR_FLAGS);
-	g_cvFinaleFailureCount =	CreateConVar("mapchanger_finale_failure_count",		"2",	"终局团灭几次自动换到下一张图", CVAR_FLAGS);
+	g_cvFinaleChangeType = 		CreateConVar("mapchanger_finale_change_type",		"4",	"0=终局不换地图(返回大厅), 1=救援载具离开时, 2=终局获胜时, 4=统计屏幕出现时, 8=统计屏幕结束时", CVAR_FLAGS);
+	g_cvFinaleFailureCount =	CreateConVar("mapchanger_finale_failure_count",		"0",	"终局团灭几次自动换到下一张图 0=关闭", CVAR_FLAGS);
 	g_cvFinaleRandomNextMap =	CreateConVar("mapchanger_finale_random_nextmap",	"0",	"终局是否启用随机下一关地图", CVAR_FLAGS);
 	g_cvFinaleChangeType.AddChangeHook(CvarChanged);
 	g_cvFinaleFailureCount.AddChangeHook(CvarChanged);
 	g_cvFinaleRandomNextMap.AddChangeHook(CvarChanged);
 
-	//AutoExecConfig(true);
+	AutoExecConfig(true, "map_changer");
 
 	HookEvent("round_end", 				Event_RoundEnd, 		EventHookMode_PostNoCopy);
 	HookEvent("finale_win", 			Event_FinaleWin,		EventHookMode_PostNoCopy);
@@ -139,19 +139,19 @@ public void OnPluginStart() {
 
 Action cmdSetNext(int client, int args) {
 	if (!g_bIsFinalMap) {
-		ReplyToCommand(client, "当前地图非终局地图.");
+		ReplyToCommand(client, "当前地图非终局地图");
 		return Plugin_Handled;
 	}
 		
 	if (args != 1) {
-		ReplyToCommand(client, "\x01!setnext/sm_setnext <\x05第一章节地图代码\x01>.");
+		ReplyToCommand(client, "\x01!nmaps/sm_nmaps <\x05第一章节地图代码\x01>");
 		return Plugin_Handled;
 	}
 
 	char map[64];
 	GetCmdArg(1, map, sizeof map);
 	if (!IsMapValidEx(map)) {
-		ReplyToCommand(client, "无效的地图名.");
+		ReplyToCommand(client, "无效的地图名");
 		return Plugin_Handled;
 	}
 
@@ -159,9 +159,9 @@ Action cmdSetNext(int client, int args) {
 	int Id = FindMapId(map, FIRST);
 	strcopy(g_sNextMap, sizeof g_sNextMap, map);
 	if (Id == -1)
-		Format(buffer, sizeof buffer, "\x01下一张地图已设置为 \x05%s\x01.", map);
+		Format(buffer, sizeof buffer, "\x01下一张地图已设置为 \x05%s\x01", map);
 	else
-		Format(buffer, sizeof buffer, "\x01下一张地图已设置为 \x05%s \x01(\x05%s\x01)\x01.", map, g_sValveMaps[Id][TRANSLATE]);
+		Format(buffer, sizeof buffer, "\x01下一张地图已设置为 \x05%s \x01(\x05%s\x01)\x01", map, g_sValveMaps[Id][TRANSLATE]);
 
 	ReplyToCommand(client, "%s", buffer);
 	return Plugin_Handled;
