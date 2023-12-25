@@ -456,7 +456,7 @@ cfg/sourcemod/l4d_mutants.cfg
 ```sourcepawn
 // ConVars for plugin "l4d_mutant_zombies.smx"
 
-// 0 =关闭插件,1 =打开插件.
+// 0=关闭插件,1=打开插件.
 // Default: "1"
 l4d_mutants_allow "1"
 
@@ -468,7 +468,7 @@ l4d_mutants_modes ""
 // Default: ""
 l4d_mutants_modes_off ""
 
-// 在这些游戏模式下打开插件.0 =全部,1=战役,2=生存,4=对抗,8=清道夫,将数字加在一起.
+// 在这些游戏模式下打开插件.0=全部,1=战役,2=生存,4=对抗,8=清道夫,将数字加在一起.
 // Default: "0"
 l4d_mutants_modes_tog "0"
 

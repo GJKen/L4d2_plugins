@@ -129,7 +129,7 @@ L4D2
 
 <details><summary>Require | 需求</summary>
 
-1. [left4dhooks](https://forums.alliedmods.net/showthread.SourcePawn?t=321696)
+1. [[L4D & L4D2] Left 4 DHooks Direct](https://forums.alliedmods.net/showthread.php?t=321696)
 </details>
 
 <details><summary>每个特感增效</summary>

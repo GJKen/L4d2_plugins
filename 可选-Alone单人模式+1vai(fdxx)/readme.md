@@ -1,8 +1,8 @@
 # 📌Alone单人模式+1vai
 	
-**原作[Github](https://github.com/fantasylidong/CompetitiveWithAnne)**
+**原作 [Github](https://github.com/fantasylidong/CompetitiveWithAnne)**
 
-Alone控制单人模式, 1vai控制起身动画
+Alone控制杀死特感并扣血, 1vai控制起身动画
 
 > 修改Alone源码开局提示到服务器控制台, 修改部分提示文案
 ---

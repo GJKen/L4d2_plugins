@@ -1,10 +1,10 @@
 # 📌幸存者MVP统计
 
-**原作[GIthub](https://github.com/umlka/l4d2/blob/main/survivor_mvp/survivor_mvp.sp)**
+**原作 [GIthub](https://github.com/umlka/l4d2/blob/main/survivor_mvp/survivor_mvp.sp)**
 
 **详情看图示**
 
-> 修改了源码的一些文案
+> 修改源码的一些文案
 
 > 修改源码添加团灭次数统计
 ---
@@ -56,5 +56,8 @@ Related Plugin | 相关插件
 
 <details><summary>Changelog | 版本日志</summary>
 
-- 2023.12.24 > 添加团灭次数统计
+- 2023.12.24
+	- 修改规范插件名字
+	- 添加团灭次数统计, `OnMapEnd()` 清空团灭计数
+	- 分别在团灭次数0-20-50有不同的if判断, 从而输出不同语句
 </details>

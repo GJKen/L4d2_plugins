@@ -1,42 +1,20 @@
 # 📌投票执行更改cvar
 
+输入指令投票更改cvar
+
 **原作 [Github](https://github.com/fantasylidong/anne/blob/main/left4dead2/addons/sourcemod/scripting/vote.sp)**
-
-输入指令投票更改cvar,<br>投票执行配置文件的位置, 位于 `sourcemod/data/match_votes_file/` 文件夹里面的任意路径
-
-默认读取 `sourcemod/data/match_votes_file/default.txt`
-
-不同模式可以用cvar指定读取配置文件 `sm_cvar votecfgfile "data/match_votes_file/*.txt"`
 
 > 修改源码的一些文案和RegConsoleCmd指令
 
 > 修改配置文件路径
 
 > 添加重启地图代码
----
-<details><summary>Command | 命令</summary>
 
-|指令|功能|权限|
-|-|-|-|
-|`!v` \ `!vt` \ `!votes`|投票菜单|Console|
-|`!vk`|投票踢出玩家|Console|
-|`!cv`|管理员终止此次投票|Admin|
-|`!restartmap`|重启当前地图|Admin|
-</details>
+投票执行配置文件的位置, 位于 `sourcemod/data/match_votes_file/` 文件夹里面的任意路径
 
-Video | 影片展示
-<br/>None
+默认读取 `sourcemod/data/match_votes_file/default.txt`
 
-Image | 图示
-<br/>None
-
-<details><summary>ConVar | 指令</summary>
-
-```SourcePawn
-//投票文件的位置(位于sourcemod/文件夹)
-votecfgfile "data/match_votes_file/default.txt"
-```
-</details>
+不同模式可以用cvar指定读取配置文件 `sm_cvar votecfgfile "data/match_votes_file/*.txt"`
 
 <details><summary>Configs | 设定示例</summary>
 
@@ -61,6 +39,31 @@ data/match_votes_file/*.txt
 	}
 ```
   </details>
+  
+---
+<details><summary>Command | 命令</summary>
+
+|指令|功能|权限|
+|-|-|-|
+|`!v` \ `!vt` \ `!votes`|投票菜单|Console|
+|`!vk`|投票踢出玩家|Console|
+|`!cv`|管理员终止此次投票|Admin|
+|`!restartmap`|重启当前地图|Admin|
+</details>
+
+Video | 影片展示
+<br/>None
+
+Image | 图示
+<br/>None
+
+<details><summary>ConVar | 指令</summary>
+
+```SourcePawn
+//投票文件的位置(位于sourcemod/文件夹)
+votecfgfile "data/match_votes_file/default.txt"
+```
+</details>
 
 <details><summary>Require | 需求</summary>
 

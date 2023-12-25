@@ -1,6 +1,6 @@
 # 📌Witch惊扰提示
 
-**原作[GIthub](https://github.com/umlka/l4d2/blob/main/sms/sms.sp)**
+**原作 [GIthub](https://github.com/umlka/l4d2/blob/main/sms/sms.sp)**
 
 > 从原作提取而出, 修改了源码的一些文案
 ---

@@ -58,7 +58,7 @@ Require | 需求
 
 <details><summary>Related Plugin | 相关插件</summary>
 
-1. [shop](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp)
+1. [Shop点数商店(Sql 版本)](https://github.com/GJKen/L4d2_plugins/tree/main/%E5%8F%AF%E9%80%89-Shop%E7%82%B9%E6%95%B0%E5%95%86%E5%BA%97(%E6%95%B0%E6%8D%AE%E5%BA%93%E7%89%88%E6%9C%AC)(1.3.8)(NanakaNeko))
 </details>
 
 <details><summary>Changelog | 版本日志</summary>

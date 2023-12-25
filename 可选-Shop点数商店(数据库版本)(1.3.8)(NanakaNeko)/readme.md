@@ -1,4 +1,4 @@
-# 📌Shop点数商店(Lite 版本)
+# 📌Shop点数商店(Sql 版本)
 
 **原作 [Github](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop.sp "Github")**
 
@@ -116,7 +116,7 @@ Require | 需求
 
 <details><summary>Related Plugin | 相关插件</summary>
 
-1. [shop_lite](https://github.com/NanakaNeko/l4d2_plugins_coop/blob/main/scripting/shop_lite.sp)
+1. [Shop点数商店(Lite 版本)](https://github.com/GJKen/L4d2_plugins/edit/main/%E5%8F%AF%E9%80%89-Shop%E7%82%B9%E6%95%B0%E5%95%86%E5%BA%97(Lite%E7%89%88%E6%9C%AC)(2.2)(NanakaNeko)/readme.md)
 </details>
 
 <details><summary>Changelog | 版本日志</summary>

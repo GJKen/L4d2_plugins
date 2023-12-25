@@ -36,10 +36,9 @@ Video | 影片展示
 ![l4dinfectedbots_1](image/l4dinfectedbots_1.jpg)<br>
 ![l4dinfectedbots_2](image/l4dinfectedbots_2.jpg)
 
-- Join infected team and play in coop/survival/realism mode.
-
-	- 在战役/写实/生存模式下加入特感阵营<br>
-	![l4dinfectedbots_3](image/l4dinfectedbots_3.jpg)
+- Join infected team and play in coop/survival/realism mode.<br>
+- 在战役/写实/生存模式下加入特感阵营
+![l4dinfectedbots_3](image/l4dinfectedbots_3.jpg)
 </details>
 
 <details><summary>ConVar | 控制台变量</summary>

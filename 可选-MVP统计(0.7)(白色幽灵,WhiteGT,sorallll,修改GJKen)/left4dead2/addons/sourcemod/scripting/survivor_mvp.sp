@@ -4,11 +4,11 @@
 #include <colors>
 #include <left4dhooks>
 
-#define PLUGIN_NAME				"击杀排行统计"
-#define PLUGIN_AUTHOR			"白色幽灵 WhiteGT, sorallll"
-#define PLUGIN_DESCRIPTION		"击杀排行统计"
+#define PLUGIN_NAME				"[L4d2]survivor_mvp(击杀排行统计)"
+#define PLUGIN_AUTHOR			"白色幽灵 WhiteGT, sorallll, 修改GJKen"
+#define PLUGIN_DESCRIPTION		""
 #define PLUGIN_VERSION			"0.7"
-#define PLUGIN_URL				""
+#define PLUGIN_URL				"https://github.com/umlka/l4d2/tree/main/survivor_mvp"
 
 Handle
 	g_hTimer;
@@ -400,7 +400,6 @@ void PrintStatistics() {
 	else if (g_iFailCount == 20) {CPrintToChatAll("{default}杂鱼{red}~ {default}累了就休息{red}❤", g_iFailCount);}
 	else if (g_iFailCount == 50) {CPrintToChatAll("{red}杂鱼...别玩了,我心疼T_T", g_iFailCount);}
 	else {CPrintToChatAll("{default}杂鱼~ 本章{red}%d{default}次团灭了捏{red}❤", g_iFailCount);}
-		
 
 	for (i = 0; i < infoMax; i++) {
 		client = clients[i];

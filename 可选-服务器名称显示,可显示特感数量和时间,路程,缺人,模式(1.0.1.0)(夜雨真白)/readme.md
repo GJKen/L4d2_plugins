@@ -17,7 +17,7 @@ Video | 影片展示
 
 <details><summary>Image | 图示</summary>
 
-![l4d2_server_name.smx](imgs/02.png)
+![l4d2_server_name.smx](imgs/01.jpg)
 </details>
 
 <details><summary>服务器名称配置</summary>
@@ -49,11 +49,6 @@ Video | 影片展示
 
 此为自用 cvar 配置
 
-❗cvar 设置服名不支持中文
-<br>❗`sn_base_mode_name` 和 `sn_display_infected_info` 这两个 `cvar` 未配置或者检测不到刷特插件的 `cvar`
-<br>会在控制台报错, 服名会显示不出模式或刷特参数
-<br>❗插件显示的模式在源码里面, 更改需要自己编译
-
 no cfg
 ```sourcepawn
 //是否在服名中显示刷特参数 1=开,0=关
@@ -73,6 +68,10 @@ sn_base_server_name ""
 //a=纯净战役, b=多特战役 c=增强多特 d=坐牢战役 e=简单药役 f=正常药役 g=坐牢药役 h=单人战役 i=单人药役 j=单人多特 k=普通战役 l=无限火力 m=高级无限 n=HT训练
 sn_base_mode_name ""
 ```
+❗cvar 设置服名不支持中文
+<br>❗`sn_base_mode_name` 和 `sn_display_infected_info` 这两个 cvar 未配置或者检测不到刷特插件的 cvar
+<br>会在控制台报错, 服名会显示不出模式或刷特参数
+<br>❗插件显示的模式在源码里面, 更改需要自己编译
 </details>
 
 <details><summary>Require | 需求</summary>

@@ -30,7 +30,7 @@ l4d_reservedslots_adm "1"
 l4d_reservedslots_flag "z"
 
 // If set to 1, reserved slots will hidden (subtracted 'l4d_reservedslots_adm' from the max slot 'sv_maxplayers')
-// 为 1时, 服务器会只会显示最大人数, 预留通道被隐藏
+// 为1时, 服务器会只会显示最大人数, 预留通道被隐藏
 // 为0时, 服务器会显示最大人数+预留通道
 l4d_reservedslots_hide "1"
 ```

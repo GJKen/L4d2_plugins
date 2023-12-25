@@ -30,12 +30,12 @@
 目前支持的武器有:
 
 - 近战:撬棍, 板球棒
-- 手枪: Magnum
-- 冲锋枪:Uzi; Silenced
-- 霰弹枪:Pump; Chrome; Auto
+- 手枪:马格南
+- 冲锋枪:Uzi, Smg
+- 霰弹枪:木喷, 铁喷, 连喷
 - Gascan
 
-这些武器有 2 款新皮肤:Magnum； M16； AK47, 其他就1把
+这些武器有 2 款新皮肤:马格南; M16; AK47, 其他就1把
 
 11 种武器共有 14 种新皮肤
 
@@ -47,7 +47,7 @@
 
 启用 Gascan RNG 皮肤可能会导致一些插件出现故障, 这些插件会检查皮肤以检测是否是清理皮肤
 
-不知道和"金撬棍"成就有没有冲突
+不知道和金撬棍(Golden Crowbar)成就有没有冲突
 </details>
 
 ---
@@ -55,7 +55,7 @@
 
 [Youtube](https://youtu.be/w_CrGjsEg7I)
 
-> 视频来自(Credits: Lucarbuncle)
+> 视频来自: Lucarbuncle
 </details>
 
 <details><summary>Image | 图示</summary>
@@ -63,7 +63,7 @@
 官方武器皮肤
 ![l4d2_wskin_rng.smx](https://forums.alliedmods.net/image-proxy/2e2476c28fe3e99efeac12b80cafccbd35001103/68747470733a2f2f692e696d6775722e636f6d2f3838474c7148712e6a7067)
 
-三方武器皮肤
+测试三方武器皮肤
 ![l4d2_wskin_rng.smx](imgs/01.png)
 </details>
 
