@@ -1,0 +1,77 @@
+/*
+	******************************************************************************************************************************************************
+
+	You can display phrases in chat with color using any of the methods below:
+
+	Using color codes:
+		•  // Default (use instead of \x01), Alt + 01 Keyboard Shortcut
+		•  // Light Green (use instead of \x03), Alt + 03 Keyboard Shortcut
+		•  // Orange (use instead of \x04), Alt + 04 Keyboard Shortcut
+		•  // Olive (use instead of \x05), Alt + 05 Keyboard Shortcut
+
+	or
+
+	Using color tags:
+		• {default} // Default (use instead of \x01)
+		• {lightgreen} // Light Green (use instead of \x03)
+		• {orange} // Orange (use instead of \x04)
+		• {olive} // Green (use instead of \x05)
+
+	******************************************************************************************************************************************************
+*/
+
+"Phrases"
+{
+	"Intro"
+	{
+		"en"			"{lightgreen}To change your weapon skin, type {orange}!wskin {lightgreen}in chat."
+		"es"			"{lightgreen}Para cambiar el aspecto de tu arma, escribe {orange}!wskin {lightgreen}en chat."
+		"hu"			"{lightgreen}Fegyver kinézet váltásához, írd be a chatbe !wskin"
+		"pt"			"{lightgreen}Para mudar a aparência da sua arma, digite {orange}!wskin {lightgreen}no chat."
+		"pt_p"			"{lightgreen}Para mudar a aparência da sua arma, digite {orange}!wskin {lightgreen}no chat."
+		"ru"			"{lightgreen}Для изменения скина оружия введите {orange}!wskin {lightgreen}в чат."
+		"ua"			"{lightgreen}Для зміни скіну зброї введіть {orange}!wskin {lightgreen}у чат."
+		"chi"			"{lightgreen}聊天视窗输入 {orange}!wskin {lightgreen}改换武器皮肤." 
+		"zho"			"{lightgreen}聊天視窗輸入 {orange}!wskin {lightgreen}改換武器皮膚."
+	}
+
+	"Weapon skins"
+	{
+		"en"			"Weapon skins:"
+		"es"			"Armas con aspecto:"
+		"hu"			"Fegyver kinézet:"
+		"pt"			"Armas com aparência:"
+		"pt_p"			"Armas com aparência:"
+		"ru"			"Скины оружия:"
+		"ua"			"Скіни зброї:"
+		"chi" 			"武器皮肤:"
+		"zho"			"武器皮膚:"
+	}
+
+	"Select a skin"
+	{
+		"en"			"Select a skin:"
+		"es"			"Selecciona un aspecto:"
+		"hu"			"Válasz egy kinézetett:"
+		"pt"			"Selecione uma aparência:"
+		"pt_p"			"Selecione uma aparência:"
+		"ru"			"Выберите скин:"
+		"ua"			"Оберіть скін:"
+		"chi"			"选一个可换皮肤:"
+		"zho"			"選一個可換皮膚:"
+	}
+	
+	"Skin"
+	{
+		"en"			"Skin"
+		"es"			"Aspecto"
+		"hu"			"Kinézet"
+		"pt"			"Aparência"
+		"pt_p"			"Aparência"
+		"ru"			"Скин"
+		"ua"			"Скін"
+		"chi"			"皮肤"
+		"zho"			"皮膚"
+	}
+
+}
