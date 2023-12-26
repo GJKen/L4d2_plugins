@@ -80,8 +80,8 @@ public Plugin myinfo =
 // ====================================================================================================
 // Filenames
 // ====================================================================================================
-#define CONFIG_FILENAME               "l4d2_wskin"
-#define TRANSLATION_FILENAME          "l4d2_wskin.phrases"
+#define CONFIG_FILENAME               "l4d2_wskin_menu"
+#define TRANSLATION_FILENAME          "l4d2_wskin_menu.phrases"
 
 // ====================================================================================================
 // Defines
@@ -221,7 +221,7 @@ public void OnPluginStart()
     g_hCvar_HuntingRifle      = CreateConVar("l4d2_wskin_hunting_rifle", "1", "Weapon skin option for Hunting Rifle.\n0 = OFF, 1 = ON.", CVAR_FLAGS, true, 0.0, true, 1.0);
     g_hCvar_CricketBat        = CreateConVar("l4d2_wskin_cricket_bat", "1", "Weapon skin option for Cricket Bat melee.\n0 = OFF, 1 = ON.", CVAR_FLAGS, true, 0.0, true, 1.0);
     g_hCvar_Crowbar           = CreateConVar("l4d2_wskin_crowbar", "1", "Weapon skin option for Crowbar melee.\n0 = OFF, 1 = ON.", CVAR_FLAGS, true, 0.0, true, 1.0);
-    g_hCvar_Gascan            = CreateConVar("l4d2_wskin_gascan", "1", "Weapon skin option for Gascan.\nNote: Enabling this may glitch some plugins that check the gascan skin to detect if is a scavenge one.\n0 = OFF, 1 = ON.", CVAR_FLAGS, true, 0.0, true, 1.0);
+    g_hCvar_Gascan            = CreateConVar("l4d2_wskin_gascan", "0", "Weapon skin option for Gascan.\nNote: Enabling this may glitch some plugins that check the gascan skin to detect if is a scavenge one.\n0 = OFF, 1 = ON.", CVAR_FLAGS, true, 0.0, true, 1.0);
 
     // Hook plugin ConVars change
     g_hCvar_Enabled.AddChangeHook(Event_ConVarChanged);
