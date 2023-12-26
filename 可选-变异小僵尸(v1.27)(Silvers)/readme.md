@@ -20,6 +20,43 @@
 ### 🔗Example Config | 配置示例
 <details><summary>data/l4d_mutants.cfg</summary>
 
+<br>
+
+- <details><summary>Zombies Types | 小僵尸类型</summary>
+
+	<br>
+
+	- Bomb-炸弹:
+		- There are random chances for Bomb mutants to explode when attacking, being hurt (defending) or shot in the head.
+		- 炸弹变种在攻击, 受伤(防御)或头部中弹时会随机爆炸.
+
+	- Fire-火焰:
+		- Common which walk through molotov fires or firework crate explosions have a random chance to mutate into Fire mutants. These zombies are fireproof and have chances to drop fires when attacking or defending.
+		- 穿过火焰或烟花箱爆炸的僵尸会随机突变为火焰变种.这些僵尸是防火的, 在攻击或防御时有机会掉落火焰.
+
+	- Ghost-幽灵:
+		- Semi transparent zombie.
+		- 半透明僵尸
+
+	- Mind-思维:
+		- Getting near to these zombies will change your screen color.
+		- 靠近这些僵尸会改变你的屏幕颜色.
+
+	- Smoke-烟:
+		- Players near to these zombies receive damage.
+		- 靠近这些僵尸的玩家会受到伤害.
+
+	- Spit-吐:
+		- Common which walk through Spitter acid have a random chance to mutate into to Spit mutants. When hit by these zombies, players take damage for a few seconds.
+		- 穿过痰水的僵尸会随机突变为Spitter变种.当被这些僵尸击中时, 玩家会受到几秒钟的伤害.
+
+	- Tesla-特斯拉:
+		- Nikola Tesla mutant, flings players away from the Mutant.
+		- 尼古拉·特斯拉变种, 会将玩家从身边击飞.
+	</details>
+
+❗此为自用配置
+
 ```sourcepawn
 "Mutants"
 {
@@ -373,36 +410,6 @@
 </details>
 
 ---
-<details><summary>Zombies Types | 小僵尸类型</summary>
-
-- Bomb-炸弹:
-	- There are random chances for Bomb mutants to explode when attacking, being hurt (defending) or shot in the head.
-	- 炸弹变种在攻击, 受伤(防御)或头部中弹时会随机爆炸.
-
-- Fire-火焰:
-	- Common which walk through molotov fires or firework crate explosions have a random chance to mutate into Fire mutants. These zombies are fireproof and have chances to drop fires when attacking or defending.
-	- 穿过火焰或烟花箱爆炸的僵尸会随机突变为火焰变种.这些僵尸是防火的, 在攻击或防御时有机会掉落火焰.
-
-- Ghost-幽灵:
-	- Semi transparent zombie.
-	- 半透明僵尸
-
-- Mind-思维:
-	- Getting near to these zombies will change your screen color.
-	- 靠近这些僵尸会改变你的屏幕颜色.
-
-- Smoke-烟:
-	- Players near to these zombies receive damage.
-	- 靠近这些僵尸的玩家会受到伤害.
-
-- Spit-吐:
-	- Common which walk through Spitter acid have a random chance to mutate into to Spit mutants. When hit by these zombies, players take damage for a few seconds.
-	- 穿过痰水的僵尸会随机突变为Spitter变种.当被这些僵尸击中时, 玩家会受到几秒钟的伤害.
-
-- Tesla-特斯拉:
-	- Nikola Tesla mutant, flings players away from the Mutant.
-	- 尼古拉·特斯拉变种, 会将玩家从身边击飞.
-</details>
 
 <details><summary>Command | 指令</summary>
 
@@ -441,15 +448,6 @@ Mind type effects-思维类型效果:
 ![l4d_mutant_zombies.smx](http://imgur.com/CwTuujU.jpg)
 </details>
 
-<details><summary>Translation Support | 支持语言</summary>
-
-```
-English
-繁體中文
-简体中文
-```
-</details>
-
 <details><summary>ConVar | 控制台变量</summary>
 
 cfg/sourcemod/l4d_mutants.cfg
@@ -474,6 +472,22 @@ l4d_mutants_modes_tog "0"
 
 // 突变僵尸插件版本
 l4d2_mutants_version
+```
+</details>
+
+<details><summary>Translation Support | 支持语言</summary>
+
+```
+English
+繁體中文
+简体中文
+```
+</details>
+
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
 ```
 </details>
 

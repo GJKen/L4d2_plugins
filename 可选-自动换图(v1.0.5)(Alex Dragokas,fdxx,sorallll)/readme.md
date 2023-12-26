@@ -30,7 +30,7 @@ Image | 图示
 
 <details><summary>ConVar | 指令</summary>
 
-此为自用配置
+❗此为自用配置
 
 cfg/sourcemod/map_changer.cfg
 ```sourcepawn
@@ -58,12 +58,19 @@ mapchanger_finale_random_nextmap "1"
 ```
 </details>
 
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+</details>
+
 Require | 需求
 <br>None
 
 <details><summary>Related Plugin | 相关插件</summary>
 
-[投票换图(fdxx, sorallll)(v0.9)](https://github.com/GJKen/L4d2_plugins/tree/main/%E5%8F%AF%E9%80%89-%E6%8A%95%E7%A5%A8%E6%8D%A2%E5%9B%BE(fdxx%2C%20sorallll)(v0.9))
+[投票换图(fdxx, sorallll)(v0.9)](https://github.com/GJKen/L4d2_plugins/tree/main/%E5%8F%AF%E9%80%89-%E6%8A%95%E7%A5%A8%E6%8D%A2%E5%9B%BE(v0.9)(fdxx%2Csorallll))
 </details>
 
 Changelog | 版本日志

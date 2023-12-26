@@ -53,6 +53,14 @@ l4d2_give_ammo_time 180
 ```
 </details>
 
+<details><summary>Apply to | 适用于</summary>
+
+```
+l4d1
+l4d2
+```
+</details>
+
 Require | 需求
 <br>None
 

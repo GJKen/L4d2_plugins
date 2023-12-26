@@ -17,19 +17,6 @@ Video | 影片展示
 ![survivor_mvp.smx](imgs/01.png)<br>
 </details>
 
-<details><summary>Translation Support | 支持语言</summary>
-
-```
-简体中文
-```
-</details>
-
-Require | 需求
-<br>None
-
-Related Plugin | 相关插件
-<br>None
-
 <details><summary>ConVar | 控制台变量</summary>
 
 no cfg
@@ -38,6 +25,25 @@ no cfg
 sms_witchstartled_notify "1"
 ```
 </details>
+
+<details><summary>Translation Support | 支持语言</summary>
+
+```
+简体中文
+```
+</details>
+
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+
+Require | 需求
+<br>None
+
+Related Plugin | 相关插件
+<br>None
 
 Changelog | 版本日志
 <br>None

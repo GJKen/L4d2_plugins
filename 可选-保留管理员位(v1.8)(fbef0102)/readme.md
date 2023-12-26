@@ -45,9 +45,16 @@ English
 ```
 </details>
 
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+</details>
+
 <details><summary>Require | 需求</summary>
 
-1. L4dtoolz
+1. [L4dtoolz](https://github.com/accelerator74/l4dtoolz)
 </details>
 
 Related Plugin | 相关插件

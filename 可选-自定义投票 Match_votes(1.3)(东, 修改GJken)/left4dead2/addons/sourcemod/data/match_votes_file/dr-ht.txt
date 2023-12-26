@@ -13,77 +13,49 @@
 	}
 	"特感数量"
 	{
-		"sm_cvar l4d2_si_spawn_control_max_specials 1"
+		"exec match_votes/dr-ht/dr-ht_1t"
 		{
 			"message" "1特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 2"
+		"exec match_votes/dr-ht/dr-ht_2t"
 		{
 			"message" "2特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 3"
+		"exec match_votes/dr-ht/dr-ht_3t"
 		{
 			"message" "3特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 4"
+		"exec match_votes/dr-ht/dr-ht_4t"
 		{
 			"message" "4特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 5"
+		"exec match_votes/dr-ht/dr-ht_5t"
 		{
 			"message" "5特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 6"
+		"exec match_votes/dr-ht/dr-ht_6t"
 		{
 			"message" "6特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 7"
+		"exec match_votes/dr-ht/dr-ht_7t"
 		{
 			"message" "7特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 8"
+		"exec match_votes/dr-ht/dr-ht_8t"
 		{
 			"message" "8特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 9"
+		"exec match_votes/dr-ht/dr-ht_9t"
 		{
 			"message" "9特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 10"
+		"exec match_votes/dr-ht/dr-ht_10t"
 		{
 			"message" "10特"
 		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 12"
+		"exec match_votes/dr-ht/dr-ht_12t"
 		{
 			"message" "12特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 14"
-		{
-			"message" "14特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 16"
-		{
-			"message" "16特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 18"
-		{
-			"message" "18特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 20"
-		{
-			"message" "20特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 22"
-		{
-			"message" "22特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 24"
-		{
-			"message" "24特"
-		}
-		"sm_cvar l4d2_si_spawn_control_max_specials 28"
-		{
-			"message" "28特"
 		}
 	}
 	"刷特时间(s)"

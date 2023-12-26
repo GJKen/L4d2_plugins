@@ -45,13 +45,6 @@ Video | 影片展示
 ![shop.smx](imgs/01.png) ![shop.smx](imgs/02.png)
 </details>
 
-<details><summary>Translation Support | 支持语言</summary>
-
-```
-简体中文
-```
-</details>
-
 <details><summary>ConVar | 控制台变量</summary>
 
 cfg/sourcemod/l4dinfectedbots.cfg
@@ -111,12 +104,26 @@ l4d2_weapon_number "2"
 ```
 </details>
 
+<details><summary>Translation Support | 支持语言</summary>
+
+```
+简体中文
+```
+</details>
+
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+</details>
+
 Require | 需求
 <br>None
 
 <details><summary>Related Plugin | 相关插件</summary>
 
-1. [Shop点数商店(Lite 版本)](https://github.com/GJKen/L4d2_plugins/edit/main/%E5%8F%AF%E9%80%89-Shop%E7%82%B9%E6%95%B0%E5%95%86%E5%BA%97(Lite%E7%89%88%E6%9C%AC)(2.2)(NanakaNeko)/readme.md)
+1. [Shop点数商店(Lite 版本)](https://github.com/GJKen/L4d2_plugins/edit/main/%E5%8F%AF%E9%80%89-Shop%E7%82%B9%E6%95%B0%E5%95%86%E5%BA%97(Lite%E7%89%88%E6%9C%AC)(2.2)(NanakaNeko))
 </details>
 
 <details><summary>Changelog | 版本日志</summary>

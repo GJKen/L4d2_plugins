@@ -26,6 +26,22 @@ tank_animation_playbackrate "5.0"
 Translation Support | 支持语言
 <br>None
 
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D1
+L4D2
+```
+</details>
+
+<details><summary>Require | 需求</summary>
+
+1. [[L4D & L4D2] Left 4 DHooks Direct](https://forums.alliedmods.net/showthread.php?t=321696)
+</details>
+
+Related Plugin | 相关插件
+<br>None
+
 <details><summary>Changelog | 版本日志</summary>
 
 - 1.0.7 (20-Oct-2022)
@@ -41,11 +57,3 @@ Translation Support | 支持语言
 - 1.0.4 (10-Mar-2022)
 	- Fix 'Client 3 is not in game' error
 </details>
-
-<details><summary>Require | 需求</summary>
-
-1. [[L4D & L4D2] Left 4 DHooks Direct](https://forums.alliedmods.net/showthread.php?t=321696)
-</details>
-
-Related Plugin | 相关插件
-<br>None

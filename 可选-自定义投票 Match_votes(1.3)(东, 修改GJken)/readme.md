@@ -41,7 +41,7 @@ data/match_votes_file/*.txt
   </details>
   
 ---
-<details><summary>Command | 命令</summary>
+<details><summary>Command | 指令</summary>
 
 |指令|功能|权限|
 |-|-|-|
@@ -57,11 +57,25 @@ Video | 影片展示
 Image | 图示
 <br/>None
 
-<details><summary>ConVar | 指令</summary>
+<details><summary>ConVar | 控制台变量</summary>
 
 ```SourcePawn
 //投票文件的位置(位于sourcemod/文件夹)
 votecfgfile "data/match_votes_file/default.txt"
+```
+</details>
+
+<details><summary>Translation Support | 支持语言</summary>
+
+```
+简体中文
+```
+</details>
+
+<details><summary>Apply to | 适用于</summary>
+
+```
+l4d2
 ```
 </details>
 
@@ -72,14 +86,6 @@ votecfgfile "data/match_votes_file/default.txt"
 
 Related Plugin | 相关插件
 <br>None
-
-<details><summary>Apply to | 适用于</summary>
-
-```
-l4d1
-l4d2
-```
-</details>
 
 Changelog | 版本日志</summary>
 <br/>None

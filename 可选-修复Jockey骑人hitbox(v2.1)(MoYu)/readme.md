@@ -16,18 +16,18 @@ Command | 指令
 ![l4d2_jockey_hitbox_fix.smx](imgs/01.png) ![l4d2_jockey_hitbox_fix.smx](imgs/02.png)
 </details>
 
- <details><summary>Apply to | 适用于</summary>
-
-```
-L4D2 only
-```
-</details>
-
 ConVar | 控制台变量
 <br>None
 
 Translation Support | 支持语言
 <br>None
+
+ <details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2 only
+```
+</details>
 
 Require | 需求
 <br>None

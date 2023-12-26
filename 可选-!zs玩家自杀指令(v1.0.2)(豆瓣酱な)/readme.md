@@ -36,6 +36,13 @@ l4d2_suicide_start_tips 0
 ```
 </details>
 
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+</details>
+
 Require | 需求
 <br>None
 

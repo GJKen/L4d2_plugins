@@ -25,6 +25,13 @@ ConVar | 控制台变量
 ```
 </details>
 
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
+</details>
+
 Require | 需求
 <br>None
 

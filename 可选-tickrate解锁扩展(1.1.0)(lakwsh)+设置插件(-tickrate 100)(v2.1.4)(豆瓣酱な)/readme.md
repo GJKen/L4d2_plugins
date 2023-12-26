@@ -16,6 +16,9 @@ Video | 影片展示
 Image | 图示
 <br>None
 
+ConVar | 控制台变量
+<br>None
+
 <details><summary>Translation Support | 支持语言</summary>
 
 ```
@@ -23,8 +26,11 @@ Image | 图示
 ```
 </details>
 
-ConVar | 控制台变量
-<br>None
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D2
+```
 
 Require | 需求
 <br>None

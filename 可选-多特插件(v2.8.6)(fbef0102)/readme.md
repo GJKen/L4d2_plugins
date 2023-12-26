@@ -646,14 +646,6 @@ l4d_infectedbots_witch_spawn_time_min "90.0"
 	</details>
 </details>
 
-<details><summary>Apply to | 适用于</summary>
-
-```php
-L4D1 coop/versus/realism/survival/scavenge + all mutation modes
-L4D2 all modes
-```
-</details>
-
 <details><summary>Translation Support | 支持语言</summary>
 
 ```
@@ -661,6 +653,14 @@ English
 繁體中文
 简体中文
 Russian
+```
+</details>
+
+<details><summary>Apply to | 适用于</summary>
+
+```php
+L4D1 coop/versus/realism/survival/scavenge + all mutation modes
+L4D2 all modes
 ```
 </details>
 
