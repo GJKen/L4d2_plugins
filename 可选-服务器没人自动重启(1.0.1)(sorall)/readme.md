@@ -3,6 +3,8 @@
 **原作 [Github](https://github.com/umlka/l4d2/tree/main/restart)**
 
 > 修改源码myinfo
+
+> 删除!rs指令
 ---
 Command | 指令</summary>
 <br>None

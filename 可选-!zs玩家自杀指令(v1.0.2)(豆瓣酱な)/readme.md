@@ -5,6 +5,7 @@
 幸存者和感染者都可使用
 
 > 修改源码自杀提示文案
+
 > 修改源码myinfo
 ---
 <details><summary>Command | 指令</summary>

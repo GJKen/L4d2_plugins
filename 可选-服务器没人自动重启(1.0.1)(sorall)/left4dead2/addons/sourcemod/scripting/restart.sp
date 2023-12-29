@@ -9,8 +9,8 @@ ConVar
 	g_cvSvHibernateWhe;
 
 public Plugin myinfo = {
-	name = "[L4D2] Restart Server/Map",
-	author = "sorallll",
+	name = "[L4D2] Server Auto Restart",
+	author = "sorallll, 修改GJKen",
 	description = "服务器没人自动重启",
 	version = PLUGIN_VERSION,
 	url = "https://github.com/umlka/l4d2/tree/main/restart"
@@ -22,20 +22,6 @@ public void OnPluginStart() {
 	g_cvSvHibernateWhe = FindConVar("sv_hibernate_when_empty");
 
 	HookEvent("player_disconnect", Event_PlayerDisconnect, EventHookMode_Pre);
-	RegAdminCmd("sm_rs", cmdRestart, ADMFLAG_ROOT);
-}
-
-Action cmdRestart(int client, int args) {
-	char buffer[64];
-	GetCmdArgString(buffer, sizeof buffer);
-	if (!strcmp(buffer, "sr", false))
-		RestartServer();
-	else if (!strcmp(buffer, "mp", false)) {
-		if (GetCurrentMap(buffer, sizeof buffer))
-			ServerCommand("changelevel %s", buffer);
-	}
-
-	return Plugin_Handled;
 }
 
 void Event_PlayerDisconnect(Event event, const char[] name, bool dontBroadcast) {
