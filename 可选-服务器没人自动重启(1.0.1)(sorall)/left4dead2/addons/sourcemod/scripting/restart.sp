@@ -2,22 +2,18 @@
 #pragma newdecls required
 #include <sourcemod>
 
-#define PLUGIN_NAME				"Restart Server/Map"
-#define PLUGIN_AUTHOR			"sorallll"
-#define PLUGIN_DESCRIPTION		""
 #define PLUGIN_VERSION			"1.0.1"
-#define PLUGIN_URL				""
 
 ConVar
 	g_cvSbAllBotGame,
 	g_cvSvHibernateWhe;
 
 public Plugin myinfo = {
-	name = PLUGIN_NAME,
-	author = PLUGIN_AUTHOR,
-	description = PLUGIN_DESCRIPTION,
+	name = "[L4D2] Restart Server/Map",
+	author = "sorallll",
+	description = "服务器没人自动重启",
 	version = PLUGIN_VERSION,
-	url = PLUGIN_URL
+	url = "https://github.com/umlka/l4d2/tree/main/restart"
 };
 
 public void OnPluginStart() {

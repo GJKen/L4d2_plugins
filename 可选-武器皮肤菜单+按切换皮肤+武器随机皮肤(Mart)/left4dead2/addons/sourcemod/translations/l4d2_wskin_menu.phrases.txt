@@ -31,8 +31,8 @@
 		"pt_p"			"{lightgreen}Para mudar a aparência da sua arma, digite {orange}!wskin {lightgreen}no chat."
 		"ru"			"{lightgreen}Для изменения скина оружия введите {orange}!wskin {lightgreen}в чат."
 		"ua"			"{lightgreen}Для зміни скіну зброї введіть {orange}!wskin {lightgreen}у чат."
-		"chi"			"{lightgreen}聊天视窗输入 {orange}!wskin {lightgreen}改换武器皮肤." 
-		"zho"			"{lightgreen}聊天視窗輸入 {orange}!wskin {lightgreen}改換武器皮膚."
+		"chi"			"{lightgreen}聊天框输入 {orange}!wskin {lightgreen}改换武器皮肤" 
+		"zho"			"{lightgreen}聊天框輸入 {orange}!wskin {lightgreen}改換武器皮膚"
 	}
 
 	"Weapon skins"
@@ -57,8 +57,8 @@
 		"pt_p"			"Selecione uma aparência:"
 		"ru"			"Выберите скин:"
 		"ua"			"Оберіть скін:"
-		"chi"			"选一个可换皮肤:"
-		"zho"			"選一個可換皮膚:"
+		"chi"			"❤你喜欢什么?:"
+		"zho"			"❤你喜歡什麽?:"
 	}
 	
 	"Skin"

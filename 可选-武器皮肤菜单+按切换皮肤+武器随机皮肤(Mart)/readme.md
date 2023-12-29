@@ -6,7 +6,9 @@
 
 原作 [alliedmods](https://forums.alliedmods.net/showthread.php?t=327611)
 	
-> 修改translations文件名称为 l4d2_wskin_menu.phrases.txt, 修改提示文案
+> 修改translations文件名称为 l4d2_wskin_menu.phrases.txt
+
+> 修改提示文案
 
 > 修改插件名称为 l4d2_wskin_menu.smx
 

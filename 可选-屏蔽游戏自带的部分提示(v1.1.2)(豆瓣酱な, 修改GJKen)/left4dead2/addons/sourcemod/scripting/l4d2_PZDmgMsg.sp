@@ -5,7 +5,6 @@
 #include <left4dhooks>
 #define CVAR_FLAGS		FCVAR_NOTIFY
 
-
 #define SERVER_INDEX 0
 #define NO_INDEX 	-1
 #define NO_PLAYER 	-2
@@ -13,42 +12,6 @@
 #define RED_INDEX 	 3
 #define MAX_COLORS 	 6
 #define MAX_MESSAGE_LENGTH 254
-// static const char CTag[][] = {"{default}", "{green}", "{lightgreen}", "{red}", "{blue}", "{olive}"};
-// static const char CTagCode[][] = {"\x01", "\x04", "\x03", "\x03", "\x03", "\x05"};
-// static const bool CTagReqSayText2[] = {false, false, true, true, true, false};
-// static const int CProfile_TeamIndex[] = {NO_INDEX, NO_INDEX, SERVER_INDEX, RED_INDEX, BLUE_INDEX, NO_INDEX};
-
-/**
- * @note Prints a message to a specific client in the chat area.
- * @note Supports color tags.
- *
- * @param client	Client index.
- * @param szMessage	Message (formatting rules).
- * @return			No return
- *
- * On error/Errors:	If the client is not connected an error will be thrown.
- */
-stock void CPrintToChat(int client, const char[] szMessage, any ...) {
-	if (client <= 0 || client > MaxClients)
-		ThrowError("Invalid client index %d", client);
-
-	if (!IsClientInGame(client))
-		ThrowError("Client %d is not in game", client);
-
-	char szBuffer[MAX_MESSAGE_LENGTH];
-	char szCMessage[MAX_MESSAGE_LENGTH];
-
-	SetGlobalTransTarget(client);
-	FormatEx(szBuffer, sizeof szBuffer, "\x01%s", szMessage);
-	VFormat(szCMessage, sizeof szCMessage, szBuffer, 3);
-
-	// int index = CFormat(szCMessage, sizeof szCMessage);
-	// if (index == NO_INDEX)
-	// 	PrintToChat(client, "%s", szCMessage);
-	// else
-	// 	CSayText2(client, index, szCMessage);
-}
-
 
 bool   g_bSMNotity;
 int    g_iTextMsg, g_iPZDmgMsg, g_iConVar, g_iDeath, g_iIncapacitated, g_iDisconnect, g_iDefibrillator;
@@ -58,7 +21,7 @@ ConVar g_hTextMsg, g_hPZDmgMsg, g_hConVar, g_hDeath, g_hIncapacitated, g_hDiscon
 /* 感谢 sorallll 提供 TextMsg 和 PZDmgMsg */
 public Plugin myinfo =
 {
-	name = "l4d2_PZDmgMsg(屏蔽游戏自带的部分提示)",
+	name = "[L4D2] PZDmgMsg(屏蔽游戏自带的部分提示)",
 	author = "豆瓣酱な, 修改:GJken", 
 	description = "屏蔽游戏自带的部分提示",
 	version = PLUGIN_VERSION,
@@ -75,7 +38,7 @@ public void OnPluginStart()
 	g_hIncapacitated = CreateConVar("l4d2_player_incapacitated", "1", "屏蔽游戏自带的玩家倒下提示 0=显示, 1=屏蔽", CVAR_FLAGS);
 	g_hDisconnect = CreateConVar("l4d2_player_disconnect", "1", "屏蔽游戏自带的玩家离开提示 0=显示, 1=屏蔽", CVAR_FLAGS);
 	g_hDefibrillator = CreateConVar("l4d2_defibrillator_used", "1", "屏蔽游戏自带的使用电击器提示 0=显示, 1=屏蔽", CVAR_FLAGS);
-	g_cvSMNotity = CreateConVar("l4d2_sourcemod_sm_notify_admin", "0", "屏蔽sourcemod平台自带的SM提示 1=只向管理员显示, 0=对所有人屏蔽");
+	g_cvSMNotity = CreateConVar("l4d2_sourcemod_sm_notify_admin", "0", "屏蔽sourcemod平台自带的SM提示 1=只向管理员显示, 0=对所有人屏蔽", CVAR_FLAGS);
 
 	AutoExecConfig(true, "l4d2_PZDmgMsg");
 
@@ -96,7 +59,7 @@ public void OnPluginStart()
 	HookEvent("player_incapacitated", Event_PayerIncapacitated, EventHookMode_Pre);//屏蔽游戏自带的玩家倒下提示
 	HookEvent("defibrillator_used", Event_DefibrillatorUsed, EventHookMode_Pre);//屏蔽游戏自带的使用电击器提示
 	HookEvent("player_disconnect", Event_PlayerDisconnect, EventHookMode_Pre);//屏蔽游戏自带的玩家离开提示
-	HookUserMessage(GetUserMessageId("TextMsg"), umTextMsg, true);// 屏蔽sm提示
+	HookUserMessage(GetUserMessageId("TextMsg"), smTextMsg, true);//屏蔽sourcemod平台自带的SM提示
 }
 
 public void ConVarChanged(ConVar convar, const char[] oldValue, const char[] newValue)
@@ -151,13 +114,12 @@ public Action Event_ServerCvar(Event event, const char[] name, bool dontBroadcas
 	return Plugin_Handled;
 }
 
-// 游戏自带的闲置提示和sourcemod平台自带的[SM]提示
-Action umTextMsg(UserMsg msg_id, BfRead msg, const int[] players, int num, bool reliable, bool init) {
+//屏蔽sourcemod平台自带的SM提示
+Action smTextMsg(UserMsg msg_id, BfRead msg, const int[] players, int num, bool reliable, bool init)
+{
 	static char buffer[254];
 	msg.ReadString(buffer, sizeof buffer);
 
-	// if (g_bGameIdle && strcmp(buffer, "\x03#L4D_idle_spectator") == 0) //聊天栏提示:XXX 现已闲置
-	// 	return Plugin_Handled;
 	if (StrContains(buffer, "\x03[SM]") == 0) {//聊天栏以[SM]开头的消息
 		if (g_bSMNotity) {
 			DataPack dPack = new DataPack();
@@ -175,7 +137,8 @@ Action umTextMsg(UserMsg msg_id, BfRead msg, const int[] players, int num, bool 
 	return Plugin_Continue;
 }
 
-void NextFrame_SMMessage(DataPack dPack) {
+void NextFrame_SMMessage(DataPack dPack)
+{
 	dPack.Reset();
 	int num = dPack.ReadCell();
 	int[] players = new int[num];
