@@ -101,7 +101,6 @@ public void OnPluginStart() {
 	HookEvent("infected_death",				Event_InfectedDeath);
 	HookEvent("tank_spawn",					Event_TankSpawn);
 	HookEvent("player_incapacitated_start",	Event_PlayerIncapacitatedStart);
-	HookEvent("mission_lost", 				Event_MissionLost);
 	
 	RegConsoleCmd("sm_mvp", cmdShowMvp, "Show Mvp");
 
@@ -109,10 +108,8 @@ public void OnPluginStart() {
 		L4D_OnFirstSurvivorLeftSafeArea_Post(0);
 }
 
-//团灭计数
-void Event_MissionLost(Event event, const char[] name, bool dontBroadcast) 
-{
-    g_iFailCount++;
+public void OnMapStart() {
+	g_iFailCount = 0;//地图开始, 团灭计数清空1
 }
 
 public void OnConfigsExecuted() {
@@ -175,12 +172,12 @@ public void OnClientDisconnect(int client) {
 public void OnMapEnd() {
 	delete g_hTimer;
 	g_bLeftSafeArea = false;
-	g_iFailCount = 0;
 	ClearData();
 	ClearTankData();
 }
 
 void Event_RoundEnd(Event event, const char[] name, bool dontBroadcast) {
+	g_iFailCount++;//团灭计数
 	PrintStatistics();
 	OnMapEnd();
 }
@@ -396,7 +393,10 @@ void PrintStatistics() {
 	int len;
 	int numSpace;
 	char buffer[254];
+	// CPrintToChatAll("{default}杂鱼~ 本章{red}%d{default}次团灭了捏{red}❤", g_iFailCount);
+	// CPrintToChatAll("{default}杂鱼{red}~ {default}很棒喔{red}❤", g_iFailCount);
 	if (g_iFailCount == 0) {CPrintToChatAll("{default}杂鱼{red}~ {default}很棒喔{red}❤", g_iFailCount);}
+	else if (g_iFailCount == 5) {CPrintToChatAll("{default}杂鱼{red}~ {default}太菜了{red}❤", g_iFailCount);}
 	else if (g_iFailCount == 20) {CPrintToChatAll("{default}杂鱼{red}~ {default}累了就休息{red}❤", g_iFailCount);}
 	else if (g_iFailCount == 50) {CPrintToChatAll("{red}杂鱼...别玩了,我心疼T_T", g_iFailCount);}
 	else {CPrintToChatAll("{default}杂鱼~ 本章{red}%d{default}次团灭了捏{red}❤", g_iFailCount);}

@@ -1,0 +1,256 @@
+"Games"
+{
+	"#default"
+	{
+		"Offsets"
+		{
+			"OS"
+			{
+				"linux"		"1"
+				"windows"	"0"
+			}
+		}
+	}
+
+	"left4dead2"
+	{
+		"MemPatches"
+		{
+			"CTerrorPlayer::RoundRespawn::StatsCondition"
+			{
+				"signature"		"CTerrorPlayer::RoundRespawn"
+
+				"linux"
+				{
+					"offset"	"19h"
+					"verify"	"\x75"
+					"patch"		"\xEB"
+				}
+				
+				"windows"
+				{
+					"offset"	"Fh"
+					"verify"	"\x75"
+					"patch"		"\xEB"
+				}
+			}
+
+			"CDirector::Update::PZSpawn"
+			{
+				"signature"		"CDirector::Update"
+
+				"linux"
+				{
+					"offset"	"325h"
+					"verify"	"\x0F\x85"
+					"patch"		"\x90\xE9"
+				}
+				
+				"windows"
+				{
+					"offset"	"146h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+			}
+
+			"CTerrorPlayer::CanBecomeGhost::SpawnDisabled"
+			{
+				"signature"		"CTerrorPlayer::CanBecomeGhost"
+
+				"linux"
+				{
+					"offset"	"BEh"
+					"verify"	"\x74"
+					"patch"		"\xEB"
+				}
+				
+				"windows"
+				{
+					"offset"	"C5h"
+					"verify"	"\x74"
+					"patch"		"\xEB"
+				}
+			}
+
+			"CTerrorPlayer::CanBecomeGhost::UnlockSetting"
+			{
+				"signature"		"CTerrorPlayer::CanBecomeGhost"
+
+				"linux"
+				{
+					"offset"	"631h"
+					"verify"	"\xE8"
+					"patch"		"\x90\x90\x90\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"947h"
+					"verify"	"\xE8"
+					"patch"		"\x90\x90\x90\x90\x90"
+				}
+			}
+
+			"CTerrorPlayer::Spawn::ConvertZombieClass"
+			{
+				"signature"		"CTerrorPlayer::Spawn"
+
+				"linux"
+				{
+					"offset"	"12D1h"
+					"verify"	"\x0F\x85"
+					"patch"		"\x90\xE9"
+				}
+				
+				"windows"
+				{
+					"offset"	"1C66h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+			}
+
+			"CTerrorPlayer::PlayerZombieAbortControl::PZDisabled"
+			{
+				"signature"		"CTerrorPlayer::PlayerZombieAbortControl"
+
+				"linux"
+				{
+					"offset"	"3Ah"
+					"verify"	"\x0F\x85"
+					"patch"		"\x90\xE9"
+				}
+				
+				"windows"
+				{
+					"offset"	"32h"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+			}
+
+			"CTerrorPlayer::WarpGhostToInitialPosition::PZDisabled"
+			{
+				"signature"		"CTerrorPlayer::WarpGhostToInitialPosition"
+
+				"linux"
+				{
+					"offset"	"53Dh"
+					"verify"	"\x74"
+					"patch"		"\x90\x90"
+				}
+				
+				"windows"
+				{
+					"offset"	"3B3h"
+					"verify"	"\x0F\x84"
+					"patch"		"\x90\x90\x90\x90\x90\x90"
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			/* CTerrorPlayer::OnIncapacitatedAsSurvivor(CTakeDamageInfo const&) */
+			"m_hHiddenWeapon"
+			{
+				"linux"		"16288"
+				"windows"	"16308"
+			}
+
+			/**
+			* 搜索字符串 "#L4D_Scenario_Restart"
+			**/
+			"RestartScenarioTimer"
+			{
+				"linux"		"424"
+				"windows"	"424"
+			}
+		}
+
+		"Signatures" //大部分windows签名来自https://github.com/Psykotikism/L4D1-2_Signatures
+		{
+			/* CTerrorPlayer::RoundRespawn(void) */
+			"CTerrorPlayer::RoundRespawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xC6\x86"
+				/* ? ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? 75 ? 8B ? E8 ? ? ? ? C6 86 */
+			}
+
+			/* CDirector::Update(CDirector *__hidden this) */
+			"CDirector::Update"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector6UpdateEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x34\xA1\x2A\x2A\x2A\x2A\x53\x56\x8B\xF1"
+				/* 55 8B EC 83 EC 34 A1 ? ? ? ? 53 56 8B F1 */
+			}
+
+			/* CTerrorPlayer::CanBecomeGhost(CTerrorPlayer *__hidden this, bool) */
+			"CTerrorPlayer::CanBecomeGhost"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer14CanBecomeGhostEb"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83"
+				/* ? ? ? ? ? ? 83 ? ? 83 ? ? 55 8B ? ? 89 ? ? ? 8B ? 83 ? ? 56 57 8B ? E8 ? ? ? ? 83 */
+			}
+
+			/* CTerrorPlayer::Spawn(CTerrorPlayer *__hidden this) */
+			"CTerrorPlayer::Spawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer5SpawnEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x48\x53\x56\x8B\xF1\x8B\x0D\x2A\x2A\x2A\x2A"
+				/* 55 8B EC 83 EC 48 53 56 8B F1 8B 0D ? ? ? ? */
+			}
+
+			/* CTerrorPlayer::PlayerZombieAbortControl(void) */
+			"CTerrorPlayer::PlayerZombieAbortControl"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer24PlayerZombieAbortControlEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\xE8"
+				/* ? ? ? ? ? ? 56 8B ? E8 ? ? ? ? 83 ? ? 0F 85 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 0F 84 ? ? ? ? E8 */
+			}
+
+			/* CTerrorPlayer::WarpGhostToInitialPosition(CTerrorPlayer *__hidden this, bool) */
+			"CTerrorPlayer::WarpGhostToInitialPosition"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer26WarpGhostToInitialPositionEb"
+				"windows"	"\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x83\xEC\x58\x56\x8B\xF1\x8B\x06"
+				/* 53 8B DC 83 EC 08 83 E4 F0 83 C4 04 55 8B 6B 04 89 6C 24 04 8B EC 83 EC 58 56 8B F1 8B 06 */
+			}
+
+			/* ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &) */
+			"ForEachTerrorPlayer<SpawnablePZScan>"
+			{
+				"library"	"server"
+				"linux"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x8B\x75\x80"
+				/* E8 ? ? ? ? 8B 75 80 */
+			}
+
+			/* CTerrorPlayer::SetBecomeGhostAt(CTerrorPlayer *__hidden this, float s2) */
+			"CTerrorPlayer::SetBecomeGhostAt"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
+				"windows"	"\x53\x8B\xDC\x83\xEC\x08\x83\xE4\xF0\x83\xC4\x04\x55\x8B\x6B\x04\x89\x6C\x24\x04\x8B\xEC\x83\xEC\x58\x56\x8B\xF1\x8B\x06"
+				/* 53 8B DC 83 EC 08 83 E4 F0 83 C4 04 55 8B 6B 04 89 6C 24 04 8B EC 83 EC 58 56 8B F1 8B 06 */
+			}
+
+			/* CTerrorGameRules::"CTerrorGameRules::HasPlayerControlledZombies"() */
+			"CTerrorGameRules::HasPlayerControlledZombies"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x7E"
+				/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B 0D ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 6A ? 68 ? ? ? ? 8B ? E8 ? ? ? ? 85 ? 7E */
+			}
+		}
+    }
+}
