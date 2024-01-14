@@ -25,7 +25,7 @@ Video | 影片展示
 
 <details><summary>ConVar | 控制台变量</summary>
 
-cfg/sourcemod/l4d2_player_suicide.cfg
+[l4d2_dominatorscontrol.smx]
 ```sourcepawn
 // 启用玩家自杀指令. 0=禁用, 1=只限倒地或挂边的生还者, 2=无条件使用
 // Default: "1"
