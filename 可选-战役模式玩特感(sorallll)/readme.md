@@ -10,7 +10,7 @@
 
 <details><summary>l4d2_dominatorscontrol.smx</summary>
 
-└─ 导演控制, 解除控制性特感数量限制<br>
+└─ 解除控制性特感数量限制<br>
 └─ 原作 [Github](https://github.com/SirPlease/L4D2-Competitive-Rework/blob/a89e98ab9f54ba4fb8f04d7af3135a339b7e8445/addons/sourcemod/scripting/l4d2_dominatorscontrol.sp#L4), 无修改
 </details>
 

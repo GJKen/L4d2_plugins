@@ -232,5 +232,9 @@
 		{
 			"message" "少女与天鹅(Anmi:no source)"
 		}
+		"exec match_votes/motd8"
+		{
+			"message" "铃兰+巫恋 new_year(Pix:114733659)"
+		}
 	}
 }

@@ -275,5 +275,40 @@
 		{
 			"message" "开启反伤"
 		}
-	}	
+	}
+	"更改motd (需重启地图)"
+	{
+		"exec match_votes/motd1"
+		{
+			"message" "小春-R18(Pid:96067070)"
+		}
+		"exec match_votes/motd2"
+		{
+			"message" "モ誰(Twi:1302667849249378304)"
+		}
+		"exec match_votes/motd3"
+		{
+			"message" "浅黄梦月 (Twi:1477031921003921409)"
+		}
+		"exec match_votes/motd4"
+		{
+			"message" "水族馆(Anmi: 83088427)"
+		}
+		"exec match_votes/motd5"
+		{
+			"message" "原神萝莉-R18(dorontabi: 100613459)"
+		}
+		"exec match_votes/motd6"
+		{
+			"message" "Mignon-水出芙蓉(Twi:1486585741832454151)"
+		}
+		"exec match_votes/motd7"
+		{
+			"message" "少女与天鹅(Anmi:no source)"
+		}
+		"exec match_votes/motd8"
+		{
+			"message" "铃兰+巫恋 new_year(Pix:114733659)"
+		}
+	}
 }
