@@ -38,8 +38,8 @@ Change Log:
 // ====================================================================================================
 // Plugin Info - define
 // ====================================================================================================
-#define PLUGIN_NAME                   "[L4D1 & L4D2] Explosion Announcer"
-#define PLUGIN_AUTHOR                 "Mart"
+#define PLUGIN_NAME                   "[L4D1 & L4D2] Explosion Announcer(点燃或打爆物品提示)"
+#define PLUGIN_AUTHOR                 "Mart, 修改:GJKen"
 #define PLUGIN_DESCRIPTION            "Outputs to the chat who exploded some props"
 #define PLUGIN_VERSION                "1.0.7"
 #define PLUGIN_URL                    "https://forums.alliedmods.net/showthread.php?t=328006"
@@ -652,7 +652,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05引燃了汽油桶!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05点燃了汽油桶!", attacker);
             }
         }
 
@@ -680,7 +680,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05打爆了白色大油桶!", attacker);
+                PrintToChat(client, "!]\x03%N\x05打爆了白色大油桶!", attacker);
             }
         }
 
@@ -708,7 +708,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05打爆了煤气罐!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05打爆了煤气罐!", attacker);
             }
         }
 
@@ -736,7 +736,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05打爆了氧气瓶!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05打爆了氧气瓶!", attacker);
             }
         }
 
@@ -764,7 +764,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05引燃了路障油桶!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05点燃了路障油桶!", attacker);
             }
         }
 
@@ -792,7 +792,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05打爆了汽油泵!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05打爆了汽油泵!", attacker);
             }
         }
 
@@ -820,7 +820,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05点燃了烟花盒!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05点燃了烟花盒!", attacker);
             }
         }
 
@@ -848,7 +848,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "\x04[提示]\x03%N\x05打爆了爆炸大油桶!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05打爆了爆炸大油桶!", attacker);
             }
         }
     }
