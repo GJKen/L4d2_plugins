@@ -22,9 +22,9 @@
 |-|-|-|
 |`!team3`|切换到特感方|Console|
 |`!team2`|切换到生还方|Console|
-|`!pb`|提前叛变|Console|
-|`!pt`|转交坦克|Console|
-|`!tt`|接管坦克|Console|
+|`!pb`|提前叛变|Admin|
+|`!pt`|转交坦克|Admin|
+|`!tt`|接管坦克|Admin|
 |`!class`|灵魂状态下更改特感类型或鼠标中键|Console|
 |鼠标中键|非灵魂状态下管理员重置特感技能冷却时间|Admin|
 ---
