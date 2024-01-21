@@ -299,7 +299,7 @@ public void OnPluginStart()
 
 
 	// CVARS
-	g_hCvarAllow =		CreateConVar(	"l4d_tree_allow",			"1",			"0=插件禁用, 1=插件启用.", CVAR_FLAGS );
+	g_hCvarAllow =		CreateConVar(	"l4d_tree_allow",			"1",			"0=禁用插件, 1=启用插件", CVAR_FLAGS );
 	g_hCvarModes =		CreateConVar(	"l4d_tree_modes",			"",				"在这些游戏模式中启用插件, 用英文逗号隔开(无空格). (无内容=全部游戏模式)", CVAR_FLAGS );
 	g_hCvarModesOff =	CreateConVar(	"l4d_tree_modes_off",		"",				"在这些游戏模式中关闭插件, 用英文逗号隔开(无空格). (无内容=无)", CVAR_FLAGS );
 	g_hCvarModesTog =	CreateConVar(	"l4d_tree_modes_tog",		"0",			"在这些游戏模式中启用插件. 0=全部游戏模式, 1=战役, 2=生还者, 4=对抗, 8=清道夫. 将这些数字叠加在一起", CVAR_FLAGS );
@@ -315,16 +315,16 @@ public void OnPluginStart()
 	{
 		g_hCvarGlow =	CreateConVar(	"l4d_tree_glow",			"255 0 0",		"礼物发光轮廓颜色, 0=关闭(默认的礼物颜色)三个数值在0-255之间,用空格分隔, RGB:红绿蓝", CVAR_FLAGS );
 		g_hCvarItems =	CreateConVar(	"l4d_tree_items",			"80,100,25,25,25,25,15,15,15,2,2,2,5,5,5,2,0,0,0,2,0,2,5,0,0,2,0,5,0,5",		"以下物品武器生成百分比几率 数值必须用逗号分隔 肾上腺素, 药丸, 燃烧瓶, 自制手雷, 胆汁, 医疗包, 电击器, 高爆弹药包, 燃烧弹药包, M4步枪, 1代连喷, 木狙, mac冲锋枪, 木喷, 小手枪, 铁喷, 三连发步枪, 榴弹发射器, M60, AK47, Sg552瞄准步枪, SPAS连喷, SMG消音冲锋枪, MP5冲锋枪, AWP, 军狙, 鸟狙, 马格南, 电锯, 其他近战", CVAR_FLAGS );
-		g_hCvarMelee =	CreateConVar(	"l4d_tree_melee",			"0,0,0,10,0,0,0,50,50,0,50,10,10",		"以下近战武器生成几率 数值必须用逗号分隔:消防斧, 棒球棍, 板球棍, 撬棍, 平底锅, 高尔夫球棍, 吉他, 武士刀, 看到, 警棍, 小刀, 草叉, 铲子.", CVAR_FLAGS );
+		g_hCvarMelee =	CreateConVar(	"l4d_tree_melee",			"0,0,0,10,0,0,0,50,50,0,50,10,10",		"以下近战武器生成几率 数值必须用逗号分隔:消防斧, 棒球棍, 板球棍, 撬棍, 平底锅, 高尔夫球棍, 吉他, 武士刀, 看到, 警棍, 小刀, 草叉, 铲子", CVAR_FLAGS );
 	}
 	else
 	{
-		g_hCvarItems =	CreateConVar(	"l4d_tree_items",			"0,100,25,25,0,40,0,0,0,2,2,2,5,5,5",	"Item chance - values must be comma separated: 肾上腺素, 药丸, 燃烧瓶, 自制手雷, 胆汁, 医疗包, 电击器, 高爆弹药包, 燃烧弹药包, M4步枪, 1代连喷, 木狙, mac冲锋枪, 木喷, 小手枪", CVAR_FLAGS );
+		g_hCvarItems =	CreateConVar(	"l4d_tree_items",			"0,100,25,25,0,40,0,0,0,2,2,2,5,5,5",	"物品生成几率, 数值必须用逗号分隔:肾上腺素, 药丸, 燃烧瓶, 土制手雷, 胆汁, 医疗包, 电击器, 高爆弹药包, 燃烧弹药包, M4步枪, 1代连喷, 木狙, mac冲锋枪, 木喷, 小手枪", CVAR_FLAGS );
 	}
 	g_hCvarRainbow =	CreateConVar(	"l4d_tree_rainbow",			"2",			"0=关闭 1=礼物随时间变化颜色 2=树木随着时间的推移而改变颜色, 3=两个都有", CVAR_FLAGS );
 	g_hCvarRate =		CreateConVar(	"l4d_tree_rate",			"10",			"使用彩虹选项时颜色变化的速度", CVAR_FLAGS, true, 1.0, true, 255.0 );
 	g_hCvarSpeed =		CreateConVar(	"l4d_tree_speed",			"0.2",			"每秒更新颜色的频率(秒)", CVAR_FLAGS, true, 0.1 );
-	CreateConVar(						"l4d_tree_version",			PLUGIN_VERSION, "Christmas Tree plugin version.", FCVAR_NOTIFY|FCVAR_DONTRECORD );
+	CreateConVar(						"l4d_tree_version",			PLUGIN_VERSION, "圣诞树插件版本", FCVAR_NOTIFY|FCVAR_DONTRECORD );
 	AutoExecConfig(true,				"l4d_christmas_tree");
 
 	g_hCvarMPGameMode = FindConVar("mp_gamemode");
