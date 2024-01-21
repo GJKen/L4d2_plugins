@@ -542,7 +542,7 @@
 	}
 	"Chernobyl"
 	{
-		"chi"		"切诺尔贝利-gamemaps(Chernobyl: Chapter One)"
+		"chi"		"切诺尔贝利(Chernobyl: Chapter One)"
 	}
 	"Outrun"
 	{
@@ -552,188 +552,21 @@
 	{
 		"chi"		"感染之城(Infected City)"
 	}
-	"7HoursLaterII"
+	"{"		"chi"
+	"goldeneye4dead"
 	{
-		"chi"		"7小时之后(7 Hours Later)II"
-	}
-	"OrangeOnslaught"
-	{
-		"chi"		"橙色冲击(Orange Onslaught)"
-	}
-	"Simplicity"
-	{
-		"chi"		"简约(Simplicity)"
-	}
-	"quedan"
-	{
-		"chi"		"Quedan 4X Morir L4D2"
-	}
-	"rkls"
-	{
-		"chi"		"公路杀手(Roadkill)"
-	}
-	"kickedout"
-	{
-		"chi"		"踢出!!!(Kicked!!! Out!!)"
+		"chi"		"黄金眼修4复版(GoldenEye 4 Dead Fixed)"
 	}
 	"BlackMesaFallout"
 	{
-		"chi"		"黑色起源:辐射(BLACK MESA: FALLOUTS)"
+		"chi"		"黑山基地-辐射(Black Mesa Fallouts)"
 	}
-	"ProjectDreams"
+	"City17revamped"
 	{
-		"chi"		"梦想计划(Project: Dreams)"
+		"chi"		"城市17重制版(City 17 Revamped)v5"
 	}
-	"fallenport"
+	"Blackmist"
 	{
-		"chi"		"坠落(Fallen)"
-	}
-	"countryroadsnc"
-	{
-		"chi"		"乡村小路Country Roads NC Mashup:Fixed)"
-	}
-	"MontrealGoneToHell"
-	{
-		"chi"		"蒙特利尔的沦陷(MTL Gone To Hell)1.28"
-	}
-	"jiugongchang"
-	{
-		"chi"		"九死一生之小女孩的梦境v2.6"
-	}
-	"deathsummer"
-	{
-		"chi"		"死亡夏日(Death Summer)"
-	}
-	"BlueHeavenLongVersion"
-	{
-		"chi"		"蓝色天堂(加长版)"
-	}
-	"BeJustRoundTheCorner"
-	{
-		"chi"		"指日可待(Be Just Round the Corner)"
-	}
-	"diescreaming"
-	{
-		"chi"		"死亡尖叫(Die Screaming)II"
-	}
-	"Venissia"
-	{
-		"chi"		"威尼西亚(Venissia)"
-	}
-	"OpenRoadICSX"
-	{
-		"chi"		"开放公路(Open Road)"
-	}
-	"DeadCenterRebirthFIX"
-	{
-		"chi"		"死亡中心:重生(Dead Center: Rebirth)"
-	}
-	"dbd2dc"
-	{
-		"chi"		"活死人黎明:导演版(Dead Before Dawn DC)"
-	}
-	"detourahead"
-	{
-		"chi"		"$DetourAhead_Title"
-	}
-	"drmalroyfirstencounter"
-	{
-		"chi"		"Dr. Malroy: The First Encounter"
-	}
-	"drmalroy"
-	{
-		"chi"		"Dr. Malroy's Laboratory"
-	}
-	"Diescraper362"
-	{
-		"chi"		"Diescraper Redux 3.62"
-	}
-	"Diescraper362VS"
-	{
-		"chi"		"Diescraper Redux 3.62"
-	}
-	"BeginningtoCrossover"
-	{
-		"chi"		"Beginning to Cross Over"
-	}
-	"DT1TheGunslinger"
-	{
-		"chi"		"Dark Tower 1 The Gunslinger (1.99)"
-	}
-	"TheMission"
-	{
-		"chi"		"TheMission"
-	}
-	"IRRXmasEd"
-	{
-		"chi"		"Innes Road Rash Christmas Edition 1.1"
-	}
-	"UrbanDisaster"
-	{
-		"chi"		"Urban Disaster (1.0)"
-	}
-	"NoFate"
-	{
-		"chi"		"No Fate"
-	}
-	"riptide"
-	{
-		"chi"		"Riptide"
-	}
-	"complexcourseR"
-	{
-		"chi"		"Complex Course"
-	}
-	"deadspace"
-	{
-		"chi"		"死亡空间"
-	}
-	"Chapter2"
-	{
-		"chi"		"Nowhare Is Safe - Chapter 2"
-	}
-	"Blightmare"
-	{
-		"chi"		"Blightmare"
-	}
-	"burningnight"
-	{
-		"chi"		"Burning Night"
-	}
-	"energycrisis"
-	{
-		"chi"		"Energy Crisis"
-	}
-	"GGZact1"
-	{
-		"chi"		"Green Grove Zone"
-	}
-	"Beldurra"
-	{
-		"chi"		"Beldurra"
-	}
-	"DeadAirDaytime"
-	{
-		"chi"		"Dead Air Daytime"
-	}
-	"darkblood2"
-	{
-		"chi"		"Dark Blood 2"
-	}
-	"hopeless"
-	{
-		"chi"		"Hopeless"
-	}
-	"atthegloaming2feitu"
-	{
-		"chi"		"atthegloaming2feitu"
-	}
-	"FeetUnder"
-	{
-		"chi"		"10,000 Feet Under"
-	}
-	"gloomtown"
-	{
-		"chi"		"Gloom Town"
+		"chi"		"黑迷雾"
 	}
 }
