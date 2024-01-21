@@ -57,5 +57,8 @@ Require | 需求
 Related Plugin | 相关插件
 <br>None
 
-Changelog | 版本日志
-<br>None
+<details><summary>Changelog | 版本日志</summary>
+
+- (v1.0 2023/8/16 UTC+8) Initial release.
+
+</details>
