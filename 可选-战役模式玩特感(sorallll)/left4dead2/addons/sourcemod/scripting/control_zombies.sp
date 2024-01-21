@@ -1,8 +1,6 @@
 #pragma semicolon 1
 #pragma newdecls required
 #include <sourcemod>
-//#include <sdkhooks>
-//#include <sdktools>
 #include <colors>
 #include <dhooks>
 #include <left4dhooks>
@@ -15,8 +13,8 @@
 	Profiler g_profiler;
 #endif
 
-#define PLUGIN_NAME				"Control Zombies In Co-op"
-#define PLUGIN_AUTHOR			"sorallll"
+#define PLUGIN_NAME				"[L4d2] Control Zombies In Coop(战役模式玩特感)"
+#define PLUGIN_AUTHOR			"sorallll, 修改:GJKen"
 #define PLUGIN_DESCRIPTION		""
 #define PLUGIN_VERSION			"3.6.1"
 #define PLUGIN_URL				"https://steamcommunity.com/id/sorallll"
@@ -244,14 +242,12 @@ public void OnPluginStart() {
 	g_cUserFlagBits.AddChangeHook(CvarChanged_Access);
 	g_cImmunityLevels.AddChangeHook(CvarChanged_Access);
 
-	//RegAdminCmd("sm_cz", cmdCz, ADMFLAG_ROOT, "测试");
-
-	RegConsoleCmd("sm_team2",	cmdTeam2,			"切换到Team 2.");
-	RegConsoleCmd("sm_team3",	cmdTeam3,			"切换到Team 3.");
-	RegConsoleCmd("sm_pb",		cmdPanBian,			"提前叛变.");
-	RegConsoleCmd("sm_tt",		cmdTakeOverTank,	"接管坦克.");
-	RegConsoleCmd("sm_pt",		cmdTransferTank,	"转交坦克.");
-	RegConsoleCmd("sm_class",	cmdChangeClass,		"更改特感类型.");
+	RegConsoleCmd("sm_team2", cmdTeam2, "切换到Team 2");
+	RegConsoleCmd("sm_team3", cmdTeam3, "切换到Team 3");
+	RegAdminCmd("sm_pb", cmdPanBian, ADMFLAG_ROOT, "提前叛变");
+	RegAdminCmd("sm_tt", cmdTakeOverTank, ADMFLAG_ROOT, "接管坦克");
+	RegAdminCmd("sm_pt", cmdTransferTank, ADMFLAG_ROOT, "转交坦克");
+	RegConsoleCmd("sm_class", cmdChangeClass, "更改特感类型");
 
 	if (g_bLateLoad)
 		g_bLeftSafeArea = L4D_HasAnySurvivorLeftSafeArea();
