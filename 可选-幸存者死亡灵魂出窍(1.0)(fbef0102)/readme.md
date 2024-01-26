@@ -2,7 +2,7 @@
 
 幸存者死亡会有透明灵魂升天, 使用电击器灵魂会回归尸体
 
-原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d_death_soul), 未修改
+**原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d_death_soul), 未修改**
 
 ---
 

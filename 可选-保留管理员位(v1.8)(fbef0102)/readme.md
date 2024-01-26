@@ -1,6 +1,4 @@
-# 📌保留管理员位置
-
-> Admin Reserved Slots
+# 📌保留管理员位置 - Admin Reserved Slots
 
 **原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/blob/master/l4d_reservedslots), 未任何修改**
 

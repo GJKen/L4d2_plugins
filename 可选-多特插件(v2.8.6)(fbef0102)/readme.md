@@ -1,6 +1,6 @@
 # 📌多特感生成
 
-原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4dinfectedbots)
+**原作 [Github](https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4dinfectedbots)**
 
 > 删除了 `!zs` 指令, 防止和其它插件指令冲突
 

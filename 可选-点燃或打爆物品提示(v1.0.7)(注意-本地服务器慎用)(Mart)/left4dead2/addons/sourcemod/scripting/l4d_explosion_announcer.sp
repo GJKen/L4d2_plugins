@@ -680,7 +680,7 @@ public void OutputMessage(int attacker, int type)
                         continue;
                 }
 
-                PrintToChat(client, "!]\x03%N\x05打爆了白色大油桶!", attacker);
+                PrintToChat(client, "\x04[!]\x03%N\x05打爆了白色大油桶!", attacker);
             }
         }
 

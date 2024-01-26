@@ -4,7 +4,7 @@
 
 <details><summary>l4d2_wskin_menu.smx</summary>
 
-原作 [alliedmods](https://forums.alliedmods.net/showthread.php?t=327611)
+**原作 [alliedmods](https://forums.alliedmods.net/showthread.php?t=327611)**
 	
 > 修改translations文件名称为 l4d2_wskin_menu.phrases.txt
 

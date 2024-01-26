@@ -1,6 +1,6 @@
 # 📌服务器名称显示,可显示特感数量和时间,路程,缺人,模式
 
-原作 [Github](https://github.com/GlowingTree880/L4D2_LittlePlugins/tree/main/ServerNamer)
+**原作 [Github](https://github.com/GlowingTree880/L4D2_LittlePlugins/tree/main/ServerNamer)**
 
 > 从 kita 修改的源码再次修改, 修改了部分文案
 

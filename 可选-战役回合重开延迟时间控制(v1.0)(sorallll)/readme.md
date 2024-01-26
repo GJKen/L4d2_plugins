@@ -1,6 +1,6 @@
 # 📌战役回合重开延迟时间控制
 
-原作 [Github](https://github.com/umlka/l4d2/tree/main/coop_round_restart_delay)
+**原作 [Github](https://github.com/umlka/l4d2/tree/main/coop_round_restart_delay)**
 
 > 修改源码myinfo
 ---

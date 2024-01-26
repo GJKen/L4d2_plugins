@@ -1,6 +1,6 @@
 # 📌动态大厅
 
-**原作者 [Github](https://github.com/umlka/l4d2)**
+**原作 [Github](https://github.com/umlka/l4d2)**
 
 ---
 <details><summary>Command | 指令</summary>

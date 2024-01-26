@@ -1,6 +1,6 @@
 # 📌圣诞树
 
-原作 [alliedmods](https://forums.alliedmods.net/showthread.php?p=2672241)
+**原作 [alliedmods](https://forums.alliedmods.net/showthread.php?p=2672241)**
 
 生成圣诞树或礼物盒子, 可临时生成或保存到地图上
 

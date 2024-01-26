@@ -3,8 +3,8 @@
 #include <sourcemod>
 #include <left4dhooks>
 
-#define PLUGIN_NAME				"Map Changer"
-#define PLUGIN_AUTHOR			"Alex Dragokas, fdxx, sorallll"
+#define PLUGIN_NAME				"[l4d2] Map Changer"
+#define PLUGIN_AUTHOR			"Alex Dragokas, fdxx, sorallll, 修改:x光"
 #define PLUGIN_DESCRIPTION		""
 #define PLUGIN_VERSION			"1.0.5"
 #define PLUGIN_URL				""
