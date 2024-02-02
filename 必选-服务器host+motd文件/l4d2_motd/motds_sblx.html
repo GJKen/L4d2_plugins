@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>JKChan For SBLX Server</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="网站仅用于学习交流使用">
+<link rel="icon" href="./src/navIndex.png">
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	::-webkit-scrollbar{
+		width: 10px;
+		height: 20px;
+		background: #ff5500;
+	}
+	::-webkit-scrollbar-thumb{
+		background: darkcyan;
+		border-radius: 10px;
+	}
+	body{
+		width: 2560;
+		font-size: 17px;
+		font-weight: bolder;
+		font-family: Arial, Microsoft YaHei, sans-serif !important;
+		background: #a18e7c;
+		overflow: hidden;
+	}
+	code{
+		color: #2266AA;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style-type: disclosure-closed;
+		list-style-position: inside;
+		display: inline-block;
+	}
+	.title{
+		color: #F00;
+	}
+	.title_mode{
+		color: #12619e;
+		padding: 0 15 0 15;
+	}
+	.title_mode li{
+		padding: 5 0 5;
+		list-style: none;
+	}
+	button{
+		width: 90;
+		height: 30;
+		background: rgba(67, 140, 191, .40);
+		text-decoration: none;
+		transition: .3s;
+		border: none;
+		color: #000;
+		border-radius: 8px;
+		outline: none;
+		font-size: 17px;
+		padding: 0;
+	}
+	button.active{
+		background: rgba(43, 80, 230, .66);
+		pointer-events: none;
+	}
+	button:hover{
+		background: rgba(43, 80, 230, .66);
+		cursor: hand;
+	}
+	a{
+		color: #009daf;
+	}
+	#cmds{
+		margin-top: 10px;
+	}
+	#miandiv{
+		position: relative;
+		margin: 5;
+		padding: 10 10 0 10;
+		border-radius: 20px;
+		background: rgba(255, 255, 255, .70);
+		width: 22%;
+		height: 400px;
+		box-shadow: rgba(14, 14, 14, .15) 0px 6px 15px 15px;
+		overflow: auto;
+	}
+	#bgimg{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		background-image: url(http://cdn-us.imgs.moe/2024/02/02/l4d2_motd_9_bWMVMdCWUH.jpg);
+	}
+	#setudiv{
+		position: absolute;
+		top: 10;
+		right: 103;
+	}
+	#setudiv #btn4{
+		width: 80;
+		margin: -5;
+		border-radius: 8px 0 0 8px;
+	}
+	#RS{
+		width: 80;
+		border-radius: 0 8px 8px 0;
+	}
+	#RS code{
+		color: #ff1c10;
+	}
+	
+	/* 表格前面有序列表 */
+	/* tr:before{
+		counter-increment: section;
+		content: "" counter(section) ".";
+	} */
+	table{
+		border: 1px black solid;
+		border-collapse: collapse;
+		color: #fff;
+		background: rgba(45,114,210, .5);
+		counter-reset: section;
+		/* display: none; */
+		display: table;
+	}
+	table.active{
+		display: none;
+	}
+	td{
+		text-align: justify;
+		height: 2em;
+		border: 1px black solid;
+		padding: 0 10px 0;
+	}
+	tr:hover{
+		color: bisque;
+		background: rgba(106,106,106, .4);
+		box-shadow: 0px 0px 5px rgba(0,0,0, .1);
+	}
+</style>
+	</head>
+	<body>
+		<img id="bgimg" onclick="this.style.zIndex='auto'">
+		<div id="miandiv" onclick="this.style.zIndex='auto'">
+			<button id="btn2" class="list" onclick="ReplaceCmds(1)">公告</button>
+			<button id="btn1" class="list" onclick="ReplaceCmds(2)">本服说明</button>
+			<button id="btn3" class="list" onclick="ReplaceCmds(3)">指令说明</button>
+			<div id="setudiv">
+				<button id="btn4" onclick="ReplaceCmds(4)">隐藏</button>
+				<button id="RS" onclick="ReplaceCmds(0,1)"><code >❤</code>色图<code>❤</code></button>
+			</div><br>
+			<div id="cmds">
+				<text>本服为拉稀酱赞助的绝境服</text><br><br>
+				<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>
+				<ul>
+					<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>
+					<li>在选项→视频→高级设置中将'可用的页池内存'改为低可解决闪退问题<br></li>
+					<li>在游戏启动项添加<br><code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>
+				</ul><br>
+			</div>
+	</body>
+</html>
+<script type="text/javascript" src="./src/motds_sblx.js"></script>
+<script type="text/javascript" src="./src/setu.js"></script>
