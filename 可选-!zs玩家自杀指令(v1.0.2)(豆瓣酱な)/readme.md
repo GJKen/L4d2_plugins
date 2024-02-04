@@ -4,7 +4,7 @@
 
 幸存者和感染者都可使用
 
-> 修改源码自杀提示文案
+> 修改源码自杀提示文案为随机的文案提示
 
 > 修改源码myinfo
 ---
@@ -25,7 +25,7 @@ Video | 影片展示
 
 <details><summary>ConVar | 控制台变量</summary>
 
-[l4d2_dominatorscontrol.smx]
+cfg/sourcemod/l4d2_player_suicide.cfg
 ```sourcepawn
 // 启用玩家自杀指令. 0=禁用, 1=只限倒地或挂边的生还者, 2=无条件使用
 // Default: "1"
@@ -59,6 +59,8 @@ Related Plugin | 相关插件
 
 <details><summary>Changelog | 版本日志</summary>
 
-- (v1.0 2023/8/16 UTC+8) Initial release.
+- (1.0.3 2024/1/26 UTC+8) 修改随机自杀文案提示
+
+- (1.0.2 2024/1/26 UTC+8) 修改部分默认cvar值, 源码myinfo, 自杀文案
 
 </details>

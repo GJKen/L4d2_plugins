@@ -3,8 +3,9 @@
 #pragma newdecls required
 #include <sourcemod>
 #include <sdktools>
+#include <colors>
 
-#define PLUGIN_VERSION "1.0.2"
+#define PLUGIN_VERSION "1.0.3"
 
 int    g_iSuicide;
 ConVar g_hSuicide, g_hShowTips;
@@ -149,7 +150,55 @@ void IsPlayerSuicide(int client, int victim, char[] g_sName, char[] g_sTeam)
 		PrintToChat(victim, "\x05你当前已是死亡状态");
 }
 
+//随机文案
 void IsForceSuicide(int client, int victim, char[] g_sName, char[] g_sTeam)
+{
+	if (IsPlayerAlive(client))
+	{
+		int Rand = GetRandomInt(0, 9);
+		switch (Rand)
+		{
+			case 0: {
+				CPrintToChatAll("{blue}%N {green}嗝屁了", client);
+			}
+			case 1: {
+				CPrintToChatAll("{green}牛牛冲过来把{blue} %N {green}撅了", client);
+			}
+			case 2: {
+				CPrintToChatAll("{blue}%N {green}偷吃了坦克的小饼干被捶死", client);
+			}
+			case 3: {
+				CPrintToChatAll("{blue}%N {green}偷偷摸Witch奶子被反手拍死", client);
+			}
+			case 4: {
+				CPrintToChatAll("{blue}%N {green}今天没吃饭饿死了", client);
+			}
+			case 5: {
+				CPrintToChatAll("{green}猴子用腿夹死了 {blue}%N ", client);
+			}
+			case 6: {
+				CPrintToChatAll("{blue}%N {green}想和口水舌吻中毒死", client);
+			}
+			case 7: {
+				CPrintToChatAll("{blue}%N {green}被舌头捆绑Play, 窒息死亡", client);
+			}
+			case 8: {
+				CPrintToChatAll("{blue}%N {green}使用Bommer倒模冲晕了", client);
+			}
+			case 9: {
+				CPrintToChatAll("{blue}%N {green}被Hunter榨精死亡", client);
+			}
+			default: {
+				CPrintToChatAll("{blue}%N {green}转生到异世界当Magic Girl", client);
+			}
+		}
+		ForcePlayerSuicide(client);
+	}
+	else
+		PrintToChat(victim, "\x05你当前已是死亡状态");
+}
+// 原版代码
+/*void IsForceSuicide(int client, int victim, char[] g_sName, char[] g_sTeam)
 {
 	if (IsPlayerAlive(client))
 	{
@@ -159,7 +208,7 @@ void IsForceSuicide(int client, int victim, char[] g_sName, char[] g_sTeam)
 	}
 	else
 		PrintToChat(victim, "\x05你当前已是死亡状态");
-}
+}*/
 
 stock bool IsValidClient(int client)
 {

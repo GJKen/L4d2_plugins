@@ -47,3 +47,17 @@ Related Plugin | 相关插件
 
 Changelog | 版本日志
 <br>None
+
+<details><summary>Changelog | 版本日志</summary>
+
+- v1.7 (2023-12-17)
+	- Optimize code and improve performance
+
+- v1.6 (2023-11-18)
+	- Add grenade launcher damage
+
+- v1.5 (2022-12-6)
+	- Disable Pipe Bomb Explosive friendly fire
+	- Disable Fire friendly fire.
+	- Friendly fire now will not incap player
+</details>
