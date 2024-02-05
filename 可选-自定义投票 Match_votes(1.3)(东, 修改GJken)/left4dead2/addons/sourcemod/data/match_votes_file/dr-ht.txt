@@ -152,79 +152,79 @@
 			"message" "off - tank连跳"
 		}
 	}
-	"bot数量"
+	"控制人数"
 	{
 		"exec match_votes/bots_num_1"
 		{
-			"message" "bot数量1"
+			"message" "控制1人"
 		}
 		"exec match_votes/bots_num_2"
 		{
-			"message" "bot数量2"
+			"message" "控制2人"
 		}
 		"exec match_votes/bots_num_3"
 		{
-			"message" "bot数量3"
+			"message" "控制3人"
 		}
 		"exec match_votes/bots_num_4"
 		{
-			"message" "bot数量4"
+			"message" "控制4人"
 		}
 		"exec match_votes/bots_num_5"
 		{
-			"message" "bot数量5"
+			"message" "控制5人"
 		}
 		"exec match_votes/bots_num_6"
 		{
-			"message" "bot数量6"
+			"message" "控制6人"
 		}
 		"exec match_votes/bots_num_7"
 		{
-			"message" "bot数量7"
+			"message" "控制7人"
 		}
 		"exec match_votes/bots_num_8"
 		{
-			"message" "bot数量8"
+			"message" "控制8人"
 		}
 		"exec match_votes/bots_num_9"
 		{
-			"message" "bot数量9"
+			"message" "控制9人"
 		}
 		"exec match_votes/bots_num_10"
 		{
-			"message" "bot数量10"
+			"message" "控制10人"
 		}
 		"exec match_votes/bots_num_11"
 		{
-			"message" "bot数量11"
+			"message" "控制11人"
 		}
 		"exec match_votes/bots_num_12"
 		{
-			"message" "bot数量12"
+			"message" "控制12人"
 		}
 		"exec match_votes/bots_num_13"
 		{
-			"message" "bot数量13"
+			"message" "控制13人"
 		}
 		"exec match_votes/bots_num_14"
 		{
-			"message" "bot数量14"
+			"message" "控制14人"
 		}
 		"exec match_votes/bots_num_15"
 		{
-			"message" "bot数量15"
+			"message" "控制15人"
 		}
 		"exec match_votes/bots_num_16"
 		{
-			"message" "bot数量16"
+			"message" "控制16人"
 		}
 		"exec match_votes/bots_num_17"
 		{
-			"message" "bot数量17"
+			"message" "控制17人"
 		}
 		"exec match_votes/bots_num_18"
 		{
-			"message" "bot数量18"
+			"message" "控制18人"
 		}
 	}
 	"角色属性(rpg)"

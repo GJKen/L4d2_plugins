@@ -10,7 +10,7 @@ bool g_bWitchstartled;
 
 public Plugin myinfo =
 {
-	name = "witch Startled(惊扰witch提示)",
+	name = "[L4d2] Disturb Witch Tips(惊扰witch提示)",
 	author = "原:sorallll, 修改:GJKen", 
 	description = "提取自sorallll的sms插件",
 	version = "1.0",

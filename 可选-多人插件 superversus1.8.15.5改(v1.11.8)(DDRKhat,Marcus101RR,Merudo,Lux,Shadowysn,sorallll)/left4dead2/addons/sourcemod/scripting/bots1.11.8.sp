@@ -303,16 +303,16 @@ public void OnPluginStart() {
 	CreateConVar("bots_version", PLUGIN_VERSION, "bots(coop) plugin version", FCVAR_NOTIFY|FCVAR_DONTRECORD);
 
 	g_cBotLimit =				CreateConVar("bots_limit",				"4",		"开局Bot的数量", CVAR_FLAGS, true, 1.0, true, float(MaxClients));
-	g_cJoinLimit =				CreateConVar("bots_join_limit",			"-1",		"生还者玩家数量达到该值后将禁用sm_join命令和本插件的自动加入功能(不会影响游戏原有的加入功能). \n-1=插件不进行处理", CVAR_FLAGS, true, -1.0, true, float(MaxClients));
-	g_cJoinFlags =				CreateConVar("bots_join_flags",			"3",		"额外玩家加入生还者的方法. \n0=插件不进行处理, 1=输入!join手动加入, 2=进服后插件自动加入, 3=手动+自动", CVAR_FLAGS);
-	g_cJoinRespawn =			CreateConVar("bots_join_respawn",		"1",		"玩家加入生还者时如果没有存活的Bot可以接管是否复活. \n0=否, 1=是, -1=总是复活(该值为-1时将允许玩家通过切换队伍/退出重进刷复活)", CVAR_FLAGS);
-	g_cSpecNotify =				CreateConVar("bots_spec_notify",		"3",		"完全旁观玩家点击鼠标左键时, 提示加入生还者的方式 \n0=不提示, 1=聊天栏, 2=屏幕中央, 3=弹出菜单", CVAR_FLAGS);
+	g_cJoinLimit =				CreateConVar("bots_join_limit",			"-1",		"射精者玩家数量达到该值后将禁用sm_join命令和本插件的自动加入功能(不会影响游戏原有的加入功能). \n-1=插件不进行处理", CVAR_FLAGS, true, -1.0, true, float(MaxClients));
+	g_cJoinFlags =				CreateConVar("bots_join_flags",			"3",		"额外玩家加入射精者的方法. \n0=插件不进行处理, 1=输入!join手动加入, 2=进服后插件自动加入, 3=手动+自动", CVAR_FLAGS);
+	g_cJoinRespawn =			CreateConVar("bots_join_respawn",		"1",		"玩家加入射精者时如果没有存活的Bot可以夺舍是否复活. \n0=否, 1=是, -1=总是复活(该值为-1时将允许玩家通过切换队伍/退出重进刷复活)", CVAR_FLAGS);
+	g_cSpecNotify =				CreateConVar("bots_spec_notify",		"3",		"完全撸管玩家点击鼠标左键时, 提示加入射精者的方式 \n0=不提示, 1=聊天栏, 2=屏幕中央, 3=弹出菜单", CVAR_FLAGS);
 	g_eWeapon[0].Flags =		CreateConVar("bots_give_slot0",			"131071",	"主武器给什么. \n0=不给, 131071=所有, 7=微冲, 1560=霰弹, 30720=狙击, 31=Tier1, 32736=Tier2, 98304=Tier0", CVAR_FLAGS);
 	g_eWeapon[1].Flags =		CreateConVar("bots_give_slot1",			"1064",		"副武器给什么. \n0=不给, 131071=所有.(如果选中了近战且该近战在当前地图上未解锁,则会随机给一把)", CVAR_FLAGS);
 	g_eWeapon[2].Flags =		CreateConVar("bots_give_slot2",			"0",		"投掷物给什么. \n0=不给, 7=所有", CVAR_FLAGS);
 	g_eWeapon[3].Flags =		CreateConVar("bots_give_slot3",			"1",		"医疗品给什么. \n0=不给, 15=所有", CVAR_FLAGS);
 	g_eWeapon[4].Flags =		CreateConVar("bots_give_slot4",			"3",		"药品给什么. \n0=不给, 3=所有", CVAR_FLAGS);
-	g_cGiveType =				CreateConVar("bots_give_type",			"2",		"根据什么来给玩家装备. \n0=不给, 1=每个槽位的设置, 2=当前存活生还者的平均装备质量(仅主副武器)", CVAR_FLAGS);
+	g_cGiveType =				CreateConVar("bots_give_type",			"2",		"根据什么来给玩家装备. \n0=不给, 1=每个槽位的设置, 2=当前存活射精者的平均装备质量(仅主副武器)", CVAR_FLAGS);
 	g_cGiveTime =				CreateConVar("bots_give_time",			"0",		"什么时候给玩家装备. \n0=每次出生时, 1=只在本插件创建Bot和复活玩家时", CVAR_FLAGS);
 
 	g_cSurLimit = FindConVar("survivor_limit");
@@ -340,13 +340,13 @@ public void OnPluginStart() {
 
 	RegConsoleCmd("sm_afk",				cmdGoIdle,		"闲置");
 	RegConsoleCmd("sm_teams",			cmdTeamPanel,	"团队菜单");
-	RegConsoleCmd("sm_join",			cmdJoinTeam2,	"加入生还者");
-	RegConsoleCmd("sm_jg",			cmdJoinTeam2,	"加入生还者");
-	RegConsoleCmd("sm_tkbot",			cmdTakeOverBot,	"接管指定BOT");
+	RegConsoleCmd("sm_join",			cmdJoinTeam2,	"加入射精者");
+	RegConsoleCmd("sm_jg",			cmdJoinTeam2,	"加入射精者");
+	RegConsoleCmd("sm_tkbot",			cmdTakeOverBot,	"夺舍指定BOT");
 
-	RegAdminCmd("sm_away",				cmdJoinTeam1,	ADMFLAG_ROOT,	"加入旁观者");
-	RegAdminCmd("sm_s",				cmdJoinTeam1,	ADMFLAG_ROOT,	"加入旁观者");
-	RegAdminCmd("sm_bot",				cmdBotSet,		ADMFLAG_ROOT,	"设置开局Bot的数量");
+	RegAdminCmd("sm_away",				cmdJoinTeam1,	ADMFLAG_ROOT,	"加入撸管者");
+	RegAdminCmd("sm_s",				cmdJoinTeam1,	ADMFLAG_ROOT,	"加入撸管者");
+	RegAdminCmd("sm_bot",				cmdBotSet,		ADMFLAG_ROOT,	"设置开局智障的数量");
 
 	HookEvent("round_end",				Event_RoundEnd,		EventHookMode_PostNoCopy);
 	HookEvent("round_start",			Event_RoundStart,	EventHookMode_PostNoCopy);
@@ -413,7 +413,7 @@ Action cmdJoinTeam2(int client, int args) {
 	}
 
 	if (CheckJoinLimit()) {
-		PrintToChat(client, "\x05已达到生还者数量限制 \x04%d\x01", g_iJoinLimit);
+		PrintToChat(client, "\x05已达到射精者数量限制 \x04%d\x01", g_iJoinLimit);
 		return Plugin_Handled;
 	}
 
@@ -424,7 +424,7 @@ Action cmdJoinTeam2(int client, int args) {
 		}
 
 		case TEAM_SURVIVOR: {
-			PrintToChat(client, "你当前已在生还者队伍");
+			PrintToChat(client, "你当前已在射精者队伍");
 			return Plugin_Handled;
 		}
 
@@ -507,17 +507,17 @@ Action cmdTakeOverBot(int client, int args) {
 	}
 
 	if (!IsTeamAllowed(client)) {
-		PrintToChat(client, "不符合接管条件");
+		PrintToChat(client, "不符合夺舍条件");
 		return Plugin_Handled;
 	}
 
 	if (CheckJoinLimit()) {
-		PrintToChat(client, "\x05已达到生还者数量限制 \x04%d\x01", g_iJoinLimit);
+		PrintToChat(client, "\x05已达到射精者数量限制 \x04%d\x01", g_iJoinLimit);
 		return Plugin_Handled;
 	}
 
 	if (!FindUselessSurBot(true)) {
-		PrintToChat(client, "\x01没有 \x05空闲的电脑BOT \x01可以接管\x01");
+		PrintToChat(client, "\x01没有 \x05空闲的智障 \x01可以夺舍\x01");
 		return Plugin_Handled;
 	}
 
@@ -545,8 +545,8 @@ void TakeOverBotMenu(int client) {
 	char info[12];
 	char disp[64];
 	Menu menu = new Menu(TakeOverBot_MenuHandler);
-	menu.SetTitle("- 请选择接管目标 - [!tkbot]");
-	menu.AddItem("o", "当前旁观目标");
+	menu.SetTitle("- 请选择夺舍目标 - [!tkbot]");
+	menu.AddItem("o", "当前撸管目标");
 
 	for (int i = 1; i <= MaxClients; i++) {
 		if (!IsValidSurBot(i))
@@ -566,7 +566,7 @@ int TakeOverBot_MenuHandler(Menu menu, MenuAction action, int param1, int param2
 	switch (action) {
 		case MenuAction_Select: {
 			if (CheckJoinLimit()) {
-				PrintToChat(param1, "\x05已达到生还者数量限制 \x04%d\x01", g_iJoinLimit);
+				PrintToChat(param1, "\x05已达到射精者数量限制 \x04%d\x01", g_iJoinLimit);
 				return 0;
 			}
 
@@ -580,7 +580,7 @@ int TakeOverBot_MenuHandler(Menu menu, MenuAction action, int param1, int param2
 					TakeOverBot(param1);
 				}
 				else
-					PrintToChat(param1, "当前旁观目标非可接管BOT");
+					PrintToChat(param1, "当前撸管目标非可夺舍BOT");
 			}
 			else {
 				bot = GetClientOfUserId(StringToInt(item));
@@ -589,7 +589,7 @@ int TakeOverBot_MenuHandler(Menu menu, MenuAction action, int param1, int param2
 				else {
 					int team = IsTeamAllowed(param1);
 					if (!team)
-						PrintToChat(param1, "不符合接管条件");
+						PrintToChat(param1, "不符合夺舍条件");
 					else {
 						if (team != TEAM_SPECTATOR)
 							ChangeClientTeam(param1, TEAM_SPECTATOR);
@@ -619,7 +619,7 @@ Action cmdJoinTeam1(int client, int args) {
 
 	bool idle = !!GetBotOfIdlePlayer(client);
 	if (!idle && GetClientTeam(client) == TEAM_SPECTATOR) {
-		PrintToChat(client, "你当前已在旁观者队伍");
+		PrintToChat(client, "你当前已在撸管者队伍");
 		return Plugin_Handled;
 	}
 
@@ -650,7 +650,7 @@ Action cmdBotSet(int client, int args) {
 	delete g_hBotsTimer;
 	g_cBotLimit.IntValue = arg;
 	g_hBotsTimer = CreateTimer(1.0, tmrBotsUpdate);
-	ReplyToCommand(client, "\x05开局BOT数量已设置为 \x04%d\x01", arg);
+	ReplyToCommand(client, "\x05开局智障数量已设置为 \x04%d\x01", arg);
 	return Plugin_Handled;
 }
 
@@ -693,12 +693,12 @@ void JoinTeam2Menu(int client) {
 	EmitSoundToClient(client, SOUND_SPECMENU, SOUND_FROM_PLAYER, SNDCHAN_AUTO, SNDLEVEL_NORMAL, SND_NOFLAGS, SNDVOL_NORMAL, SNDPITCH_NORMAL, -1, NULL_VECTOR, NULL_VECTOR, true, 0.0);
 
 	Menu menu = new Menu(JoinTeam2_MenuHandler);
-	menu.SetTitle("加入生还者?");
+	menu.SetTitle("加入射精者?");
 	menu.AddItem("y", "是");
 	menu.AddItem("n", "否");
 
 	if (FindUselessSurBot(true))
-		menu.AddItem("t", "接管指定BOT");
+		menu.AddItem("t", "夺舍指定智障");
 
 	menu.ExitButton = false;
 	menu.ExitBackButton = false;
@@ -716,7 +716,7 @@ int JoinTeam2_MenuHandler(Menu menu, MenuAction action, int param1, int param2) 
 					if (FindUselessSurBot(true))
 						TakeOverBotMenu(param1);
 					else
-						PrintToChat(param1, "\x01没有 \x05空闲的电脑BOT \x01可以接管\x01");
+						PrintToChat(param1, "\x01没有 \x05空闲的智障 \x01可以夺舍\x01");
 				}
 			}
 		}
@@ -1283,7 +1283,7 @@ void DrawTeamPanel(int client, bool autoRefresh) {
 		panel.DrawText(info);
 	}
 	// g_iBotLimit bot总数
-	FormatEx(info, sizeof info, "性感真人 [%d] - %d 智障", GetTeamPlayers(TEAM_SURVIVOR, false), GetSurBotsCount());
+	FormatEx(info, sizeof info, "性感真人 [%d] - 智障 [%d]", GetTeamPlayers(TEAM_SURVIVOR, false), GetSurBotsCount());
 	panel.DrawItem(info);
 
 	static ConVar cv;
@@ -1592,7 +1592,7 @@ void State_Transition(int client, int state) {
 	SDKCall(g_hSDK_CCSPlayer_State_Transition, client, state);
 }
 
-// 模拟CDirector::NewPlayerPossessBot(int, int, SurvivorBot *)中的接管方式
+// 模拟CDirector::NewPlayerPossessBot(int, int, SurvivorBot *)中的夺舍方式
 bool CheckForTake(int bot, int target) {
 	return !GetEntProp(bot, Prop_Send, "m_isIncapacitated") && !GetEntData(target, m_isOutOfCheckpoint);
 }
