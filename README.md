@@ -104,9 +104,11 @@
 		<a href="https://github.com/GlowingTree880/L4D2_LittlePlugins">L4D2_LittlePlugins</a>
 	</td>
 	<td align="center">
+		<a href="https://github.com/txuk1x">
 			<img src="https://cdn-fusion.imgimg.cc/i/2023/xzLEe175aEhb2A7u.jpg" width="60px;" alt="Kita"/>
 			<p>Kita</p>
-			<p>妹有link捏</p>
+		</a>
+		<a href="https://github.com/txuk1x/g10">g10</a>
 	</td>
 	<td align="center">
 		<a href="https://github.com/Hatsune-Imagine">
