@@ -326,11 +326,11 @@
 	}
 	"友伤设置"
 	{
-		"exec vote/ff-off"
+		"exec match_votes/friendly_fire_0"
 		{
 			"message" "友伤 - off"
 		}
-		"exec vote/ff-on"
+		"exec match_votes/friendly_fire_default"
 		{
 			"message" "友伤 - on"
 		}
