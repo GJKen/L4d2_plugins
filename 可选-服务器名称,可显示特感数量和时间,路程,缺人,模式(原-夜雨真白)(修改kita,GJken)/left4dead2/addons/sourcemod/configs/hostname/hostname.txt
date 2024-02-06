@@ -2,10 +2,10 @@ ServerName
 {
 	"27015"
 	{
-		"baseName"	"JKChan's Server#1"
+		"baseName"	"JKChan#1"
 	}
 	"27025"
 	{
-		"baseName"	"JKChan's Server#2"
+		"baseName"	"JKChan#2"
 	}
 }
