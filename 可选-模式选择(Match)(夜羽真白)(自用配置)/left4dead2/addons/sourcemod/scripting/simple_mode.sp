@@ -186,7 +186,7 @@ public Action addModeCmdHandler(int client, int args)
 	}
 	// 非法参数
 	if (args != 1) {
-		CPrintToChat(client, "[{B}%s{W}] {G}请使用: {O}!addmode *模式名称* {G}来添加一个模式", MODULE_PREFIX);
+		CPrintToChat(client, "[{G}%s{W}] 请使用: {O}!addmode {G}*模式名称* {W}来添加一个模式", MODULE_PREFIX);
 		return Plugin_Handled;
 	}
 
@@ -196,17 +196,17 @@ public Action addModeCmdHandler(int client, int args)
 	char tempPath[PLATFORM_MAX_PATH];
 	BuildPath(Path_SM, tempPath, sizeof(tempPath), "%s/%s", modeDirPath, cmdModeName);
 	if (DirExists(tempPath)) {
-		CPrintToChat(client, "[{B}%s{W}] {G}模式目录: {O}%s {G}已经存在, 创建失败", MODULE_PREFIX, tempPath);
+		CPrintToChat(client, "[{G}%s{W}] 模式目录: {O}%s {W}已经存在, 创建失败", MODULE_PREFIX, tempPath);
 		return Plugin_Handled;
 	}
 
 	if (!CreateDirectory(tempPath, PERM_DIR)) {
 		log.error("[%s] 无法为模式: %s 创建目录: %s", MODULE_PREFIX, cmdModeName, tempPath);
-		CPrintToChat(client, "[{B}%s{W}] {G}模式目录: {O}%s {G}创建失败, 请手动创建", MODULE_PREFIX, tempPath);
+		CPrintToChat(client, "[{G}%s{W}] 模式目录: {O}%s {W}创建失败, 请手动创建", MODULE_PREFIX, tempPath);
 		return Plugin_Continue;
 	}
 	createCustomConfigFile(cmdModeName);
-	CPrintToChat(client, "[{B}%s{W}] {G}模式: {O}%s {G}配置文件创建完成", MODULE_PREFIX, cmdModeName);
+	CPrintToChat(client, "[{G}%s{W}] 模式: {O}%s {W}配置文件创建完成", MODULE_PREFIX, cmdModeName);
 	return Plugin_Continue;
 }
 
@@ -219,7 +219,7 @@ public Action addModeCmdHandler(int client, int args)
 public Action deleteModeCmdHandler(int client, int args) {
 	// 玩家无效
 	if (client == 0) {
-		PrintToServer("[{B}%s{W}] {G}删除模式指令不能于服务器控制台使用", MODULE_PREFIX);
+		PrintToServer("[{G}%s{W}] 删除模式指令不能于服务器控制台使用", MODULE_PREFIX);
 		return Plugin_Handled;
 	}
 	if (!IsValidClient(client) || IsFakeClient(client)) {
@@ -227,7 +227,7 @@ public Action deleteModeCmdHandler(int client, int args) {
 	}
 	// 非法参数
 	if (args != 1) {
-		CPrintToChat(client, "[{B}%s{W}] {G}请使用: {O}!delmode *模式名称* {G}来删除一个模式", MODULE_PREFIX);
+		CPrintToChat(client, "[{G}%s{W}] 请使用: {O}!delmode *模式名称* {W}来删除一个模式", MODULE_PREFIX);
 		return Plugin_Handled;
 	}
 
@@ -237,7 +237,7 @@ public Action deleteModeCmdHandler(int client, int args) {
 	// 已加载模式
 	if (isModeLoaded || isModeActive) {
 		if (strlen(modeName) > 0 && strcmp(modeName, cmdModeName) == 0) {
-			CPrintToChat(client, "[{B}%s{W}] {G}当前已经加载 %s 模式, 请先卸载模式再进行删除", modeName);
+			CPrintToChat(client, "[{G}%s{W}] 当前已经加载 {O}%s 模式, {W}请先卸载模式再进行删除", modeName);
 			return Plugin_Handled;
 		}
 	}
@@ -245,13 +245,13 @@ public Action deleteModeCmdHandler(int client, int args) {
 	char tempPath[PLATFORM_MAX_PATH];
 	BuildPath(Path_SM, tempPath, sizeof(tempPath), "%s/%s", modeDirPath, cmdModeName);
 	if (!DirExists(tempPath)) {
-		CPrintToChat(client, "[{B}%s{W}] {G}模式目录: {O}%s {G}不存在, 无法删除", MODULE_PREFIX, tempPath);
+		CPrintToChat(client, "[{G}%s{W}] 模式目录: {O}%s {W}不存在, 无法删除", MODULE_PREFIX, tempPath);
 		return Plugin_Handled;
 	}
 	// 模式目录存在，删除里面所有文件最后删除目录
 	DirectoryListing dirHandle = OpenDirectory(tempPath);
 	if (dirHandle == null || !removeDir(dirHandle, tempPath)) {
-		CPrintToChat(client, "[{B}%s{W}] {G}模式目录: {O}%s {G}删除失败, 请手动删除", MODULE_PREFIX, tempPath);
+		CPrintToChat(client, "[{G}%s{W}] 模式目录: {O}%s {W}删除失败, 请手动删除", MODULE_PREFIX, tempPath);
 	}
 	return Plugin_Continue;
 }
@@ -277,7 +277,7 @@ public Action forceMatchCmdHandler(int client, int args)
 	// }
 
 	if (args < 1) {
-		CPrintToChat(client, "[{B}%s{W}] {G}请使用 {O}!forcematch **模式名** {G}来指定加载模式", MODULE_PREFIX);
+		CPrintToChat(client, "[{G}%s{W}] 请使用 {O}!forcematch **模式名** {W}来指定加载模式", MODULE_PREFIX);
 		return Plugin_Handled;
 	}
 	char cmdModeName[PLATFORM_MAX_PATH];
@@ -285,22 +285,22 @@ public Action forceMatchCmdHandler(int client, int args)
 	BuildPath(Path_SM, tempPath, sizeof(tempPath), "%s/%s", modeDirPath, cmdModeName);
 	if (!DirExists(tempPath)) {
 		if (IsValidClient(client)) {
-			CPrintToChat(client, "[{B}%s{W}] {G}模式配置文件: {O}%s {G}不存在, 无法加载模式", MODULE_PREFIX, cmdModeName);
+			CPrintToChat(client, "[{G}%s{W}] 模式配置文件: {O}%s {W}不存在, 无法加载模式", MODULE_PREFIX, cmdModeName);
 		} else {
-			CPrintToChatAll("[{B}%s{W}] {G}模式配置文件: {O}%s {G}不存在, 无法加载模式", MODULE_PREFIX, cmdModeName);
+			CPrintToChatAll("[{G}%s{W}] 模式配置文件: {O}%s {W}不存在, 无法加载模式", MODULE_PREFIX, cmdModeName);
 		}
 
 		log.info("[%s] 模式配置文件: %s 不存在, 无法加载模式", MODULE_PREFIX, cmdModeName);
 		return Plugin_Handled;
 	}
-	// CPrintToChatAll("[{B}%s{W}] {G}准备加载: {O}%s {G}模式", MODULE_PREFIX, cmdModeName);
+	// CPrintToChatAll("[{G}%s{W}] {G}准备加载: {O}%s {G}模式", MODULE_PREFIX, cmdModeName);
 
 	char mapName[64], displayMapName[PLATFORM_MAX_PATH];
 	if (args == 2) {
 		GetCmdArg(2, mapName, sizeof(mapName));
 		if (FindMap(mapName, displayMapName, sizeof(displayMapName)) == FindMap_NotFound) {
 			if (IsValidClient(client)) {
-				CPrintToChat(client, "[{B}%s{W}] {G}无法找到地图: {O}%s", MODULE_PREFIX, mapName);
+				CPrintToChat(client, "[{G}%s{W}] 无法找到地图: {O}%s", MODULE_PREFIX, mapName);
 			}
 			
 			log.info("[%s] 无法找到地图: %s", MODULE_PREFIX, mapName);
@@ -312,7 +312,7 @@ public Action forceMatchCmdHandler(int client, int args)
 
 	if (isModeLoaded) {
 		log.info("[%s] 当前已经加载: %s 模式, 准备加载: %s 模式, 正在卸载: %s 模式", MODULE_PREFIX, modeName, cmdModeName, modeName);
-		CPrintToChatAll("[{B}%s{W}] {G}准备卸载当前: {O}%s {G}模式, 加载: {O}%s {G}模式", MODULE_PREFIX, modeName, cmdModeName);
+		CPrintToChatAll("[{G}%s{W}] 准备卸载当前: {O}%s {W}模式, 加载: {O}%s {W}模式", MODULE_PREFIX, modeName, cmdModeName);
 		doUnloadMatchMode(true);
 	}
 
@@ -333,7 +333,7 @@ public Action resetMatchCmdHandler(int client, int args)
 	}
 
 	if (!isModeLoaded) {
-		CPrintToChat(client, "[{B}%s{W}] {G}当前未加载任何配置模式", MODULE_PREFIX);
+		CPrintToChat(client, "[{G}%s{W}] 当前未加载任何配置模式", MODULE_PREFIX);
 		return Plugin_Handled;
 	}
 	doUnloadMatchMode(true);
@@ -427,7 +427,7 @@ static void doLoadMatchMode(const char[] modeName)
 	}
 
 	isModeLoaded = true;
-	CPrintToChatAll("[{B}%s{W}] {G}正在加载: {O}%s {G}模式", MODULE_PREFIX, modeName);
+	CPrintToChatAll("[{G}%s{W}] 正在加载: {O}%s {W}模式", MODULE_PREFIX, modeName);
 
 	if (!isMapRestarted && (g_hRestartMap.IntValue == RESTART_START || g_hRestartMap.IntValue == RESTART_BOTH)) {
 		// 如果在 forceMatch 命令中指定地图，则加载到指定的地图
@@ -435,11 +435,11 @@ static void doLoadMatchMode(const char[] modeName)
 		g_hChangedMap.GetString(mapName, sizeof(mapName));
 
 		if (strlen(mapName) > 0) {
-			CPrintToChatAll("[{B}%s{W}] {G}正在切换到地图: {O}%s", MODULE_PREFIX, mapName);
+			CPrintToChatAll("[{G}%s{W}] {G}正在切换到地图: {O}%s", MODULE_PREFIX, mapName);
 			g_hChangedMap.RestoreDefault();
 		} else {
 			GetCurrentMap(mapName, sizeof(mapName));
-			CPrintToChatAll("[{B}%s{W}] {G}正在重启当前地图: {O}%s", MODULE_PREFIX, mapName);
+			CPrintToChatAll("[{G}%s{W}] 正在重启当前地图: {O}%s", MODULE_PREFIX, mapName);
 		}
 		DataPack pack = new DataPack();
 		pack.Reset();
@@ -479,7 +479,7 @@ static void doUnloadMatchMode(bool force = false)
 	isModeLoaded = isMapRestarted = isModePluginLoaded = false;
 	Call_StartForward(fwdMatchUnloaded);
 	Call_Finish();
-	CPrintToChatAll("[{B}%s{W}] {G}模式 {O}%s {G}已经卸载", MODULE_PREFIX, modeName);
+	CPrintToChatAll("[{G}%s{W}] 模式 {O}%s {W}已经卸载", MODULE_PREFIX, modeName);
 
 	ServerCommand("sm plugins load_unlock");
 
@@ -493,7 +493,7 @@ static void doUnloadMatchMode(bool force = false)
 	if (g_hRestartMap.IntValue == RESTART_END || g_hRestartMap.IntValue == RESTART_BOTH) {
 		char mapName[64];
 		GetCurrentMap(mapName, sizeof(mapName));
-		CPrintToChatAll("[{B}%s{W}] {G}正在重启当前地图: {O}%s", MODULE_PREFIX, mapName);
+		CPrintToChatAll("[{G}%s{W}] 正在重启当前地图: {O}%s", MODULE_PREFIX, mapName);
 
 		DataPack pack = new DataPack();
 		pack.Reset();
