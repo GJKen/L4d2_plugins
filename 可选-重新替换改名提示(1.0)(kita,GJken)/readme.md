@@ -3,7 +3,7 @@
 **原作 [Github](https://github.com/txuk1x/g10/blob/main/%E5%BF%85%E9%80%89-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8A%9F%E8%83%BD%EF%BC%88kita%EF%BC%89/left4dead2/addons/sourcemod/scripting/serverfunction/changename.sp)**
 
 > 提取自kita的serverFunction
-> 代码复制过来的, Cvar不生效管它的
+> 代码复制过来的, `show_player_team_chat_spec`不生效管它的
 ---
 Command | 指令
 <br>None
