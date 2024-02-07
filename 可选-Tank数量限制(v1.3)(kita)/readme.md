@@ -2,7 +2,7 @@
 	
 **原作 [Github](https://github.com/txuk1x/g10/tree/main/%E8%8D%AF%E5%BD%B9-tank%E6%95%B0%E9%87%8F%E9%99%90%E5%88%B6(kita)/left4dead2/addons/sourcemod)**
 
-> 修改源码info
+> 修改源码myinfo
 
 ---
 
@@ -18,6 +18,7 @@ Image | 图示
 <details><summary>ConVar | 控制台变量</summary>
 
 ```php
+//本次关卡中坦克最多生成数量
 z_tank_limit 1
 ```
 </details>
