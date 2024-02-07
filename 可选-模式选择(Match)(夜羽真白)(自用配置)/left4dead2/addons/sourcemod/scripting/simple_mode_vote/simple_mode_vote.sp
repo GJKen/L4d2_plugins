@@ -112,15 +112,15 @@ void startResetMatchVote(int client) {
         return;
     }
     if (GetClientTeam(client) <= TEAM_SPECTATOR) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}杂鱼旁观不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}杂鱼旁观不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX);
         return;
     }
     if (!isModeLoaded) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}当前未加载任何配置模式", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}当前未加载任何配置模式", MODULE_VOTE_PREFIX);
         return;
     }
     if (!IsNewBuiltinVoteAllowed()) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}没看到正在进行的投票吗?", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}没看到正在进行的投票吗?", MODULE_VOTE_PREFIX);
         return;
     }
     
@@ -136,7 +136,7 @@ void startResetMatchVote(int client) {
         players[index++] = i;
     }
     if (connectCount > 0) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}当前有 {O}%d {G}位正在连接中的玩家, 不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX, connectCount);
+        CPrintToChat(client, "[{G}%s{W}] {G}当前有 {O}%d {G}位正在连接中的玩家,不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX, connectCount);
         return;
     }
 
@@ -145,8 +145,8 @@ void startResetMatchVote(int client) {
     g_hVote = CreateBuiltinVote(ResetVoteActionHandler, BuiltinVoteType_Custom_YesNo, BuiltinVoteAction_Cancel | BuiltinVoteAction_VoteEnd | BuiltinVoteAction_End);
     SetBuiltinVoteArgument(g_hVote, title);
     DisplayBuiltinVote(g_hVote, players, index, MENU_DISPLAY_TIME);
-    // CPrintToChatAll("{B}[{W}%s{B}]: {G}玩家 {O}%N {G}发起了一个卸载当前模式的投票", MODULE_VOTE_PREFIX, client);
-    CPrintToChatAll("{B}[{W}%s{B}]: {B}%N {G}杂鱼发起一个卸载当前模式的投票❤", MODULE_VOTE_PREFIX, client);
+    // CPrintToChatAll("[{G}%s{W}] {G}玩家 {O}%N {G}发起了一个卸载当前模式的投票", MODULE_VOTE_PREFIX, client);
+    CPrintToChatAll("[{G}%s{W}] {B}%N {G}杂鱼发起一个卸载当前模式的投票❤", MODULE_VOTE_PREFIX, client);
     FakeClientCommand(client, "Vote Yes");
 }
 
@@ -225,7 +225,7 @@ public int MatchModeMenuHandler(Menu menu, MenuAction action, int client, int it
             } while (modeKey.GotoNextKey());
             configMenu.Display(client, MENU_DISPLAY_TIME);
         } else {
-            CPrintToChat(client, "{B}[{W}%s{B}]: {G}无法找到配置文件 {O}%s", MODULE_VOTE_PREFIX, info);
+            CPrintToChat(client, "[{G}%s{W}] {G}无法找到配置文件 {O}%s", MODULE_VOTE_PREFIX, info);
             showMatchModeMenu(client);
         }
     }
@@ -291,15 +291,15 @@ bool startMatchVote(int client, const char[] name) {
         return false;
     }
     if (GetClientTeam(client) <= TEAM_SPECTATOR) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}杂鱼旁观不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}杂鱼旁观不能发起卸载配置投票捏❤", MODULE_VOTE_PREFIX);
         return false;
     }
     if (IsBuiltinVoteInProgress()) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}没看到正在进行的投票吗?", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}没看到正在进行的投票吗?", MODULE_VOTE_PREFIX);
         return false;
     }
     if (!IsNewBuiltinVoteAllowed()) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}当前不允许发起新的投票捏❤", MODULE_VOTE_PREFIX);
+        CPrintToChat(client, "[{G}%s{W}] {G}当前不允许发起新的投票捏❤", MODULE_VOTE_PREFIX);
         return false;
     }
 
@@ -313,7 +313,7 @@ bool startMatchVote(int client, const char[] name) {
         players[index++] = i;
     }
     if (index < g_hVotePlayerLimit.IntValue) {
-        CPrintToChat(client, "{B}[{W}%s{B}]: {G}当前玩家数量小于允许发起投票的最小玩家数量 {O}%d", MODULE_VOTE_PREFIX, g_hVotePlayerLimit.IntValue);
+        CPrintToChat(client, "[{G}%s{W}] {G}当前玩家数量小于允许发起投票的最小玩家数量 {O}%d", MODULE_VOTE_PREFIX, g_hVotePlayerLimit.IntValue);
         log.info("[%s]: %N 准备发起一个投票, 当前玩家数量小于允许投票的最小玩家数量 %d, 无法发起投票", MODULE_VOTE_PREFIX, client, g_hVotePlayerLimit.IntValue);
         return false;
     }
@@ -323,8 +323,8 @@ bool startMatchVote(int client, const char[] name) {
     g_hVote = CreateBuiltinVote(VoteActionHandler, BuiltinVoteType_Custom_YesNo, BuiltinVoteAction_Cancel | BuiltinVoteAction_VoteEnd | BuiltinVoteAction_End);
     SetBuiltinVoteArgument(g_hVote, title);
     DisplayBuiltinVote(g_hVote, players, index, MENU_DISPLAY_TIME);
-    // CPrintToChatAll("{B}[{W}%s{B}]: {G}玩家 {O}%N {G}发起了一个将模式更改为 {O}%s {G}的投票", MODULE_VOTE_PREFIX, client, name);
-    CPrintToChatAll("{B}[{W}%s{B}]: {B}%N {G}杂鱼发起一个将模式更改为 {O}%s {G}的投票❤", MODULE_VOTE_PREFIX, client, name);
+    // CPrintToChatAll("[{G}%s{W}] {G}玩家 {O}%N {G}发起了一个将模式更改为 {O}%s {G}的投票", MODULE_VOTE_PREFIX, client, name);
+    CPrintToChatAll("[{G}%s{W}] {B}%N {G}杂鱼发起一个将模式更改为 {O}%s {G}的投票❤", MODULE_VOTE_PREFIX, client, name);
     return true;
 }
 
