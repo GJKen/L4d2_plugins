@@ -377,7 +377,7 @@ Action cmdGoIdle(int client, int args) {
 	if (GetClientTeam(client) != TEAM_SURVIVOR || !IsPlayerAlive(client))
 		return Plugin_Handled;
 
-	GoAFKTimer(client, 2.5);
+	GoAFKTimer(client, 0.0); //0.0 是闲置延迟时间(float)
 	return Plugin_Handled;
 }
 
