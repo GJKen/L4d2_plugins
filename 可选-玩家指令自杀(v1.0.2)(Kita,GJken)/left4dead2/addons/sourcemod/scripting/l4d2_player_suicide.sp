@@ -143,7 +143,7 @@ public Action Kill_Survivor(int client, int args)
 				CPrintToChatAll("{blue}%N {default}转到异世界当科比", client);
 			}
 			case 39: {
-				CPrintToChatAll("{blue}%N {default}死亡后传送队友最后的波纹", client);
+				CPrintToChatAll("{blue}%N {default}这是我最后的波纹了!", client);
 			}
 			default: {
 				CPrintToChatAll("%N {blue}死了", client);
