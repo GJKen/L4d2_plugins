@@ -123,7 +123,7 @@ float g_fCvarTimer, g_fDistance;
 // ====================================================================================================
 public Plugin myinfo =
 {
-	name = "[L4D & L4D2] Coop Markers - Flow Distance",
+	name = "[L4D2/1] Coop Markers - Flow Distance",
 	author = "SilverShot",
 	description = "Displays messages when Survivors progress through certain distances of the map.",
 	version = PLUGIN_VERSION,
