@@ -435,7 +435,7 @@ static void doLoadMatchMode(const char[] modeName)
 		g_hChangedMap.GetString(mapName, sizeof(mapName));
 
 		if (strlen(mapName) > 0) {
-			CPrintToChatAll("[{G}%s{W}] {G}正在切换到地图: {O}%s", MODULE_PREFIX, mapName);
+			CPrintToChatAll("[{G}%s{W}] 正在切换到地图: {O}%s", MODULE_PREFIX, mapName);
 			g_hChangedMap.RestoreDefault();
 		} else {
 			GetCurrentMap(mapName, sizeof(mapName));
