@@ -5,7 +5,7 @@
  *                           Version: 1.2.3                              *
  *                                                                        *
  **************************************************************************/
- 
+ //kita {lightgreen} {red} {blue} 这三个颜色不能出现在一起
 #if defined _colors_included
  #endinput
 #endif
@@ -35,7 +35,8 @@ enum Colors
 }
 
 /* Colors' properties */
-stock char CTag[][] = {"{default}", "{darkred}", "{green}", "{lightgreen}", "{red}", "{blue}", "{olive}", "{lime}", "{lightred}", "{purple}", "{grey}", "{orange}"};
+stock char CTag1[][] = {"{default}", "{darkred}", "{green}", "{lightgreen}", "{red}", "{blue}", "{olive}", "{lime}", "{lightred}", "{purple}", "{grey}", "{orange}"};
+stock char CTag2[][] = {"{W}", "{D}", "{O}", "{LG}", "{R}", "{B}", "{G}", "{L}", "{LR}", "{P}", "{GR}", "{OR}"};
 stock char CTagCode[][] = {"\x01", "\x02", "\x04", "\x03", "\x03", "\x03", "\x05", "\x06", "\x07", "\x03", "\x08", "\x09"};
 stock bool CTagReqSayText2[] = {false, false, false, true, true, true, false, false, false, false, false, false};
 stock bool CEventIsHooked = false;
@@ -255,8 +256,10 @@ stock void CPrintToChatAllEx(int author, const char[] szMessage, any ...)
  */
 stock void CRemoveTags(char[] szMessage, int maxlength)
 {
-	for (int i = 0; i < MAX_COLORS; i++)
-		ReplaceString(szMessage, maxlength, CTag[i], "", false);
+	for (int i = 0; i < MAX_COLORS; i++) {
+		ReplaceString(szMessage, maxlength, CTag1[i], "", false);
+		ReplaceString(szMessage, maxlength, CTag2[i], "", false);
+	}
 	
 	ReplaceString(szMessage, maxlength, "{teamcolor}", "", false);
 }
@@ -370,27 +373,37 @@ stock int CFormat(char[] szMessage, int maxlength, int author = NO_INDEX)
 	/* For other color tags we need a loop */
 	for (int i = 0; i < MAX_COLORS; i++)
 	{
+	
+		char CTag[24];
+		if (StrContains(szMessage, CTag1[i], false) != -1) {
+			strcopy(CTag, 24, CTag1[i]);
+		} else if (StrContains(szMessage, CTag2[i], false) != -1) {
+			strcopy(CTag, 24, CTag2[i]);
+		} else {
+			continue;
+		}
+	
 		/* If tag not found - skip */
-		if (StrContains(szMessage, CTag[i], false) == -1)
+		if (StrContains(szMessage, CTag, false) == -1)
 			continue;
 			
 		/* If tag is not supported by game replace it with green tag */
 		else if (!CProfile_Colors[i])
-			ReplaceString(szMessage, maxlength, CTag[i], CTagCode[Color_Green], false);
+			ReplaceString(szMessage, maxlength, CTag, CTagCode[Color_Green], false);
 		
 		/* If tag doesn't need saytext2 simply replace */
 		else if (!CTagReqSayText2[i])
-			ReplaceString(szMessage, maxlength, CTag[i], CTagCode[i], false);
+			ReplaceString(szMessage, maxlength, CTag, CTagCode[i], false);
 
 		/* Tag needs saytext2 */
 		else
 		{
 			/* If saytext2 is not supported by game replace tag with green tag */
 			if (!CProfile_SayText2)
-				ReplaceString(szMessage, maxlength, CTag[i], CTagCode[Color_Green], false);
-				
+				ReplaceString(szMessage, maxlength, CTag, CTagCode[Color_Green], false);
+			
 			/* Game supports saytext2 */
-			else 
+			else
 			{
 				/* If random player for tag wasn't specified replace tag and find player */
 				if (iRandomPlayer == NO_INDEX)
@@ -400,11 +413,11 @@ stock int CFormat(char[] szMessage, int maxlength, int author = NO_INDEX)
 					
 					/* If player not found replace tag with green color tag */
 					if (iRandomPlayer == NO_PLAYER)
-						ReplaceString(szMessage, maxlength, CTag[i], CTagCode[Color_Green], false);
+						ReplaceString(szMessage, maxlength, CTag, CTagCode[Color_Green], false);
 
 					/* If player was found simply replace */
 					else
-						ReplaceString(szMessage, maxlength, CTag[i], CTagCode[i], false);
+						ReplaceString(szMessage, maxlength, CTag, CTagCode[i], false);
 					
 				}
 				/* If found another team color tag throw error */

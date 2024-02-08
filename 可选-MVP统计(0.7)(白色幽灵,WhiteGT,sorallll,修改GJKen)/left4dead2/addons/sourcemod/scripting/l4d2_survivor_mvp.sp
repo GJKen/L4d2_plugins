@@ -4,9 +4,9 @@
 #include <colors>
 #include <left4dhooks>
 
-#define PLUGIN_NAME				"[L4d2]survivor_mvp(击杀排行统计)"
+#define PLUGIN_NAME				"[L4d2] Survivor Mvp"
 #define PLUGIN_AUTHOR			"白色幽灵 WhiteGT, sorallll, 修改GJKen"
-#define PLUGIN_DESCRIPTION		""
+#define PLUGIN_DESCRIPTION		"生还者击杀排行统计, 可显示对Tank伤害的排行"
 #define PLUGIN_VERSION			"0.7"
 #define PLUGIN_URL				"https://github.com/umlka/l4d2/tree/main/survivor_mvp"
 
@@ -24,11 +24,11 @@ bool
 	g_bLeftSafeArea;
 
 int
-	g_iTotaldmgSI,
+	// g_iTotaldmgSI,
 	g_iTotalkillSI,
-	g_iTotalkillCI,
-	g_iTotalFF,
-	g_iTotalRF;
+	g_iTotalkillCI;
+	// g_iTotalFF,
+	// g_iTotalRF;
 
 static int g_iFailCount;
 
@@ -152,11 +152,11 @@ Action tmrPrintStatistics(Handle timer) {
 }
 
 public void OnClientDisconnect(int client) {
-	g_iTotaldmgSI -= g_esData[client].dmgSI;
+	// g_iTotaldmgSI -= g_esData[client].dmgSI;
 	g_iTotalkillSI -= g_esData[client].killSI;
 	g_iTotalkillCI -= g_esData[client].killCI;
-	g_iTotalFF -= g_esData[client].teamFF;
-	g_iTotalRF -= g_esData[client].teamRF;
+	// g_iTotalFF -= g_esData[client].teamFF;
+	// g_iTotalRF -= g_esData[client].teamRF;
 	
 	g_esData[client].CleanInfected();
 	g_esData[client].CleanTank();
@@ -205,10 +205,10 @@ void Event_PlayerHurt(Event event, const char[] name, bool dontBroadcast) {
 			switch (GetClientTeam(attacker)) {
 				case 2: {
 					int dmg = event.GetInt("dmg_health");
-					g_iTotalFF += dmg;
+					// g_iTotalFF += dmg;
 					g_esData[attacker].teamFF += dmg;
 
-					g_iTotalRF += dmg;
+					// g_iTotalRF += dmg;
 					g_esData[victim].teamRF += dmg;
 				}
 
@@ -232,7 +232,7 @@ void Event_PlayerHurt(Event event, const char[] name, bool dontBroadcast) {
 				int dmg = event.GetInt("dmg_health");
 				switch (GetEntProp(victim, Prop_Send, "m_zombieClass")) {
 					case 1, 2, 3, 4, 5, 6: {
-						g_iTotaldmgSI += dmg;
+						// g_iTotaldmgSI += dmg;
 						g_esData[attacker].dmgSI += dmg;
 					}
 		
@@ -393,13 +393,12 @@ void PrintStatistics() {
 	int len;
 	int numSpace;
 	char buffer[254];
-	// CPrintToChatAll("{default}杂鱼~ 本章{red}%d{default}次团灭了捏{red}❤", g_iFailCount);
-	// CPrintToChatAll("{default}杂鱼{red}~ {default}很棒喔{red}❤", g_iFailCount);
-	if (g_iFailCount == 0) {CPrintToChatAll("{default}杂鱼{red}~ {default}很棒喔{red}❤", g_iFailCount);}
-	else if (g_iFailCount == 5) {CPrintToChatAll("{default}杂鱼{red}~ {default}太菜了{red}❤", g_iFailCount);}
-	else if (g_iFailCount == 20) {CPrintToChatAll("{default}杂鱼{red}~ {default}累了就休息{red}❤", g_iFailCount);}
-	else if (g_iFailCount == 50) {CPrintToChatAll("{red}杂鱼...别玩了,我心疼T_T", g_iFailCount);}
-	else {CPrintToChatAll("{default}杂鱼~ 本章{red}%d{default}次团灭了捏{red}❤", g_iFailCount);}
+	if (g_iFailCount == 0) {CPrintToChatAll("{W}杂鱼{R}~ {W}很棒喔{R}❤", g_iFailCount);}
+	else if (g_iFailCount == 5) {CPrintToChatAll("{W}杂鱼{R}~ {W}太菜了{R}❤", g_iFailCount);}
+	else if (g_iFailCount == 20) {CPrintToChatAll("{W}杂鱼{R}~ {W}累了就休息{R}❤", g_iFailCount);}
+	else if (g_iFailCount == 50) {CPrintToChatAll("{R}杂鱼...别玩了,我心疼T_T", g_iFailCount);}
+	else {CPrintToChatAll("{W}杂鱼~ 本章{R}%d{W}次团灭了捏{R}❤", g_iFailCount);}
+	PrintToServer("本章 %d 次团灭了捏❤", g_iFailCount);
 
 	for (i = 0; i < infoMax; i++) {
 		client = clients[i];
@@ -459,26 +458,34 @@ void PrintStatistics() {
 	dmgSI = g_esData[client].dmgSI;
 	killSI = g_esData[client].killSI;
 	if (killSI > 0)
-		PrintToChatAll("\x01杀特睾手: \x05%N \x01伤害: \x05%d\x01(\x04%d%%\x01) 击杀: \x05%d\x01(\x04%d%%\x01)", client, dmgSI, RoundToNearest(float(dmgSI) / float(g_iTotaldmgSI) * 100.0), killSI, RoundToNearest(float(killSI) / float(g_iTotalkillSI) * 100.0));
+	// CPrintToChatAll("{W}杀特睾手: {R}%N {W}伤害: {G}%d{W}({O}%d%%{W}) 击杀: {G}%d{W}({O}%d%%{W})", client, dmgSI, RoundToNearest(float(dmgSI) / float(g_iTotaldmgSI) * 100.0), killSI, RoundToNearest(float(killSI) / float(g_iTotalkillSI) * 100.0));
+	CPrintToChatAll("{W}杀特睾手: {R}%N {W}伤害: {G}%d{W} 击杀: {G}%d", client, dmgSI, killSI);
+	PrintToServer("杀特睾手: %N 伤害: %d 击杀: %d", client, dmgSI, killSI);
 
 	SortCustom1D(clients, count, SortCIKill);
 	client = clients[0];
 	killCI = g_esData[client].killCI;
 	headCI = g_esData[client].headCI;
 	if (killCI > 0)
-		PrintToChatAll("\x01清尸狂人: \x05%N \x01击杀: \x05%d\x01(\x04%d%%\x01) 爆头: \x05%d\x01(\x04%d%%\x01)", client, killCI, RoundToNearest(float(killCI) / float(g_iTotalkillCI) * 100.0), headCI, RoundToNearest(float(headCI) / float(killCI) * 100.0));
+	// CPrintToChatAll("{W}清尸狂人: {B}%N {W}击杀: {G}%d{W}({O}%d%%{W}) 爆头: {G}%d{W}({O}%d%%{W})", client, killCI, RoundToNearest(float(killCI) / float(g_iTotalkillCI) * 100.0), headCI, RoundToNearest(float(headCI) / float(killCI) * 100.0));
+	CPrintToChatAll("{W}清尸狂人: {B}%N {W}击杀: {G}%d{W} 爆头: {G}%d{W}", client, killCI, headCI);
+	PrintToServer("清尸狂人: %N 击杀: %d 爆头: %d", client, killCI, headCI);
 
 	SortCustom1D(clients, count, SortTeamFF);
 	client = clients[0];
 	teamFF = g_esData[client].teamFF;
 	if (teamFF > 0)
-		PrintToChatAll("\x01射精之王: \x05%N \x01精液: \x05%d\x01(\x04%d%%\x01)", client, teamFF, RoundToNearest(float(teamFF) / float(g_iTotalFF) * 100.0));
+	// CPrintToChatAll("{W}射精之王: {B}%N {W}精液: {G}%d{W}({O}%d%%{W})", client, teamFF, RoundToNearest(float(teamFF) / float(g_iTotalFF) * 100.0));
+	CPrintToChatAll("{W}射精之王: {B}%N {W}精液: {G}%d{W}", client, teamFF);
+	PrintToServer("射精之王: %N 精液: %d", client, teamFF);
 
 	SortCustom1D(clients, count, SortTeamRF);
 	client = clients[0];
 	teamRF = g_esData[client].teamRF;
 	if (teamRF > 0)
-		PrintToChatAll("\x01M属性大爆发: \x05%N \x01被射: \x05%d\x01(\x04%d%%\x01)", client, teamRF, RoundToNearest(float(teamRF) / float(g_iTotalRF) * 100.0));
+	// CPrintToChatAll("{W}M属性大爆发: {B}%N {W}被射: {G}%d{W}({O}%d%%{W})", client, teamRF, RoundToNearest(float(teamRF) / float(g_iTotalRF) * 100.0));
+	CPrintToChatAll("{W}M属性大爆发: {B}%N {W}被射: {G}%d{W}", client, teamRF);
+	PrintToServer("M属性大爆发: %N 被射: %d", client, teamRF);
 }
 
 void PrintTankStatistics(int tank) {
@@ -549,7 +556,7 @@ void PrintTankStatistics(int tank) {
 
 	char name[MAX_NAME_LENGTH];
 	FormatEx(name, sizeof name, "[%s] %N", IsFakeClient(tank) ? "AI" : "PZ", tank);
-	CPrintToChatAll("{default}[{red}%s{default}] {olive}%N {default}HP: {red}%d", IsFakeClient(tank) ? "AI" : "PZ", tank, g_esData[tank].totalTankDmg);
+	CPrintToChatAll("{W}[{R}%s{W}] {olive}%N {W}HP: {R}%d", IsFakeClient(tank) ? "AI" : "PZ", tank, g_esData[tank].totalTankDmg);
 
 	int len;
 	int numSpace;
@@ -559,43 +566,43 @@ void PrintTankStatistics(int tank) {
 		damage = aClients.Get(i, 0);
 		percent = RoundToNearest(float(damage) / float(g_esData[tank].totalTankDmg) * 100.0);
 
-		strcopy(buffer, sizeof buffer, "{red}♥{default}[");
+		strcopy(buffer, sizeof buffer, "{R}♥{W}[");
 		numSpace = dmgLen - IntToString(damage, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
-		Format(buffer[len], sizeof buffer - len, "{red}%s", str);
+		Format(buffer[len], sizeof buffer - len, "{R}%s", str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 	
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, "{default}] (");
+		strcopy(buffer[len], sizeof buffer - len, "{W}] (");
 		numSpace = percLen - IntToString(percent, str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
-		Format(buffer[len], sizeof buffer - len, "{red}%s%%", str);
+		Format(buffer[len], sizeof buffer - len, "{R}%s%%", str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, "{default}) 吃拳: ");
+		strcopy(buffer[len], sizeof buffer - len, "{W}) 吃拳: ");
 		numSpace = clawLen - IntToString(g_esData[tank].tankClaw[client], str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
-		Format(buffer[len], sizeof buffer - len, "{red}%s", str);
+		Format(buffer[len], sizeof buffer - len, "{R}%s", str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, " {default}吃饼: ");
+		strcopy(buffer[len], sizeof buffer - len, " {W}吃饼: ");
 		numSpace = rockLen - IntToString(g_esData[tank].tankRock[client], str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
-		Format(buffer[len], sizeof buffer - len, "{red}%s", str);
+		Format(buffer[len], sizeof buffer - len, "{R}%s", str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
-		strcopy(buffer[len], sizeof buffer - len, " {default}吃铁: ");
+		strcopy(buffer[len], sizeof buffer - len, " {W}吃铁: ");
 		numSpace = hitLen - IntToString(g_esData[tank].tankHittable[client], str, sizeof str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 		len = strlen(buffer);
-		Format(buffer[len], sizeof buffer - len, "{red}%s", str);
+		Format(buffer[len], sizeof buffer - len, "{R}%s", str);
 		AppendSpaceChar(buffer, sizeof buffer, numSpace);
 
 		len = strlen(buffer);
@@ -691,11 +698,11 @@ int SortTeamRF(int elem1, int elem2, const int[] array, Handle hndl) {
 }
 
 void ClearData() {
-	g_iTotaldmgSI = 0;
+	// g_iTotaldmgSI = 0;
 	g_iTotalkillSI = 0;
 	g_iTotalkillCI = 0;
-	g_iTotalFF = 0;
-	g_iTotalRF = 0;
+	// g_iTotalFF = 0;
+	// g_iTotalRF = 0;
 
 	for (int i = 1; i <= MaxClients; i++)
 		g_esData[i].CleanInfected();
