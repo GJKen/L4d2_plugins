@@ -3,7 +3,7 @@
 #include <sourcemod>
 #include <sdktools>
 #include <left4dhooks>
-#define SERVER_NAME_PATH "configs/hostname/hostname.txt"
+#define SERVER_NAME_PATH "configs/hostname.txt"
 #define CVAR_FLAG FCVAR_NOTIFY
 #define MODE 13
 
@@ -36,7 +36,7 @@ public void OnPluginStart()
 	key = CreateKeyValues("ServerName");
 	if (!FileToKeyValues(key, serverNamePath)) { SetFailState("无法找到服名文件位于：%s", SERVER_NAME_PATH); }
 	g_hAllowDisplayInfectedInfo = CreateConVar("sn_display_infected_info", "0", "是否在服名中显示特感信息,0=关", CVAR_FLAG, true, 0.0, true, 1.0);
-	g_hAllowDisplayMode = CreateConVar("sn_display_mode_info", "0", "是否在当前服名中显示是什么模式,0=关", CVAR_FLAG, true, 0.0, true, 1.0);
+	g_hAllowDisplayMode = CreateConVar("sn_display_mode_info", "0", "是否在当前服名中显示什么模式,0=关", CVAR_FLAG, true, 0.0, true, 1.0);
 	g_hRefreshTime = CreateConVar("sn_refresh_time", "10", "服名刷新时间-秒", CVAR_FLAG, true, 0.1);
 	g_hBaseServerName = CreateConVar("sn_base_server_name", "", "基本服名,配置则使用当前服名,未配置则使用文件中的服名", CVAR_FLAG, true, 0.0);
 	g_hBaseModeName = CreateConVar("sn_base_mode_name", "", "基本模式名称,空则不显示", CVAR_FLAG, true, 0.0);
@@ -124,8 +124,8 @@ void setServerName()
 
 	char c_mode[32];
 	char ModeCode[MODE][32] = {"a","b","c","d","e","f","g","h","i","j","k","l","n"};
-	char ModeName[MODE][128] = {"[纯净模式]","[普通模式]","[多特模式]","[写专多特]","[无限火力]","[困难无限]","[药役A]","[药役B]","[药役C]","[药役D]","[单人药役]","[HT训练]","[HT x Witch]"};
-	// char ModeName[MODE][128] = {"[a纯净模式]","[b普通模式]","[c多特模式]","[d写专多特]","[e无限火力]","[f困难无限]","[g药役A]","[h药役B]","[i药役C]","[j药役D]","[k单人药役]","[lHT训练]","[nHTx Witch]"};
+	char ModeName[MODE][128] = {"[纯净战役]","[绝境战役18特]","[多特战役]","[写专多特]","[无限火力]","[困难无限]","[药役A]","[药役B]","[药役C]","[药役D]","[单人药役]","[HT训练]","[HT x Witch]"};
+	// char ModeName[MODE][128] = {"[a纯净模式]","[b绝境战役18特]","[c多特战役]","[d写专多特]","[e无限火力]","[f困难无限]","[g药役A]","[h药役B]","[i药役C]","[j药役D]","[k单人药役]","[lHT训练]","[nHTx Witch]"};
 	GetConVarString(g_hBaseModeCode, c_mode, sizeof(c_mode));
 	for (int i = 0; i < MODE; i++)
 	if(StrEqual(c_mode, ModeCode[i])) {
@@ -158,6 +158,7 @@ void setServerName()
 		}
 		else if (LibraryExists("l4dinfectedbots"))
 		{
+			PrintToServer("哈利波特");
 			cv_hInfectedLimit = GetConVarInt(FindConVar("l4d_infectedbots_max_specials"));
 			cv_hInfectedTime = GetConVarInt(FindConVar("l4d_infectedbots_spawn_time_max"));
 		}
