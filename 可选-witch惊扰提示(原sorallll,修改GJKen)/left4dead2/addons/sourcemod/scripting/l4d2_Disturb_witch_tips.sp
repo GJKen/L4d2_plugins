@@ -10,7 +10,7 @@ bool g_bWitchstartled;
 
 public Plugin myinfo =
 {
-	name = "[L4d2] Disturb Witch Tips(惊扰witch提示)",
+	name = "[L4d2] Disturb Witch Tips(Witch惊扰提示)",
 	author = "原:sorallll, 修改:GJKen", 
 	description = "提取自sorallll的sms插件",
 	version = "1.0",
@@ -37,7 +37,6 @@ void GetCvars() {
 	g_bWitchstartled =	g_cvWitchstartled.BoolValue;
 }
 
-// Witch惊扰提示
 void Event_WitchHarasserSet(Event event, const char[] name, bool dontBroadcast) {
 	if (!g_bWitchstartled)
 		return;
@@ -49,18 +48,35 @@ void Event_WitchHarasserSet(Event event, const char[] name, bool dontBroadcast) 
 	switch (GetClientTeam(client)) {
 		case 2: {
 			int idleplayer = GetIdlePlayerOfBot(client);
-			if (!idleplayer)
-				// CPrintToChatAll("{olive}%N 已获得成就 摸 witch 奶子", client);
-				CPrintToChatAll("{red}witch{default}:左拐的红灯最难等了啊啊啊啊啊!", client);
-			else
-				// CPrintToChatAll("{green}◈ {default}[{olive}打酱油{default}]{blue}%N {default}对 {olive}witch {default}嫖娼", idleplayer);
-				// CPrintToChatAll("{olive}%N[打酱油] 已获得成就 摸 witch 奶子", idleplayer);
-				CPrintToChatAll("{red}witch{default}:左拐的红灯最难等了啊啊啊啊啊!", idleplayer);
+			if (!idleplayer){
+				int aRand = GetRandomInt(0, 7);
+				switch (aRand){
+					case 0: {
+						CPrintToChatAll("{R}Witch{W}:不要摸我的奶子啊啊啊啊啊啊啊!", client);}
+					case 1: {
+						CPrintToChatAll("{B}%N {W}被Witch榨精❤", client);}
+					case 2: {
+						CPrintToChatAll("{R}Witch{W}:想不想看看批?", client);}
+					case 3: {
+						CPrintToChatAll("{B}%N {W}被Witch盯上了❤", client);}
+					case 4: {
+						CPrintToChatAll("{R}Witch{W}:我的奶子好玩吗?", client);}
+					case 5: {
+						CPrintToChatAll("{B}%N {W}已获得成就 {G}摸Wtich奶子", client);}
+					case 6: {
+						CPrintToChatAll("{R}Witch{W}:臭杂鱼,我想你了{R}❤❤❤", client);}
+					case 7: {
+						CPrintToChatAll("{R}Witch{W}:想不想看看我的奶子?", client);}
+				}
+			}
+			else{
+				CPrintToChatAll("[{O}打酱油{W}]{B}%N {W}对 witch {W}嫖娼", idleplayer);
+			}
 		}
 
-		case 3:
-			// CPrintToChatAll("{olive}%N 已获得成就 摸 witch 奶子", client);
+		case 3: {
 			CPrintToChatAll("{red}witch{default}:左拐的红灯最难等了啊啊啊啊啊!", client);
+		}
 	}
 }
 

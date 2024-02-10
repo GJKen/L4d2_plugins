@@ -50,14 +50,5 @@ Changelog | 版本日志
 
 <details><summary>Changelog | 版本日志</summary>
 
-- v1.7 (2023-12-17)
-	- Optimize code and improve performance
-
-- v1.6 (2023-11-18)
-	- Add grenade launcher damage
-
-- v1.5 (2022-12-6)
-	- Disable Pipe Bomb Explosive friendly fire
-	- Disable Fire friendly fire.
-	- Friendly fire now will not incap player
+- 2024.02.11 > 更新随机文案提示, 详情看图示
 </details>
