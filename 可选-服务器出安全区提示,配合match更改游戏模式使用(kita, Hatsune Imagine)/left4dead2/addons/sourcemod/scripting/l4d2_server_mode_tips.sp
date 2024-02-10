@@ -8,7 +8,7 @@ public Plugin myinfo =
 {
 	name 			= "[L4D2] Server Mode Tips",
 	author 			= "kita, Hatsune Imagine, 修改:GJKen",
-	description 	= "离开安全屋提示当前模式以及刷特数量,配合服务器名称显示使用,适配了fdxx/树树子/哈利波特刷特插件",
+	description 	= "离开安全屋提示当前模式以及刷特数量,配合服务器名称显示使用,适配了树树子/fdxx刷特插件",
 	version 		= "2.2",
 	url 			= "https://github.com/GJKen/L4d2_plugins"
 }
@@ -43,11 +43,6 @@ void PrintModeInfo() {
 		infectedLimit = GetConVarInt(FindConVar("l4d2_si_spawn_control_max_specials"));
 		infectedTime = GetConVarInt(FindConVar("l4d2_si_spawn_control_spawn_time"));
 	}
-	else if (LibraryExists("l4dinfectedbots"))
-	{
-		infectedLimit = GetConVarInt(FindConVar("l4d_infectedbots_max_specials"));
-		infectedTime = GetConVarInt(FindConVar("l4d_infectedbots_spawn_time_max"));
-	}
 	else
 	{
 		infectedLimit = 0;
@@ -55,9 +50,9 @@ void PrintModeInfo() {
 	}
 
 	if (infectedTime == 0 && infectedTime == 0)
-		CPrintToChatAll("{green}当前为{blue}%s{default}", GameMode);
+		CPrintToChatAll("{G}当前为{B}%s", GameMode);
 	else
-		CPrintToChatAll("{green}当前为{blue}%s{default}[{olive}%d{default}特{olive}%d{default}秒]", GameMode, infectedLimit, infectedTime);
+		CPrintToChatAll("{G}当前为{B}%s{W}[{O}%d{W}特{O}%d{W}秒]", GameMode, infectedLimit, infectedTime);
 
-	CPrintToChatAll("{olive}!match{green}选择模式 {olive}!v{green}投票菜单 {olive}!b{green}商店 {olive}!maps{green}换官图{blue}/{green}三方图");
+	CPrintToChatAll("{O}!match{W}选择模式 {O}!v{W}投票菜单 {O}!b{W}商店 {O}!maps{W}换官图{B}/{W}三方图");
 }
