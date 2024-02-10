@@ -924,7 +924,7 @@ int lastHumanTankId;
 
 public Plugin myinfo =
 {
-	name = "[L4D/L4D2] Infected Bots (Coop/Versus/Realism/Scavenge/Survival/Mutation)",
+	name = "[L4D2/1] Infected Bots (Coop/Versus/Realism/Scavenge/Survival/Mutation)",
 	author = "djromero (SkyDavid), MI 5, Harry Potter",
 	description = "Spawns multi infected bots in versus + allows playable special infected in coop/survival + unlock infected limitt",
 	version = PLUGIN_VERSION,
@@ -933,6 +933,7 @@ public Plugin myinfo =
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
+	RegPluginLibrary("l4dinfectedbots");
 	EngineVersion test = GetEngineVersion();
 
 	if( test == Engine_Left4Dead )

@@ -1,0 +1,205 @@
+"Cfgs"
+{
+	"全体转生?"
+	{
+		"exec match_votes/restartmap_on"
+		{
+			"message" "人生重开!!!!"
+		}
+		"exec match_votes/restartmap_off"
+		{
+			"message" "我不想重开T_T"
+		}
+	}
+	"控制人数"
+	{
+		"exec match_votes/bots_num_1"
+		{
+			"message" "控制1人"
+		}
+		"exec match_votes/bots_num_2"
+		{
+			"message" "控制2人"
+		}
+		"exec match_votes/bots_num_3"
+		{
+			"message" "控制3人"
+		}
+		"exec match_votes/bots_num_4"
+		{
+			"message" "控制4人"
+		}
+		"exec match_votes/bots_num_5"
+		{
+			"message" "控制5人"
+		}
+		"exec match_votes/bots_num_6"
+		{
+			"message" "控制6人"
+		}
+		"exec match_votes/bots_num_7"
+		{
+			"message" "控制7人"
+		}
+		"exec match_votes/bots_num_8"
+		{
+			"message" "控制8人"
+		}
+		"exec match_votes/bots_num_9"
+		{
+			"message" "控制9人"
+		}
+		"exec match_votes/bots_num_10"
+		{
+			"message" "控制10人"
+		}
+		"exec match_votes/bots_num_11"
+		{
+			"message" "控制11人"
+		}
+		"exec match_votes/bots_num_12"
+		{
+			"message" "控制12人"
+		}
+		"exec match_votes/bots_num_13"
+		{
+			"message" "控制13人"
+		}
+		"exec match_votes/bots_num_14"
+		{
+			"message" "控制14人"
+		}
+		"exec match_votes/bots_num_15"
+		{
+			"message" "控制15人"
+		}
+		"exec match_votes/bots_num_16"
+		{
+			"message" "控制16人"
+		}
+		"exec match_votes/bots_num_17"
+		{
+			"message" "控制17人"
+		}
+		"exec match_votes/bots_num_18"
+		{
+			"message" "控制18人"
+		}
+	}
+	"角色属性(rpg)"
+	{
+		"exec match_votes/xd999_on"
+		{
+			"message" "on - 下蹲速度999"
+		}
+		"exec match_votes/xd999_off"
+		{
+			"message" "off - 下蹲速度999"
+		}
+		"exec match_votes/survivor_allow_crawling_on"
+		{
+			"message" "on - 倒地爬行"
+		}
+		"exec match_votes/survivor_allow_crawling_off"
+		{
+			"message" "off - 倒地爬行"
+		}
+		"exec match_votes/survivor_revive_duration_3s"
+		{
+			"message" "3s - 拉人时间"
+		}
+		"exec match_votes/survivor_revive_duration_5s"
+		{
+			"message" "5s - 拉人时间(默认)"
+		}
+		"exec match_votes/first_aid_kit_use_duration_3s"
+		{
+			"message" "3s - 打包时间"
+		}
+		"exec match_votes/first_aid_kit_use_duration_5s"
+		{
+			"message" "5s - 打包时间(默认)"
+		}
+	}
+	"小僵尸控制"
+	{
+		"exec match_votes/zomble_0_0_0"
+		{
+			"message" "无小僵尸"
+		}
+		"exec match_votes/zomble_default"
+		{
+			"message" "官方默认僵尸数量"
+		}
+		"exec match_votes/zomble_3_1_5"
+		{
+			"message" "3-1-5 每次尸潮刷新僵尸的数量5"
+		}
+		"exec match_votes/zomble_3_1_10"
+		{
+			"message" "3-1-10 每次尸潮刷新僵尸的数量10"
+		}
+		"exec match_votes/zomble_3_1_20"
+		{
+			"message" "3-1-20 每次尸潮刷新僵尸的数量20"
+		}
+	}
+	"枪械设置"
+	{
+		"exec vote/weapon/AnneHappy"
+		{
+			"message" "Anne枪械"
+		}
+		"exec vote/weapon/AnneHappyPlus"
+		{
+			"message" "AnnePlus枪械"
+		}
+		"exec vote/weapon/zonemod"
+		{
+			"message" "Zonemod枪械"
+		}
+		"exec vote/shove/Zonemod"
+		{
+			"message" "Zonemod推数"
+		}
+		"exec vote/shove/AnneHappy"
+		{
+			"message" "Anne药役推数"
+		}
+		"sm_weapon_attributes_reset"
+		{
+			"message" "恢复默认枪械伤害"
+		}
+		"exec match_votes/ammo_3"
+		{
+			"message" "3倍弹药"
+		}
+		"exec match_votes/ammo_2"
+		{
+			"message" "2倍弹药"
+		}
+		"exec match_votes/ammo_default"
+		{
+			"message" "默认弹药"
+		}
+	}
+	"友伤设置"
+	{
+		"exec match_votes/friendly_fire_0"
+		{
+			"message" "友伤 - off"
+		}
+		"exec match_votes/friendly_fire_default"
+		{
+			"message" "友伤 - on"
+		}
+		"exec match_votes/friendly_fire_anti_off"
+		{
+			"message" "反伤 - off"
+		}
+		"exec match_votes/friendly_fire_anti_on"
+		{
+			"message" "反伤 - on"
+		}
+	}
+}

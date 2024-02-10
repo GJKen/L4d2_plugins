@@ -6,6 +6,8 @@
 
 > 修改源码的提示文案
 
+> 添加 `RegPluginLibrary("l4dinfectedbots");` 适配 [l4d2_server_mode_tips](https://github.com/GJKen/L4d2_plugins/tree/main/%E5%8F%AF%E9%80%89-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%AE%89%E5%85%A8%E5%8C%BA%E6%8F%90%E7%A4%BA%2C%E9%85%8D%E5%90%88match%E6%9B%B4%E6%94%B9%E6%B8%B8%E6%88%8F%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8(kita%2C%20Hatsune%20Imagine))
+
 <details><summary>简介</summary>
 
 - 此插件控制游戏导演生成系统, 能够强制无视游戏特感数量限制, 生成多特感

@@ -174,22 +174,22 @@
 		{
 			"message" "3倍弹药"
 		}
-		"exec vote/weapon/shuangbei"
+		"exec match_votes/ammo_2"
 		{
 			"message" "2倍弹药"
 		}
-		"exec vote/weapon/moren"
+		"exec match_votes/ammo_default"
 		{
 			"message" "默认弹药"
 		}
 	}
 	"友伤设置"
 	{
-		"exec vote/ff-off"
+		"exec match_votes/friendly_fire_0"
 		{
 			"message" "友伤 - off"
 		}
-		"exec vote/ff-on"
+		"exec match_votes/friendly_fire_default"
 		{
 			"message" "友伤 - on"
 		}

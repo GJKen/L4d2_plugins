@@ -9,11 +9,11 @@
 
 public Plugin myinfo =
 {
-	name = "Vote for run command or cfg file",
+	name = "[L4d2] Vote for run command or cfg file",
 	description = "使用!votes投票执行命令或cfg文件",
-	author = "东",
+	author = "东, 修改GJKen",
 	version = "1.3",
-	url = "https://github.com/fantasylidong/"
+	url = "https://github.com/gjken/L4d2_plugins"
 };
 
 
@@ -37,7 +37,7 @@ int
 public void OnPluginStart()
 {
 	char g_sBuffer[128];
-	g_hVoteFilelocation = CreateConVar("votecfgfile", "data/match_votes_file/default.txt", "投票文件的位置(位于sourcemod/文件夹)", FCVAR_NOTIFY);
+	g_hVoteFilelocation = CreateConVar("votecfgfile", "configs/match_votes_file/default.txt", "投票文件的位置(位于sourcemod/文件夹)", FCVAR_NOTIFY);
 
 	GetConVarString(g_hVoteFilelocation, g_sVoteFile, sizeof(g_sVoteFile));
 	RegConsoleCmd("sm_v", VoteRequest);
