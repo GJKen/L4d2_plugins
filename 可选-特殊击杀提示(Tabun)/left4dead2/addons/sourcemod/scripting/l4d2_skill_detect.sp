@@ -221,7 +221,7 @@ new const String: g_csSIClassName[][] =
     "witch",
     "tank"
 };
-bool:           g_deadstop;
+// bool:           g_deadstop;
 new     bool:           g_bLateLoad                                         = false;
 
 new     Handle:         g_hForwardSkeet                                     = INVALID_HANDLE;
@@ -231,7 +231,7 @@ new     Handle:         g_hForwardSkeetMeleeHurt                            = IN
 new     Handle:         g_hForwardSkeetSniper                               = INVALID_HANDLE;
 new     Handle:         g_hForwardSkeetSniperHurt                           = INVALID_HANDLE;
 new     Handle:         g_hForwardSkeetGL                                   = INVALID_HANDLE;
-new     Handle:         g_hForwardHunterDeadstop                            = INVALID_HANDLE;
+// new     Handle:         g_hForwardHunterDeadstop                            = INVALID_HANDLE;
 new     Handle:         g_hForwardSIShove                                   = INVALID_HANDLE;
 new     Handle:         g_hForwardBoomerPop                                 = INVALID_HANDLE;
 new     Handle:         g_hForwardLevel                                     = INVALID_HANDLE;
@@ -275,7 +275,7 @@ new                     g_iPounceDamage         [MAXPLAYERS + 1];               
 new     Float:          g_fPouncePosition       [MAXPLAYERS + 1][3];                            // position that a hunter (jockey?) pounced from (or charger started his carry)
 
 // deadstops
-new     Float:          g_fVictimLastShove      [MAXPLAYERS + 1][MAXPLAYERS + 1];               // when was the player shoved last by attacker? (to prevent doubles)
+// new     Float:          g_fVictimLastShove      [MAXPLAYERS + 1][MAXPLAYERS + 1];               // when was the player shoved last by attacker? (to prevent doubles)
 
 // levels / charges
 new                     g_iChargerHealth        [MAXPLAYERS + 1];                               // how much health the charger had the last time it was seen taking damage
@@ -427,7 +427,7 @@ new     Handle:         g_hCvarMaxPounceDamage                              = IN
 
 public Plugin:myinfo = 
 {
-    name = "Skill Detection (skeets, crowns, levels)",
+    name = "[L4d2] Skill Detection(skeets, crowns, levels)",
     author = "Tabun",
     description = "Detects and reports skeets, crowns, levels, highpounces, etc.",
     version = PLUGIN_VERSION,
@@ -446,7 +446,7 @@ public APLRes:AskPluginLoad2(Handle:myself, bool:late, String:error[], err_max)
     g_hForwardSkeetSniperHurt = CreateGlobalForward("OnSkeetSniperHurt", ET_Ignore, Param_Cell, Param_Cell, Param_Cell, Param_Cell );
     g_hForwardSkeetGL =         CreateGlobalForward("OnSkeetGL", ET_Ignore, Param_Cell, Param_Cell );
     g_hForwardSIShove =         CreateGlobalForward("OnSpecialShoved", ET_Ignore, Param_Cell, Param_Cell, Param_Cell );
-    g_hForwardHunterDeadstop =  CreateGlobalForward("OnHunterDeadstop", ET_Ignore, Param_Cell, Param_Cell );
+    // g_hForwardHunterDeadstop =  CreateGlobalForward("OnHunterDeadstop", ET_Ignore, Param_Cell, Param_Cell );
     g_hForwardBoomerPop =       CreateGlobalForward("OnBoomerPop", ET_Ignore, Param_Cell, Param_Cell, Param_Cell, Param_Float );
     g_hForwardLevel =           CreateGlobalForward("OnChargerLevel", ET_Ignore, Param_Cell, Param_Cell );
     g_hForwardLevelHurt =       CreateGlobalForward("OnChargerLevelHurt", ET_Ignore, Param_Cell, Param_Cell, Param_Cell );
@@ -606,14 +606,14 @@ public OnClientDisconnect(client)
 
 public Action: Event_RoundStart( Handle:event, const String:name[], bool:dontBroadcast )
 {
-    if (LibraryExists("nodeadstop"))
-    {
-        g_deadstop = false;
-    }
-    else
-    {
-        g_deadstop = true;
-    }
+    // if (LibraryExists("nodeadstop"))
+    // {
+    //     g_deadstop = false;
+    // }
+    // else
+    // {
+    //     g_deadstop = true;
+    // }
 
 
     g_iRocksBeingThrownCount = 0;
@@ -622,10 +622,10 @@ public Action: Event_RoundStart( Handle:event, const String:name[], bool:dontBro
     {
         g_bIsHopping[i] = false;
         
-        for ( new j = 1; j <= MaxClients; j++ )
-        {
-            g_fVictimLastShove[i][j] = 0.0;
-        }
+        // for ( new j = 1; j <= MaxClients; j++ )
+        // {
+        //     g_fVictimLastShove[i][j] = 0.0;
+        // }
     }
 }
 
@@ -1194,17 +1194,17 @@ public Action: Event_PlayerShoved( Handle:event, const String:name[], bool:dontB
         }
     }
     
-    if ( g_fVictimLastShove[victim][attacker] == 0.0 || (GetGameTime() - g_fVictimLastShove[victim][attacker]) >= SHOVE_TIME )
-    {
-        if ( GetEntProp(victim, Prop_Send, "m_isAttemptingToPounce") )
-        {
-				HandleDeadstop( attacker, victim );
-        }
+    // if ( g_fVictimLastShove[victim][attacker] == 0.0 || (GetGameTime() - g_fVictimLastShove[victim][attacker]) >= SHOVE_TIME )
+    // {
+    //     if ( GetEntProp(victim, Prop_Send, "m_isAttemptingToPounce") )
+    //     {
+	// 			HandleDeadstop( attacker, victim );
+    //     }
         
-        HandleShove( attacker, victim, zClass );
+    //     HandleShove( attacker, victim, zClass );
         
-        g_fVictimLastShove[victim][attacker] = GetGameTime();
-    }
+    //     g_fVictimLastShove[victim][attacker] = GetGameTime();
+    // }
     
     // check for shove on smoker by pull victim
     if ( g_iSmokerVictim[victim] == attacker )
@@ -2519,27 +2519,27 @@ stock HandleLevelHurt( attacker, victim, damage )
 }
 
 // deadstops
-stock HandleDeadstop( attacker, victim )
-{
+// stock HandleDeadstop( attacker, victim )
+// {
 
-    // report?
-    if (GetConVarBool(g_hCvarReport))
-    {
-        if ( IS_VALID_INGAME(attacker) && IS_VALID_INGAME(victim) && !IsFakeClient(victim) && g_deadstop == true)
-        {
-            CPrintToChatAll( "{green}★ {blue}%N {default}推停了 {blue}%N", attacker, victim );
-        }
-        else if ( IS_VALID_INGAME(attacker) && g_deadstop == true)
-        {
-            CPrintToChatAll( "{green}★ {blue}%N {default}推停了 {blue}hunter", attacker );
-        }
-    }
+//     // report?
+//     if (GetConVarBool(g_hCvarReport))
+//     {
+//         if ( IS_VALID_INGAME(attacker) && IS_VALID_INGAME(victim) && !IsFakeClient(victim) && g_deadstop == true)
+//         {
+//             CPrintToChatAll( "{green}★ {blue}%N {default}推停了 {blue}%N", attacker, victim );
+//         }
+//         else if ( IS_VALID_INGAME(attacker) && g_deadstop == true)
+//         {
+//             CPrintToChatAll( "{green}★ {blue}%N {default}推停了 {blue}hunter", attacker );
+//         }
+//     }
     
-    Call_StartForward(g_hForwardHunterDeadstop);
-    Call_PushCell(attacker);
-    Call_PushCell(victim);
-    Call_Finish();
-}
+//     Call_StartForward(g_hForwardHunterDeadstop);
+//     Call_PushCell(attacker);
+//     Call_PushCell(victim);
+//     Call_Finish();
+// }
 
 stock HandleShove( attacker, victim, zombieClass )
 {
