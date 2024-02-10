@@ -51,7 +51,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public Plugin myinfo =
 {
-	name = "[L4D2]M60_NoDrop_AmmoPile_patch",
+	name = "[L4D2] M60 No Drop Ammo Pile patch",
 	author = "Lux",
 	description = "Prevents m60 from dropping and allows use of ammo piles",
 	version = PLUGIN_VERSION,
@@ -60,7 +60,7 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-	hCVAR_M60 = CreateConVar("l4d2_M60_nodrop_ammopile_patch", "450", "设置机枪M60后备弹药数量.", FCVAR_NOTIFY);
+	hCVAR_M60 = CreateConVar("l4d2_M60_nodrop_ammopile_patch", "", "设置机枪M60后备弹药数量.", FCVAR_NOTIFY);
 	hCVAR_M60.AddChangeHook(CVARChangedM60);
 	AutoExecConfig(true, "l4d2_M60_NoDrop_AmmoPile_patch");
 	

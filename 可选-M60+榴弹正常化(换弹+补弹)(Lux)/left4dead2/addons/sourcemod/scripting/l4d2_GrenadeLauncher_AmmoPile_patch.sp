@@ -44,7 +44,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public Plugin myinfo =
 {
-	name = "[L4D2]GrenadeLauncher_AmmoPile_patch",
+	name = "[L4D2] GrenadeLauncher Ammo Pile patch",
 	author = "Lux",
 	description = "Allows GrenadeLauncher to use ammo piles",
 	version = PLUGIN_VERSION,
