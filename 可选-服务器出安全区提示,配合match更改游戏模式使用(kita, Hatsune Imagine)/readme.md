@@ -4,7 +4,7 @@
 
 > 基于源码提取而出的插件
 
-> 适配了fdxx/树树子/哈利波特刷特插件
+> 适配了树树子/fdxx刷特插件
 ---
 <details><summary>Command | 指令</summary>
 
