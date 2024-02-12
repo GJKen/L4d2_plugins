@@ -1,10 +1,7 @@
-<!-- http://43.136.73.52/motds_pipei.html -->
 <html>
 <head>
 <title>JKChan For SBLX Server</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content="网站仅用于学习交流使用">
-<link rel="icon" href="./src/navIndex.png">
 <style type="text/css">
 	*{margin: 0;padding: 0;}
 	::-webkit-scrollbar{
@@ -20,9 +17,9 @@
 		width: 2560;
 		font-size: 17px;
 		font-weight: bolder;
-		font-family: Arial, Microsoft YaHei, sans-serif !important;
 		background: #a18e7c;
 		overflow: hidden;
+		font-family: Arial, Microsoft YaHei, sans-serif !important;
 	}
 	code{
 		color: #179cde;
@@ -41,10 +38,8 @@
 	}
 	.title_mode{
 		color: #129b9e;
-		/* padding: 0 15 0 15; */
 	}
 	.title_mode li{
-		/* padding: 5 0 5; */
 		list-style: none;
 	}
 	button{
@@ -59,6 +54,7 @@
 		outline: none;
 		font-size: 17px;
 		padding: 0;
+		font-family: Arial, Microsoft YaHei, sans-serif !important;
 	}
 	button.active{
 		background: rgba(43, 80, 230, .66);
@@ -87,13 +83,12 @@
 	}
 	#bgimg{
 		position: fixed;
-		top: 0px;
-		left: 0px;
+		top:0;
+		left: 0;
 		width: 100%;
 		height: 100%;
-		background-size: 100% auto;
-		background-repeat: no-repeat;
-		background-image: url(http://cdn-us.imgs.moe/2024/02/02/l4d2_motd_9_bWMVMdCWUH.jpg);
+		background-size: cover;
+		background-image: url("http://cdn-us.imgs.moe/2024/02/02/l4d2_motd_9_bWMVMdCWUH.jpg");
 	}
 	#setudiv{
 		position: absolute;
@@ -112,12 +107,6 @@
 	#RS code{
 		color: #ff1c10;
 	}
-	
-	/* 表格前面有序列表 */
-	/* tr:before{
-		counter-increment: section;
-		content: "" counter(section) ".";
-	} */
 	table{
 		border: 1px black solid;
 		border-collapse: collapse;
@@ -142,32 +131,31 @@
 		box-shadow: 0px 0px 5px rgba(0,0,0, .1);
 	}
 </style>
-	</head>
-	<body>
-		<img id="bgimg" onclick="this.style.zIndex='auto'">
-		<div id="miandiv" onclick="this.style.zIndex='auto'">
-			<button id="btn2" onclick="ReplaceCmds(1)">公告</button>
-			<button id="btn1" onclick="ReplaceCmds(2)">说明</button>
-			<button id="btn3" onclick="ReplaceCmds(3)">指令</button>
-			<div id="setudiv">
-				<button id="btn4" onclick="ReplaceCmds(4)">隐藏</button>
-				<button id="RS" onclick="ReplaceCmds(0,1)"><code >❤</code>色图<code>❤</code></button>
-			</div><br>
-			<div id="cmds">
-				<text class="title2">Q群:735468034</text><br />
-				<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>
-				<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>
-				<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>
-				<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>
-				<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>
-				<ul>
-					<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>
-					<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>
-					<li>在游戏启动项添加<code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>
-				</ul>
-			</div>
-	</body>
-</html>
+</head>
+<body>
+	<div id="bgimg" onclick="this.style.zIndex='auto'"></div>
+	<div id="miandiv" onclick="this.style.zIndex='auto'">
+		<button id="btn2" onclick="ReplaceCmds(1)">公告</button>
+		<button id="btn1" onclick="ReplaceCmds(2)">本服说明</button>
+		<button id="btn3" onclick="ReplaceCmds(3)">指令说明</button>
+		<div id="setudiv">
+			<button id="btn4" onclick="ReplaceCmds(4)">隐藏</button>
+			<button id="RS" onclick="ReplaceCmds(0,1)"><code >❤</code>色图<code>❤</code></button>
+		</div><br>
+		<div id="cmds">
+			<text class="title2">Q群:735468034</text><br />
+			<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>
+			<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>
+			<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>
+			<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>
+			<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>
+			<ul>
+				<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>
+				<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>
+				<li>在游戏启动项添加<code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>
+			</ul>
+		</div>
+</body>
 <script>
 	function randomSetu(){
 		var images = [
@@ -192,7 +180,6 @@
 		];
 		//生成随机索引值
 		var randomIndex = Math.floor(Math.random() * images.length);
-		console.log(randomIndex);
 		document.querySelector("#bgimg").style.backgroundImage = 'url(' + images[randomIndex] + ')';
 	}
 	function ReplaceCmds(type, setu) {
@@ -214,10 +201,10 @@
 		else if (type == 2) {
 			cmds.innerHTML = ('\
 			<p class="title_mode">介绍一下本服游戏的特性:<br>\
-			默认进服之后的模式为纯净战役,!match投票更改游戏模式<br></p>\
+			默认进服之后的模式只有基本Sourcemod插件,<br>生还者随机叛变tank,!match投票更改游戏模式<br></p>\
 			<ul>\
 			</li>\
-			<li>战役->纯净战役: 和纯净没什么区别🐶,只有基本Sourcemod插件</li>\
+			<li>战役->普通战役: 和纯净没什么区别,只有基本Sourcemod插件</li>\
 			<li>战役->多特战役: 部分常用插件,fbef0102刷特,2倍医疗</li>\
 			<li>战役->多特增强: 部分常用插件,fbef0102刷特+特感加智插件,2倍医疗</li>\
 			<li>药役->简单药役: 部分常用插件,fdxx刷特,击杀Witch回血,特感加智</li>\
@@ -229,13 +216,13 @@
 		else if (type == 3) {
 			cmds.innerHTML = ('\
 			<code>!match</code>: 投票更改游戏模式<br />\
-			<code>!v</code> | <code>!votes</code>: 多功能投票,不同游戏模式不同的投票内容<br />\
+			<code>!v</code> | <code>!votes</code>: 多功能投票, 不同游戏模式不同的投票内容<br />\
 			<code>!maps</code>: 投票换地图 可更换三方图 自选地图章节<br />\
 			<code>!nxmaps</code>: 下一张地图投票(需在救援关才能投票)<br />\
 			<code>!afk</code>: 闲置 | <code>!away / !s</code>: 旁观 | <code>!join / !jg</code>: 加入生还<br />\
 			<code>!teams</code>: 查看团队信息<br />\
 			<code>!b</code> | <code>!buy</code> | <code>!rpg</code>: 商店<br />\
-			<code>!zs</code>: 快速清空血条,转生异世界<br />\
+			<code>!zs</code>: 转生异世界<br />\
 			<code>!g</code>: 丢物品<br />\
 			<code>z(订购键)</code>: 订购键的<code class="light">看</code>可标记物品 / 路线<br />')
 		}
@@ -247,5 +234,4 @@
 		}
 	}
 </script>
-<!-- <script type="text/javascript" src="./src/motds_pipei.js"></script> -->
-<!-- <script type="text/javascript" src="./src/setu.js"></script> -->
+</html>
