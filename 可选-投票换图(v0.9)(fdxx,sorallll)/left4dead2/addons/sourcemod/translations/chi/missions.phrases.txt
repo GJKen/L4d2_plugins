@@ -104,7 +104,7 @@
 	{
 		"chi"		"魔鬼山"
 	}
-	"Fallen"
+	"fallen"
 	{
 		"chi"		"坠落"
 	}
@@ -568,5 +568,121 @@
 	"Blackmist"
 	{
 		"chi"		"黑迷雾"
+	}
+	"nomercyproject"
+	{
+		"chi"		"毫不留情圣诞版(No Mercy-Christmas Edition)"
+	}
+	"ZPTZ"
+	{
+		"chi"		"Z-PTZ v2.0"
+	}
+	"diescreaming"
+	{
+		"chi"		"死亡尖叫(Die Screaming)II"
+	}
+	"KimchiZomie"
+	{
+		"chi"		"泡菜僵尸(Kimchi Zombie)"
+	}
+	"KimchiZomie2"
+	{
+		"chi"		"泡菜僵尸(Kimchi Zombie)II"
+	}
+	"awaystadium"
+	{
+		"chi"		"离开球场(Away Stadium)"
+	}
+	"Overkill"
+	{
+		"chi"		"行尸走肉(Overkill)"
+	}
+	"TheRavine"
+	{
+		"chi"		"峡谷(The Ravine)"
+	}
+	"UrbanDisaster"
+	{
+		"chi"		"城市灾难(Urban Disaster)"
+	}
+	"darkblood2"
+	{
+		"chi"		"黑血(Dark Blood)II v3"
+	}
+	"haha7"
+	{
+		"chi"		"HAHA7:后会有期"
+	}
+	"prague"
+	{
+		"chi"		"布拉格(Prague)v3.2"
+	}
+	"TokyoDark"
+	{
+		"chi"		"东京暗影(Tokyo Dark)v2"
+	}
+	"complexcourseR"
+	{
+		"chi"		"复杂过程(Complex Course)v3"
+	}
+	"BadNeighborhood"
+	{
+		"chi"		"坏邻居(Bad Neighborhood)v2"
+	}
+	"Gunk"
+	{
+		"chi"		"粘液(Gunk)v32"
+	}
+	"energycrisis"
+	{
+		"chi"		"能源危机(Energy Crisis)v1_5"
+	}
+	"Sufrimiento"
+	{
+		"chi"		"痛苦(El Sufrimiento)v1.1.4.4"
+	}
+	"UndeadMine"
+	{
+		"chi"		"亡灵矿山(Undead Mine)"
+	}
+	"snowden"
+	{
+		"chi"		"雪巢(Snow Den)"
+	}
+	"goingbottles"
+	{
+		"chi"		"Going 4 Bottles"
+	}
+	"DeathAbove"
+	{
+		"chi"		"死神天降(Death From Above)"
+	}
+	"Bloodsouls"
+	{
+		"chi"		"血魂(Bloodsouls)v2"
+	}
+	"re3short"
+	{
+		"chi"		"生化危机无解迷版(Resident Evil Short and Versus)Ⅲ"
+	}
+	"hopeless"
+	{
+		"chi"		"绝望(Hopeless)"
+	}
+	"BlackoutExtended"
+	{
+		"chi"		"停电加长版(Blackout Extended)"
+	}
+	"LostWay"
+	{
+		"chi"		"迷途(Lost Way)"
+	}
+	"atc1tacobucket"
+	{
+		"chi"		"墨西哥至尊玉米薄饼店(Taco Bucket Supreme)"
+	}
+	"Navigation"
+	{
+		"chi"		"领航(Navigation)"
 	}
 }
