@@ -43,6 +43,11 @@ void PrintModeInfo() {
 		infectedLimit = GetConVarInt(FindConVar("l4d2_si_spawn_control_max_specials"));
 		infectedTime = GetConVarInt(FindConVar("l4d2_si_spawn_control_spawn_time"));
 	}
+	else if (LibraryExists("director_si_spawn"))
+	{
+		infectedLimit = GetConVarInt(FindConVar("sss_1P"));
+		infectedTime = GetConVarInt(FindConVar("SS_Time"));
+	}
 	else
 	{
 		infectedLimit = 0;

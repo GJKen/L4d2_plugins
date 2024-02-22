@@ -13,69 +13,108 @@
 	}
 	"刷特数量"
 	{
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/1t"
 		{
 			"message" "1特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/2t"
 		{
 			"message" "2特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/3t"
 		{
 			"message" "3特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/4t"
 		{
 			"message" "4特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/5t"
 		{
 			"message" "5特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/6t"
 		{
 			"message" "6特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/7t"
 		{
 			"message" "7特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/8t"
 		{
 			"message" "8特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/9t"
 		{
 			"message" "9特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/10t"
 		{
 			"message" "10特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/12t"
 		{
 			"message" "12特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/14t"
 		{
 			"message" "14特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/16t"
 		{
 			"message" "16特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/18t"
 		{
 			"message" "18特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/20t"
 		{
 			"message" "20特"
 		}
-		"exec match_votes/mutation4/"
+		"exec match_votes/mutation4/22t"
 		{
 			"message" "22特"
+		}
+	}
+	"刷特时间"
+	{
+		"exec match_votes/mutation4/1timer"
+		{
+			"message" "刷特时间 1S"
+		}
+		"exec match_votes/mutation4/5timer"
+		{
+			"message" "刷特时间 5S"
+		}
+		"exec match_votes/mutation4/10timer"
+		{
+			"message" "刷特时间 10S"
+		}
+		"exec match_votes/mutation4/15timer"
+		{
+			"message" "刷特时间 15S"
+		}
+		"exec match_votes/mutation4/20timer"
+		{
+			"message" "刷特时间 20S"
+		}
+		"exec match_votes/mutation4/25timer"
+		{
+			"message" "刷特时间 25S"
+		}
+		"exec match_votes/mutation4/30timer"
+		{
+			"message" "刷特时间 30S"
+		}
+		"exec match_votes/mutation4/35timer"
+		{
+			"message" "刷特时间 35S"
+		}
+		"exec match_votes/mutation4/40timer"
+		{
+			"message" "刷特时间 40S"
 		}
 	}
 	"控制人数"
