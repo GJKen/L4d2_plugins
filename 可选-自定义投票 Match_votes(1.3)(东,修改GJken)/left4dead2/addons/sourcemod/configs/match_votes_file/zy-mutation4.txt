@@ -11,6 +11,73 @@
 			"message" "我不想重开T_T"
 		}
 	}
+	"刷特数量"
+	{
+		"exec match_votes/mutation4/"
+		{
+			"message" "1特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "2特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "3特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "4特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "5特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "6特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "7特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "8特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "9特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "10特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "12特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "14特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "16特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "18特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "20特"
+		}
+		"exec match_votes/mutation4/"
+		{
+			"message" "22特"
+		}
+	}
 	"控制人数"
 	{
 		"exec match_votes/bots_num_1"
