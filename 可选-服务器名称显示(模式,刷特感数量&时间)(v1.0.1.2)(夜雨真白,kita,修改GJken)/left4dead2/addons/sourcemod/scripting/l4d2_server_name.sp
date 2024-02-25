@@ -156,11 +156,10 @@ void setServerName()
 			cv_hInfectedLimit = GetConVarInt(FindConVar("l4d2_si_spawn_control_max_specials"));
 			cv_hInfectedTime = GetConVarInt(FindConVar("l4d2_si_spawn_control_spawn_time"));
 		}
-		else if (LibraryExists("l4dinfectedbots"))
+		else if (LibraryExists("director_si_spawn"))
 		{
-			PrintToServer("哈利波特");
-			cv_hInfectedLimit = GetConVarInt(FindConVar("l4d_infectedbots_max_specials"));
-			cv_hInfectedTime = GetConVarInt(FindConVar("l4d_infectedbots_spawn_time_max"));
+			cv_hInfectedLimit = GetConVarInt(FindConVar("sss_1P"));
+			cv_hInfectedTime = GetConVarInt(FindConVar("SS_Time"));
 		}
 		else
 		{
