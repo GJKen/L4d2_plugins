@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+<title>JKChan's Server Mode[mutation4]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="http://gitee.com/gjken/web_archive/raw/master/css/main.css" type="text/css"/>
+<!-- <link rel="stylesheet" href="./src/main_norm.css" type="text/css"/> -->
+</head>
+<body>
+	<div id="bgimg" onclick="this.style.zIndex='auto'"></div>
+	<div id="miandiv" onclick="this.style.zIndex='auto'">
+		<button id="btn2" class="list" onclick="ReplaceCmds(1)">公告</button>
+		<button id="btn1" class="list" onclick="ReplaceCmds(2)">说明</button>
+		<button id="btn3" class="list" onclick="ReplaceCmds(3)">指令</button>
+		<div id="setudiv">
+			<button id="btn4" onclick="ReplaceCmds(4)">隐藏</button>
+			<button id="RS" onclick="ReplaceCmds(0,1)"><code >❤</code>色图<code>❤</code></button>
+		</div><br>
+		<div id="cmds">
+			<text class="title">当前模式为绝境模式</text><br><br>
+			<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>
+			<ul>
+				<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>
+				<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>
+				<li>在游戏启动项添加<code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>
+			</ul>
+		</div>
+</body>
+<!-- <script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/js/motds_mutation4_sblx_norm.js"></script> -->
+<script type="text/javascript" src="./src/motds_mutation4_sblx_norm.js"></script>
+<script type="text/javascript" src="http://gitee.com/gjken/web_archive/raw/master/js/setu.js"></script>
+</html>

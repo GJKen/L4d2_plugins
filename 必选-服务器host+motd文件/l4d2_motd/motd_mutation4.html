@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>JKChan's Server Mode[mutation4]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	::-webkit-scrollbar{
+		width: 10px;
+		height: 20px;
+		background: #ff5500;
+	}
+	::-webkit-scrollbar-thumb{
+		background: darkcyan;
+		border-radius: 10px;
+	}
+	body{
+		width: 2560;
+		font-size: 17px;
+		font-weight: bolder;
+		font-family: Arial, Microsoft YaHei, sans-serif !important;
+		background: #a18e7c;
+		overflow: hidden;
+	}
+	code{
+		color: #2266AA;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style-type: disclosure-closed;
+		list-style-position: inside;
+		display: inline-block;
+	}
+	.title{
+		color: #F00;
+	}
+	.title_mode{
+		color: #12619e;
+		padding: 0 15 0 15;
+	}
+	.title_mode li{
+		padding: 5 0 5;
+		list-style: none;
+	}
+	button{
+		width: 90;
+		height: 30;
+		background: rgba(67, 140, 191, .40);
+		text-decoration: none;
+		transition: .3s;
+		border: none;
+		color: #000;
+		border-radius: 8px;
+		outline: none;
+		font-size: 17px;
+		padding: 0;
+	}
+	button.active{
+		background: rgba(43, 80, 230, .66);
+		pointer-events: none;
+	}
+	button:hover{
+		background: rgba(43, 80, 230, .66);
+		cursor: hand;
+	}
+	a{
+		color: #009daf;
+	}
+	#cmds{
+		margin-top: 10px;
+	}
+	#miandiv{
+		position: relative;
+		margin: 5;
+		padding: 10 10 0 10;
+		border-radius: 20px;
+		background: rgba(255, 255, 255, .70);
+		width: 22%;
+		height: 400px;
+		box-shadow: rgba(14, 14, 14, .15) 0px 6px 15px 15px;
+		overflow: auto;
+	}
+	#bgimg{
+		position: fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-image: url("http://cdn-us.imgs.moe/2024/02/02/l4d2_motd_9_bWMVMdCWUH.jpg");
+	}
+	#setudiv{
+		position: absolute;
+		top: 10;
+		right: 103;
+	}
+	#setudiv #btn4{
+		width: 80;
+		margin: -5;
+		border-radius: 8px 0 0 8px;
+	}
+	#RS{
+		width: 80;
+		border-radius: 0 8px 8px 0;
+	}
+	#RS code{
+		color: #ff1c10;
+	}
+	table{
+		border: 1px black solid;
+		border-collapse: collapse;
+		color: #fff;
+		background: rgba(45,114,210, .5);
+		counter-reset: section;
+		display: table;
+	}
+	table.active{
+		display: none;
+	}
+	td{
+		text-align: justify;
+		height: 2em;
+		border: 1px black solid;
+		padding: 0 10px 0;
+	}
+	tr:hover{
+		color: bisque;
+		background: rgba(106,106,106, .4);
+		box-shadow: 0px 0px 5px rgba(0,0,0, .1);
+	}
+</style>
+</head>
+<body>
+	<div id="bgimg" onclick="this.style.zIndex='auto'"></div>
+	<div id="miandiv" onclick="this.style.zIndex='auto'">
+		<button id="btn2" class="list" onclick="ReplaceCmds(1)">公告</button>
+		<button id="btn1" class="list" onclick="ReplaceCmds(2)">说明</button>
+		<button id="btn3" class="list" onclick="ReplaceCmds(3)">指令</button>
+		<div id="setudiv">
+			<button id="btn4" onclick="ReplaceCmds(4)">隐藏</button>
+			<button id="RS" onclick="ReplaceCmds(0,1)"><code >❤</code>色图<code>❤</code></button>
+		</div><br>
+		<div id="cmds">
+			<text class="title">当前模式为绝境模式</text><br><br>
+			<text class="title2">Q群:735468034</text><br />
+			<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>
+			<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>
+			<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>
+			<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>
+			<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>
+			<ul>
+				<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>
+				<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>
+				<li>在游戏启动项添加<code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>
+			</ul>
+		</div>
+</body>
+<script type="text/javascript"  src="http://gitee.com/gjken/web_archive/raw/master/js/setu.js"></script>
+<script>
+	function ReplaceCmds(type, setu) {
+		if (type == 1) {
+			cmds.innerHTML = ('\
+				<text class="title">当前模式为绝境模式</text><br><br>\
+				<text class="title2">Q群:735468034</text><br />\
+				<text>本服steam组 <a href="https://steamcommunity.com/groups/jkchan" title="jkchan" target="_blank">https://steamcommunity.com/groups/jkchan</a><br></text>\
+				<text>打不过或有问题到<code>Telegram</code>联系我 <a href="https://t.me/GJK_en" title="@GJK_en" target="_blank">https://t.me/GJK_en</a></text><br><br>\
+				<text class="title">为保持好的游玩环境,请路人玩家不要无理由投票踢出其他玩家<br>恶意黑枪和开挂等等不文明行为皆可游戏内使用!vk投票踢人</text><br><br>\
+				<text class="title">想要匹配更多人,就设置steam下载地区为上海,加装<code>8 slots lobbies fixed</code>(8人大厅mod)可以匹配8人,不加装则4人匹配</text><br><br>\
+				<text class="title">进服闪退,音效卡顿掉帧的解决方法:</text>\
+				<ul>\
+					<li>检查服务器当前地图是否为三方图,检查本地是否能正常进入三方图,如果本地三方图能正常进入,进不来服务器可能是别的原因</li>\
+					<li>在选项→视频→高级设置中将"可用的页池内存"改为低可解决闪退问题<br></li>\
+					<li>在游戏启动项添加<code>-heapsize 1500000 -num_edicts 4096 -processheap -highpriority</code>可解决音效卡顿掉帧问题</li>\
+				</ul>\
+		')}
+		else if (type == 2) {
+			cmds.innerHTML = ('\
+			<ul class="title_mode">\
+			<p>介绍一下此模式的特性:<br>基本Sourcemod插件和部分常用插件</p>\
+			<p id="btn6">刷特时间调整↴</p>\
+			<table>\
+				<tbody>\
+					<tr>\
+						<td>所有特感刷特时间20s</td>\
+						<td>玩家离开安全区30s后刷特</td>\
+						<td>Tank存在不刷特</td>\
+					</tr>\
+				</tbody>\
+			</table>\
+			<p id="btn6">武器调整↴</p>\
+			<table>\
+				<tbody>\
+					<tr>\
+						<td>awp 2.2倍伤害(253)</td>\
+						<td>scout 2.5倍伤害(262.5)</td>\
+					</tr>\
+					<tr>\
+						<td>sg552 1.2倍伤害(38)</td>\
+						<td>mp5 1.2倍伤害(28)</td>\
+					</tr>\
+					<tr>\
+						<td>M60打空弹夹不会掉落</td>\
+					</tr>\
+				</tbody>\
+			</table>\
+			<p>特感主动出击?可能</p>\
+		')}
+		else if (type == 3) {
+			cmds.innerHTML = ('\
+			<table>\
+				<tbody>\
+					<tr>\
+						<td>!match</td>\
+						<td>投票更改游戏模式</td>\
+					</tr>\
+					<tr>\
+						<td>!v !votes</td>\
+						<td>多功能投票,不同游戏模式不同的投票内容</td>\
+					</tr>\
+					<tr>\
+						<td>!maps</td>\
+						<td>投票换地图 可更换三方图 自选地图章节</td>\
+					</tr>\
+					<tr>\
+						<td>!nxmaps</td>\
+						<td>下一张地图投票(需在救援关才能投票)</td>\
+					</tr>\
+					<tr>\
+						<td>!afk</td>\
+						<td>闲置</td>\
+					</tr>\
+					<tr>\
+						<td>!away !s</td>\
+						<td>加入旁观者</td>\
+					</tr>\
+					<tr>\
+						<td>!join !jg</td>\
+						<td>加入生还者</td>\
+					</tr>\
+					<tr>\
+						<td>!teams</td>\
+						<td>查看团队信息</td>\
+					</tr>\
+					<tr>\
+						<td>!b !buy !rpg</td>\
+						<td>简易商店</td>\
+					</tr>\
+					<tr>\
+						<td>!zs</td>\
+						<td>快速清空血条,转生异世界</td>\
+					</tr>\
+					<tr>\
+						<td>!g</td>\
+						<td>丢物品</td>\
+					</tr>\
+					<tr>\
+						<td>z(订购键)</td>\
+						<td>订购键的"看"可标记物品 / 路线</td>\
+					</tr>\
+				</tbody>\
+			</table>\
+		')}
+		else if (type == 4) {
+			bgimg.style.zIndex = "9"
+		}
+		else if (setu == 1) {
+			randomSetu();
+		}
+	}
+</script>
+</html>
