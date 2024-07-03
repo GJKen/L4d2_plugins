@@ -1,0 +1,231 @@
+"Phrases"
+{
+	"c1m1_hotel"
+	{
+		"en"		"1: Hotel"
+	}
+	"c1m2_streets"
+	{
+		"en"		"2: Streets"
+	}
+	"c1m3_mall"
+	{
+		"en"		"3: Mall"
+	}
+	"c1m4_atrium"
+	{
+		"en"		"4: Atrium"
+	}
+	"c2m1_highway"
+	{
+		"en"		"1: Highway"
+	}
+	"c2m2_fairgrounds"
+	{
+		"en"		"2: Fairground"
+	}
+	"c2m3_coaster"
+	{
+		"en"		"3: Coaster"
+	}
+	"c2m4_barns"
+	{
+		"en"		"4: Barns"
+	}
+	"c2m5_concert"
+	{
+		"en"		"5: Concert"
+	}
+	"c3m1_plankcountry"
+	{
+		"en"		"1: Plank Country"
+	}
+	"c3m2_swamp"
+	{
+		"en"		"2: Swamp"
+	}
+	"c3m3_shantytown"
+	{
+		"en"		"3: Shanty Town"
+	}
+	"c3m4_plantation"
+	{
+		"en"		"4: Plantation"
+	}
+	"c4m1_milltown_a"
+	{
+		"en"		"1: Milltown"
+	}
+	"c4m2_sugarmill_a"
+	{
+		"en"		"2: Sugar Mill"
+	}
+	"c4m3_sugarmill_b"
+	{
+		"en"		"3: Mill Escape"
+	}
+	"c4m4_milltown_b"
+	{
+		"en"		"4: Return to Town"
+	}
+	"c4m5_milltown_escape"
+	{
+		"en"		"5: Town Escape"
+	}
+	"c5m1_waterfront"
+	{
+		"en"		"1: Waterfront"
+	}
+	"c5m2_park"
+	{
+		"en"		"2: Park"
+	}
+	"c5m3_cemetery"
+	{
+		"en"		"3: Cemetery"
+	}
+	"c5m4_quarter"
+	{
+		"en"		"4: Quarter"
+	}
+	"c5m5_bridge"
+	{
+		"en"		"5: Bridge"
+	}
+	"c6m1_riverbank"
+	{
+		"en"		"1: Riverbank"
+	}
+	"c6m2_bedlam"
+	{
+		"en"		"2: Underground"
+	}
+	"c6m3_port"
+	{
+		"en"		"3: Port"
+	}
+	"c7m1_docks"
+	{
+		"en"		"1: Docks"
+	}
+	"c7m2_barge"
+	{
+		"en"		"2: Barge"
+	}
+	"c7m3_port"
+	{
+		"en"		"3: Port"
+	}
+	"c8m1_apartment"
+	{
+		"en"		"1: The Apartments"
+	}
+	"c8m2_subway"
+	{
+		"en"		"2: The Subway"
+	}
+	"c8m3_sewers"
+	{
+		"en"		"3: The Sewer"
+	}
+	"c8m4_interior"
+	{
+		"en"		"4: The Hospital"
+	}
+	"c8m5_rooftop"
+	{
+		"en"		"5: Rooftop Finale"
+	}
+	"c9m1_alleys"
+	{
+		"en"		"1: The Alleys"
+	}
+	"c9m2_lots"
+	{
+		"en"		"2: The Truck Depot Finale"
+	}
+	"c10m1_caves"
+	{
+		"en"		"1: The Turnpike"
+	}
+	"c10m2_drainage"
+	{
+		"en"		"2: The Drains"
+	}
+	"c10m3_ranchhouse"
+	{
+		"en"		"3: The Church"
+	}
+	"c10m4_mainstreet"
+	{
+		"en"		"4: The Town"
+	}
+	"c10m5_houseboat"
+	{
+		"en"		"5: Boathouse Finale"
+	}
+	"c11m1_greenhouse"
+	{
+		"en"		"1: The Greenhouse"
+	}
+	"c11m2_offices"
+	{
+		"en"		"2: The Crane"
+	}
+	"c11m3_garage"
+	{
+		"en"		"3: The Construction Site"
+	}
+	"c11m4_terminal"
+	{
+		"en"		"4: The Terminal"
+	}
+	"c11m5_runway"
+	{
+		"en"		"5: Runway Finale"
+	}
+	"c12m1_hilltop"
+	{
+		"en"		"1: The Woods"
+	}
+	"c12m2_traintunnel"
+	{
+		"en"		"2: The Tunnel"
+	}
+	"c12m3_bridge"
+	{
+		"en"		"3: The Bridge"
+	}
+	"c12m4_barn"
+	{
+		"en"		"4: The Train Station"
+	}
+	"c12m5_cornfield"
+	{
+		"en"		"5: Farmhouse Finale"
+	}
+	"c13m1_alpinecreek"
+	{
+		"en"		"1: Alpine Creek"
+	}
+	"c13m2_southpinestream"
+	{
+		"en"		"2: South Pine Stream"
+	}
+	"c13m3_memorialbridge"
+	{
+		"en"		"3: Memorial Bridge"
+	}
+	"c13m4_cutthroatcreek"
+	{
+		"en"		"4: Cut-throat Creek"
+	}
+	"c14m1_junkyard"
+	{
+		"en"		"1: The Junkyard"
+	}
+	"c14m2_lighthouse"
+	{
+		"en"		"2: Lighthouse Finale"
+	}
+}

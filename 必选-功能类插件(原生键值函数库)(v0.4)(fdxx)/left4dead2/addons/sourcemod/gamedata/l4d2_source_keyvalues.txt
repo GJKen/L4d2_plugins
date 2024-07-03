@@ -1,0 +1,229 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"fileSystem"
+			{
+				"linux"
+				{
+					"signature"	"CDirector::OnServerShutdown"
+					"read"		"366"
+					"read"		"0"		// IFileSystem
+					"offset"	"4"		// IBaseFileSystem
+				}
+
+				"windows"
+				{
+					"signature"	"CDirector::OnServerShutdown"
+					"read"		"365"
+					"read"		"0"
+					"offset"	"4"
+				}
+			}
+		}
+
+		"Offsets"
+		{
+			"KeyValuesSize"
+			{
+				"linux"		"44"
+				"windows"	"44"
+			}
+		}
+
+		"Signatures"
+		{
+			"KeyValues::operator_new"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValuesnwEj"
+				"windows"	"\x55\x8B\xEC\xFF\x15\x2A\x2A\x2A\x2A\x8B\x4D\x08\x8B\x10\x8B\x52\x08"
+			}
+
+			"KeyValues::KeyValues"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValuesC2EPKcP16IKeyValuesSystemb"
+				"windows"	"\x55\x8B\xEC\x8A\x55\x10"
+			}
+
+			"KeyValues::deleteThis"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues10deleteThisEv"
+				"windows"	"\x56\x8B\xF1\x85\xF6\x74\x2A\xE8"
+			}
+
+			"KeyValues::UsesEscapeSequences"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues19UsesEscapeSequencesEb"
+				"windows"	"\x55\x8B\xEC\x8A\x45\x08\x88\x41\x11"
+			}
+
+			"KeyValues::LoadFromFile"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues12LoadFromFileEP15IBaseFileSystemPKcS3_"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x3C\x53\x8B\x5D\x0C"
+			}
+
+			"KeyValues::GetName"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9KeyValues7GetNameEv"
+				"windows"	"\x56\x8B\xF1\x85\xF6\x74\x2A\x8B\x46\x14"
+			}
+
+			"KeyValues::SetName"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues7SetNameEPKc"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x8B\x46\x14"
+			}
+
+			"KeyValues::GetNameSymbol"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9KeyValues13GetNameSymbolEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x01\xC3"
+			}
+
+			"KeyValues::GetDataType"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues11GetDataTypeEPKc"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x6A\x00\x50\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x0F\xBE\x40\x10"
+			}
+
+			"KeyValues::GetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9GetStringEPKcS1_"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x44\x02\x00\x00\xA1\x2A\x2A\x2A\x2A\x33\xC5\x89\x45\xFC\x53"
+			}
+
+			"KeyValues::SetString"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues9SetStringEPKcS1_"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x56\x6A\x01\x50\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x85\xF6\x74\x2A\x8B\x4E\x04\x53"
+			}
+
+			"KeyValues::SetStringValue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues14SetStringValueEPKc"
+				"windows"	"\x55\x8B\xEC\x53\x56\x8B\xF1\x8B\x46\x04"
+			}
+
+			"KeyValues::GetInt"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues6GetIntEPKci"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x6A\x00\x50\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x0F\xBE\x48\x10"
+			}
+
+			"KeyValues::SetInt"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues6SetIntEPKci"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x6A\x01\x50\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8B\x4D\x0C\x89\x48\x0C\xC6\x40\x10\x02"
+			}
+
+			"KeyValues::GetFloat"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues8GetFloatEPKcf"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x83\xEC\x08\x6A\x00"
+			}
+
+			"KeyValues::SetFloat"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues8SetFloatEPKcf"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x6A\x01\x50\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\xF3\x0F\x10\x45\x0C"
+			}
+
+			"KeyValues::GetPtr"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues6GetPtrEPKcPv"
+				"windows"	"\x55\x8B\xEC\x8B\x45\x08\x6A\x00\x50\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x80\x78\x10\x04"
+			}
+
+			"KeyValues::FindKey"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues7FindKeyEPKcb"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x10\x01\x00\x00\xA1\x2A\x2A\x2A\x2A\x33\xC5\x89\x45\xFC\x8A\x45\x0C\x56\x8B\x75\x08"
+			}
+
+			"KeyValues::FindKeyFromSymbol"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK9KeyValues7FindKeyEi"
+				"windows"	"\x55\x8B\xEC\x85\xC9"
+			}
+
+			"KeyValues::GetFirstSubKey"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues14GetFirstSubKeyEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x20\xC3"
+			}
+
+			"KeyValues::GetNextKey"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues10GetNextKeyEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x1C\xC3"
+			}
+
+			"KeyValues::GetFirstTrueSubKey"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues18GetFirstTrueSubKeyEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x20\x85\xC0\x74\x2A\xEB\x2A\x8D\x49\x00\x80\x78\x10\x00\x74"
+			}
+
+			"KeyValues::GetNextTrueSubKey"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues17GetNextTrueSubKeyEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x1C\x85\xC0\x74\x2A\xEB\x2A\x8D\x49\x00\x80\x78\x10\x00\x74"
+			}
+
+			"KeyValues::GetFirstValue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues13GetFirstValueEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x20\x85\xC0\x74\x2A\xEB\x2A\x8D\x49\x00\x80\x78\x10\x00\x75"
+			}
+
+			"KeyValues::GetNextValue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues12GetNextValueEv"
+				"windows"	"\x85\xC9\x74\x2A\x8B\x41\x1C\x85\xC0\x74\x2A\xEB\x2A\x8D\x49\x00\x80\x78\x10\x00\x75"
+			}
+
+			"KeyValues::SaveToFile"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9KeyValues10SaveToFileEP15IBaseFileSystemPKcS3_"
+				"windows"	"\x55\x8B\xEC\x51\x53\x8B\x5D\x10\x56\x8B\x75\x08"
+			}
+
+			"CDirector::OnServerShutdown"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector16OnServerShutdownEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x56\x8B\xF1\x8B\x8E\x2A\x2A\x2A\x2A\x8B\x01\x8B\x10\x57\xFF\xD2"
+			}
+		}
+	}
+}
+

@@ -1,0 +1,231 @@
+"Phrases"
+{
+	"c1m1_hotel"
+	{
+		"chi"		"1：旅馆"
+	}
+	"c1m2_streets"
+	{
+		"chi"		"2：街道"
+	}
+	"c1m3_mall"
+	{
+		"chi"		"3：购物中心"
+	}
+	"c1m4_atrium"
+	{
+		"chi"		"4：中厅"
+	}
+	"c2m1_highway"
+	{
+		"chi"		"1：高速公路"
+	}
+	"c2m2_fairgrounds"
+	{
+		"chi"		"2：游乐场"
+	}
+	"c2m3_coaster"
+	{
+		"chi"		"3：过山车"
+	}
+	"c2m4_barns"
+	{
+		"chi"		"4：谷仓"
+	}
+	"c2m5_concert"
+	{
+		"chi"		"5：音乐会"
+	}
+	"c3m1_plankcountry"
+	{
+		"chi"		"1：乡村"
+	}
+	"c3m2_swamp"
+	{
+		"chi"		"2：沼泽"
+	}
+	"c3m3_shantytown"
+	{
+		"chi"		"3：贫民窟"
+	}
+	"c3m4_plantation"
+	{
+		"chi"		"4：种植园"
+	}
+	"c4m1_milltown_a"
+	{
+		"chi"		"1：密尔城"
+	}
+	"c4m2_sugarmill_a"
+	{
+		"chi"		"2：糖厂"
+	}
+	"c4m3_sugarmill_b"
+	{
+		"chi"		"3：逃离工厂"
+	}
+	"c4m4_milltown_b"
+	{
+		"chi"		"4：重返小镇"
+	}
+	"c4m5_milltown_escape"
+	{
+		"chi"		"5：逃离小镇"
+	}
+	"c5m1_waterfront"
+	{
+		"chi"		"1：码头"
+	}
+	"c5m2_park"
+	{
+		"chi"		"2：公园"
+	}
+	"c5m3_cemetery"
+	{
+		"chi"		"3：墓地"
+	}
+	"c5m4_quarter"
+	{
+		"chi"		"4：特区"
+	}
+	"c5m5_bridge"
+	{
+		"chi"		"5：桥"
+	}
+	"c6m1_riverbank"
+	{
+		"chi"		"1: 河畔"
+	}
+	"c6m2_bedlam"
+	{
+		"chi"		"2: 地下通道"
+	}
+	"c6m3_port"
+	{
+		"chi"		"3: 港口"
+	}
+	"c7m1_docks"
+	{
+		"chi"		"1: 码头"
+	}
+	"c7m2_barge"
+	{
+		"chi"		"2: 驳船"
+	}
+	"c7m3_port"
+	{
+		"chi"		"3: 港口"
+	}
+	"c8m1_apartment"
+	{
+		"chi"		"1: 公寓"
+	}
+	"c8m2_subway"
+	{
+		"chi"		"2: 地铁"
+	}
+	"c8m3_sewers"
+	{
+		"chi"		"3: 下水道"
+	}
+	"c8m4_interior"
+	{
+		"chi"		"4: 医院"
+	}
+	"c8m5_rooftop"
+	{
+		"chi"		"5: 屋顶"
+	}
+	"c9m1_alleys"
+	{
+		"chi"		"1: 小巷"
+	}
+	"c9m2_lots"
+	{
+		"chi"		"2: 卡车停车场"
+	}
+	"c10m1_caves"
+	{
+		"chi"		"1: 收费公路"
+	}
+	"c10m2_drainage"
+	{
+		"chi"		"2: 水沟"
+	}
+	"c10m3_ranchhouse"
+	{
+		"chi"		"3: 教堂"
+	}
+	"c10m4_mainstreet"
+	{
+		"chi"		"4: 小镇"
+	}
+	"c10m5_houseboat"
+	{
+		"chi"		"5: 码头"
+	}
+	"c11m1_greenhouse"
+	{
+		"chi"		"1: 花房"
+	}
+	"c11m2_offices"
+	{
+		"chi"		"2: 起重机"
+	}
+	"c11m3_garage"
+	{
+		"chi"		"3: 建筑工地"
+	}
+	"c11m4_terminal"
+	{
+		"chi"		"4: 航空机场"
+	}
+	"c11m5_runway"
+	{
+		"chi"		"5: 飞机跑道"
+	}
+	"c12m1_hilltop"
+	{
+		"chi"		"1: 森林"
+	}
+	"c12m2_traintunnel"
+	{
+		"chi"		"2: 隧道"
+	}
+	"c12m3_bridge"
+	{
+		"chi"		"3: 桥"
+	}
+	"c12m4_barn"
+	{
+		"chi"		"4: 火车站"
+	}
+	"c12m5_cornfield"
+	{
+		"chi"		"5: 农舍"
+	}
+	"c13m1_alpinecreek"
+	{
+		"chi"		"1: 高山小溪"
+	}
+	"c13m2_southpinestream"
+	{
+		"chi"		"2: 松木之河"
+	}
+	"c13m3_memorialbridge"
+	{
+		"chi"		"3: 纪念大桥"
+	}
+	"c13m4_cutthroatcreek"
+	{
+		"chi"		"4: 残酷溪流"
+	}
+	"c14m1_junkyard"
+	{
+		"chi"		"1: 教区桥梁"
+	}
+	"c14m2_lighthouse"
+	{
+		"chi"		"2: 灯塔"
+	}
+}
