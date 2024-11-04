@@ -122,13 +122,13 @@
 		<td align="center">
 				<img src="https://cdn-fusion.imgimg.cc/i/2023/MpOZcjEy3hqU8Vzl.jpg" width="60px;" alt="豆瓣酱な"/>
 				<p>豆瓣酱な</p>
-				<a href="https://github.com/apples1949/l4dplugins">l4dplugins</a>
+				<a href="https://github.com/apples1949/douban-l4d2-plugins-set">douban-l4d2-plugins-set</a>
 		</td>
 		<td align="center">
 			<a href="https://github.com/apples1949">
 				<img src="https://avatars.githubusercontent.com/u/49244656" width="60px;" alt="apples1949"/>
 				<p>apples1949</p>
-			<a href="https://github.com/apples1949/douban-l4d2-plugins-set">douban-l4d2-plugins-set</a>
+				<a href="https://github.com/apples1949/l4dplugins">l4dplugins</a>
 		</td>
 	</tr>
 </table>
