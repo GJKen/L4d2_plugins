@@ -108,7 +108,7 @@
 			<img src="https://cdn-fusion.imgimg.cc/i/2023/xzLEe175aEhb2A7u.jpg" width="60px;" alt="Kita"/>
 			<p>Kita</p>
 		</a>
-		<p>y已跑路</p>
+		<p>已跑路</p>
 	</td>
 	<td align="center">
 		<a href="https://github.com/Hatsune-Imagine">
