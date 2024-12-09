@@ -78,7 +78,7 @@
 			<img src="https://avatars.githubusercontent.com/u/22582796" width="60px;" alt="fantasylidong"/>
 			<p>fantasylidong</p>
 		</a>
-		<a href="https://github.com/fantasylidong/CompetitiveWithAnne">L4D2-Not0721Here-CoopSvPlugins</a>
+		<a href="https://github.com/fantasylidong/CompetitiveWithAnne">CompetitiveWithAnne</a>
 	</td>
 	</tr>
 	<tr>
@@ -108,7 +108,7 @@
 			<img src="https://cdn-fusion.imgimg.cc/i/2023/xzLEe175aEhb2A7u.jpg" width="60px;" alt="Kita"/>
 			<p>Kita</p>
 		</a>
-		<a href="https://github.com/txuk1x/g10">g10</a>
+		<p>已跑路</p>
 	</td>
 	<td align="center">
 		<a href="https://github.com/Hatsune-Imagine">
@@ -122,13 +122,13 @@
 		<td align="center">
 				<img src="https://cdn-fusion.imgimg.cc/i/2023/MpOZcjEy3hqU8Vzl.jpg" width="60px;" alt="豆瓣酱な"/>
 				<p>豆瓣酱な</p>
-				<p>妹有link捏</p>
+				<a href="https://github.com/apples1949/douban-l4d2-plugins-set">douban-l4d2-plugins-set</a>
 		</td>
 		<td align="center">
 			<a href="https://github.com/apples1949">
 				<img src="https://avatars.githubusercontent.com/u/49244656" width="60px;" alt="apples1949"/>
 				<p>apples1949</p>
-			<a href="https://github.com/apples1949/l4dplugins">l4dplugins</a>
+				<a href="https://github.com/apples1949/l4dplugins">l4dplugins</a>
 		</td>
 	</tr>
 </table>
